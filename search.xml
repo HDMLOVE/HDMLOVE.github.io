@@ -1,198 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Google浏览器无法安装问题</title>
-    <url>/2020/03/02/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="/2020/03/02/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image1.jpg" alt="点击图片时候下方显示描述"></p>
-<p>&ensp;&ensp;&ensp;&ensp;今天遇到一个有趣的问题，Google浏览器莫名其面的一直安装不上，自己捣鼓了好久最后才解决。网上有很多方法说是因为注册表有残留，准确的说是GoogleUpdate这个东西在作怪，解决的方法只需要将注册表里Google相关的东西删除。</p>
-<a id="more"></a>
-
-<h1 id="打开注册表直接Win-R输入regedit"><a href="#打开注册表直接Win-R输入regedit" class="headerlink" title="打开注册表直接Win+R输入regedit"></a>打开注册表直接Win+R输入regedit</h1><p><img src="/2020/03/02/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image2.jpg"></p>
-<h1 id="删除注册表残留数据。"><a href="#删除注册表残留数据。" class="headerlink" title="删除注册表残留数据。"></a>删除注册表残留数据。</h1><p>&ensp;&ensp;&ensp;&ensp;删除\HKEY_CURRENT_USER\Software\和HKEY_LOCAL_MACHINE\SOFTWARE目录下的Google及对应的子目录就可以了。但是我操作的时候出现了问题，删除Google目录时候报错，后面发现是权限问题。解决方法：右键该目录修改管理员权限可以删除。</p>
-<h1 id="确认电脑系统版本。"><a href="#确认电脑系统版本。" class="headerlink" title="确认电脑系统版本。"></a>确认电脑系统版本。</h1><p>&ensp;&ensp;&ensp;&ensp;可以删除之后还是发现无法安装，最后发现照着网上的帖子没有用，因为帖子估计都比较老，我的是win10系统，所以导致删除的路径不对，导致依旧无法正常安装，需要删除对应的路径。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">32位：HKEY_LOCAL_MACHINE\SOFTWARE\Google</span><br><span class="line">64位：HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Google</span><br></pre></td></tr></table></figure>
-<h1 id="重启安装应用。"><a href="#重启安装应用。" class="headerlink" title="重启安装应用。"></a>重启安装应用。</h1><p>&ensp;&ensp;&ensp;&ensp;重新双击运行安装应用程序，完美解决！</p>
-]]></content>
+    <title>人为什么活着</title>
+    <url>/2020/10/14/%E7%94%9F%E6%B4%BB/</url>
+    <content><![CDATA[<p>你喜欢的人在努力，你却在想怎么说我爱你</p>
+<a id="more"></a>]]></content>
       <categories>
-        <category>windows</category>
-      </categories>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2020/11/29/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p>title: Go语言error错误处理<br>date: 2021-02-1 16:39:14<br>tags:<br>categories:</p>
-<h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><p>Go语言的错误处理</p>
-<a id="more"></a>
-
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
-    <title>Hexo搭建个人站点</title>
-    <url>/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<p>花了好几天，熬了几个夜晚，终于把自己的个人博客搭建起来了网站，顺便来一篇教程，分享给大家，同时也方便以后再次部署。我之前是在github上搭建了一版，github+hexo,奈何实在太卡了，想起自己在阿里云有台服务器，然后直接部署到云上了,下面方法步骤亲测成功。</p>
-<a id="more"></a>
-
-<h1 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h1><blockquote>
-<ul>
-<li>一台个人PC</li>
-<li>money!(开玩笑的 ^-^)</li>
-<li>一台linux服务器，可以买台云服务器，没有又想体验的话就VM虚拟机，本地看看过把瘾吧。^ ^</li>
-</ul>
-</blockquote>
-<h1 id="需要的软件环境"><a href="#需要的软件环境" class="headerlink" title="需要的软件环境"></a>需要的软件环境</h1><blockquote>
-<ul>
-<li>Git</li>
-<li>Node.js</li>
-<li>hexo-cli</li>
-<li>Nginx</li>
-</ul>
-</blockquote>
-<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p><a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a><br>下一步下一步傻瓜式安装</p>
-<h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下一步下一步傻瓜式安装</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p><img src="/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image1.jpg" alt="点击图片时候下方显示描述"></p>
-<p>&ensp;&ensp;&ensp;&ensp;选择一个文件夹作为你的博客文件夹，比如我自己建立在E:盘在命令行窗口下：</p>
-<p><img src="/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image2.jpg" alt="点击图片时候下方显示描述"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v     # 查看hexo安装成功没</span><br><span class="line">cd e:       # 打开e盘;</span><br><span class="line">mkdir blog; # 创建blog文件夹作为我的博客目录</span><br><span class="line">cd blog     # 进入blog目录</span><br><span class="line">hexo init   # 初始化blog</span><br><span class="line">hexo g      # 生成静态页面</span><br><span class="line">hexo s      # 启动服务监听</span><br><span class="line">打开页面    localhost:4000</span><br><span class="line">可以看到hello world 的页面，初步完成。</span><br><span class="line"></span><br><span class="line">常用命令</span><br><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line"></span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d # 一件生成静态页面同时上传</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>Hexo有很多很不错的主题，使用过butterfly、replica、landscape等等，目前陷入<strong>Next</strong>主题的坑(简直太好用了！！)。</p>
-<p><strong>主题地址</strong></p>
-<p><a href="https://github.com/theme-next/hexo-theme-next">Next主题社区维护版本入口地址</a></p>
-<p><strong>文章评论系统</strong></p>
-<p>目前本站使用的是Valine评论系统，感觉还不错，下面介绍怎么配置使用这个系统。</p>
-<p>首先这个Valine评论系统是可以很好的支持Next主题的，它支持Markdown语法，没有后端是基于LeanCloud的所以我们需要注册一个LeanCloud账户，</p>
-<p><a href="https://console.leancloud.cn/">LeanCloud官网入口地址</a></p>
-<p>注册完成后，选择创建应用，然后选择开发版本，填写描述信息，然后生成，同时将<strong>App ID</strong> 和 <strong>App Key</strong>记下来。</p>
-<ul>
-<li>设置Next主题，在主题配置文件中找到valine进行配置，将生成的<strong>App ID</strong> 和 <strong>App Key</strong>填入对应的字段，如下图。</li>
-</ul>
-<img src="/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image-20210219032911009.png" alt="image-20210219032911009" style="zoom:25%;">
-
-<ul>
-<li>如果想要管理评论，进入 leancloud 官网，找到 <code>控制台</code>-&gt;<code>存储</code>-&gt;<code>commet</code> 中进行管理。</li>
-</ul>
-<h4 id="设置代码高亮"><a href="#设置代码高亮" class="headerlink" title="设置代码高亮"></a>设置代码高亮</h4><p>NexT 代码高亮，共有5款主题供你选择。 NexT 默认使用的是 白色的 <code>normal</code> 主题，可选的值有 <code>normal</code>，<code>night</code>， <code>night blue</code>， <code>night bright</code>， <code>night eighties</code>：</p>
-<p>更改 <code>highlight_theme</code> 字段，将其值设定成你所喜爱的高亮主题，例如：</p>
-<p>高亮主题设置示例</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Code Highlight theme</span></span><br><span class="line"><span class="comment"># Available value: normal | night | night eighties | night blue | night bright</span></span><br><span class="line"><span class="comment"># https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line"><span class="attr">highlight_theme:</span> <span class="string">normal</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>IO多路复用</title>
-    <url>/2020/12/20/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/</url>
-    <content><![CDATA[<blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;我们可以将标准输入、套接字等都看做IO的一路，多路复用的意思是在任何一路IO有事件的情况下，通知应用程序去处理相应的IO事件，这样程序就仿佛可以同一时刻处理多个IO事件了。</p>
-</blockquote>
-<a id="more"></a>
-
-<h1 id="select"><a href="#select" class="headerlink" title="select"></a>select</h1><blockquote>
-<ul>
-<li><p>select fd_set结构，底层是一个bitmap结构，是定长的1024，不容易改，如果需要改需要重新编译内核代码。</p>
-</li>
-<li><p>使用select函数，通知内核挂起进程，当一个或者多个IO事件发生之后，控制权限返回给应用程序，由应用程序进行IO事件的处理。</p>
-</li>
-<li><p>当有事件发生的时候，并不知道具体是哪几条流（可能有一个也可能有多个），只能轮询一遍出所有的流，找出相应的数据，或者写入数据的流，**时间复杂度为O(n)**。</p>
-</li>
-<li><p>需要维护一个存放大量fd的数据结构，当用户空间向内核空间传递该数据结构的时候会发生大量的拷贝，拷贝开销大，从而影响效率。</p>
-</li>
-</ul>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/select.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">select</span><span class="params">(<span class="keyword">int</span> maxfd, fd_set *readset, fd_set *writeset, fd_set *expectset, struct timeval *timeout)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">timeval</span>&#123;</span></span><br><span class="line">	<span class="keyword">long</span> tv_sec;		<span class="comment">/* 秒 */</span></span><br><span class="line">	<span class="keyword">long</span> tv_usec;		<span class="comment">/* 微秒 */</span></span><br><span class="line">&#125;</span><br><span class="line">timeout可以有三种情况：</span><br><span class="line">timeout == <span class="literal">NULL</span>;	<span class="comment">/* 等待无限长的时间 */</span></span><br><span class="line">timeout-&gt;tv_sec == <span class="number">0</span> &amp;&amp; timeout-&gt;tv_usec == <span class="number">0</span>	<span class="comment">/* 不等待，直接返回。（Noblock 非阻塞）*/</span></span><br><span class="line">timeout-&gt;tv_sec != <span class="number">0</span> || timeout-&gt;usec != <span class="number">0</span>	<span class="comment">/* 等待指定的时间 */</span></span><br><span class="line">  </span><br><span class="line"><span class="comment">/* FD_ZERO 将一个fd_set类型的变量的所有的位都设置为0 */</span></span><br><span class="line"><span class="keyword">int</span> FD_ZERO(fd_set *fdset);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* FD_CLR 可以将某一个位进行清除 */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">FD_CLR</span><span class="params">(fd_set *fdset)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* FD_SET 用来将某一个位进行置位1 */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">FD_SET</span><span class="params">(<span class="keyword">int</span> fd, fd_set *fdset)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* FD_ISSET 用来检测某一个位是否被置位 */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">FD_ISSET</span><span class="params">(<span class="keyword">int</span> fd, fd_set *fdset)</span></span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>返回值（return value）:做好准备的文件描述符个数，超时为0， 错误为-1。</p>
-<p>中间的三个参数readset、writeset、exepectset，分别是读描述符集合 readset、写描述符集合 writeset 和异常描述符集合 exceptset，这些参数指明了我们关心哪一些描述符，和需要满足什么条件。一个文件描述符保存在fd_set类型之中，fd_set其实就是一个位图bitmap。</p>
-<p>int maxfd; 指的是最大的文件描述符加1。</p>
-<p>Linux环境下编程，系统给提供了一组宏定义，可以对我们的fd_set进行赋值等操作。</p>
-<p>Demo:</p>
-</blockquote>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (argc != <span class="number">2</span>) &#123;</span><br><span class="line">        error(<span class="number">1</span>, <span class="number">0</span>, <span class="string">&quot;usage: select01 &lt;IPaddress&gt;&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> socket_fd = tcp_client(argv[<span class="number">1</span>], SERV_PORT);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> recv_line[MAXLINE], send_line[MAXLINE];</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    fd_set readmask;</span><br><span class="line">    fd_set allreads;</span><br><span class="line">    FD_ZERO(&amp;allreads);</span><br><span class="line">    FD_SET(<span class="number">0</span>, &amp;allreads);</span><br><span class="line">    FD_SET(socket_fd, &amp;allreads);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">        readmask = allreads;</span><br><span class="line">        <span class="keyword">int</span> rc = select(socket_fd + <span class="number">1</span>, &amp;readmask, <span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (rc &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            error(<span class="number">1</span>, errno, <span class="string">&quot;select failed&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (FD_ISSET(socket_fd, &amp;readmask)) &#123;</span><br><span class="line">            n = read(socket_fd, recv_line, MAXLINE);</span><br><span class="line">            <span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                error(<span class="number">1</span>, errno, <span class="string">&quot;read error&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">                error(<span class="number">1</span>, <span class="number">0</span>, <span class="string">&quot;server terminated \n&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            recv_line[n] = <span class="number">0</span>;</span><br><span class="line">            <span class="built_in">fputs</span>(recv_line, <span class="built_in">stdout</span>);</span><br><span class="line">            <span class="built_in">fputs</span>(<span class="string">&quot;\n&quot;</span>, <span class="built_in">stdout</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (FD_ISSET(STDIN_FILENO, &amp;readmask)) &#123;</span><br><span class="line">            <span class="keyword">if</span> (fgets(send_line, MAXLINE, <span class="built_in">stdin</span>) != <span class="literal">NULL</span>) &#123;</span><br><span class="line">                <span class="keyword">int</span> i = <span class="built_in">strlen</span>(send_line);</span><br><span class="line">                <span class="keyword">if</span> (send_line[i - <span class="number">1</span>] == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">                    send_line[i - <span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;now sending %s\n&quot;</span>, send_line);</span><br><span class="line">                <span class="keyword">size_t</span> rt = write(socket_fd, send_line, <span class="built_in">strlen</span>(send_line));</span><br><span class="line">                <span class="keyword">if</span> (rt &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                    error(<span class="number">1</span>, errno, <span class="string">&quot;write failed &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;send bytes: %zu \n&quot;</span>, rt);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="poll"><a href="#poll" class="headerlink" title="poll"></a>poll</h1><blockquote>
-<p>poll其实本质和select一样没有太大的区别，主要有几点改变。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">&gt;<span class="class"><span class="keyword">struct</span> <span class="title">pollfd</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> fd;</span><br><span class="line">	<span class="keyword">short</span> events;</span><br><span class="line">	<span class="keyword">short</span> revents;</span><br><span class="line">&gt;&#125;;</span><br><span class="line"></span><br><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">poll</span><span class="params">(struct pollfd *fds. <span class="keyword">unsigned</span> <span class="keyword">long</span> nfds, <span class="keyword">int</span> timeout)</span></span>;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>Events可以表示多个不同的事件，具体的实现可以通过二进制掩码位操作来完成，例如<code>POLLIN</code>和<code>POLLOUT</code>表示可读可写事件。</p>
-</li>
-<li><p>与select不同的在于，poll每次检测之后的结果不会修改元凯的传入的值，而是将结果保留在revents字段中，这样就不用每次检测完成之后都要重置待检测的描述字和感兴趣的事件。revents可以理解<code>return events</code>。</p>
-</li>
-<li><p>如果对某个pollfd结构进行事件检测，可以将对应的pollfd结构的fd成员设置成一个负值，poll函数将会忽略该事件。</p>
-</li>
-<li><p>突破了select(1024)最大文件描述符的限制，原因是它是基于链表来存储</p>
-</li>
-</ul>
-<p> <strong>同样存在缺点：</strong></p>
-<p> 1、依旧是大量的fd数组在用户空间和内核空间之间进行拷贝。</p>
-<p> 2、poll是水平触发，如果fd就绪被报告之后没有对其进行处理，下次poll韩式会再次报告该事件。</p>
-</blockquote>
-<h1 id="epoll"><a href="#epoll" class="headerlink" title="epoll"></a>epoll</h1><p>epoll接口</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/epoll.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">epoll_create</span><span class="params">(<span class="keyword">int</span> size)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">epoll_ctl</span><span class="params">(<span class="keyword">int</span> epfd, <span class="keyword">int</span> op, <span class="keyword">int</span> fd, struct epoll_event *event)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">epoll_wait</span><span class="params">(<span class="keyword">int</span> epfd, struct epoll_event *events, <span class="keyword">int</span> maxevents, <span class="keyword">int</span> timeout)</span></span>;</span><br></pre></td></tr></table></figure>
-
-
-<blockquote>
-<ul>
-<li><p>epoll_create 函数是一个系统调用函数，函数将会在内核空间开辟一块新的空间，可以理解为epoll结构空间，返回值为epoll的文件描述符编号，方便后续操作使用。</p>
-</li>
-<li><p>epoll_ctl是epoll事件的注册函数，epoll与select不同，select函数是调用时指定的需要监听的描述符和事件，epoll先将用户感兴趣的描述符事件注册到epoll空间内，此函数是非阻塞函数，作用仅仅是增删改epoll空间内的描述符信息。<br>  参数1：epfd，epoll结构的进程fd编号，函数将依靠该编号找到对应的epoll结构。<br>  参数2：op，表示当前的请求的类型，由三个定义：</p>
-<pre><code>           EPOLL_CTL_ADD:注册新的fd到epoll中。
-           EPOLL_CTL_MOD:修改已经注册的fd的监听事件。
-           EPOLL_CTL_DEL:从epfd中删除一个fd。
-</code></pre>
-<p>  参数3：fd,需要监听的文件描述符，一般指的是sockfd。<br>  参数4：event，告诉内核该fd资源感兴趣的事件。</p>
-</li>
-<li><p>epoll_wait函数，等待事件的发生，类似于select()函数调用。根据参数timeout，决定是否处于阻塞模式。<br>  参数1：epfd，指定一个感兴趣事件列表。<br>  参数2：*events，是一个指针，必须指向一个epoll_event结构数组，当函数返回的时候，内核会将就绪状态的的数据拷贝到该数组中。<br>  参数3：maxevents，标明参数2epoll_event结构数组最多能接收的数据量，即本次操作做多能获取多少就绪数据。<br>  参数4: timeout，单位为毫秒。</p>
-<pre><code> 0：表示立即返回。
- -1：阻塞调用，直到有用户感兴趣事件就绪为止。
-</code></pre>
-</li>
-</ul>
-<p>(1) epoll_create 函数是一个系统调用函数，函数将会在内核空间开辟一块新的空间，可以理解为epoll结构空间，返回值为epoll的文件描述符编号，方便后续操作使用。</p>
-<p>(2) epoll_ctl是epoll事件的注册函数，epoll与select不同，select函数是调用时指定的需要监听的描述符和事件，epoll先将用户感兴趣的描述符事件注册到epoll空间内，此函数是非阻塞函数，作用仅仅是增删改epoll空间内的描述符信息。<br>  参数1：epfd，epoll结构的进程fd编号，函数将依靠该编号找到对应的epoll结构。<br>  参数2：op，表示当前的请求的类型，由三个定义：<br>               EPOLL_CTL_ADD:注册新的fd到epoll中。<br>               EPOLL_CTL_MOD:修改已经注册的fd的监听事件。<br>               EPOLL_CTL_DEL:从epfd中删除一个fd。<br>  参数3：fd,需要监听的文件描述符，一般指的是sockfd。<br>  参数4：event，告诉内核该fd资源感兴趣的事件。</p>
-<p>(3)epoll_wait函数，等待事件的发生，类似于select()函数调用。根据参数timeout，决定是否处于阻塞模式。<br>  参数1：epfd，指定一个感兴趣事件列表。<br>  参数2：*events，是一个指针，必须指向一个epoll_event结构数组，当函数返回的时候，内核会将就绪状态的的数据拷贝到该数组中。<br>  参数3：maxevents，标明参数2epoll_event结构数组最多能接收的数据量，即本次操作做多能获取多少就绪数据。<br>  参数4: timeout，单位为毫秒。<br>         0 表示立即返回。</p>
-<p>​        -1 阻塞调用，直到有用户感兴趣事件就绪为止。</p>
-<p>​        &gt;0 阻塞调用，阻塞指定的时间内如果有时间就绪则是提前返回，否则就等待指定的事件后返回。<br>  返回值（return value）：本次就绪的fd的个数。</p>
-<p>工作模式：<br>       epoll对文件描述符的操作有两种模式：LT(水平触发)和ET(边缘触发)。LT是默认模式，两者的区别如下：<br>       LT(level 水平触发)：事件就绪之后，用户可以选择处理或者不处理，如果用户本次未进行处理，那么下次调用epoll_wait时候仍然会将未出的事件打包给你。<br>       ET(edge 边缘触发)： 事件就绪之后，用户必须处理，因为内核不给给你兜底，内核把就绪的事件打包给用户态之后，就会把对应的就绪事件清理掉，不会再次通知用户。<br>       ET模式在很大的程度上减少了epoll事件被重复触发的次数，因此被认为效率比LT模式高，也是epoll重要的杀手锏。</p>
-<p><strong>epoll优点：</strong></p>
-<p>1、没有最大文件描述符限制</p>
-<p>2、使用mmap文件映射内存加速与内核空间的消息传递，不再是大量的fd从用户空间拷贝到内核空间，大大减少了拷贝的开销。</p>
-<p>3、效率提升，不再使用轮询</p>
-</blockquote>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>1、<a href="https://blog.csdn.net/qq_35976351/article/details/85228002">https://blog.csdn.net/qq_35976351/article/details/85228002</a></p>
-<p>2、<a href="https://time.geekbang.org/column/article/138948">https://time.geekbang.org/column/article/138948</a></p>
-]]></content>
-      <categories>
-        <category>Unix环境编程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Linux常用命令</title>
-    <url>/2020/02/29/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a><strong>linux下常用的一下命令</strong></h1><a id="more"></a>
-
-<h2 id="防火墙相关的命令。"><a href="#防火墙相关的命令。" class="headerlink" title="防火墙相关的命令。"></a><strong>防火墙相关的命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;4400-4600&#x2F;udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone #作用域 </span><br><span class="line">--add-port&#x3D;80&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 </span><br><span class="line">--permanent #永久生效</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --remove-port&#x3D;80&#x2F;tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span><br></pre></td></tr></table></figure>
-<h2 id="yum安装软件包。"><a href="#yum安装软件包。" class="headerlink" title="yum安装软件包。"></a><strong>yum安装软件包。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install epel-release #安装&quot;epel-release&quot;的软件包</span><br><span class="line">yum install tcpreplay</span><br></pre></td></tr></table></figure>
-<h2 id="ps命令。"><a href="#ps命令。" class="headerlink" title="ps命令。"></a><strong>ps命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -eLf	 #查看进程线程情况</span><br></pre></td></tr></table></figure>
-<h2 id="压缩、解压命令。"><a href="#压缩、解压命令。" class="headerlink" title="压缩、解压命令。"></a><strong>压缩、解压命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">压缩：</span><br><span class="line">tar -zcvf &#x2F;tmp&#x2F;etc.tar.gz  &#x2F;etc     #将&#x2F;etc下的所有文件及目录打包到&#x2F;etc，并使用gz压缩  </span><br><span class="line">tar -cvf &#x2F;home&#x2F;abc.tar &#x2F;home&#x2F;abc    #只打包，不压缩</span><br><span class="line">tar -zcvf &#x2F;home&#x2F;abc.tar.gz &#x2F;home&#x2F;abc#打包，并用gzip压缩</span><br><span class="line"></span><br><span class="line">解压：</span><br><span class="line">tar -zxvf &#x2F;tmp&#x2F;etc.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="服务的锁定与取消。"><a href="#服务的锁定与取消。" class="headerlink" title="服务的锁定与取消。"></a><strong>服务的锁定与取消。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl mask firewalld   #需要锁定该服务时执行</span><br><span class="line">systemctl unmask firewalld #实现取消服务的锁定</span><br></pre></td></tr></table></figure>
-<h2 id="路由配置相关。"><a href="#路由配置相关。" class="headerlink" title="路由配置相关。"></a><strong>路由配置相关。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#添加IPV6地址</span><br><span class="line">ip -6 addr add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt; dev &lt;interface&gt;</span><br><span class="line">ip -6 addr add 2001:0db8:0:f101::1&#x2F;64 dev eth0</span><br><span class="line"></span><br><span class="line">ifconfig &lt;interface&gt; inet6 add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt;</span><br><span class="line">ifconfig eth0 inet6 add 2001:0db8:0:f101::1&#x2F;64</span><br><span class="line"></span><br><span class="line">#添加默认路由</span><br><span class="line">ip -6 route add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; via &lt;ipv6address&gt;</span><br><span class="line">ip -6 route add default via 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">route -A inet6 add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; gw</span><br><span class="line">route -A inet6 add default gw 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">#查看路由</span><br><span class="line">ip -6 route show</span><br><span class="line">route -A &#39;inet6&#39;</span><br><span class="line">route -6</span><br><span class="line"></span><br><span class="line">#windows查看路由表</span><br><span class="line">route print</span><br><span class="line"></span><br><span class="line">#查看邻居缓存</span><br><span class="line">ip -6 neighbor show</span><br><span class="line"></span><br><span class="line">#windows查看邻居缓存</span><br><span class="line">netsh interface ipv6 show neighbors</span><br><span class="line"></span><br><span class="line">#查看smtp服务器</span><br><span class="line">ping smtp.sohu.com </span><br><span class="line">ping smtp.qq.com</span><br></pre></td></tr></table></figure>
-<h2 id="更新内核命令。"><a href="#更新内核命令。" class="headerlink" title="更新内核命令。"></a><strong>更新内核命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum update kernel -y</span><br></pre></td></tr></table></figure>
-<h2 id="大文件重定向有效信息。"><a href="#大文件重定向有效信息。" class="headerlink" title="大文件重定向有效信息。"></a><strong>大文件重定向有效信息。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">重定向dmesg.txt关键字Call Trace的前后2000行到nn.txt：</span><br><span class="line">grep -C 2000 ‘Call Trace’ dmesg.txt &gt;nn.txt</span><br></pre></td></tr></table></figure>
-<h2 id="Shell递归删除指定字符串文件或者目录。"><a href="#Shell递归删除指定字符串文件或者目录。" class="headerlink" title="Shell递归删除指定字符串文件或者目录。"></a><strong>Shell递归删除指定字符串文件或者目录。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">文件：find . -name &quot;*.rej&quot; | xargs rm -rf</span><br><span class="line">目录：find . -type d -name &quot;*.rej&quot; | xargs rm -rf</span><br></pre></td></tr></table></figure>
-<h2 id="文件夹建立软链接（用绝对地址）"><a href="#文件夹建立软链接（用绝对地址）" class="headerlink" title="文件夹建立软链接（用绝对地址）"></a><strong>文件夹建立软链接（用绝对地址）</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ln -s 源地址 目的地址   #比如我把linux文件系统rootfs_dir软链接到&#x2F;home&#x2F;jyg&#x2F;目录下</span><br><span class="line">ln -s &#x2F;opt&#x2F;linux&#x2F;rootfs_dir  &#x2F;home&#x2F;jyg&#x2F;rootfs_dir #就可以了</span><br></pre></td></tr></table></figure>
-<h2 id="大文件分割"><a href="#大文件分割" class="headerlink" title="大文件分割"></a><strong>大文件分割</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">windows下 d:&gt;wireshark&gt;editcap -C 1000000(文件大小) 待分割文件路径 新文件名称</span><br><span class="line">linux 可使用split命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Raft算法</title>
-    <url>/2021/01/07/Raft%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="Raft算法"><a href="#Raft算法" class="headerlink" title="Raft算法"></a>Raft算法</h1><h2 id="什么是Raft算法"><a href="#什么是Raft算法" class="headerlink" title="什么是Raft算法"></a>什么是Raft算法</h2><p>Raft算法是Multi-Paxos算法，</p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
+        <category>杂谈</category>
       </categories>
   </entry>
   <entry>
@@ -211,78 +25,9 @@
 ]]></content>
   </entry>
   <entry>
-    <title>docker</title>
-    <url>/2020/12/20/docker/</url>
-    <content><![CDATA[<p>Docker 本质上就是一个虚拟机。</p>
-<p><img src="/2020/12/20/docker/image.png" alt="image-20201220085110478"></p>
-<p>在docker中有几个基本的概念。</p>
-<p>1、镜像：类似于平时使用的iso或者image镜像文件。</p>
-<p>2、容器：容器其实就会类似于虚拟机</p>
-<p>3、tar文件：类似于vmdk文件，可以直接打个包在别的地方直接run运行。</p>
-<p>4、docker file。docker 的一些配置</p>
-<p>5、仓库：存放有很多已经打包好的镜像，MySQL镜像、ngnix镜像等。</p>
-<a id="more"></a>
-
-<p>常用的操作命令：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1、直接从远程仓库下载mysql镜像</span><br><span class="line">docker search mysql 查找mysql镜像</span><br><span class="line">docker pull mysql   下载mysql镜像</span><br><span class="line">等价于命令docker pull mysql:latest,不指定版本会直接默认下载最新的版本镜像。</span><br><span class="line"></span><br><span class="line">2、查看本地的镜像</span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line">3、运行容器</span><br><span class="line">docker run -d 3307:3306 mysql</span><br><span class="line">-d 指定后台运行不阻塞当前shell窗口</span><br><span class="line">-p 指定内外部端口映射 外部:内部</span><br><span class="line"></span><br><span class="line">4、查看正在运行的容器，查看活跃的容器。</span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line">5、进入容器</span><br><span class="line">docker exec -it id bash</span><br><span class="line"></span><br><span class="line">6、启动停止容器</span><br><span class="line">docker stop &lt;容器ID&gt;</span><br><span class="line">docker restart &lt;容器ID&gt;</span><br><span class="line"></span><br><span class="line">7、删除docker实例</span><br><span class="line">docker rm -f 实例ID</span><br><span class="line"></span><br><span class="line">8、查询mysql镜像</span><br><span class="line">docker search mysql</span><br><span class="line"></span><br><span class="line">9、保存容器镜像</span><br><span class="line">docker commit 实例ID 新的名字</span><br></pre></td></tr></table></figure>
-<p><img src="/2020/12/20/docker/image1.png" alt="image-20201220090133527"></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>信号signal</title>
-    <url>/2021/01/03/%E4%BF%A1%E5%8F%B7signal/</url>
-    <content><![CDATA[<h1 id="信号机制"><a href="#信号机制" class="headerlink" title="信号机制"></a>信号机制</h1><blockquote>
-<p>信号：</p>
-<p>信号是一种软中断，信号提供了一种处理异步事件的方法。比如终端运行着一个程序，我们在设备输入一个ctrl+c中断停止的按键，那么我们实际上通过触发一个信号（）停止了一个程序。</p>
-<p>信号的处理：</p>
-<p>（1）可以直接将其忽略掉。大多数信号可以直接忽略掉但有两种信号却决不能被忽略，它们是SIGKILL和SIGSTOP信号。</p>
-<p>（2）捕捉信号，注册信号处理函数。</p>
-<p>（3）执行系统的默认动作。</p>
-<a id="more"></a>
-
-<p>进程创建：</p>
-<p>当一个进程调用fork函数的时候，其子进程会直接继承父进程的信号处理方式，因为子进程在开始复制了父进程的春初对象，所以信号捕捉函数的地址在子进程中是有意义的。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Unix环境编程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/10/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>海量数据处理问题</title>
-    <url>/2021/01/07/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="海量数据问题"><a href="#海量数据问题" class="headerlink" title="海量数据问题"></a>海量数据问题</h2><h3 id="海量日志数据，提取出某日访问百度次数最多的那个IP。"><a href="#海量日志数据，提取出某日访问百度次数最多的那个IP。" class="headerlink" title="海量日志数据，提取出某日访问百度次数最多的那个IP。"></a>海量日志数据，提取出某日访问百度次数最多的那个IP。</h3><p>首先是这一天，并且是访问百度的日志中的IP取出来，逐个写入到一个大文件中。注意到IP是32位的，最多有个2^32个IP。同样可以采用映射的方法，比如模1000，把整个大文件映射为1000个小文件，再找出每个小文中出现频率最大的IP（可以采用hash_map进行频率统计，然后再找出频率最大的几个）及相应的频率。然后再在这1000个最大的IP中，找出那个频率最大的IP，即为所求。</p>
-<a id="more"></a>
-
-<p>算法思想：分而治之+哈希</p>
-<p>1、IP地址最多有2^32=4G种取值情况，所以不能一次性直接都完全加载到内存中。</p>
-<p>2、考虑分而治之的思想，将IP地址进行hash(IP)%1024，把海量的数据分别存储到1024个文件中，这样，每个文件最有就含有4MB个IP地址。</p>
-<p>3、对于每一个小文件，可以进行构造一个key value的hash map，将IP作为key值，出现的次数作为value值，同时记录下当前出现次数最多的那个IP地址。</p>
-<p>4、可以得到1024个文件📃中出现次数最多的IP，再根据常规的排序算法得到总体上的出现次数最多的IP。</p>
-<h3 id="搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"><a href="#搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节" class="headerlink" title="搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"></a>搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节</h3><p>假设目前有一千万个记录（这些查询串的重复度比较高，虽然总数是1千万，但如果除去重复后，不超过3百万个。一个查询串的重复度越高，说明查询它的用户越多，也就是越热门。），请你统计最热门的10个查询串，要求使用的内存不能超过1G。</p>
-<p>算法思想：经典的topK问题。</p>
-<p>1、先对这批海量数据进行预处理，在O(n)的时间之内用hash表完成统计。</p>
-<p>2、借助堆这个数据结构，找出topk，时间复杂度为nlogK。借助堆这个数据结构，我们可以在log量级的时间内查找和调整移动。我们可以维护一个大顶堆，然后遍历这300万左右的数据，分别和根元素进行比对，最后得出前十个热门的查询串。</p>
-<h3 id="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"><a href="#有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词" class="headerlink" title="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"></a>有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词</h3><p>算法思想：分而治之+hash</p>
-<p>1、顺序读取文件，对于读取的每一个值，可以使用hash(x)%5000，将读取的词存储到5000个文件中，每个文件大概200k，如果还是有文件大于1m，可以按照这个方法继续往下分，直到可以直接放入内存中为止。</p>
-<p>2、对于每一个小文件，统计每个文件节点中出现的词以及相应的一个频率（tries树🌲或者hashMap都可以）。取出出现频率最大的一百个词（可以采用含有100个节点的最小堆），这样又可以得到5000个文件。最后一步，可以将这5000个文件进行归并过程了（类似于归并排序）。</p>
-<h3 id="在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。"><a href="#在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。" class="headerlink" title="在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。"></a>在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。</h3><p>方案1：可以采用2-bitmap进行，共需要内存</p>
-<h3 id="海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"><a href="#海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。" class="headerlink" title="海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"></a>海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。</h3><h3 id="腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"><a href="#腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？" class="headerlink" title="腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"></a>腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？</h3><p>使用bitmap，或者布隆过滤器。</p>
-<h3 id="10亿个域名如何判断，新来一个域名，如何判断在还是不在"><a href="#10亿个域名如何判断，新来一个域名，如何判断在还是不在" class="headerlink" title="10亿个域名如何判断，新来一个域名，如何判断在还是不在"></a>10亿个域名如何判断，新来一个域名，如何判断在还是不在</h3><p>可以使用布隆过滤器，判断不在就一定不在，判断在的话可能不在。</p>
+    <title>Raft算法</title>
+    <url>/2021/01/07/Raft%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Raft算法"><a href="#Raft算法" class="headerlink" title="Raft算法"></a>Raft算法</h1><h2 id="什么是Raft算法"><a href="#什么是Raft算法" class="headerlink" title="什么是Raft算法"></a>什么是Raft算法</h2><p>Raft算法是Multi-Paxos算法，</p>
 ]]></content>
       <categories>
         <category>数据结构与算法</category>
@@ -305,6 +50,32 @@
 
 
 <h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void InsertSort(int array[], int len)&#123;</span><br><span class="line"></span><br><span class="line">    int i, j;</span><br><span class="line">    int temp;</span><br><span class="line">    for ( i &#x3D; 1; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        temp &#x3D; array[i];</span><br><span class="line">        for ( j &#x3D; i-1; j &gt;&#x3D;0; j--)</span><br><span class="line">        &#123;</span><br><span class="line">            &#x2F;* code *&#x2F;</span><br><span class="line">            if (temp &lt; array[j])&#123;</span><br><span class="line">                array[j+1] &#x3D; array[j];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        array[j+1] &#x3D; temp;</span><br><span class="line">    &#125;</span><br><span class="line">    return ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>海量数据处理问题</title>
+    <url>/2021/01/07/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="海量数据问题"><a href="#海量数据问题" class="headerlink" title="海量数据问题"></a>海量数据问题</h2><h3 id="海量日志数据，提取出某日访问百度次数最多的那个IP。"><a href="#海量日志数据，提取出某日访问百度次数最多的那个IP。" class="headerlink" title="海量日志数据，提取出某日访问百度次数最多的那个IP。"></a>海量日志数据，提取出某日访问百度次数最多的那个IP。</h3><p>首先是这一天，并且是访问百度的日志中的IP取出来，逐个写入到一个大文件中。注意到IP是32位的，最多有个2^32个IP。同样可以采用映射的方法，比如模1000，把整个大文件映射为1000个小文件，再找出每个小文中出现频率最大的IP（可以采用hash_map进行频率统计，然后再找出频率最大的几个）及相应的频率。然后再在这1000个最大的IP中，找出那个频率最大的IP，即为所求。</p>
+<a id="more"></a>
+
+<p>算法思想：分而治之+哈希</p>
+<p>1、IP地址最多有2^32=4G种取值情况，所以不能一次性直接都完全加载到内存中。</p>
+<p>2、考虑分而治之的思想，将IP地址进行hash(IP)%1024，把海量的数据分别存储到1024个文件中，这样，每个文件最有就含有4MB个IP地址。</p>
+<p>3、对于每一个小文件，可以进行构造一个key value的hash map，将IP作为key值，出现的次数作为value值，同时记录下当前出现次数最多的那个IP地址。</p>
+<p>4、可以得到1024个文件📃中出现次数最多的IP，再根据常规的排序算法得到总体上的出现次数最多的IP。</p>
+<h3 id="搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"><a href="#搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节" class="headerlink" title="搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"></a>搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节</h3><p>假设目前有一千万个记录（这些查询串的重复度比较高，虽然总数是1千万，但如果除去重复后，不超过3百万个。一个查询串的重复度越高，说明查询它的用户越多，也就是越热门。），请你统计最热门的10个查询串，要求使用的内存不能超过1G。</p>
+<p>算法思想：经典的topK问题。</p>
+<p>1、先对这批海量数据进行预处理，在O(n)的时间之内用hash表完成统计。</p>
+<p>2、借助堆这个数据结构，找出topk，时间复杂度为nlogK。借助堆这个数据结构，我们可以在log量级的时间内查找和调整移动。我们可以维护一个大顶堆，然后遍历这300万左右的数据，分别和根元素进行比对，最后得出前十个热门的查询串。</p>
+<h3 id="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"><a href="#有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词" class="headerlink" title="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"></a>有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词</h3><p>算法思想：分而治之+hash</p>
+<p>1、顺序读取文件，对于读取的每一个值，可以使用hash(x)%5000，将读取的词存储到5000个文件中，每个文件大概200k，如果还是有文件大于1m，可以按照这个方法继续往下分，直到可以直接放入内存中为止。</p>
+<p>2、对于每一个小文件，统计每个文件节点中出现的词以及相应的一个频率（tries树🌲或者hashMap都可以）。取出出现频率最大的一百个词（可以采用含有100个节点的最小堆），这样又可以得到5000个文件。最后一步，可以将这5000个文件进行归并过程了（类似于归并排序）。</p>
+<h3 id="在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。"><a href="#在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。" class="headerlink" title="在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。"></a>在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。</h3><p>方案1：可以采用2-bitmap进行，共需要内存</p>
+<h3 id="海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"><a href="#海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。" class="headerlink" title="海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"></a>海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。</h3><h3 id="腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"><a href="#腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？" class="headerlink" title="腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"></a>腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？</h3><p>使用bitmap，或者布隆过滤器。</p>
+<h3 id="10亿个域名如何判断，新来一个域名，如何判断在还是不在"><a href="#10亿个域名如何判断，新来一个域名，如何判断在还是不在" class="headerlink" title="10亿个域名如何判断，新来一个域名，如何判断在还是不在"></a>10亿个域名如何判断，新来一个域名，如何判断在还是不在</h3><p>可以使用布隆过滤器，判断不在就一定不在，判断在的话可能不在。</p>
 ]]></content>
       <categories>
         <category>数据结构与算法</category>
@@ -336,52 +107,6 @@
       <categories>
         <category>C语言</category>
       </categories>
-  </entry>
-  <entry>
-    <title>人为什么活着</title>
-    <url>/2020/10/14/%E7%94%9F%E6%B4%BB/</url>
-    <content><![CDATA[<p>你喜欢的人在努力，你却在想怎么说我爱你</p>
-<a id="more"></a>]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>编写Makefile</title>
-    <url>/2020/10/06/%E7%BC%96%E5%86%99Makefile/</url>
-    <content><![CDATA[<h1 id="编写Makefile"><a href="#编写Makefile" class="headerlink" title="编写Makefile"></a>编写Makefile</h1><hr>
-<p>&ensp;&ensp;&ensp;&ensp;Makefile编写的好可以在工程项目编译链接的过程中省去很多麻烦，平时在练习的过程中也是能方便高效的学习。</p>
-<blockquote>
-<ul>
-<li>整理知识，学习笔记</li>
-<li>发布日记，杂文，所见所想</li>
-<li>撰写发布技术文稿（代码支持）</li>
-<li>撰写发布学术论文（LaTeX 公式支持）</li>
-</ul>
-</blockquote>
-<a id="more"></a>
-
-<p><img src="https://www.zybuluo.com/static/img/logo.png" alt="cmd-markdown-logo"></p>
-<h2 id="一、Makefile相关知识点"><a href="#一、Makefile相关知识点" class="headerlink" title="一、Makefile相关知识点"></a>一、Makefile相关知识点</h2><p>&ensp;&ensp;&ensp;&ensp;需要掌握的一些Makefile相关的基础知识。</p>
-<h3 id="1-忽略出错的命令。"><a href="#1-忽略出错的命令。" class="headerlink" title="1. 忽略出错的命令。"></a>1. 忽略出错的命令。</h3><p>&ensp;&ensp;&ensp;&ensp;如果不希望某条命令因为出错了而导致整个make执行被终止，可以在命令前面加上“-”，表示不管该命令出不出错，后面的命令都将继续执行下去。如：<br>&ensp;&ensp;&ensp;&ensp;mkdir lpyuan<br>&ensp;&ensp;&ensp;&ensp;如果不加“-”并且dir已经存在，则这条命令就会出错，并将导致整个make执行被终止。要想不被终止，则需要在前加上’-‘符号。<br>&ensp;&ensp;&ensp;&ensp;-mkdir dir</p>
-<h3 id="2-显示命令。"><a href="#2-显示命令。" class="headerlink" title="2. 显示命令。"></a>2. 显示命令。</h3><p>&ensp;&ensp;&ensp;&ensp;一般默认make会把命令原样显示出来后再去执行命令，如果我们不需要原样显示命令，则可以在命令前面加一个“@”， 如<br>&ensp;&ensp;&ensp;&ensp;@m -rf lpyuan<br>&ensp;&ensp;&ensp;&ensp;则是不会输出命令。</p>
-<h3 id="3-符号。"><a href="#3-符号。" class="headerlink" title="3. 符号。"></a>3. 符号。</h3><p>&ensp;&ensp;&ensp;&ensp;$@  表示目标文件<br>&ensp;&ensp;&ensp;&ensp;$^  表示所有的依赖文件<br>&ensp;&ensp;&ensp;&ensp;$&lt;  表示第一个依赖文件<br>&ensp;&ensp;&ensp;&ensp;$?  表示比目标还要新的依赖文件列表</p>
-<p>如一个目录下有如下文件：<br>&ensp;&ensp;&ensp;&ensp;hello.c&ensp;&ensp;hi.c&ensp;&ensp;main.c&ensp;&ensp;Makefile<br>按照 Makefile 规则规规矩矩的写：</p>
-<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">main: main.o hello.o hi.o</span></span><br><span class="line">        gcc -o main main.o hello.o hi.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">        cc -c main.c</span><br><span class="line"><span class="section">hello.o: hello.c</span></span><br><span class="line">        cc -c hello.c</span><br><span class="line"><span class="section">hi.o: hi.c</span></span><br><span class="line">        cc -c hi.c</span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">        rm *.o</span><br><span class="line">        rm main</span><br><span class="line">        </span><br><span class="line">改为用上述符号进行替代：</span><br><span class="line"></span><br><span class="line"><span class="section">main: main.o hello.o hi.o</span></span><br><span class="line">        gcc -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">        cc -c <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">hello.o: hello.c</span></span><br><span class="line">        cc -c <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">hi.o: hi.c</span></span><br><span class="line">        cc -c <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">        rm *.o</span><br><span class="line">        rm main</span><br></pre></td></tr></table></figure>
-<h3 id="4-Makefile中的常用函数。"><a href="#4-Makefile中的常用函数。" class="headerlink" title="4. Makefile中的常用函数。"></a>4. Makefile中的常用函数。</h3><h4 id="4-1-函数名称-：反过滤函数—filter-out。"><a href="#4-1-函数名称-：反过滤函数—filter-out。" class="headerlink" title="4.1 函数名称 ：反过滤函数—filter-out。"></a>4.1 函数名称 ：反过滤函数—filter-out。</h4><p>格式：$(filter-out PATTERN…,TEXT)<br>函数功能 ：和“filter”函数实现的功能相反。过滤掉字串“TEXT”中所有符合“PATTERN”的单词，保留所有不符合的单词。可以多个模式。存在多模式时，模式表达式之间使用空格分割。<br>返回值 ：空格分割的“TEXT”字串中所有不符合模式“PATTERN”的字串。<br>函数说明： “filter-out”函数也可以用来去除一个变量中的某些字符串（实现和“filter”函数相反）。<br>下面有个例子：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">objects&#x3D;main1.o foo.o main2.o bar.o </span><br><span class="line">mains&#x3D;main1.o main2.o</span><br><span class="line">$(filter-out$(mains),$(objects))</span><br><span class="line">实现了去除变量&quot;objects&quot;中&quot;mains&quot;定义的字串（文件名）功能。它的返回值为&quot;foo.o bar.o&quot;。</span><br></pre></td></tr></table></figure>
-<h2 id="二、Makefile通用模板"><a href="#二、Makefile通用模板" class="headerlink" title="二、Makefile通用模板"></a>二、Makefile通用模板</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TARGET&#x3D;server</span><br><span class="line">CC&#x3D;g++</span><br><span class="line">CFLAG&#x3D;-c -g -static</span><br><span class="line">#所有的.c文件</span><br><span class="line">SRCS:&#x3D;$(wildcard ..&#x2F;*.c)</span><br><span class="line">FILTERS&#x3D;..&#x2F;hello.c</span><br><span class="line">#从SRCS中除了hello.c文件 filter函数可以选择满足条件的</span><br><span class="line">SRCS:&#x3D;$(filter-out $(FILTERS), $(SRCS))</span><br><span class="line">OBJS:&#x3D;$(patsubst %.c, %.o, $(SRCS))</span><br><span class="line">CURRENT_PATH&#x3D;$(PWD)</span><br><span class="line">CPPFLAGS&#x3D; -I..&#x2F;include -I..&#x2F;util</span><br><span class="line">LIBS_PATH&#x3D;-L..&#x2F;lib64</span><br><span class="line">LIBS&#x3D;-lmylib</span><br><span class="line"></span><br><span class="line">#判断是哪个系统32bit编译还是在64bit编译。</span><br><span class="line">ARCH:&#x3D;$(shell uname -m)</span><br><span class="line">ifeq ($(ARCH), x86_64)</span><br><span class="line">VERSION:&#x3D;X86_64</span><br><span class="line">else</span><br><span class="line">VERSION:&#x3D;i686</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">$(TARGET):$(OBJS)</span><br><span class="line">        $(CC) $(DEBUG) $(SRCS) $(LIBS_PATH) $(LIBS) $(CPPFLAGS) -o $(TARGET)</span><br><span class="line"></span><br><span class="line">$(OBJS):%.o:%.c</span><br><span class="line">        $(CC) $(CFLAG) $&lt; -o $@</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">        rm -rf *~ *.bak $(TARGET)</span><br><span class="line"></span><br><span class="line">【顶层Makefile编写】</span><br><span class="line">all: all_client all_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">all_client:</span><br><span class="line">    $(MAKE) -C client</span><br><span class="line">all_server:</span><br><span class="line">    $(MAKE) -C server</span><br><span class="line"></span><br><span class="line">clean: clean_client clean_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">clean_client:</span><br><span class="line">    $(MAKE) -C client clean</span><br><span class="line">clean_server:</span><br><span class="line">    $(MAKE) -C server clean</span><br></pre></td></tr></table></figure>
-<hr>
-<p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#112;&#x79;&#117;&#97;&#x6e;&#50;&#x31;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#x6f;&#x6d;">&#108;&#112;&#x79;&#117;&#97;&#x6e;&#50;&#x31;&#64;&#x6f;&#x75;&#116;&#x6c;&#111;&#111;&#107;&#46;&#99;&#x6f;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
-]]></content>
-      <categories>
-        <category>Testing</category>
-      </categories>
-      <tags>
-        <tag>Testing</tag>
-        <tag>Another Tag</tag>
-      </tags>
   </entry>
   <entry>
     <title>进程间通信</title>
@@ -417,19 +142,24 @@
       </categories>
   </entry>
   <entry>
-    <title>腾讯面试</title>
-    <url>/2020/11/17/%E8%85%BE%E8%AE%AF%E9%9D%A2%E8%AF%95/</url>
-    <content><![CDATA[<p>1、100万数据个是topK。</p>
-<p>2、32位无符号整形个数的QQ号记录QQ号的状态 上线和下线，计算使用多少内存。</p>
-<p>3、printf(“%d “, 1, 2, 3);  printf(“%s”)；</p>
-<p>4、HTTP 和 HTTPS的区别。1、对称加密和非对称加密。2、效率问题的瓶颈。</p>
+    <title>信号signal</title>
+    <url>/2021/01/03/%E4%BF%A1%E5%8F%B7signal/</url>
+    <content><![CDATA[<h1 id="信号机制"><a href="#信号机制" class="headerlink" title="信号机制"></a>信号机制</h1><blockquote>
+<p>信号：</p>
+<p>信号是一种软中断，信号提供了一种处理异步事件的方法。比如终端运行着一个程序，我们在设备输入一个ctrl+c中断停止的按键，那么我们实际上通过触发一个信号（）停止了一个程序。</p>
+<p>信号的处理：</p>
+<p>（1）可以直接将其忽略掉。大多数信号可以直接忽略掉但有两种信号却决不能被忽略，它们是SIGKILL和SIGSTOP信号。</p>
+<p>（2）捕捉信号，注册信号处理函数。</p>
+<p>（3）执行系统的默认动作。</p>
 <a id="more"></a>
 
-<p>5、阻塞问题</p>
-<p>1、对端接收处理不过来 。流量控制。</p>
-<p>2、网络阻塞。拥塞控制。</p>
-<p>3、项目问题</p>
+<p>进程创建：</p>
+<p>当一个进程调用fork函数的时候，其子进程会直接继承父进程的信号处理方式，因为子进程在开始复制了父进程的春初对象，所以信号捕捉函数的地址在子进程中是有意义的。</p>
+</blockquote>
 ]]></content>
+      <categories>
+        <category>Unix环境编程</category>
+      </categories>
   </entry>
   <entry>
     <title>手撕代码</title>
@@ -473,6 +203,188 @@
       <categories>
         <category>面试宝典</category>
       </categories>
+  </entry>
+  <entry>
+    <title>docker</title>
+    <url>/2020/12/20/docker/</url>
+    <content><![CDATA[<p>Docker 本质上就是一个虚拟机。</p>
+<p><img src="/2020/12/20/docker/image.png" alt="image-20201220085110478"></p>
+<p>在docker中有几个基本的概念。</p>
+<p>1、镜像：类似于平时使用的iso或者image镜像文件。</p>
+<p>2、容器：容器其实就会类似于虚拟机</p>
+<p>3、tar文件：类似于vmdk文件，可以直接打个包在别的地方直接run运行。</p>
+<p>4、docker file。docker 的一些配置</p>
+<p>5、仓库：存放有很多已经打包好的镜像，MySQL镜像、ngnix镜像等。</p>
+<a id="more"></a>
+
+<p>常用的操作命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1、直接从远程仓库下载mysql镜像</span><br><span class="line">docker search mysql 查找mysql镜像</span><br><span class="line">docker pull mysql   下载mysql镜像</span><br><span class="line">等价于命令docker pull mysql:latest,不指定版本会直接默认下载最新的版本镜像。</span><br><span class="line"></span><br><span class="line">2、查看本地的镜像</span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line">3、运行容器</span><br><span class="line">docker run -d 3307:3306 mysql</span><br><span class="line">-d 指定后台运行不阻塞当前shell窗口</span><br><span class="line">-p 指定内外部端口映射 外部:内部</span><br><span class="line"></span><br><span class="line">4、查看正在运行的容器，查看活跃的容器。</span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line">5、进入容器</span><br><span class="line">docker exec -it id bash</span><br><span class="line"></span><br><span class="line">6、启动停止容器</span><br><span class="line">docker stop &lt;容器ID&gt;</span><br><span class="line">docker restart &lt;容器ID&gt;</span><br><span class="line"></span><br><span class="line">7、删除docker实例</span><br><span class="line">docker rm -f 实例ID</span><br><span class="line"></span><br><span class="line">8、查询mysql镜像</span><br><span class="line">docker search mysql</span><br><span class="line"></span><br><span class="line">9、保存容器镜像</span><br><span class="line">docker commit 实例ID 新的名字</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/12/20/docker/image1.png" alt="image-20201220090133527"></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>IO多路复用</title>
+    <url>/2020/12/20/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/</url>
+    <content><![CDATA[<blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;我们可以将标准输入、套接字等都看做IO的一路，多路复用的意思是在任何一路IO有事件的情况下，通知应用程序去处理相应的IO事件，这样程序就仿佛可以同一时刻处理多个IO事件了。</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="select"><a href="#select" class="headerlink" title="select"></a>select</h1><blockquote>
+<ul>
+<li><p>select fd_set结构，底层是一个bitmap结构，是定长的1024，不容易改，如果需要改需要重新编译内核代码。</p>
+</li>
+<li><p>使用select函数，通知内核挂起进程，当一个或者多个IO事件发生之后，控制权限返回给应用程序，由应用程序进行IO事件的处理。</p>
+</li>
+<li><p>当有事件发生的时候，并不知道具体是哪几条流（可能有一个也可能有多个），只能轮询一遍出所有的流，找出相应的数据，或者写入数据的流，**时间复杂度为O(n)**。</p>
+</li>
+<li><p>需要维护一个存放大量fd的数据结构，当用户空间向内核空间传递该数据结构的时候会发生大量的拷贝，拷贝开销大，从而影响效率。</p>
+</li>
+</ul>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/select.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">select</span><span class="params">(<span class="keyword">int</span> maxfd, fd_set *readset, fd_set *writeset, fd_set *expectset, struct timeval *timeout)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">timeval</span>&#123;</span></span><br><span class="line">	<span class="keyword">long</span> tv_sec;		<span class="comment">/* 秒 */</span></span><br><span class="line">	<span class="keyword">long</span> tv_usec;		<span class="comment">/* 微秒 */</span></span><br><span class="line">&#125;</span><br><span class="line">timeout可以有三种情况：</span><br><span class="line">timeout == <span class="literal">NULL</span>;	<span class="comment">/* 等待无限长的时间 */</span></span><br><span class="line">timeout-&gt;tv_sec == <span class="number">0</span> &amp;&amp; timeout-&gt;tv_usec == <span class="number">0</span>	<span class="comment">/* 不等待，直接返回。（Noblock 非阻塞）*/</span></span><br><span class="line">timeout-&gt;tv_sec != <span class="number">0</span> || timeout-&gt;usec != <span class="number">0</span>	<span class="comment">/* 等待指定的时间 */</span></span><br><span class="line">  </span><br><span class="line"><span class="comment">/* FD_ZERO 将一个fd_set类型的变量的所有的位都设置为0 */</span></span><br><span class="line"><span class="keyword">int</span> FD_ZERO(fd_set *fdset);</span><br><span class="line"></span><br><span class="line"><span class="comment">/* FD_CLR 可以将某一个位进行清除 */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">FD_CLR</span><span class="params">(fd_set *fdset)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* FD_SET 用来将某一个位进行置位1 */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">FD_SET</span><span class="params">(<span class="keyword">int</span> fd, fd_set *fdset)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* FD_ISSET 用来检测某一个位是否被置位 */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">FD_ISSET</span><span class="params">(<span class="keyword">int</span> fd, fd_set *fdset)</span></span>;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>返回值（return value）:做好准备的文件描述符个数，超时为0， 错误为-1。</p>
+<p>中间的三个参数readset、writeset、exepectset，分别是读描述符集合 readset、写描述符集合 writeset 和异常描述符集合 exceptset，这些参数指明了我们关心哪一些描述符，和需要满足什么条件。一个文件描述符保存在fd_set类型之中，fd_set其实就是一个位图bitmap。</p>
+<p>int maxfd; 指的是最大的文件描述符加1。</p>
+<p>Linux环境下编程，系统给提供了一组宏定义，可以对我们的fd_set进行赋值等操作。</p>
+<p>Demo:</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> **argv)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (argc != <span class="number">2</span>) &#123;</span><br><span class="line">        error(<span class="number">1</span>, <span class="number">0</span>, <span class="string">&quot;usage: select01 &lt;IPaddress&gt;&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> socket_fd = tcp_client(argv[<span class="number">1</span>], SERV_PORT);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">char</span> recv_line[MAXLINE], send_line[MAXLINE];</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line"></span><br><span class="line">    fd_set readmask;</span><br><span class="line">    fd_set allreads;</span><br><span class="line">    FD_ZERO(&amp;allreads);</span><br><span class="line">    FD_SET(<span class="number">0</span>, &amp;allreads);</span><br><span class="line">    FD_SET(socket_fd, &amp;allreads);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (;;) &#123;</span><br><span class="line">        readmask = allreads;</span><br><span class="line">        <span class="keyword">int</span> rc = select(socket_fd + <span class="number">1</span>, &amp;readmask, <span class="literal">NULL</span>, <span class="literal">NULL</span>, <span class="literal">NULL</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (rc &lt;= <span class="number">0</span>) &#123;</span><br><span class="line">            error(<span class="number">1</span>, errno, <span class="string">&quot;select failed&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (FD_ISSET(socket_fd, &amp;readmask)) &#123;</span><br><span class="line">            n = read(socket_fd, recv_line, MAXLINE);</span><br><span class="line">            <span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                error(<span class="number">1</span>, errno, <span class="string">&quot;read error&quot;</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">                error(<span class="number">1</span>, <span class="number">0</span>, <span class="string">&quot;server terminated \n&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            recv_line[n] = <span class="number">0</span>;</span><br><span class="line">            <span class="built_in">fputs</span>(recv_line, <span class="built_in">stdout</span>);</span><br><span class="line">            <span class="built_in">fputs</span>(<span class="string">&quot;\n&quot;</span>, <span class="built_in">stdout</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (FD_ISSET(STDIN_FILENO, &amp;readmask)) &#123;</span><br><span class="line">            <span class="keyword">if</span> (fgets(send_line, MAXLINE, <span class="built_in">stdin</span>) != <span class="literal">NULL</span>) &#123;</span><br><span class="line">                <span class="keyword">int</span> i = <span class="built_in">strlen</span>(send_line);</span><br><span class="line">                <span class="keyword">if</span> (send_line[i - <span class="number">1</span>] == <span class="string">&#x27;\n&#x27;</span>) &#123;</span><br><span class="line">                    send_line[i - <span class="number">1</span>] = <span class="number">0</span>;</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;now sending %s\n&quot;</span>, send_line);</span><br><span class="line">                <span class="keyword">size_t</span> rt = write(socket_fd, send_line, <span class="built_in">strlen</span>(send_line));</span><br><span class="line">                <span class="keyword">if</span> (rt &lt; <span class="number">0</span>) &#123;</span><br><span class="line">                    error(<span class="number">1</span>, errno, <span class="string">&quot;write failed &quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="built_in">printf</span>(<span class="string">&quot;send bytes: %zu \n&quot;</span>, rt);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="poll"><a href="#poll" class="headerlink" title="poll"></a>poll</h1><blockquote>
+<p>poll其实本质和select一样没有太大的区别，主要有几点改变。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">&gt;<span class="class"><span class="keyword">struct</span> <span class="title">pollfd</span>&#123;</span></span><br><span class="line"><span class="keyword">int</span> fd;</span><br><span class="line"><span class="keyword">short</span> events;</span><br><span class="line"><span class="keyword">short</span> revents;</span><br><span class="line">&gt;&#125;;</span><br><span class="line"></span><br><span class="line">&gt;<span class="function"><span class="keyword">int</span> <span class="title">poll</span><span class="params">(struct pollfd *fds, <span class="keyword">unsigned</span> <span class="keyword">long</span> nfds, <span class="keyword">int</span> timeout)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Events可以表示多个不同的事件，具体的实现可以通过二进制掩码位操作来完成，例如<code>POLLIN</code>和<code>POLLOUT</code>表示可读可写事件。</p>
+</li>
+<li><p>与select不同的在于，poll每次检测之后的结果不会修改元凯的传入的值，而是将结果保留在revents字段中，这样就不用每次检测完成之后都要重置待检测的描述字和感兴趣的事件。revents可以理解<code>return events</code>。</p>
+</li>
+<li><p>如果对某个pollfd结构进行事件检测，可以将对应的pollfd结构的fd成员设置成一个负值，poll函数将会忽略该事件。</p>
+</li>
+<li><p>突破了select(1024)最大文件描述符的限制，原因是它是基于链表来存储</p>
+</li>
+</ul>
+<p> <strong>同样存在缺点：</strong></p>
+<p> 1、依旧是大量的fd数组在用户空间和内核空间之间进行拷贝。</p>
+<p> 2、poll是水平触发，如果fd就绪被报告之后没有对其进行处理，下次poll韩式会再次报告该事件。</p>
+</blockquote>
+<h1 id="epoll"><a href="#epoll" class="headerlink" title="epoll"></a>epoll</h1><p>epoll接口</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/epoll.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">epoll_create</span><span class="params">(<span class="keyword">int</span> size)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">epoll_ctl</span><span class="params">(<span class="keyword">int</span> epfd, <span class="keyword">int</span> op, <span class="keyword">int</span> fd, struct epoll_event *event)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">epoll_wait</span><span class="params">(<span class="keyword">int</span> epfd, struct epoll_event *events, <span class="keyword">int</span> maxevents, <span class="keyword">int</span> timeout)</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<ul>
+<li><p>epoll_create 函数是一个系统调用函数，函数将会在内核空间开辟一块新的空间，可以理解为epoll结构空间，返回值为epoll的文件描述符编号，方便后续操作使用。</p>
+</li>
+<li><p>epoll_ctl是epoll事件的注册函数，epoll与select不同，select函数是调用时指定的需要监听的描述符和事件，epoll先将用户感兴趣的描述符事件注册到epoll空间内，此函数是非阻塞函数，作用仅仅是增删改epoll空间内的描述符信息。<br>  参数1：epfd，epoll结构的进程fd编号，函数将依靠该编号找到对应的epoll结构。<br>  参数2：op，表示当前的请求的类型，由三个定义：</p>
+<p>  EPOLL_CTL_ADD:注册新的fd到epoll中。</p>
+<p>  EPOLL_CTL_MOD:修改已经注册的fd的监听事件。</p>
+<p>EPOLL_CTL_DEL:从epfd中删除一个fd。<br>  参数3：fd,需要监听的文件描述符，一般指的是sockfd。<br>  参数4：event，告诉内核该fd资源感兴趣的事件。</p>
+</li>
+<li><p>epoll_wait函数，等待事件的发生，类似于select()函数调用。根据参数timeout，决定是否处于阻塞模式。<br>  参数1：epfd，指定一个感兴趣事件列表。<br>  参数2：*events，是一个指针，必须指向一个epoll_event结构数组，当函数返回的时候，内核会将就绪状态的的数据拷贝到该数组中。<br>  参数3：maxevents，标明参数2epoll_event结构数组最多能接收的数据量，即本次操作做多能获取多少就绪数据。<br>  参数4: timeout，单位为毫秒。</p>
+<pre><code> 0：表示立即返回。
+ -1：阻塞调用，直到有用户感兴趣事件就绪为止。
+</code></pre>
+</li>
+</ul>
+<p>(1) epoll_create 函数是一个系统调用函数，函数将会在内核空间开辟一块新的空间，可以理解为epoll结构空间，返回值为epoll的文件描述符编号，方便后续操作使用。</p>
+<p>(2) epoll_ctl是epoll事件的注册函数，epoll与select不同，select函数是调用时指定的需要监听的描述符和事件，epoll先将用户感兴趣的描述符事件注册到epoll空间内，此函数是非阻塞函数，作用仅仅是增删改epoll空间内的描述符信息。<br>  参数1：epfd，epoll结构的进程fd编号，函数将依靠该编号找到对应的epoll结构。<br>  参数2：op，表示当前的请求的类型，由三个定义：</p>
+<p>​                EPOLL_CTL_ADD:注册新的fd到epoll中。</p>
+<p>​                EPOLL_CTL_MOD:修改已经注册的fd的监听事件。</p>
+<p>​                EPOLL_CTL_DEL:从epfd中删除一个fd。<br>  参数3：fd,需要监听的文件描述符，一般指的是sockfd。<br>  参数4：event，告诉内核该fd资源感兴趣的事件。</p>
+<p>(3)epoll_wait函数，等待事件的发生，类似于select()函数调用。根据参数timeout，决定是否处于阻塞模式。<br>  参数1：epfd，指定一个感兴趣事件列表。<br>  参数2：*events，是一个指针，必须指向一个epoll_event结构数组，当函数返回的时候，内核会将就绪状态的的数据拷贝到该数组中。<br>  参数3：maxevents，标明参数2epoll_event结构数组最多能接收的数据量，即本次操作做多能获取多少就绪数据。<br>  参数4: timeout，单位为毫秒。<br>         0 表示立即返回。</p>
+<p>​        -1 阻塞调用，直到有用户感兴趣事件就绪为止。</p>
+<p>​        &gt;0 阻塞调用，阻塞指定的时间内如果有时间就绪则是提前返回，否则就等待指定的事件后返回。<br>  返回值（return value）：本次就绪的fd的个数。</p>
+<p>工作模式：<br>       epoll对文件描述符的操作有两种模式：LT(水平触发)和ET(边缘触发)。LT是默认模式，两者的区别如下：<br>       LT(level 水平触发)：事件就绪之后，用户可以选择处理或者不处理，如果用户本次未进行处理，那么下次调用epoll_wait时候仍然会将未出的事件打包给你。<br>       ET(edge 边缘触发)： 事件就绪之后，用户必须处理，因为内核不给给你兜底，内核把就绪的事件打包给用户态之后，就会把对应的就绪事件清理掉，不会再次通知用户。<br>       ET模式在很大的程度上减少了epoll事件被重复触发的次数，因此被认为效率比LT模式高，也是epoll重要的杀手锏。</p>
+<p><strong>epoll优点：</strong></p>
+<p>1、没有最大文件描述符限制</p>
+<p>2、使用mmap文件映射内存加速与内核空间的消息传递，不再是大量的fd从用户空间拷贝到内核空间，大大减少了拷贝的开销。</p>
+<p>3、效率提升，不再使用轮询</p>
+</blockquote>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>1、<a href="https://blog.csdn.net/qq_35976351/article/details/85228002">https://blog.csdn.net/qq_35976351/article/details/85228002</a></p>
+<p>2、<a href="https://time.geekbang.org/column/article/138948">https://time.geekbang.org/column/article/138948</a></p>
+]]></content>
+      <categories>
+        <category>Unix环境编程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2020/11/29/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>title: Go语言error错误处理<br>date: 2021-02-1 16:39:14<br>tags:<br>categories:</p>
+<h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><p>Go语言的错误处理</p>
+<a id="more"></a>
+
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+  </entry>
+  <entry>
+    <title>腾讯面试</title>
+    <url>/2020/11/17/%E8%85%BE%E8%AE%AF%E9%9D%A2%E8%AF%95/</url>
+    <content><![CDATA[<p>1、100万数据个是topK。</p>
+<p>2、32位无符号整形个数的QQ号记录QQ号的状态 上线和下线，计算使用多少内存。</p>
+<p>3、printf(“%d “, 1, 2, 3);  printf(“%s”)；</p>
+<p>4、HTTP 和 HTTPS的区别。1、对称加密和非对称加密。2、效率问题的瓶颈。</p>
+<a id="more"></a>
+
+<p>5、阻塞问题</p>
+<p>1、对端接收处理不过来 。流量控制。</p>
+<p>2、网络阻塞。拥塞控制。</p>
+<p>3、项目问题</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>编写Makefile</title>
+    <url>/2020/10/06/%E7%BC%96%E5%86%99Makefile/</url>
+    <content><![CDATA[<h1 id="编写Makefile"><a href="#编写Makefile" class="headerlink" title="编写Makefile"></a>编写Makefile</h1><hr>
+<p>&ensp;&ensp;&ensp;&ensp;Makefile编写的好可以在工程项目编译链接的过程中省去很多麻烦，平时在练习的过程中也是能方便高效的学习。</p>
+<blockquote>
+<ul>
+<li>整理知识，学习笔记</li>
+<li>发布日记，杂文，所见所想</li>
+<li>撰写发布技术文稿（代码支持）</li>
+<li>撰写发布学术论文（LaTeX 公式支持）</li>
+</ul>
+</blockquote>
+<a id="more"></a>
+
+<p><img src="https://www.zybuluo.com/static/img/logo.png" alt="cmd-markdown-logo"></p>
+<h2 id="一、Makefile相关知识点"><a href="#一、Makefile相关知识点" class="headerlink" title="一、Makefile相关知识点"></a>一、Makefile相关知识点</h2><p>&ensp;&ensp;&ensp;&ensp;需要掌握的一些Makefile相关的基础知识。</p>
+<h3 id="1-忽略出错的命令。"><a href="#1-忽略出错的命令。" class="headerlink" title="1. 忽略出错的命令。"></a>1. 忽略出错的命令。</h3><p>&ensp;&ensp;&ensp;&ensp;如果不希望某条命令因为出错了而导致整个make执行被终止，可以在命令前面加上“-”，表示不管该命令出不出错，后面的命令都将继续执行下去。如：<br>&ensp;&ensp;&ensp;&ensp;mkdir lpyuan<br>&ensp;&ensp;&ensp;&ensp;如果不加“-”并且dir已经存在，则这条命令就会出错，并将导致整个make执行被终止。要想不被终止，则需要在前加上’-‘符号。<br>&ensp;&ensp;&ensp;&ensp;-mkdir dir</p>
+<h3 id="2-显示命令。"><a href="#2-显示命令。" class="headerlink" title="2. 显示命令。"></a>2. 显示命令。</h3><p>&ensp;&ensp;&ensp;&ensp;一般默认make会把命令原样显示出来后再去执行命令，如果我们不需要原样显示命令，则可以在命令前面加一个“@”， 如<br>&ensp;&ensp;&ensp;&ensp;@m -rf lpyuan<br>&ensp;&ensp;&ensp;&ensp;则是不会输出命令。</p>
+<h3 id="3-符号。"><a href="#3-符号。" class="headerlink" title="3. 符号。"></a>3. 符号。</h3><p>&ensp;&ensp;&ensp;&ensp;$@  表示目标文件<br>&ensp;&ensp;&ensp;&ensp;$^  表示所有的依赖文件<br>&ensp;&ensp;&ensp;&ensp;$&lt;  表示第一个依赖文件<br>&ensp;&ensp;&ensp;&ensp;$?  表示比目标还要新的依赖文件列表</p>
+<p>如一个目录下有如下文件：<br>&ensp;&ensp;&ensp;&ensp;hello.c&ensp;&ensp;hi.c&ensp;&ensp;main.c&ensp;&ensp;Makefile<br>按照 Makefile 规则规规矩矩的写：</p>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">main: main.o hello.o hi.o</span></span><br><span class="line">        gcc -o main main.o hello.o hi.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">        cc -c main.c</span><br><span class="line"><span class="section">hello.o: hello.c</span></span><br><span class="line">        cc -c hello.c</span><br><span class="line"><span class="section">hi.o: hi.c</span></span><br><span class="line">        cc -c hi.c</span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">        rm *.o</span><br><span class="line">        rm main</span><br><span class="line">        </span><br><span class="line">改为用上述符号进行替代：</span><br><span class="line"></span><br><span class="line"><span class="section">main: main.o hello.o hi.o</span></span><br><span class="line">        gcc -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">        cc -c <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">hello.o: hello.c</span></span><br><span class="line">        cc -c <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">hi.o: hi.c</span></span><br><span class="line">        cc -c <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">        rm *.o</span><br><span class="line">        rm main</span><br></pre></td></tr></table></figure>
+<h3 id="4-Makefile中的常用函数。"><a href="#4-Makefile中的常用函数。" class="headerlink" title="4. Makefile中的常用函数。"></a>4. Makefile中的常用函数。</h3><h4 id="4-1-函数名称-：反过滤函数—filter-out。"><a href="#4-1-函数名称-：反过滤函数—filter-out。" class="headerlink" title="4.1 函数名称 ：反过滤函数—filter-out。"></a>4.1 函数名称 ：反过滤函数—filter-out。</h4><p>格式：$(filter-out PATTERN…,TEXT)<br>函数功能 ：和“filter”函数实现的功能相反。过滤掉字串“TEXT”中所有符合“PATTERN”的单词，保留所有不符合的单词。可以多个模式。存在多模式时，模式表达式之间使用空格分割。<br>返回值 ：空格分割的“TEXT”字串中所有不符合模式“PATTERN”的字串。<br>函数说明： “filter-out”函数也可以用来去除一个变量中的某些字符串（实现和“filter”函数相反）。<br>下面有个例子：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">objects&#x3D;main1.o foo.o main2.o bar.o </span><br><span class="line">mains&#x3D;main1.o main2.o</span><br><span class="line">$(filter-out$(mains),$(objects))</span><br><span class="line">实现了去除变量&quot;objects&quot;中&quot;mains&quot;定义的字串（文件名）功能。它的返回值为&quot;foo.o bar.o&quot;。</span><br></pre></td></tr></table></figure>
+<h2 id="二、Makefile通用模板"><a href="#二、Makefile通用模板" class="headerlink" title="二、Makefile通用模板"></a>二、Makefile通用模板</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TARGET&#x3D;server</span><br><span class="line">CC&#x3D;g++</span><br><span class="line">CFLAG&#x3D;-c -g -static</span><br><span class="line">#所有的.c文件</span><br><span class="line">SRCS:&#x3D;$(wildcard ..&#x2F;*.c)</span><br><span class="line">FILTERS&#x3D;..&#x2F;hello.c</span><br><span class="line">#从SRCS中除了hello.c文件 filter函数可以选择满足条件的</span><br><span class="line">SRCS:&#x3D;$(filter-out $(FILTERS), $(SRCS))</span><br><span class="line">OBJS:&#x3D;$(patsubst %.c, %.o, $(SRCS))</span><br><span class="line">CURRENT_PATH&#x3D;$(PWD)</span><br><span class="line">CPPFLAGS&#x3D; -I..&#x2F;include -I..&#x2F;util</span><br><span class="line">LIBS_PATH&#x3D;-L..&#x2F;lib64</span><br><span class="line">LIBS&#x3D;-lmylib</span><br><span class="line"></span><br><span class="line">#判断是哪个系统32bit编译还是在64bit编译。</span><br><span class="line">ARCH:&#x3D;$(shell uname -m)</span><br><span class="line">ifeq ($(ARCH), x86_64)</span><br><span class="line">VERSION:&#x3D;X86_64</span><br><span class="line">else</span><br><span class="line">VERSION:&#x3D;i686</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">$(TARGET):$(OBJS)</span><br><span class="line">        $(CC) $(DEBUG) $(SRCS) $(LIBS_PATH) $(LIBS) $(CPPFLAGS) -o $(TARGET)</span><br><span class="line"></span><br><span class="line">$(OBJS):%.o:%.c</span><br><span class="line">        $(CC) $(CFLAG) $&lt; -o $@</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">        rm -rf *~ *.bak $(TARGET)</span><br><span class="line"></span><br><span class="line">【顶层Makefile编写】</span><br><span class="line">all: all_client all_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">all_client:</span><br><span class="line">    $(MAKE) -C client</span><br><span class="line">all_server:</span><br><span class="line">    $(MAKE) -C server</span><br><span class="line"></span><br><span class="line">clean: clean_client clean_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">clean_client:</span><br><span class="line">    $(MAKE) -C client clean</span><br><span class="line">clean_server:</span><br><span class="line">    $(MAKE) -C server clean</span><br></pre></td></tr></table></figure>
+<hr>
+<p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#112;&#x79;&#117;&#97;&#x6e;&#50;&#x31;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;">&#108;&#112;&#x79;&#117;&#97;&#x6e;&#50;&#x31;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
+]]></content>
+      <categories>
+        <category>Testing</category>
+      </categories>
+      <tags>
+        <tag>Testing</tag>
+        <tag>Another Tag</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/10/06/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>面试笔试</title>
@@ -621,6 +533,95 @@
 ]]></content>
       <categories>
         <category>面试宝典</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hexo搭建个人站点</title>
+    <url>/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>花了好几天，熬了几个夜晚，终于把自己的个人博客搭建起来了网站，顺便来一篇教程，分享给大家，同时也方便以后再次部署。我之前是在github上搭建了一版，github+hexo,奈何实在太卡了，想起自己在阿里云有台服务器，然后直接部署到云上了,下面方法步骤亲测成功。</p>
+<a id="more"></a>
+
+<h1 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h1><blockquote>
+<ul>
+<li>一台个人PC</li>
+<li>money!(开玩笑的 ^-^)</li>
+<li>一台linux服务器，可以买台云服务器，没有又想体验的话就VM虚拟机，本地看看过把瘾吧。^ ^</li>
+</ul>
+</blockquote>
+<h1 id="需要的软件环境"><a href="#需要的软件环境" class="headerlink" title="需要的软件环境"></a>需要的软件环境</h1><blockquote>
+<ul>
+<li>Git</li>
+<li>Node.js</li>
+<li>hexo-cli</li>
+<li>Nginx</li>
+</ul>
+</blockquote>
+<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p><a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a><br>下一步下一步傻瓜式安装</p>
+<h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下一步下一步傻瓜式安装</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p><img src="/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image1.jpg" alt="点击图片时候下方显示描述"></p>
+<p>&ensp;&ensp;&ensp;&ensp;选择一个文件夹作为你的博客文件夹，比如我自己建立在E:盘在命令行窗口下：</p>
+<p><img src="/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image2.jpg" alt="点击图片时候下方显示描述"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v     # 查看hexo安装成功没</span><br><span class="line">cd e:       # 打开e盘;</span><br><span class="line">mkdir blog; # 创建blog文件夹作为我的博客目录</span><br><span class="line">cd blog     # 进入blog目录</span><br><span class="line">hexo init   # 初始化blog</span><br><span class="line">hexo g      # 生成静态页面</span><br><span class="line">hexo s      # 启动服务监听</span><br><span class="line">打开页面    localhost:4000</span><br><span class="line">可以看到hello world 的页面，初步完成。</span><br><span class="line"></span><br><span class="line">常用命令</span><br><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line"></span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d # 一件生成静态页面同时上传</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>Hexo有很多很不错的主题，使用过butterfly、replica、landscape等等，目前陷入<strong>Next</strong>主题的坑(简直太好用了！！)。</p>
+<p><strong>主题地址</strong></p>
+<p><a href="https://github.com/theme-next/hexo-theme-next">Next主题社区维护版本入口地址</a></p>
+<p><strong>文章评论系统</strong></p>
+<p>目前本站使用的是Valine评论系统，感觉还不错，下面介绍怎么配置使用这个系统。</p>
+<p>首先这个Valine评论系统是可以很好的支持Next主题的，它支持Markdown语法，没有后端是基于LeanCloud的所以我们需要注册一个LeanCloud账户，</p>
+<p><a href="https://console.leancloud.cn/">LeanCloud官网入口地址</a></p>
+<p>注册完成后，选择创建应用，然后选择开发版本，填写描述信息，然后生成，同时将<strong>App ID</strong> 和 <strong>App Key</strong>记下来。</p>
+<ul>
+<li>设置Next主题，在主题配置文件中找到valine进行配置，将生成的<strong>App ID</strong> 和 <strong>App Key</strong>填入对应的字段，如下图。</li>
+</ul>
+<img src="/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image-20210219032911009.png" alt="image-20210219032911009" style="zoom:25%;">
+
+<ul>
+<li>如果想要管理评论，进入 leancloud 官网，找到 <code>控制台</code>-&gt;<code>存储</code>-&gt;<code>commet</code> 中进行管理。</li>
+</ul>
+<h4 id="设置代码高亮"><a href="#设置代码高亮" class="headerlink" title="设置代码高亮"></a>设置代码高亮</h4><p>NexT 代码高亮，共有5款主题供你选择。 NexT 默认使用的是 白色的 <code>normal</code> 主题，可选的值有 <code>normal</code>，<code>night</code>， <code>night blue</code>， <code>night bright</code>， <code>night eighties</code>：</p>
+<p>更改 <code>highlight_theme</code> 字段，将其值设定成你所喜爱的高亮主题，例如：</p>
+<p>高亮主题设置示例</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Code Highlight theme</span></span><br><span class="line"><span class="comment"># Available value: normal | night | night eighties | night blue | night bright</span></span><br><span class="line"><span class="comment"># https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line"><span class="attr">highlight_theme:</span> <span class="string">normal</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Google浏览器无法安装问题</title>
+    <url>/2020/03/02/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p><img src="/2020/03/02/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image1.jpg" alt="点击图片时候下方显示描述"></p>
+<p>&ensp;&ensp;&ensp;&ensp;今天遇到一个有趣的问题，Google浏览器莫名其面的一直安装不上，自己捣鼓了好久最后才解决。网上有很多方法说是因为注册表有残留，准确的说是GoogleUpdate这个东西在作怪，解决的方法只需要将注册表里Google相关的东西删除。</p>
+<a id="more"></a>
+
+<h1 id="打开注册表直接Win-R输入regedit"><a href="#打开注册表直接Win-R输入regedit" class="headerlink" title="打开注册表直接Win+R输入regedit"></a>打开注册表直接Win+R输入regedit</h1><p><img src="/2020/03/02/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image2.jpg"></p>
+<h1 id="删除注册表残留数据。"><a href="#删除注册表残留数据。" class="headerlink" title="删除注册表残留数据。"></a>删除注册表残留数据。</h1><p>&ensp;&ensp;&ensp;&ensp;删除\HKEY_CURRENT_USER\Software\和HKEY_LOCAL_MACHINE\SOFTWARE目录下的Google及对应的子目录就可以了。但是我操作的时候出现了问题，删除Google目录时候报错，后面发现是权限问题。解决方法：右键该目录修改管理员权限可以删除。</p>
+<h1 id="确认电脑系统版本。"><a href="#确认电脑系统版本。" class="headerlink" title="确认电脑系统版本。"></a>确认电脑系统版本。</h1><p>&ensp;&ensp;&ensp;&ensp;可以删除之后还是发现无法安装，最后发现照着网上的帖子没有用，因为帖子估计都比较老，我的是win10系统，所以导致删除的路径不对，导致依旧无法正常安装，需要删除对应的路径。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">32位：HKEY_LOCAL_MACHINE\SOFTWARE\Google</span><br><span class="line">64位：HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Google</span><br></pre></td></tr></table></figure>
+<h1 id="重启安装应用。"><a href="#重启安装应用。" class="headerlink" title="重启安装应用。"></a>重启安装应用。</h1><p>&ensp;&ensp;&ensp;&ensp;重新双击运行安装应用程序，完美解决！</p>
+]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux常用命令</title>
+    <url>/2020/02/29/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a><strong>linux下常用的一下命令</strong></h1><a id="more"></a>
+
+<h2 id="防火墙相关的命令。"><a href="#防火墙相关的命令。" class="headerlink" title="防火墙相关的命令。"></a><strong>防火墙相关的命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;4400-4600&#x2F;udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone #作用域 </span><br><span class="line">--add-port&#x3D;80&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 </span><br><span class="line">--permanent #永久生效</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --remove-port&#x3D;80&#x2F;tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span><br></pre></td></tr></table></figure>
+<h2 id="yum安装软件包。"><a href="#yum安装软件包。" class="headerlink" title="yum安装软件包。"></a><strong>yum安装软件包。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install epel-release #安装&quot;epel-release&quot;的软件包</span><br><span class="line">yum install tcpreplay</span><br></pre></td></tr></table></figure>
+<h2 id="ps命令。"><a href="#ps命令。" class="headerlink" title="ps命令。"></a><strong>ps命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -eLf	 #查看进程线程情况</span><br></pre></td></tr></table></figure>
+<h2 id="压缩、解压命令。"><a href="#压缩、解压命令。" class="headerlink" title="压缩、解压命令。"></a><strong>压缩、解压命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">压缩：</span><br><span class="line">tar -zcvf &#x2F;tmp&#x2F;etc.tar.gz  &#x2F;etc     #将&#x2F;etc下的所有文件及目录打包到&#x2F;etc，并使用gz压缩  </span><br><span class="line">tar -cvf &#x2F;home&#x2F;abc.tar &#x2F;home&#x2F;abc    #只打包，不压缩</span><br><span class="line">tar -zcvf &#x2F;home&#x2F;abc.tar.gz &#x2F;home&#x2F;abc#打包，并用gzip压缩</span><br><span class="line"></span><br><span class="line">解压：</span><br><span class="line">tar -zxvf &#x2F;tmp&#x2F;etc.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="服务的锁定与取消。"><a href="#服务的锁定与取消。" class="headerlink" title="服务的锁定与取消。"></a><strong>服务的锁定与取消。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl mask firewalld   #需要锁定该服务时执行</span><br><span class="line">systemctl unmask firewalld #实现取消服务的锁定</span><br></pre></td></tr></table></figure>
+<h2 id="路由配置相关。"><a href="#路由配置相关。" class="headerlink" title="路由配置相关。"></a><strong>路由配置相关。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#添加IPV6地址</span><br><span class="line">ip -6 addr add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt; dev &lt;interface&gt;</span><br><span class="line">ip -6 addr add 2001:0db8:0:f101::1&#x2F;64 dev eth0</span><br><span class="line"></span><br><span class="line">ifconfig &lt;interface&gt; inet6 add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt;</span><br><span class="line">ifconfig eth0 inet6 add 2001:0db8:0:f101::1&#x2F;64</span><br><span class="line"></span><br><span class="line">#添加默认路由</span><br><span class="line">ip -6 route add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; via &lt;ipv6address&gt;</span><br><span class="line">ip -6 route add default via 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">route -A inet6 add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; gw</span><br><span class="line">route -A inet6 add default gw 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">#查看路由</span><br><span class="line">ip -6 route show</span><br><span class="line">route -A &#39;inet6&#39;</span><br><span class="line">route -6</span><br><span class="line"></span><br><span class="line">#windows查看路由表</span><br><span class="line">route print</span><br><span class="line"></span><br><span class="line">#查看邻居缓存</span><br><span class="line">ip -6 neighbor show</span><br><span class="line"></span><br><span class="line">#windows查看邻居缓存</span><br><span class="line">netsh interface ipv6 show neighbors</span><br><span class="line"></span><br><span class="line">#查看smtp服务器</span><br><span class="line">ping smtp.sohu.com </span><br><span class="line">ping smtp.qq.com</span><br></pre></td></tr></table></figure>
+<h2 id="更新内核命令。"><a href="#更新内核命令。" class="headerlink" title="更新内核命令。"></a><strong>更新内核命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum update kernel -y</span><br></pre></td></tr></table></figure>
+<h2 id="大文件重定向有效信息。"><a href="#大文件重定向有效信息。" class="headerlink" title="大文件重定向有效信息。"></a><strong>大文件重定向有效信息。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">重定向dmesg.txt关键字Call Trace的前后2000行到nn.txt：</span><br><span class="line">grep -C 2000 ‘Call Trace’ dmesg.txt &gt;nn.txt</span><br></pre></td></tr></table></figure>
+<h2 id="Shell递归删除指定字符串文件或者目录。"><a href="#Shell递归删除指定字符串文件或者目录。" class="headerlink" title="Shell递归删除指定字符串文件或者目录。"></a><strong>Shell递归删除指定字符串文件或者目录。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">文件：find . -name &quot;*.rej&quot; | xargs rm -rf</span><br><span class="line">目录：find . -type d -name &quot;*.rej&quot; | xargs rm -rf</span><br></pre></td></tr></table></figure>
+<h2 id="文件夹建立软链接（用绝对地址）"><a href="#文件夹建立软链接（用绝对地址）" class="headerlink" title="文件夹建立软链接（用绝对地址）"></a><strong>文件夹建立软链接（用绝对地址）</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ln -s 源地址 目的地址   #比如我把linux文件系统rootfs_dir软链接到&#x2F;home&#x2F;jyg&#x2F;目录下</span><br><span class="line">ln -s &#x2F;opt&#x2F;linux&#x2F;rootfs_dir  &#x2F;home&#x2F;jyg&#x2F;rootfs_dir #就可以了</span><br></pre></td></tr></table></figure>
+<h2 id="大文件分割"><a href="#大文件分割" class="headerlink" title="大文件分割"></a><strong>大文件分割</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">windows下 d:&gt;wireshark&gt;editcap -C 1000000(文件大小) 待分割文件路径 新文件名称</span><br><span class="line">linux 可使用split命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux</category>
       </categories>
   </entry>
 </search>
