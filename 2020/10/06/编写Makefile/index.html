@@ -79,7 +79,7 @@ function activateLightMode(){
 <li>撰写发布学术论文（LaTeX 公式支持）</li>
 </ul>
 </blockquote>
-<p><a href="https://www.zybuluo.com/static/img/logo.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="cmd-markdown-logo" class="fancybox"><img alt="cmd-markdown-logo" title="cmd-markdown-logo" data-src="https://www.zybuluo.com/static/img/logo.png" class="lazyload"></a></p>
+<p><a href="https://www.zybuluo.com/static/img/logo.png" target="_blank" rel="noopener" data-fancybox="group" data-caption="cmd-markdown-logo" class="fancybox"><img alt="cmd-markdown-logo" data-src="https://www.zybuluo.com/static/img/logo.png" class="lazyload" title="cmd-markdown-logo"></a></p>
 <h2 id="一、Makefile相关知识点"><a href="#一、Makefile相关知识点" class="headerlink" title="一、Makefile相关知识点"></a>一、Makefile相关知识点</h2><p>    需要掌握的一些Makefile相关的基础知识。</p>
 <h3 id="1-忽略出错的命令。"><a href="#1-忽略出错的命令。" class="headerlink" title="1. 忽略出错的命令。"></a>1. 忽略出错的命令。</h3><p>    如果不希望某条命令因为出错了而导致整个make执行被终止，可以在命令前面加上“-”，表示不管该命令出不出错，后面的命令都将继续执行下去。如：<br>    mkdir lpyuan<br>    如果不加“-”并且dir已经存在，则这条命令就会出错，并将导致整个make执行被终止。要想不被终止，则需要在前加上’-‘符号。<br>    -mkdir dir</p>
 <h3 id="2-显示命令。"><a href="#2-显示命令。" class="headerlink" title="2. 显示命令。"></a>2. 显示命令。</h3><p>    一般默认make会把命令原样显示出来后再去执行命令，如果我们不需要原样显示命令，则可以在命令前面加一个“@”， 如<br>    @m -rf lpyuan<br>    则是不会输出命令。</p>
