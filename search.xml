@@ -1,74 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Centos+hexo搭建个人网站</title>
-    <url>/2020/03/01/Centos-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<blockquote>
-<ul>
-<li>整理知识，学习笔记</li>
-<li>发布日记，杂文，所见所想</li>
-<li>撰写发布技术文稿（代码支持）</li>
-<li>撰写发布学术论文（LaTeX 公式支持）</li>
-</ul>
-</blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;花了好几天，熬了几个夜晚，终于把自己的个人博客搭建起来了网站，顺便来一篇教程，分享给大家，同时也方便以后再次部署。我之前是在github上搭建了一版，github+hexo,奈何实在太卡了，想起自己在阿里云有台服务器，然后直接部署到云上了,下面方法步骤亲测成功。</p>
-<a id="more"></a>
-
-<h1 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h1><blockquote>
-<ul>
-<li>一台个人PC</li>
-<li>money!(开玩笑的 ^-^)</li>
-<li>一台linux服务器，可以买台云服务器，没有又想体验的话就VM虚拟机，本地看看过把瘾吧。^ ^</li>
-</ul>
-</blockquote>
-<h1 id="需要的软件环境"><a href="#需要的软件环境" class="headerlink" title="需要的软件环境"></a>需要的软件环境</h1><blockquote>
-<ul>
-<li>Git</li>
-<li>Node.js</li>
-<li>hexo-cli</li>
-<li>Nginx</li>
-</ul>
-</blockquote>
-<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p><a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a><br>下一步下一步傻瓜式安装</p>
-<h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下一步下一步傻瓜式安装</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p><img src="/2020/03/01/Centos-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image1.jpg" alt="点击图片时候下方显示描述"></p>
-<p>&ensp;&ensp;&ensp;&ensp;选择一个文件夹作为你的博客文件夹，比如我自己建立在E:盘在命令行窗口下：</p>
-<p><img src="/2020/03/01/Centos-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image2.jpg" alt="点击图片时候下方显示描述"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v     # 查看hexo安装成功没</span><br><span class="line">cd e:       # 打开e盘;</span><br><span class="line">mkdir blog; # 创建blog文件夹作为我的博客目录</span><br><span class="line">cd blog     # 进入blog目录</span><br><span class="line">hexo init   # 初始化blog</span><br><span class="line">hexo g      # 生成静态页面</span><br><span class="line">hexo s      # 启动服务监听</span><br><span class="line">打开页面    localhost:4000</span><br><span class="line">可以看到hello world 的页面，初步完成。</span><br><span class="line"></span><br><span class="line">常用命令</span><br><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line"></span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>其他</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Google浏览器无法安装问题</title>
     <url>/2020/03/01/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[<p><img src="/2020/03/01/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image1.jpg" alt="点击图片时候下方显示描述"></p>
 <p>&ensp;&ensp;&ensp;&ensp;今天遇到一个有趣的问题，Google浏览器莫名其面的一直安装不上，自己捣鼓了好久最后才解决。网上有很多方法说是因为注册表有残留，准确的说是GoogleUpdate这个东西在作怪，解决的方法只需要将注册表里Google相关的东西删除。</p>
 <a id="more"></a>
 
-<h1 id="1、打开注册表直接Win-R输入regedit"><a href="#1、打开注册表直接Win-R输入regedit" class="headerlink" title="1、打开注册表直接Win+R输入regedit"></a>1、打开注册表直接Win+R输入regedit</h1><p><img src="/2020/03/01/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image2.jpg"></p>
-<h1 id="2、删除注册表残留数据。"><a href="#2、删除注册表残留数据。" class="headerlink" title="2、删除注册表残留数据。"></a>2、删除注册表残留数据。</h1><p>&ensp;&ensp;&ensp;&ensp;删除\HKEY_CURRENT_USER\Software\和HKEY_LOCAL_MACHINE\SOFTWARE目录下的Google及对应的子目录就可以了。但是我操作的时候出现了问题，删除Google目录时候报错，后面发现是权限问题。解决方法：右键该目录修改管理员权限可以删除。</p>
-<h1 id="3、确认电脑系统版本。"><a href="#3、确认电脑系统版本。" class="headerlink" title="3、确认电脑系统版本。"></a>3、确认电脑系统版本。</h1><p>&ensp;&ensp;&ensp;&ensp;可以删除之后还是发现无法安装，最后发现照着网上的帖子没有用，因为帖子估计都比较老，我的是win10系统，所以导致删除的路径不对，导致依旧无法正常安装，需要删除对应的路径。</p>
+<h1 id="打开注册表直接Win-R输入regedit"><a href="#打开注册表直接Win-R输入regedit" class="headerlink" title="打开注册表直接Win+R输入regedit"></a>打开注册表直接Win+R输入regedit</h1><p><img src="/2020/03/01/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image2.jpg"></p>
+<h1 id="删除注册表残留数据。"><a href="#删除注册表残留数据。" class="headerlink" title="删除注册表残留数据。"></a>删除注册表残留数据。</h1><p>&ensp;&ensp;&ensp;&ensp;删除\HKEY_CURRENT_USER\Software\和HKEY_LOCAL_MACHINE\SOFTWARE目录下的Google及对应的子目录就可以了。但是我操作的时候出现了问题，删除Google目录时候报错，后面发现是权限问题。解决方法：右键该目录修改管理员权限可以删除。</p>
+<h1 id="确认电脑系统版本。"><a href="#确认电脑系统版本。" class="headerlink" title="确认电脑系统版本。"></a>确认电脑系统版本。</h1><p>&ensp;&ensp;&ensp;&ensp;可以删除之后还是发现无法安装，最后发现照着网上的帖子没有用，因为帖子估计都比较老，我的是win10系统，所以导致删除的路径不对，导致依旧无法正常安装，需要删除对应的路径。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">32位：HKEY_LOCAL_MACHINE\SOFTWARE\Google</span><br><span class="line">64位：HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Google</span><br></pre></td></tr></table></figure>
-<h1 id="4、重启安装应用。"><a href="#4、重启安装应用。" class="headerlink" title="4、重启安装应用。"></a>4、重启安装应用。</h1><p>&ensp;&ensp;&ensp;&ensp;重新双击运行安装应用程序，完美解决！</p>
+<h1 id="重启安装应用。"><a href="#重启安装应用。" class="headerlink" title="重启安装应用。"></a>重启安装应用。</h1><p>&ensp;&ensp;&ensp;&ensp;重新双击运行安装应用程序，完美解决！</p>
 ]]></content>
       <categories>
         <category>windows</category>
       </categories>
   </entry>
   <entry>
-    <title>Go语言error错误处理</title>
-    <url>/2021/02/01/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><p>Go语言的错误处理</p>
+    <title></title>
+    <url>/2020/11/29/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<p>title: Go语言error错误处理<br>date: 2021-02-1 16:39:14<br>tags:<br>categories:</p>
+<h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><p>Go语言的错误处理</p>
 <a id="more"></a>
 
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="第3章-基本的数据类型"><a href="#第3章-基本的数据类型" class="headerlink" title="第3章 基本的数据类型"></a>第3章 基本的数据类型</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">四大类型：</span><br><span class="line">1、基础数据类型(basic type)</span><br><span class="line">2、聚合类型(aggregate type)</span><br><span class="line">3、引用类型(reference type)</span><br><span class="line">4、接口类型(interface type)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基础的数据类型：</span><br><span class="line">1、数字、字符串、布尔型</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
   </entry>
   <entry>
     <title>Linux常用命令</title>
@@ -279,7 +235,7 @@
   <entry>
     <title>海量数据处理问题</title>
     <url>/2021/01/07/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="1-海量数据问题"><a href="#1-海量数据问题" class="headerlink" title="1 海量数据问题"></a>1 海量数据问题</h2><h3 id="1-1-海量日志数据，提取出某日访问百度次数最多的那个IP。"><a href="#1-1-海量日志数据，提取出某日访问百度次数最多的那个IP。" class="headerlink" title="1.1 海量日志数据，提取出某日访问百度次数最多的那个IP。"></a>1.1 海量日志数据，提取出某日访问百度次数最多的那个IP。</h3><p>首先是这一天，并且是访问百度的日志中的IP取出来，逐个写入到一个大文件中。注意到IP是32位的，最多有个2^32个IP。同样可以采用映射的方法，比如模1000，把整个大文件映射为1000个小文件，再找出每个小文中出现频率最大的IP（可以采用hash_map进行频率统计，然后再找出频率最大的几个）及相应的频率。然后再在这1000个最大的IP中，找出那个频率最大的IP，即为所求。</p>
+    <content><![CDATA[<h2 id="海量数据问题"><a href="#海量数据问题" class="headerlink" title="海量数据问题"></a>海量数据问题</h2><h3 id="海量日志数据，提取出某日访问百度次数最多的那个IP。"><a href="#海量日志数据，提取出某日访问百度次数最多的那个IP。" class="headerlink" title="海量日志数据，提取出某日访问百度次数最多的那个IP。"></a>海量日志数据，提取出某日访问百度次数最多的那个IP。</h3><p>首先是这一天，并且是访问百度的日志中的IP取出来，逐个写入到一个大文件中。注意到IP是32位的，最多有个2^32个IP。同样可以采用映射的方法，比如模1000，把整个大文件映射为1000个小文件，再找出每个小文中出现频率最大的IP（可以采用hash_map进行频率统计，然后再找出频率最大的几个）及相应的频率。然后再在这1000个最大的IP中，找出那个频率最大的IP，即为所求。</p>
 <a id="more"></a>
 
 <p>算法思想：分而治之+哈希</p>
@@ -287,16 +243,16 @@
 <p>2、考虑分而治之的思想，将IP地址进行hash(IP)%1024，把海量的数据分别存储到1024个文件中，这样，每个文件最有就含有4MB个IP地址。</p>
 <p>3、对于每一个小文件，可以进行构造一个key value的hash map，将IP作为key值，出现的次数作为value值，同时记录下当前出现次数最多的那个IP地址。</p>
 <p>4、可以得到1024个文件📃中出现次数最多的IP，再根据常规的排序算法得到总体上的出现次数最多的IP。</p>
-<h3 id="1-2-搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"><a href="#1-2-搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节" class="headerlink" title="1.2 搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"></a>1.2 搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节</h3><p>假设目前有一千万个记录（这些查询串的重复度比较高，虽然总数是1千万，但如果除去重复后，不超过3百万个。一个查询串的重复度越高，说明查询它的用户越多，也就是越热门。），请你统计最热门的10个查询串，要求使用的内存不能超过1G。</p>
+<h3 id="搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"><a href="#搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节" class="headerlink" title="搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"></a>搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节</h3><p>假设目前有一千万个记录（这些查询串的重复度比较高，虽然总数是1千万，但如果除去重复后，不超过3百万个。一个查询串的重复度越高，说明查询它的用户越多，也就是越热门。），请你统计最热门的10个查询串，要求使用的内存不能超过1G。</p>
 <p>算法思想：经典的topK问题。</p>
 <p>1、先对这批海量数据进行预处理，在O(n)的时间之内用hash表完成统计。</p>
 <p>2、借助堆这个数据结构，找出topk，时间复杂度为nlogK。借助堆这个数据结构，我们可以在log量级的时间内查找和调整移动。我们可以维护一个大顶堆，然后遍历这300万左右的数据，分别和根元素进行比对，最后得出前十个热门的查询串。</p>
-<h3 id="1-3-有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"><a href="#1-3-有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词" class="headerlink" title="1.3 有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"></a>1.3 有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词</h3><p>算法思想：分而治之+hash</p>
+<h3 id="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"><a href="#有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词" class="headerlink" title="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"></a>有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词</h3><p>算法思想：分而治之+hash</p>
 <p>1、顺序读取文件，对于读取的每一个值，可以使用hash(x)%5000，将读取的词存储到5000个文件中，每个文件大概200k，如果还是有文件大于1m，可以按照这个方法继续往下分，直到可以直接放入内存中为止。</p>
 <p>2、对于每一个小文件，统计每个文件节点中出现的词以及相应的一个频率（tries树🌲或者hashMap都可以）。取出出现频率最大的一百个词（可以采用含有100个节点的最小堆），这样又可以得到5000个文件。最后一步，可以将这5000个文件进行归并过程了（类似于归并排序）。</p>
-<h3 id="1-4-在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。"><a href="#1-4-在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。" class="headerlink" title="1.4 在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。"></a>1.4 在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。</h3><p>方案1：可以采用2-bitmap进行，共需要内存</p>
-<h3 id="1-5-海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"><a href="#1-5-海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。" class="headerlink" title="1.5 海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"></a>1.5 海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。</h3><h3 id="1-6-腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"><a href="#1-6-腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？" class="headerlink" title="1.6 腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"></a>1.6 腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？</h3><p>使用bitmap，或者布隆过滤器。</p>
-<h3 id="1-7-10亿个域名如何判断，新来一个域名，如何判断在还是不在"><a href="#1-7-10亿个域名如何判断，新来一个域名，如何判断在还是不在" class="headerlink" title="1.7 10亿个域名如何判断，新来一个域名，如何判断在还是不在"></a>1.7 10亿个域名如何判断，新来一个域名，如何判断在还是不在</h3><p>可以使用布隆过滤器，判断不在就一定不在，判断在的话可能不在。</p>
+<h3 id="在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。"><a href="#在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。" class="headerlink" title="在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。"></a>在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。</h3><p>方案1：可以采用2-bitmap进行，共需要内存</p>
+<h3 id="海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"><a href="#海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。" class="headerlink" title="海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"></a>海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。</h3><h3 id="腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"><a href="#腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？" class="headerlink" title="腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"></a>腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？</h3><p>使用bitmap，或者布隆过滤器。</p>
+<h3 id="10亿个域名如何判断，新来一个域名，如何判断在还是不在"><a href="#10亿个域名如何判断，新来一个域名，如何判断在还是不在" class="headerlink" title="10亿个域名如何判断，新来一个域名，如何判断在还是不在"></a>10亿个域名如何判断，新来一个域名，如何判断在还是不在</h3><p>可以使用布隆过滤器，判断不在就一定不在，判断在的话可能不在。</p>
 ]]></content>
       <categories>
         <category>数据结构与算法</category>
@@ -314,9 +270,9 @@
     <title>结构体对齐</title>
     <url>/2021/01/06/%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90/</url>
     <content><![CDATA[<h1 id="结构体对齐"><a href="#结构体对齐" class="headerlink" title="结构体对齐"></a>结构体对齐</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><blockquote>
-<p>结构体对齐一直是一个老生常谈的问题，我面试过就被问过几次，但是每一次都复习准备好好的，但是一到面试时候，总能被面试官问倒（卑微~）其实主要的原因就是自己没有准确的深刻的理解结构体对齐这个知识点，没有对其进行一个总结。</p>
+<p>&ensp;&ensp;&ensp;&ensp;结构体对齐一直是一个老生常谈的问题，我面试过就被问过几次，但是每一次都复习准备好好的，但是一到面试时候，总能被面试官问倒（卑微~）其实主要的原因就是自己没有准确的深刻的理解结构体对齐这个知识点，没有对其进行一个总结。</p>
 </blockquote>
-<h2 id="为什么需要结构体对齐"><a href="#为什么需要结构体对齐" class="headerlink" title="为什么需要结构体对齐"></a>为什么需要结构体对齐</h2><p>结构体需要对其的原因主要就是对CPU对内存访问效率优化的一个问题。假设是intel 32的CPU， 每个总线周期都是要从偶地址读取32位的内存数据。</p>
+<h2 id="为什么需要结构体对齐"><a href="#为什么需要结构体对齐" class="headerlink" title="为什么需要结构体对齐"></a>为什么需要结构体对齐</h2><p>&ensp;&ensp;&ensp;&ensp;结构体需要对其的原因主要就是对CPU对内存访问效率优化的一个问题。假设是intel 32的CPU， 每个总线周期都是要从偶地址读取32位的内存数据。</p>
 <p>假设我们的CPU和总线都是64位的，每次可以从内存中获取8个字节（Byte）64位（bit）的数据，这8个字节就是对齐的，假设就是0<del>7，8</del>15类似这样，你不能从中间3<del>10这样取值。如果需要取值3</del>10之间的数据，就需要取两次，分别是0<del>7，再取8</del>15。所以CPU的取值效率就下降了。</p>
 <a id="more"></a>
 
@@ -364,7 +320,7 @@
 <h2 id="二、Makefile通用模板"><a href="#二、Makefile通用模板" class="headerlink" title="二、Makefile通用模板"></a>二、Makefile通用模板</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TARGET&#x3D;server</span><br><span class="line">CC&#x3D;g++</span><br><span class="line">CFLAG&#x3D;-c -g -static</span><br><span class="line">#所有的.c文件</span><br><span class="line">SRCS:&#x3D;$(wildcard ..&#x2F;*.c)</span><br><span class="line">FILTERS&#x3D;..&#x2F;hello.c</span><br><span class="line">#从SRCS中除了hello.c文件 filter函数可以选择满足条件的</span><br><span class="line">SRCS:&#x3D;$(filter-out $(FILTERS), $(SRCS))</span><br><span class="line">OBJS:&#x3D;$(patsubst %.c, %.o, $(SRCS))</span><br><span class="line">CURRENT_PATH&#x3D;$(PWD)</span><br><span class="line">CPPFLAGS&#x3D; -I..&#x2F;include -I..&#x2F;util</span><br><span class="line">LIBS_PATH&#x3D;-L..&#x2F;lib64</span><br><span class="line">LIBS&#x3D;-lmylib</span><br><span class="line"></span><br><span class="line">#判断是哪个系统32bit编译还是在64bit编译。</span><br><span class="line">ARCH:&#x3D;$(shell uname -m)</span><br><span class="line">ifeq ($(ARCH), x86_64)</span><br><span class="line">VERSION:&#x3D;X86_64</span><br><span class="line">else</span><br><span class="line">VERSION:&#x3D;i686</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">$(TARGET):$(OBJS)</span><br><span class="line">        $(CC) $(DEBUG) $(SRCS) $(LIBS_PATH) $(LIBS) $(CPPFLAGS) -o $(TARGET)</span><br><span class="line"></span><br><span class="line">$(OBJS):%.o:%.c</span><br><span class="line">        $(CC) $(CFLAG) $&lt; -o $@</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">        rm -rf *~ *.bak $(TARGET)</span><br><span class="line"></span><br><span class="line">【顶层Makefile编写】</span><br><span class="line">all: all_client all_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">all_client:</span><br><span class="line">    $(MAKE) -C client</span><br><span class="line">all_server:</span><br><span class="line">    $(MAKE) -C server</span><br><span class="line"></span><br><span class="line">clean: clean_client clean_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">clean_client:</span><br><span class="line">    $(MAKE) -C client clean</span><br><span class="line">clean_server:</span><br><span class="line">    $(MAKE) -C server clean</span><br></pre></td></tr></table></figure>
 <hr>
 <p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#x70;&#121;&#x75;&#x61;&#x6e;&#50;&#49;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#108;&#x70;&#121;&#x75;&#x61;&#x6e;&#50;&#49;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a><br>2020年02月28日 02:52:00   </p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#x70;&#x79;&#x75;&#97;&#110;&#x32;&#x31;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;">&#108;&#x70;&#x79;&#x75;&#97;&#110;&#x32;&#x31;&#x40;&#111;&#x75;&#x74;&#108;&#x6f;&#x6f;&#107;&#46;&#99;&#x6f;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
 ]]></content>
       <categories>
         <category>Testing</category>
@@ -425,7 +381,7 @@
   <entry>
     <title>手撕代码</title>
     <url>/2020/12/27/%E9%9D%A2%E8%AF%95%E6%89%8B%E6%92%95%E4%BB%A3%E7%A0%81/</url>
-    <content><![CDATA[<h1 id="面试常见的手撕代码题型"><a href="#面试常见的手撕代码题型" class="headerlink" title="面试常见的手撕代码题型"></a>面试常见的手撕代码题型</h1><p>所有代码都已经跑过</p>
+    <content><![CDATA[<h1 id="面试常见的手撕代码题型"><a href="#面试常见的手撕代码题型" class="headerlink" title="面试常见的手撕代码题型"></a>面试常见的手撕代码题型</h1><p>所有代码都已经跑过，可以正常编译运行。</p>
 <a id="more"></a>
 
 <h2 id="经典排序"><a href="#经典排序" class="headerlink" title="经典排序"></a>经典排序</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 交换两个数据 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> temp;</span><br><span class="line">  temp = *a;</span><br><span class="line">  *a = *b;</span><br><span class="line">  *b = temp;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 冒牌排序算法 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">size_t</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">NULL</span> == arr)</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">  <span class="keyword">int</span> i=<span class="number">0</span>, j=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;len; i++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">for</span>(j=<span class="number">1</span>; j&lt;len-i<span class="number">-1</span>; j++)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span>(arr[j]&lt;arr[j<span class="number">-1</span>])</span><br><span class="line">        swap(arr[j], arr[j<span class="number">-1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line">   </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> arr[<span class="number">10</span>]=&#123;<span class="number">7</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">8</span>&#125;;</span><br><span class="line">  BubbleSort(arr);</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt; <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>]);i++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -612,6 +568,54 @@
 ]]></content>
       <categories>
         <category>面试宝典</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hexo搭建个人站点</title>
+    <url>/2020/03/01/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</url>
+    <content><![CDATA[<p>花了好几天，熬了几个夜晚，终于把自己的个人博客搭建起来了网站，顺便来一篇教程，分享给大家，同时也方便以后再次部署。我之前是在github上搭建了一版，github+hexo,奈何实在太卡了，想起自己在阿里云有台服务器，然后直接部署到云上了,下面方法步骤亲测成功。</p>
+<a id="more"></a>
+
+<h1 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h1><blockquote>
+<ul>
+<li>一台个人PC</li>
+<li>money!(开玩笑的 ^-^)</li>
+<li>一台linux服务器，可以买台云服务器，没有又想体验的话就VM虚拟机，本地看看过把瘾吧。^ ^</li>
+</ul>
+</blockquote>
+<h1 id="需要的软件环境"><a href="#需要的软件环境" class="headerlink" title="需要的软件环境"></a>需要的软件环境</h1><blockquote>
+<ul>
+<li>Git</li>
+<li>Node.js</li>
+<li>hexo-cli</li>
+<li>Nginx</li>
+</ul>
+</blockquote>
+<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p><a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a><br>下一步下一步傻瓜式安装</p>
+<h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下一步下一步傻瓜式安装</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p><img src="/2020/03/01/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image1.jpg" alt="点击图片时候下方显示描述"></p>
+<p>&ensp;&ensp;&ensp;&ensp;选择一个文件夹作为你的博客文件夹，比如我自己建立在E:盘在命令行窗口下：</p>
+<p><img src="/2020/03/01/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image2.jpg" alt="点击图片时候下方显示描述"></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v     # 查看hexo安装成功没</span><br><span class="line">cd e:       # 打开e盘;</span><br><span class="line">mkdir blog; # 创建blog文件夹作为我的博客目录</span><br><span class="line">cd blog     # 进入blog目录</span><br><span class="line">hexo init   # 初始化blog</span><br><span class="line">hexo g      # 生成静态页面</span><br><span class="line">hexo s      # 启动服务监听</span><br><span class="line">打开页面    localhost:4000</span><br><span class="line">可以看到hello world 的页面，初步完成。</span><br><span class="line"></span><br><span class="line">常用命令</span><br><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line"></span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d # 一件生成静态页面同时上传</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>Hexo有很多很不错的主题，使用过butterfly、replica、landscape等等，目前陷入<strong>Next</strong>主题的坑(简直太好用了！！)。</p>
+<p><strong>主题地址</strong></p>
+<p><a href="https://github.com/theme-next/hexo-theme-next">Next主题社区维护版本入口地址</a></p>
+<p><strong>文章评论系统</strong></p>
+<p>目前本站使用的是Valine评论系统，感觉还不错，下面介绍怎么配置使用这个系统。</p>
+<p>首先这个Valine评论系统是可以很好的支持Next主题的，它支持Markdown语法，没有后端是基于LeanCloud的所以我们需要注册一个LeanCloud账户，</p>
+<p><a href="https://console.leancloud.cn/">LeanCloud官网入口地址</a></p>
+<p>注册完成后，选择创建应用，然后选择开发版本，填写描述信息，然后生成，同时将<strong>App ID</strong> 和 <strong>App Key</strong>记下来。</p>
+<ul>
+<li>设置Next主题，在主题配置文件中找到valine进行配置，将生成的<strong>App ID</strong> 和 <strong>App Key</strong>填入对应的字段，如下图。</li>
+</ul>
+<img src="/2020/03/01/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image-20210219032911009.png" alt="image-20210219032911009" style="zoom:25%;">
+
+<ul>
+<li>如果想要管理评论，进入 leancloud 官网，找到 <code>控制台</code>-&gt;<code>存储</code>-&gt;<code>commet</code> 中进行管理。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>其他</category>
       </categories>
   </entry>
 </search>
