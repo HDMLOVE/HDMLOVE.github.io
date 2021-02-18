@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Go语言error错误处理</title>
-    <url>/2021/02/01/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="第3章-基本的数据类型"><a href="#第3章-基本的数据类型" class="headerlink" title="第3章 基本的数据类型"></a>第3章 基本的数据类型</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">四大类型：</span><br><span class="line">1、基础数据类型(basic type)</span><br><span class="line">2、聚合类型(aggregate type)</span><br><span class="line">3、引用类型(reference type)</span><br><span class="line">4、接口类型(interface type)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基础的数据类型：</span><br><span class="line">1、数字、字符串、布尔型</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
     <title>Centos+hexo搭建个人网站</title>
     <url>/2020/03/01/Centos-hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</url>
     <content><![CDATA[<blockquote>
@@ -150,19 +140,46 @@
       </categories>
   </entry>
   <entry>
-    <title>Raft算法</title>
-    <url>/2021/01/07/Raft%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="Raft算法"><a href="#Raft算法" class="headerlink" title="Raft算法"></a>Raft算法</h1><h2 id="什么是Raft算法"><a href="#什么是Raft算法" class="headerlink" title="什么是Raft算法"></a>什么是Raft算法</h2><p>Raft算法是Multi-Paxos算法，</p>
+    <title>Go语言error错误处理</title>
+    <url>/2021/02/01/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="第3章-基本的数据类型"><a href="#第3章-基本的数据类型" class="headerlink" title="第3章 基本的数据类型"></a>第3章 基本的数据类型</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">四大类型：</span><br><span class="line">1、基础数据类型(basic type)</span><br><span class="line">2、聚合类型(aggregate type)</span><br><span class="line">3、引用类型(reference type)</span><br><span class="line">4、接口类型(interface type)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基础的数据类型：</span><br><span class="line">1、数字、字符串、布尔型</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Linux常用命令</title>
+    <url>/2020/02/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a><strong>linux下常用的一下命令</strong></h1><h2 id="防火墙相关的命令。"><a href="#防火墙相关的命令。" class="headerlink" title="防火墙相关的命令。"></a><strong>防火墙相关的命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;4400-4600&#x2F;udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone #作用域 </span><br><span class="line">--add-port&#x3D;80&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 </span><br><span class="line">--permanent #永久生效</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --remove-port&#x3D;80&#x2F;tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span><br></pre></td></tr></table></figure>
+<h2 id="yum安装软件包。"><a href="#yum安装软件包。" class="headerlink" title="yum安装软件包。"></a><strong>yum安装软件包。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install epel-release #安装&quot;epel-release&quot;的软件包</span><br><span class="line">yum install tcpreplay</span><br></pre></td></tr></table></figure>
+<h2 id="ps命令。"><a href="#ps命令。" class="headerlink" title="ps命令。"></a><strong>ps命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -eLf	 #查看进程线程情况</span><br></pre></td></tr></table></figure>
+<h2 id="压缩、解压命令。"><a href="#压缩、解压命令。" class="headerlink" title="压缩、解压命令。"></a><strong>压缩、解压命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">压缩：</span><br><span class="line">tar -zcvf &#x2F;tmp&#x2F;etc.tar.gz  &#x2F;etc     #将&#x2F;etc下的所有文件及目录打包到&#x2F;etc，并使用gz压缩  </span><br><span class="line">tar -cvf &#x2F;home&#x2F;abc.tar &#x2F;home&#x2F;abc    #只打包，不压缩</span><br><span class="line">tar -zcvf &#x2F;home&#x2F;abc.tar.gz &#x2F;home&#x2F;abc#打包，并用gzip压缩</span><br><span class="line"></span><br><span class="line">解压：</span><br><span class="line">tar -zxvf &#x2F;tmp&#x2F;etc.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="服务的锁定与取消。"><a href="#服务的锁定与取消。" class="headerlink" title="服务的锁定与取消。"></a><strong>服务的锁定与取消。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl mask firewalld   #需要锁定该服务时执行</span><br><span class="line">systemctl unmask firewalld #实现取消服务的锁定</span><br></pre></td></tr></table></figure>
+<h2 id="路由配置相关。"><a href="#路由配置相关。" class="headerlink" title="路由配置相关。"></a><strong>路由配置相关。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#添加IPV6地址</span><br><span class="line">ip -6 addr add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt; dev &lt;interface&gt;</span><br><span class="line">ip -6 addr add 2001:0db8:0:f101::1&#x2F;64 dev eth0</span><br><span class="line"></span><br><span class="line">ifconfig &lt;interface&gt; inet6 add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt;</span><br><span class="line">ifconfig eth0 inet6 add 2001:0db8:0:f101::1&#x2F;64</span><br><span class="line"></span><br><span class="line">#添加默认路由</span><br><span class="line">ip -6 route add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; via &lt;ipv6address&gt;</span><br><span class="line">ip -6 route add default via 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">route -A inet6 add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; gw</span><br><span class="line">route -A inet6 add default gw 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">#查看路由</span><br><span class="line">ip -6 route show</span><br><span class="line">route -A &#39;inet6&#39;</span><br><span class="line">route -6</span><br><span class="line"></span><br><span class="line">#windows查看路由表</span><br><span class="line">route print</span><br><span class="line"></span><br><span class="line">#查看邻居缓存</span><br><span class="line">ip -6 neighbor show</span><br><span class="line"></span><br><span class="line">#windows查看邻居缓存</span><br><span class="line">netsh interface ipv6 show neighbors</span><br><span class="line"></span><br><span class="line">#查看smtp服务器</span><br><span class="line">ping smtp.sohu.com </span><br><span class="line">ping smtp.qq.com</span><br></pre></td></tr></table></figure>
+<h2 id="更新内核命令。"><a href="#更新内核命令。" class="headerlink" title="更新内核命令。"></a><strong>更新内核命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum update kernel -y</span><br></pre></td></tr></table></figure>
+<h2 id="大文件重定向有效信息。"><a href="#大文件重定向有效信息。" class="headerlink" title="大文件重定向有效信息。"></a><strong>大文件重定向有效信息。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">重定向dmesg.txt关键字Call Trace的前后2000行到nn.txt：</span><br><span class="line">grep -C 2000 ‘Call Trace’ dmesg.txt &gt;nn.txt</span><br></pre></td></tr></table></figure>
+<h2 id="Shell递归删除指定字符串文件或者目录。"><a href="#Shell递归删除指定字符串文件或者目录。" class="headerlink" title="Shell递归删除指定字符串文件或者目录。"></a><strong>Shell递归删除指定字符串文件或者目录。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">文件：find . -name &quot;*.rej&quot; | xargs rm -rf</span><br><span class="line">目录：find . -type d -name &quot;*.rej&quot; | xargs rm -rf</span><br></pre></td></tr></table></figure>
+<h2 id="文件夹建立软链接（用绝对地址）"><a href="#文件夹建立软链接（用绝对地址）" class="headerlink" title="文件夹建立软链接（用绝对地址）"></a><strong>文件夹建立软链接（用绝对地址）</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ln -s 源地址 目的地址   #比如我把linux文件系统rootfs_dir软链接到&#x2F;home&#x2F;jyg&#x2F;目录下</span><br><span class="line">ln -s &#x2F;opt&#x2F;linux&#x2F;rootfs_dir  &#x2F;home&#x2F;jyg&#x2F;rootfs_dir #就可以了</span><br></pre></td></tr></table></figure>
+<h2 id="大文件分割"><a href="#大文件分割" class="headerlink" title="大文件分割"></a><strong>大文件分割</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">windows下 d:&gt;wireshark&gt;editcap -C 1000000(文件大小) 待分割文件路径 新文件名称</span><br><span class="line">linux 可使用split命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>数据结构与算法</category>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Mysql数据库</title>
+    <url>/2020/02/29/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据库</category>
       </categories>
   </entry>
   <entry>
     <title>Linux非阻塞模式下的EAGIN异常</title>
     <url>/2021/02/18/Linux%E9%9D%9E%E9%98%BB%E5%A1%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84EAGIN%E5%BC%82%E5%B8%B8/</url>
     <content><![CDATA[<p>之前在写一个并发聊天室时候在多个客户端连续发送数据的时候遇到EAGIN错误，如图。</p>
-<img src="../../../../Library/Application%20Support/typora-user-images/image-20210218231310810.png" alt="image-20210218231310810" style="zoom:35%;">
+<img src="/2021/02/18/Linux%E9%9D%9E%E9%98%BB%E5%A1%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84EAGIN%E5%BC%82%E5%B8%B8/image-20210218231840685.png" alt="image-20210218231840685" style="zoom:33%;">
 
 <p>Linux下，管道、FIFO以及一些设备（通常是终端和网络）一般有以下几种性质。</p>
 <a id="more"></a>
@@ -190,11 +207,12 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Mysql数据库</title>
-    <url>/2020/02/29/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-    <content><![CDATA[]]></content>
+    <title>Raft算法</title>
+    <url>/2021/01/07/Raft%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Raft算法"><a href="#Raft算法" class="headerlink" title="Raft算法"></a>Raft算法</h1><h2 id="什么是Raft算法"><a href="#什么是Raft算法" class="headerlink" title="什么是Raft算法"></a>什么是Raft算法</h2><p>Raft算法是Multi-Paxos算法，</p>
+]]></content>
       <categories>
-        <category>数据库</category>
+        <category>数据结构与算法</category>
       </categories>
   </entry>
   <entry>
@@ -210,24 +228,6 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Linux常用命令</title>
-    <url>/2020/02/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a><strong>linux下常用的一下命令</strong></h1><h2 id="防火墙相关的命令。"><a href="#防火墙相关的命令。" class="headerlink" title="防火墙相关的命令。"></a><strong>防火墙相关的命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;4400-4600&#x2F;udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone #作用域 </span><br><span class="line">--add-port&#x3D;80&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 </span><br><span class="line">--permanent #永久生效</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --remove-port&#x3D;80&#x2F;tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span><br></pre></td></tr></table></figure>
-<h2 id="yum安装软件包。"><a href="#yum安装软件包。" class="headerlink" title="yum安装软件包。"></a><strong>yum安装软件包。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install epel-release #安装&quot;epel-release&quot;的软件包</span><br><span class="line">yum install tcpreplay</span><br></pre></td></tr></table></figure>
-<h2 id="ps命令。"><a href="#ps命令。" class="headerlink" title="ps命令。"></a><strong>ps命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -eLf	 #查看进程线程情况</span><br></pre></td></tr></table></figure>
-<h2 id="压缩、解压命令。"><a href="#压缩、解压命令。" class="headerlink" title="压缩、解压命令。"></a><strong>压缩、解压命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">压缩：</span><br><span class="line">tar -zcvf &#x2F;tmp&#x2F;etc.tar.gz  &#x2F;etc     #将&#x2F;etc下的所有文件及目录打包到&#x2F;etc，并使用gz压缩  </span><br><span class="line">tar -cvf &#x2F;home&#x2F;abc.tar &#x2F;home&#x2F;abc    #只打包，不压缩</span><br><span class="line">tar -zcvf &#x2F;home&#x2F;abc.tar.gz &#x2F;home&#x2F;abc#打包，并用gzip压缩</span><br><span class="line"></span><br><span class="line">解压：</span><br><span class="line">tar -zxvf &#x2F;tmp&#x2F;etc.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="服务的锁定与取消。"><a href="#服务的锁定与取消。" class="headerlink" title="服务的锁定与取消。"></a><strong>服务的锁定与取消。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl mask firewalld   #需要锁定该服务时执行</span><br><span class="line">systemctl unmask firewalld #实现取消服务的锁定</span><br></pre></td></tr></table></figure>
-<h2 id="路由配置相关。"><a href="#路由配置相关。" class="headerlink" title="路由配置相关。"></a><strong>路由配置相关。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#添加IPV6地址</span><br><span class="line">ip -6 addr add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt; dev &lt;interface&gt;</span><br><span class="line">ip -6 addr add 2001:0db8:0:f101::1&#x2F;64 dev eth0</span><br><span class="line"></span><br><span class="line">ifconfig &lt;interface&gt; inet6 add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt;</span><br><span class="line">ifconfig eth0 inet6 add 2001:0db8:0:f101::1&#x2F;64</span><br><span class="line"></span><br><span class="line">#添加默认路由</span><br><span class="line">ip -6 route add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; via &lt;ipv6address&gt;</span><br><span class="line">ip -6 route add default via 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">route -A inet6 add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; gw</span><br><span class="line">route -A inet6 add default gw 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">#查看路由</span><br><span class="line">ip -6 route show</span><br><span class="line">route -A &#39;inet6&#39;</span><br><span class="line">route -6</span><br><span class="line"></span><br><span class="line">#windows查看路由表</span><br><span class="line">route print</span><br><span class="line"></span><br><span class="line">#查看邻居缓存</span><br><span class="line">ip -6 neighbor show</span><br><span class="line"></span><br><span class="line">#windows查看邻居缓存</span><br><span class="line">netsh interface ipv6 show neighbors</span><br><span class="line"></span><br><span class="line">#查看smtp服务器</span><br><span class="line">ping smtp.sohu.com </span><br><span class="line">ping smtp.qq.com</span><br></pre></td></tr></table></figure>
-<h2 id="更新内核命令。"><a href="#更新内核命令。" class="headerlink" title="更新内核命令。"></a><strong>更新内核命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum update kernel -y</span><br></pre></td></tr></table></figure>
-<h2 id="大文件重定向有效信息。"><a href="#大文件重定向有效信息。" class="headerlink" title="大文件重定向有效信息。"></a><strong>大文件重定向有效信息。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">重定向dmesg.txt关键字Call Trace的前后2000行到nn.txt：</span><br><span class="line">grep -C 2000 ‘Call Trace’ dmesg.txt &gt;nn.txt</span><br></pre></td></tr></table></figure>
-<h2 id="Shell递归删除指定字符串文件或者目录。"><a href="#Shell递归删除指定字符串文件或者目录。" class="headerlink" title="Shell递归删除指定字符串文件或者目录。"></a><strong>Shell递归删除指定字符串文件或者目录。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">文件：find . -name &quot;*.rej&quot; | xargs rm -rf</span><br><span class="line">目录：find . -type d -name &quot;*.rej&quot; | xargs rm -rf</span><br></pre></td></tr></table></figure>
-<h2 id="文件夹建立软链接（用绝对地址）"><a href="#文件夹建立软链接（用绝对地址）" class="headerlink" title="文件夹建立软链接（用绝对地址）"></a><strong>文件夹建立软链接（用绝对地址）</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ln -s 源地址 目的地址   #比如我把linux文件系统rootfs_dir软链接到&#x2F;home&#x2F;jyg&#x2F;目录下</span><br><span class="line">ln -s &#x2F;opt&#x2F;linux&#x2F;rootfs_dir  &#x2F;home&#x2F;jyg&#x2F;rootfs_dir #就可以了</span><br></pre></td></tr></table></figure>
-<h2 id="大文件分割"><a href="#大文件分割" class="headerlink" title="大文件分割"></a><strong>大文件分割</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">windows下 d:&gt;wireshark&gt;editcap -C 1000000(文件大小) 待分割文件路径 新文件名称</span><br><span class="line">linux 可使用split命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
   </entry>
   <entry>
     <title>shell脚本笔记</title>
@@ -247,14 +247,6 @@
       </categories>
   </entry>
   <entry>
-    <title>汇编语言</title>
-    <url>/2020/10/11/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="三大总线"><a href="#三大总线" class="headerlink" title="三大总线"></a>三大总线</h2><p>1、地址总线</p>
-<p>2、控制总线</p>
-<p>3、数据总线</p>
-]]></content>
-  </entry>
-  <entry>
     <title>信号signal</title>
     <url>/2021/01/03/%E4%BF%A1%E5%8F%B7signal/</url>
     <content><![CDATA[<h1 id="信号机制"><a href="#信号机制" class="headerlink" title="信号机制"></a>信号机制</h1><blockquote>
@@ -270,14 +262,6 @@
 ]]></content>
       <categories>
         <category>Unix环境编程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>人为什么活着</title>
-    <url>/2020/10/13/%E7%94%9F%E6%B4%BB/</url>
-    <content><![CDATA[<h1 id="你喜欢的人在努力，你却在想怎么说我爱你"><a href="#你喜欢的人在努力，你却在想怎么说我爱你" class="headerlink" title="你喜欢的人在努力，你却在想怎么说我爱你"></a>你喜欢的人在努力，你却在想怎么说我爱你</h1>]]></content>
-      <categories>
-        <category>杂谈</category>
       </categories>
   </entry>
   <entry>
@@ -299,6 +283,14 @@
       <categories>
         <category>数据结构与算法</category>
       </categories>
+  </entry>
+  <entry>
+    <title>汇编语言</title>
+    <url>/2020/10/11/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="三大总线"><a href="#三大总线" class="headerlink" title="三大总线"></a>三大总线</h2><p>1、地址总线</p>
+<p>2、控制总线</p>
+<p>3、数据总线</p>
+]]></content>
   </entry>
   <entry>
     <title>海量数据处理问题</title>
@@ -325,41 +317,11 @@
       </categories>
   </entry>
   <entry>
-    <title>腾讯面试</title>
-    <url>/2020/11/16/%E8%85%BE%E8%AE%AF%E9%9D%A2%E8%AF%95/</url>
-    <content><![CDATA[<p>1、100万数据个是topK。</p>
-<p>2、32位无符号整形个数的QQ号记录QQ号的状态 上线和下线，计算使用多少内存。</p>
-<p>3、printf(“%d “, 1, 2, 3);  printf(“%s”)；</p>
-<p>4、HTTP 和 HTTPS的区别。1、对称加密和非对称加密。2、效率问题的瓶颈。</p>
-<p>5、阻塞问题</p>
-<p>1、对端接收处理不过来 。流量控制。</p>
-<p>2、网络阻塞。拥塞控制。</p>
-<p>3、项目问题</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>结构体对齐</title>
-    <url>/2021/01/06/%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90/</url>
-    <content><![CDATA[<h1 id="结构体对齐"><a href="#结构体对齐" class="headerlink" title="结构体对齐"></a>结构体对齐</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><blockquote>
-<p>结构体对齐一直是一个老生常谈的问题，我面试过就被问过几次，但是每一次都复习准备好好的，但是一到面试时候，总能被面试官问倒（卑微~）其实主要的原因就是自己没有准确的深刻的理解结构体对齐这个知识点，没有对其进行一个总结。</p>
-</blockquote>
-<h2 id="为什么需要结构体对齐"><a href="#为什么需要结构体对齐" class="headerlink" title="为什么需要结构体对齐"></a>为什么需要结构体对齐</h2><p>结构体需要对其的原因主要就是对CPU对内存访问效率优化的一个问题。假设是intel 32的CPU， 每个总线周期都是要从偶地址读取32位的内存数据。</p>
-<p>假设我们的CPU和总线都是64位的，每次可以从内存中获取8个字节（Byte）64位（bit）的数据，这8个字节就是对齐的，假设就是0<del>7，8</del>15类似这样，你不能从中间3<del>10这样取值。如果需要取值3</del>10之间的数据，就需要取两次，分别是0<del>7，再取8</del>15。所以CPU的取值效率就下降了。</p>
-<h2 id="对齐的几个基本的原则"><a href="#对齐的几个基本的原则" class="headerlink" title="对齐的几个基本的原则"></a>对齐的几个基本的原则</h2><p>1、结构体变量的起始地址能够被其最宽的成员大小整除。</p>
-<p>2、结构体每个成员相对于起始地址的偏移能够被自身大小整除，如果不能则在前一个成员后面补充字节。</p>
-<p>3、结构体总的大小能够被最宽的成员大小整除，如果不能则是在后面进行一个补齐。</p>
-<p>结构体其实也是可以指定编译器对齐大小的，例如以下的代码</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack(1)</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> a;</span><br><span class="line">	<span class="keyword">int</span>  b;</span><br><span class="line">	<span class="keyword">char</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack()</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span> <span class="title">a</span>;</span></span><br></pre></td></tr></table></figure>
-<p>sizeof(a)的大小为5。</p>
-<h2 id="几种变形情况"><a href="#几种变形情况" class="headerlink" title="几种变形情况"></a>几种变形情况</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> a;</span><br><span class="line">	<span class="keyword">int</span>  b;</span><br><span class="line">	<span class="keyword">short</span> c;</span><br><span class="line">&#125;A1;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>变量a，自身按1字节对齐，</p>
-</blockquote>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.zhihu.com/question/27862634">https://www.zhihu.com/question/27862634</a></p>
-<p><a href="https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90">https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90</a></p>
-]]></content>
+    <title>人为什么活着</title>
+    <url>/2020/10/13/%E7%94%9F%E6%B4%BB/</url>
+    <content><![CDATA[<h1 id="你喜欢的人在努力，你却在想怎么说我爱你"><a href="#你喜欢的人在努力，你却在想怎么说我爱你" class="headerlink" title="你喜欢的人在努力，你却在想怎么说我爱你"></a>你喜欢的人在努力，你却在想怎么说我爱你</h1>]]></content>
       <categories>
-        <category>C语言</category>
+        <category>杂谈</category>
       </categories>
   </entry>
   <entry>
@@ -387,7 +349,7 @@
 <h2 id="二、Makefile通用模板"><a href="#二、Makefile通用模板" class="headerlink" title="二、Makefile通用模板"></a>二、Makefile通用模板</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TARGET&#x3D;server</span><br><span class="line">CC&#x3D;g++</span><br><span class="line">CFLAG&#x3D;-c -g -static</span><br><span class="line">#所有的.c文件</span><br><span class="line">SRCS:&#x3D;$(wildcard ..&#x2F;*.c)</span><br><span class="line">FILTERS&#x3D;..&#x2F;hello.c</span><br><span class="line">#从SRCS中除了hello.c文件 filter函数可以选择满足条件的</span><br><span class="line">SRCS:&#x3D;$(filter-out $(FILTERS), $(SRCS))</span><br><span class="line">OBJS:&#x3D;$(patsubst %.c, %.o, $(SRCS))</span><br><span class="line">CURRENT_PATH&#x3D;$(PWD)</span><br><span class="line">CPPFLAGS&#x3D; -I..&#x2F;include -I..&#x2F;util</span><br><span class="line">LIBS_PATH&#x3D;-L..&#x2F;lib64</span><br><span class="line">LIBS&#x3D;-lmylib</span><br><span class="line"></span><br><span class="line">#判断是哪个系统32bit编译还是在64bit编译。</span><br><span class="line">ARCH:&#x3D;$(shell uname -m)</span><br><span class="line">ifeq ($(ARCH), x86_64)</span><br><span class="line">VERSION:&#x3D;X86_64</span><br><span class="line">else</span><br><span class="line">VERSION:&#x3D;i686</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">$(TARGET):$(OBJS)</span><br><span class="line">        $(CC) $(DEBUG) $(SRCS) $(LIBS_PATH) $(LIBS) $(CPPFLAGS) -o $(TARGET)</span><br><span class="line"></span><br><span class="line">$(OBJS):%.o:%.c</span><br><span class="line">        $(CC) $(CFLAG) $&lt; -o $@</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">        rm -rf *~ *.bak $(TARGET)</span><br><span class="line"></span><br><span class="line">【顶层Makefile编写】</span><br><span class="line">all: all_client all_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">all_client:</span><br><span class="line">    $(MAKE) -C client</span><br><span class="line">all_server:</span><br><span class="line">    $(MAKE) -C server</span><br><span class="line"></span><br><span class="line">clean: clean_client clean_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">clean_client:</span><br><span class="line">    $(MAKE) -C client clean</span><br><span class="line">clean_server:</span><br><span class="line">    $(MAKE) -C server clean</span><br></pre></td></tr></table></figure>
 <hr>
 <p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#x70;&#x79;&#117;&#x61;&#110;&#50;&#49;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;">&#x6c;&#x70;&#x79;&#117;&#x61;&#110;&#50;&#49;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#x70;&#x79;&#117;&#x61;&#110;&#x32;&#49;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;">&#x6c;&#x70;&#x79;&#117;&#x61;&#110;&#x32;&#49;&#64;&#111;&#117;&#116;&#x6c;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
 ]]></content>
       <categories>
         <category>Testing</category>
@@ -396,6 +358,67 @@
         <tag>Testing</tag>
         <tag>Another Tag</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>结构体对齐</title>
+    <url>/2021/01/06/%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90/</url>
+    <content><![CDATA[<h1 id="结构体对齐"><a href="#结构体对齐" class="headerlink" title="结构体对齐"></a>结构体对齐</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><blockquote>
+<p>结构体对齐一直是一个老生常谈的问题，我面试过就被问过几次，但是每一次都复习准备好好的，但是一到面试时候，总能被面试官问倒（卑微~）其实主要的原因就是自己没有准确的深刻的理解结构体对齐这个知识点，没有对其进行一个总结。</p>
+</blockquote>
+<h2 id="为什么需要结构体对齐"><a href="#为什么需要结构体对齐" class="headerlink" title="为什么需要结构体对齐"></a>为什么需要结构体对齐</h2><p>结构体需要对其的原因主要就是对CPU对内存访问效率优化的一个问题。假设是intel 32的CPU， 每个总线周期都是要从偶地址读取32位的内存数据。</p>
+<p>假设我们的CPU和总线都是64位的，每次可以从内存中获取8个字节（Byte）64位（bit）的数据，这8个字节就是对齐的，假设就是0<del>7，8</del>15类似这样，你不能从中间3<del>10这样取值。如果需要取值3</del>10之间的数据，就需要取两次，分别是0<del>7，再取8</del>15。所以CPU的取值效率就下降了。</p>
+<h2 id="对齐的几个基本的原则"><a href="#对齐的几个基本的原则" class="headerlink" title="对齐的几个基本的原则"></a>对齐的几个基本的原则</h2><p>1、结构体变量的起始地址能够被其最宽的成员大小整除。</p>
+<p>2、结构体每个成员相对于起始地址的偏移能够被自身大小整除，如果不能则在前一个成员后面补充字节。</p>
+<p>3、结构体总的大小能够被最宽的成员大小整除，如果不能则是在后面进行一个补齐。</p>
+<p>结构体其实也是可以指定编译器对齐大小的，例如以下的代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack(1)</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> a;</span><br><span class="line">	<span class="keyword">int</span>  b;</span><br><span class="line">	<span class="keyword">char</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack()</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span> <span class="title">a</span>;</span></span><br></pre></td></tr></table></figure>
+<p>sizeof(a)的大小为5。</p>
+<h2 id="几种变形情况"><a href="#几种变形情况" class="headerlink" title="几种变形情况"></a>几种变形情况</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> a;</span><br><span class="line">	<span class="keyword">int</span>  b;</span><br><span class="line">	<span class="keyword">short</span> c;</span><br><span class="line">&#125;A1;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>变量a，自身按1字节对齐，</p>
+</blockquote>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.zhihu.com/question/27862634">https://www.zhihu.com/question/27862634</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90">https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90</a></p>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>腾讯面试</title>
+    <url>/2020/11/16/%E8%85%BE%E8%AE%AF%E9%9D%A2%E8%AF%95/</url>
+    <content><![CDATA[<p>1、100万数据个是topK。</p>
+<p>2、32位无符号整形个数的QQ号记录QQ号的状态 上线和下线，计算使用多少内存。</p>
+<p>3、printf(“%d “, 1, 2, 3);  printf(“%s”)；</p>
+<p>4、HTTP 和 HTTPS的区别。1、对称加密和非对称加密。2、效率问题的瓶颈。</p>
+<p>5、阻塞问题</p>
+<p>1、对端接收处理不过来 。流量控制。</p>
+<p>2、网络阻塞。拥塞控制。</p>
+<p>3、项目问题</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>链表</title>
+    <url>/2020/03/04/%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[<blockquote>
+<ul>
+<li>整理知识，学习笔记</li>
+<li>发布日记，杂文，所见所想</li>
+<li>撰写发布技术文稿（代码支持）</li>
+<li>撰写发布学术论文（LaTeX 公式支持）</li>
+</ul>
+</blockquote>
+<h1 id="什么是链表"><a href="#什么是链表" class="headerlink" title="什么是链表"></a>什么是链表</h1><p>&ensp;&ensp;&ensp;&ensp;链表是一组数据项的集合，其中每一个数据项都是一个节点的一部分，每一个节点都包含有指向下一个节点的链接。</p>
+<h1 id="链表和数组的区别"><a href="#链表和数组的区别" class="headerlink" title="链表和数组的区别"></a>链表和数组的区别</h1><p>（1）<strong>逻辑结构</strong>。数组需要实现定义固定长度（元素个数），不能适应动态的增加或者删除数据元素。<br>（2）<strong>内存结构</strong>。（静态）数组从占空间分配内存，快捷方便，但是自由度小。链表从堆中进行分配，自由度大。<br>（3）<strong>存储结构</strong>。数组在内存中是顺序存储，而链表是随机存储。数组的访问效率很高，但是插入和删除效率低，链表相反。<br>（4）数组会存在越界的问题，但是链表不会。</p>
+<h1 id="链表的应用"><a href="#链表的应用" class="headerlink" title="链表的应用"></a>链表的应用</h1><h2 id="LRU缓存淘汰算法"><a href="#LRU缓存淘汰算法" class="headerlink" title="LRU缓存淘汰算法"></a>LRU缓存淘汰算法</h2><p>&ensp;&ensp;&ensp;&ensp;缓存是一种提高数据读取性能的技术，在硬件设计、软件开发中都有着非常广泛的应用，比如常见的 CPU缓存、数据库缓存、浏览器缓存等等。缓存的大小有限，当缓存被用满时，哪些数据应该被清理出去，哪些数据应该被保留？这就需要缓存淘汰策略来决定。常见的策略有三种：<strong>先进先出策略</strong> FIFO（First In，First Out）、<strong>最少使用策略</strong> LFU（Least Frequently Used）、<strong>最近最少使用策略</strong> LRU（Least Recently Used）。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define ture 1</span><br><span class="line">#define false 0</span><br><span class="line"></span><br><span class="line">typedef int Data_type;</span><br><span class="line">typedef struct _Node&#123;</span><br><span class="line">	Data_type data;</span><br><span class="line">	struct _Node *next;</span><br><span class="line">&#125;Node;</span><br><span class="line"></span><br><span class="line">&#x2F;* 将数据插入到头部 *&#x2F;</span><br><span class="line">void intsert_elem_to_begin(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 查找元素，存在则是返回1，不存在返回0 *&#x2F;</span><br><span class="line">int find_elem(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 删除链表尾部结点 *&#x2F;</span><br><span class="line">void dalete_tail_elem();</span><br><span class="line"></span><br><span class="line">&#x2F;* 删除指定元素结点 *&#x2F;</span><br><span class="line">int delete_elem(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 判断链表是否满 *&#x2F;</span><br><span class="line">int is_full();</span><br><span class="line"></span><br><span class="line">&#x2F;* 判断链表是否为空 *&#x2F;</span><br><span class="line">int is_empty();</span><br><span class="line"></span><br><span class="line">&#x2F;* 打印所有数据 *&#x2F;</span><br><span class="line">void show_all();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#x70;&#121;&#117;&#97;&#110;&#50;&#49;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;">&#108;&#x70;&#121;&#117;&#97;&#110;&#50;&#49;&#64;&#x6f;&#117;&#x74;&#108;&#x6f;&#x6f;&#107;&#x2e;&#x63;&#111;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
   </entry>
   <entry>
     <title>进程间通信</title>
@@ -426,29 +449,6 @@
 ]]></content>
       <categories>
         <category>Unix环境编程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>链表</title>
-    <url>/2020/03/04/%E9%93%BE%E8%A1%A8/</url>
-    <content><![CDATA[<blockquote>
-<ul>
-<li>整理知识，学习笔记</li>
-<li>发布日记，杂文，所见所想</li>
-<li>撰写发布技术文稿（代码支持）</li>
-<li>撰写发布学术论文（LaTeX 公式支持）</li>
-</ul>
-</blockquote>
-<h1 id="什么是链表"><a href="#什么是链表" class="headerlink" title="什么是链表"></a>什么是链表</h1><p>&ensp;&ensp;&ensp;&ensp;链表是一组数据项的集合，其中每一个数据项都是一个节点的一部分，每一个节点都包含有指向下一个节点的链接。</p>
-<h1 id="链表和数组的区别"><a href="#链表和数组的区别" class="headerlink" title="链表和数组的区别"></a>链表和数组的区别</h1><p>（1）<strong>逻辑结构</strong>。数组需要实现定义固定长度（元素个数），不能适应动态的增加或者删除数据元素。<br>（2）<strong>内存结构</strong>。（静态）数组从占空间分配内存，快捷方便，但是自由度小。链表从堆中进行分配，自由度大。<br>（3）<strong>存储结构</strong>。数组在内存中是顺序存储，而链表是随机存储。数组的访问效率很高，但是插入和删除效率低，链表相反。<br>（4）数组会存在越界的问题，但是链表不会。</p>
-<h1 id="链表的应用"><a href="#链表的应用" class="headerlink" title="链表的应用"></a>链表的应用</h1><h2 id="LRU缓存淘汰算法"><a href="#LRU缓存淘汰算法" class="headerlink" title="LRU缓存淘汰算法"></a>LRU缓存淘汰算法</h2><p>&ensp;&ensp;&ensp;&ensp;缓存是一种提高数据读取性能的技术，在硬件设计、软件开发中都有着非常广泛的应用，比如常见的 CPU缓存、数据库缓存、浏览器缓存等等。缓存的大小有限，当缓存被用满时，哪些数据应该被清理出去，哪些数据应该被保留？这就需要缓存淘汰策略来决定。常见的策略有三种：<strong>先进先出策略</strong> FIFO（First In，First Out）、<strong>最少使用策略</strong> LFU（Least Frequently Used）、<strong>最近最少使用策略</strong> LRU（Least Recently Used）。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define ture 1</span><br><span class="line">#define false 0</span><br><span class="line"></span><br><span class="line">typedef int Data_type;</span><br><span class="line">typedef struct _Node&#123;</span><br><span class="line">	Data_type data;</span><br><span class="line">	struct _Node *next;</span><br><span class="line">&#125;Node;</span><br><span class="line"></span><br><span class="line">&#x2F;* 将数据插入到头部 *&#x2F;</span><br><span class="line">void intsert_elem_to_begin(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 查找元素，存在则是返回1，不存在返回0 *&#x2F;</span><br><span class="line">int find_elem(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 删除链表尾部结点 *&#x2F;</span><br><span class="line">void dalete_tail_elem();</span><br><span class="line"></span><br><span class="line">&#x2F;* 删除指定元素结点 *&#x2F;</span><br><span class="line">int delete_elem(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 判断链表是否满 *&#x2F;</span><br><span class="line">int is_full();</span><br><span class="line"></span><br><span class="line">&#x2F;* 判断链表是否为空 *&#x2F;</span><br><span class="line">int is_empty();</span><br><span class="line"></span><br><span class="line">&#x2F;* 打印所有数据 *&#x2F;</span><br><span class="line">void show_all();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<hr>
-<p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#x70;&#121;&#x75;&#x61;&#x6e;&#50;&#49;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#x6c;&#x70;&#121;&#x75;&#x61;&#x6e;&#50;&#49;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a><br>2020年02月28日 02:52:00   </p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
       </categories>
   </entry>
   <entry>
