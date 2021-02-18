@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Google浏览器无法安装问题</title>
-    <url>/2020/03/01/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="/2020/03/01/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image1.jpg" alt="点击图片时候下方显示描述"></p>
-<p>&ensp;&ensp;&ensp;&ensp;今天遇到一个有趣的问题，Google浏览器莫名其面的一直安装不上，自己捣鼓了好久最后才解决。网上有很多方法说是因为注册表有残留，准确的说是GoogleUpdate这个东西在作怪，解决的方法只需要将注册表里Google相关的东西删除。</p>
-<h1 id="1、打开注册表直接Win-R输入regedit"><a href="#1、打开注册表直接Win-R输入regedit" class="headerlink" title="1、打开注册表直接Win+R输入regedit"></a>1、打开注册表直接Win+R输入regedit</h1><p><img src="/2020/03/01/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image2.jpg"></p>
-<h1 id="2、删除注册表残留数据。"><a href="#2、删除注册表残留数据。" class="headerlink" title="2、删除注册表残留数据。"></a>2、删除注册表残留数据。</h1><p>&ensp;&ensp;&ensp;&ensp;删除\HKEY_CURRENT_USER\Software\和HKEY_LOCAL_MACHINE\SOFTWARE目录下的Google及对应的子目录就可以了。但是我操作的时候出现了问题，删除Google目录时候报错，后面发现是权限问题。解决方法：右键该目录修改管理员权限可以删除。</p>
-<h1 id="3、确认电脑系统版本。"><a href="#3、确认电脑系统版本。" class="headerlink" title="3、确认电脑系统版本。"></a>3、确认电脑系统版本。</h1><p>&ensp;&ensp;&ensp;&ensp;可以删除之后还是发现无法安装，最后发现照着网上的帖子没有用，因为帖子估计都比较老，我的是win10系统，所以导致删除的路径不对，导致依旧无法正常安装，需要删除对应的路径。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">32位：HKEY_LOCAL_MACHINE\SOFTWARE\Google</span><br><span class="line">64位：HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Google</span><br></pre></td></tr></table></figure>
-<h1 id="4、重启安装应用。"><a href="#4、重启安装应用。" class="headerlink" title="4、重启安装应用。"></a>4、重启安装应用。</h1><p>&ensp;&ensp;&ensp;&ensp;重新双击运行安装应用程序，完美解决！</p>
+    <title>Go语言error错误处理</title>
+    <url>/2021/02/01/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
+    <content><![CDATA[<h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="第3章-基本的数据类型"><a href="#第3章-基本的数据类型" class="headerlink" title="第3章 基本的数据类型"></a>第3章 基本的数据类型</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">四大类型：</span><br><span class="line">1、基础数据类型(basic type)</span><br><span class="line">2、聚合类型(aggregate type)</span><br><span class="line">3、引用类型(reference type)</span><br><span class="line">4、接口类型(interface type)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基础的数据类型：</span><br><span class="line">1、数字、字符串、布尔型</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
-      <categories>
-        <category>windows</category>
-      </categories>
   </entry>
   <entry>
     <title>Centos+hexo搭建个人网站</title>
@@ -54,46 +49,19 @@
       </categories>
   </entry>
   <entry>
-    <title>Go语言error错误处理</title>
-    <url>/2021/02/01/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="第3章-基本的数据类型"><a href="#第3章-基本的数据类型" class="headerlink" title="第3章 基本的数据类型"></a>第3章 基本的数据类型</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">四大类型：</span><br><span class="line">1、基础数据类型(basic type)</span><br><span class="line">2、聚合类型(aggregate type)</span><br><span class="line">3、引用类型(reference type)</span><br><span class="line">4、接口类型(interface type)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">基础的数据类型：</span><br><span class="line">1、数字、字符串、布尔型</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>Google浏览器无法安装问题</title>
+    <url>/2020/03/01/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p><img src="/2020/03/01/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image1.jpg" alt="点击图片时候下方显示描述"></p>
+<p>&ensp;&ensp;&ensp;&ensp;今天遇到一个有趣的问题，Google浏览器莫名其面的一直安装不上，自己捣鼓了好久最后才解决。网上有很多方法说是因为注册表有残留，准确的说是GoogleUpdate这个东西在作怪，解决的方法只需要将注册表里Google相关的东西删除。</p>
+<h1 id="1、打开注册表直接Win-R输入regedit"><a href="#1、打开注册表直接Win-R输入regedit" class="headerlink" title="1、打开注册表直接Win+R输入regedit"></a>1、打开注册表直接Win+R输入regedit</h1><p><img src="/2020/03/01/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image2.jpg"></p>
+<h1 id="2、删除注册表残留数据。"><a href="#2、删除注册表残留数据。" class="headerlink" title="2、删除注册表残留数据。"></a>2、删除注册表残留数据。</h1><p>&ensp;&ensp;&ensp;&ensp;删除\HKEY_CURRENT_USER\Software\和HKEY_LOCAL_MACHINE\SOFTWARE目录下的Google及对应的子目录就可以了。但是我操作的时候出现了问题，删除Google目录时候报错，后面发现是权限问题。解决方法：右键该目录修改管理员权限可以删除。</p>
+<h1 id="3、确认电脑系统版本。"><a href="#3、确认电脑系统版本。" class="headerlink" title="3、确认电脑系统版本。"></a>3、确认电脑系统版本。</h1><p>&ensp;&ensp;&ensp;&ensp;可以删除之后还是发现无法安装，最后发现照着网上的帖子没有用，因为帖子估计都比较老，我的是win10系统，所以导致删除的路径不对，导致依旧无法正常安装，需要删除对应的路径。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">32位：HKEY_LOCAL_MACHINE\SOFTWARE\Google</span><br><span class="line">64位：HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Google</span><br></pre></td></tr></table></figure>
+<h1 id="4、重启安装应用。"><a href="#4、重启安装应用。" class="headerlink" title="4、重启安装应用。"></a>4、重启安装应用。</h1><p>&ensp;&ensp;&ensp;&ensp;重新双击运行安装应用程序，完美解决！</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>Linux常用命令</title>
-    <url>/2020/02/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a><strong>linux下常用的一下命令</strong></h1><h2 id="防火墙相关的命令。"><a href="#防火墙相关的命令。" class="headerlink" title="防火墙相关的命令。"></a><strong>防火墙相关的命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;4400-4600&#x2F;udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone #作用域 </span><br><span class="line">--add-port&#x3D;80&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 </span><br><span class="line">--permanent #永久生效</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --remove-port&#x3D;80&#x2F;tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span><br></pre></td></tr></table></figure>
-<h2 id="yum安装软件包。"><a href="#yum安装软件包。" class="headerlink" title="yum安装软件包。"></a><strong>yum安装软件包。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install epel-release #安装&quot;epel-release&quot;的软件包</span><br><span class="line">yum install tcpreplay</span><br></pre></td></tr></table></figure>
-<h2 id="ps命令。"><a href="#ps命令。" class="headerlink" title="ps命令。"></a><strong>ps命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -eLf	 #查看进程线程情况</span><br></pre></td></tr></table></figure>
-<h2 id="压缩、解压命令。"><a href="#压缩、解压命令。" class="headerlink" title="压缩、解压命令。"></a><strong>压缩、解压命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">压缩：</span><br><span class="line">tar -zcvf &#x2F;tmp&#x2F;etc.tar.gz  &#x2F;etc     #将&#x2F;etc下的所有文件及目录打包到&#x2F;etc，并使用gz压缩  </span><br><span class="line">tar -cvf &#x2F;home&#x2F;abc.tar &#x2F;home&#x2F;abc    #只打包，不压缩</span><br><span class="line">tar -zcvf &#x2F;home&#x2F;abc.tar.gz &#x2F;home&#x2F;abc#打包，并用gzip压缩</span><br><span class="line"></span><br><span class="line">解压：</span><br><span class="line">tar -zxvf &#x2F;tmp&#x2F;etc.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="服务的锁定与取消。"><a href="#服务的锁定与取消。" class="headerlink" title="服务的锁定与取消。"></a><strong>服务的锁定与取消。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl mask firewalld   #需要锁定该服务时执行</span><br><span class="line">systemctl unmask firewalld #实现取消服务的锁定</span><br></pre></td></tr></table></figure>
-<h2 id="路由配置相关。"><a href="#路由配置相关。" class="headerlink" title="路由配置相关。"></a><strong>路由配置相关。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#添加IPV6地址</span><br><span class="line">ip -6 addr add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt; dev &lt;interface&gt;</span><br><span class="line">ip -6 addr add 2001:0db8:0:f101::1&#x2F;64 dev eth0</span><br><span class="line"></span><br><span class="line">ifconfig &lt;interface&gt; inet6 add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt;</span><br><span class="line">ifconfig eth0 inet6 add 2001:0db8:0:f101::1&#x2F;64</span><br><span class="line"></span><br><span class="line">#添加默认路由</span><br><span class="line">ip -6 route add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; via &lt;ipv6address&gt;</span><br><span class="line">ip -6 route add default via 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">route -A inet6 add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; gw</span><br><span class="line">route -A inet6 add default gw 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">#查看路由</span><br><span class="line">ip -6 route show</span><br><span class="line">route -A &#39;inet6&#39;</span><br><span class="line">route -6</span><br><span class="line"></span><br><span class="line">#windows查看路由表</span><br><span class="line">route print</span><br><span class="line"></span><br><span class="line">#查看邻居缓存</span><br><span class="line">ip -6 neighbor show</span><br><span class="line"></span><br><span class="line">#windows查看邻居缓存</span><br><span class="line">netsh interface ipv6 show neighbors</span><br><span class="line"></span><br><span class="line">#查看smtp服务器</span><br><span class="line">ping smtp.sohu.com </span><br><span class="line">ping smtp.qq.com</span><br></pre></td></tr></table></figure>
-<h2 id="更新内核命令。"><a href="#更新内核命令。" class="headerlink" title="更新内核命令。"></a><strong>更新内核命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum update kernel -y</span><br></pre></td></tr></table></figure>
-<h2 id="大文件重定向有效信息。"><a href="#大文件重定向有效信息。" class="headerlink" title="大文件重定向有效信息。"></a><strong>大文件重定向有效信息。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">重定向dmesg.txt关键字Call Trace的前后2000行到nn.txt：</span><br><span class="line">grep -C 2000 ‘Call Trace’ dmesg.txt &gt;nn.txt</span><br></pre></td></tr></table></figure>
-<h2 id="Shell递归删除指定字符串文件或者目录。"><a href="#Shell递归删除指定字符串文件或者目录。" class="headerlink" title="Shell递归删除指定字符串文件或者目录。"></a><strong>Shell递归删除指定字符串文件或者目录。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">文件：find . -name &quot;*.rej&quot; | xargs rm -rf</span><br><span class="line">目录：find . -type d -name &quot;*.rej&quot; | xargs rm -rf</span><br></pre></td></tr></table></figure>
-<h2 id="文件夹建立软链接（用绝对地址）"><a href="#文件夹建立软链接（用绝对地址）" class="headerlink" title="文件夹建立软链接（用绝对地址）"></a><strong>文件夹建立软链接（用绝对地址）</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ln -s 源地址 目的地址   #比如我把linux文件系统rootfs_dir软链接到&#x2F;home&#x2F;jyg&#x2F;目录下</span><br><span class="line">ln -s &#x2F;opt&#x2F;linux&#x2F;rootfs_dir  &#x2F;home&#x2F;jyg&#x2F;rootfs_dir #就可以了</span><br></pre></td></tr></table></figure>
-<h2 id="大文件分割"><a href="#大文件分割" class="headerlink" title="大文件分割"></a><strong>大文件分割</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">windows下 d:&gt;wireshark&gt;editcap -C 1000000(文件大小) 待分割文件路径 新文件名称</span><br><span class="line">linux 可使用split命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Linux</category>
+        <category>windows</category>
       </categories>
-  </entry>
-  <entry>
-    <title>Linux非阻塞模式下的EAGIN异常</title>
-    <url>/2021/02/18/Linux%E9%9D%9E%E9%98%BB%E5%A1%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84EAGIN%E5%BC%82%E5%B8%B8/</url>
-    <content><![CDATA[<p>之前在写一个并发聊天室时候在多个客户端连续发送数据的时候遇到EAGIN错误，如图。</p>
-<p><img src="/2021/02/18/Linux%E9%9D%9E%E9%98%BB%E5%A1%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84EAGIN%E5%BC%82%E5%B8%B8/image-20210218161957083.png" alt="image-20210218161957083"></p>
-<p>Linux下，管道、FIFO以及一些设备（通常是终端和网络）一般有以下几种性质。</p>
-<a id="more"></a>
-
-<blockquote>
-<p>1、一次read操作返回的数据可能会少于所要求的数据，及时此时没有到达文件尾部也可能会出现这种情况。对于这种情况，我们不认为是错误，而是视为一种异常，应该继续对此设备进行读取。</p>
-<p>2、一次write或send操作的返回值也可能会少于指定的输出的字节数。通常这可能是由于某一种因素引起的，比如在处理网络数据的时，内核输出的缓冲区满，此时写不进数据。我们也通常不认为这是一种错误，应当继续将余下的数据进行写入。（通常遇到这种情况的场景是非阻塞描述符，或者捕捉到某一种信号的时候，才会发生中途返回。）</p>
-</blockquote>
-]]></content>
   </entry>
   <entry>
     <title>IO多路复用</title>
@@ -182,12 +150,28 @@
       </categories>
   </entry>
   <entry>
-    <title>Mysql数据库</title>
-    <url>/2020/02/29/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
-    <content><![CDATA[]]></content>
+    <title>Raft算法</title>
+    <url>/2021/01/07/Raft%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h1 id="Raft算法"><a href="#Raft算法" class="headerlink" title="Raft算法"></a>Raft算法</h1><h2 id="什么是Raft算法"><a href="#什么是Raft算法" class="headerlink" title="什么是Raft算法"></a>什么是Raft算法</h2><p>Raft算法是Multi-Paxos算法，</p>
+]]></content>
       <categories>
-        <category>数据库</category>
+        <category>数据结构与算法</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Linux非阻塞模式下的EAGIN异常</title>
+    <url>/2021/02/18/Linux%E9%9D%9E%E9%98%BB%E5%A1%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84EAGIN%E5%BC%82%E5%B8%B8/</url>
+    <content><![CDATA[<p>之前在写一个并发聊天室时候在多个客户端连续发送数据的时候遇到EAGIN错误，如图。</p>
+<img src="../../../../Library/Application%20Support/typora-user-images/image-20210218231310810.png" alt="image-20210218231310810" style="zoom:35%;">
+
+<p>Linux下，管道、FIFO以及一些设备（通常是终端和网络）一般有以下几种性质。</p>
+<a id="more"></a>
+
+<blockquote>
+<p>1、一次read操作返回的数据可能会少于所要求的数据，及时此时没有到达文件尾部也可能会出现这种情况。对于这种情况，我们不认为是错误，而是视为一种异常，应该继续对此设备进行读取。</p>
+<p>2、一次write或send操作的返回值也可能会少于指定的输出的字节数。通常这可能是由于某一种因素引起的，比如在处理网络数据的时，内核输出的缓冲区满，此时写不进数据。我们也通常不认为这是一种错误，应当继续将余下的数据进行写入。（通常遇到这种情况的场景是非阻塞描述符，或者捕捉到某一种信号的时候，才会发生中途返回。）</p>
+</blockquote>
+]]></content>
   </entry>
   <entry>
     <title>docker</title>
@@ -206,21 +190,11 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Raft算法</title>
-    <url>/2021/01/07/Raft%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h1 id="Raft算法"><a href="#Raft算法" class="headerlink" title="Raft算法"></a>Raft算法</h1><h2 id="什么是Raft算法"><a href="#什么是Raft算法" class="headerlink" title="什么是Raft算法"></a>什么是Raft算法</h2><p>Raft算法是Multi-Paxos算法，</p>
-]]></content>
+    <title>Mysql数据库</title>
+    <url>/2020/02/29/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>windows安装向导脚本</title>
-    <url>/2020/03/01/windows%E5%AE%89%E8%A3%85%E5%90%91%E5%AF%BC%E8%84%9A%E6%9C%AC/</url>
-    <content><![CDATA[<p>一、windows 安装向导可以将程序打包。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>windows</category>
+        <category>数据库</category>
       </categories>
   </entry>
   <entry>
@@ -235,6 +209,49 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Linux常用命令</title>
+    <url>/2020/02/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a><strong>linux下常用的一下命令</strong></h1><h2 id="防火墙相关的命令。"><a href="#防火墙相关的命令。" class="headerlink" title="防火墙相关的命令。"></a><strong>防火墙相关的命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;4400-4600&#x2F;udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone #作用域 </span><br><span class="line">--add-port&#x3D;80&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 </span><br><span class="line">--permanent #永久生效</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --remove-port&#x3D;80&#x2F;tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span><br></pre></td></tr></table></figure>
+<h2 id="yum安装软件包。"><a href="#yum安装软件包。" class="headerlink" title="yum安装软件包。"></a><strong>yum安装软件包。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install epel-release #安装&quot;epel-release&quot;的软件包</span><br><span class="line">yum install tcpreplay</span><br></pre></td></tr></table></figure>
+<h2 id="ps命令。"><a href="#ps命令。" class="headerlink" title="ps命令。"></a><strong>ps命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -eLf	 #查看进程线程情况</span><br></pre></td></tr></table></figure>
+<h2 id="压缩、解压命令。"><a href="#压缩、解压命令。" class="headerlink" title="压缩、解压命令。"></a><strong>压缩、解压命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">压缩：</span><br><span class="line">tar -zcvf &#x2F;tmp&#x2F;etc.tar.gz  &#x2F;etc     #将&#x2F;etc下的所有文件及目录打包到&#x2F;etc，并使用gz压缩  </span><br><span class="line">tar -cvf &#x2F;home&#x2F;abc.tar &#x2F;home&#x2F;abc    #只打包，不压缩</span><br><span class="line">tar -zcvf &#x2F;home&#x2F;abc.tar.gz &#x2F;home&#x2F;abc#打包，并用gzip压缩</span><br><span class="line"></span><br><span class="line">解压：</span><br><span class="line">tar -zxvf &#x2F;tmp&#x2F;etc.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="服务的锁定与取消。"><a href="#服务的锁定与取消。" class="headerlink" title="服务的锁定与取消。"></a><strong>服务的锁定与取消。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl mask firewalld   #需要锁定该服务时执行</span><br><span class="line">systemctl unmask firewalld #实现取消服务的锁定</span><br></pre></td></tr></table></figure>
+<h2 id="路由配置相关。"><a href="#路由配置相关。" class="headerlink" title="路由配置相关。"></a><strong>路由配置相关。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#添加IPV6地址</span><br><span class="line">ip -6 addr add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt; dev &lt;interface&gt;</span><br><span class="line">ip -6 addr add 2001:0db8:0:f101::1&#x2F;64 dev eth0</span><br><span class="line"></span><br><span class="line">ifconfig &lt;interface&gt; inet6 add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt;</span><br><span class="line">ifconfig eth0 inet6 add 2001:0db8:0:f101::1&#x2F;64</span><br><span class="line"></span><br><span class="line">#添加默认路由</span><br><span class="line">ip -6 route add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; via &lt;ipv6address&gt;</span><br><span class="line">ip -6 route add default via 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">route -A inet6 add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; gw</span><br><span class="line">route -A inet6 add default gw 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">#查看路由</span><br><span class="line">ip -6 route show</span><br><span class="line">route -A &#39;inet6&#39;</span><br><span class="line">route -6</span><br><span class="line"></span><br><span class="line">#windows查看路由表</span><br><span class="line">route print</span><br><span class="line"></span><br><span class="line">#查看邻居缓存</span><br><span class="line">ip -6 neighbor show</span><br><span class="line"></span><br><span class="line">#windows查看邻居缓存</span><br><span class="line">netsh interface ipv6 show neighbors</span><br><span class="line"></span><br><span class="line">#查看smtp服务器</span><br><span class="line">ping smtp.sohu.com </span><br><span class="line">ping smtp.qq.com</span><br></pre></td></tr></table></figure>
+<h2 id="更新内核命令。"><a href="#更新内核命令。" class="headerlink" title="更新内核命令。"></a><strong>更新内核命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum update kernel -y</span><br></pre></td></tr></table></figure>
+<h2 id="大文件重定向有效信息。"><a href="#大文件重定向有效信息。" class="headerlink" title="大文件重定向有效信息。"></a><strong>大文件重定向有效信息。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">重定向dmesg.txt关键字Call Trace的前后2000行到nn.txt：</span><br><span class="line">grep -C 2000 ‘Call Trace’ dmesg.txt &gt;nn.txt</span><br></pre></td></tr></table></figure>
+<h2 id="Shell递归删除指定字符串文件或者目录。"><a href="#Shell递归删除指定字符串文件或者目录。" class="headerlink" title="Shell递归删除指定字符串文件或者目录。"></a><strong>Shell递归删除指定字符串文件或者目录。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">文件：find . -name &quot;*.rej&quot; | xargs rm -rf</span><br><span class="line">目录：find . -type d -name &quot;*.rej&quot; | xargs rm -rf</span><br></pre></td></tr></table></figure>
+<h2 id="文件夹建立软链接（用绝对地址）"><a href="#文件夹建立软链接（用绝对地址）" class="headerlink" title="文件夹建立软链接（用绝对地址）"></a><strong>文件夹建立软链接（用绝对地址）</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ln -s 源地址 目的地址   #比如我把linux文件系统rootfs_dir软链接到&#x2F;home&#x2F;jyg&#x2F;目录下</span><br><span class="line">ln -s &#x2F;opt&#x2F;linux&#x2F;rootfs_dir  &#x2F;home&#x2F;jyg&#x2F;rootfs_dir #就可以了</span><br></pre></td></tr></table></figure>
+<h2 id="大文件分割"><a href="#大文件分割" class="headerlink" title="大文件分割"></a><strong>大文件分割</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">windows下 d:&gt;wireshark&gt;editcap -C 1000000(文件大小) 待分割文件路径 新文件名称</span><br><span class="line">linux 可使用split命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>shell脚本笔记</title>
+    <url>/2020/02/29/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="1、Shell脚本相关知识。"><a href="#1、Shell脚本相关知识。" class="headerlink" title="1、Shell脚本相关知识。"></a>1、<strong>Shell脚本相关知识。</strong></h1>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>windows安装向导脚本</title>
+    <url>/2020/03/01/windows%E5%AE%89%E8%A3%85%E5%90%91%E5%AF%BC%E8%84%9A%E6%9C%AC/</url>
+    <content><![CDATA[<p>一、windows 安装向导可以将程序打包。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>windows</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>汇编语言</title>
+    <url>/2020/10/11/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h2 id="三大总线"><a href="#三大总线" class="headerlink" title="三大总线"></a>三大总线</h2><p>1、地址总线</p>
+<p>2、控制总线</p>
+<p>3、数据总线</p>
 ]]></content>
   </entry>
   <entry>
@@ -253,6 +270,14 @@
 ]]></content>
       <categories>
         <category>Unix环境编程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>人为什么活着</title>
+    <url>/2020/10/13/%E7%94%9F%E6%B4%BB/</url>
+    <content><![CDATA[<h1 id="你喜欢的人在努力，你却在想怎么说我爱你"><a href="#你喜欢的人在努力，你却在想怎么说我爱你" class="headerlink" title="你喜欢的人在努力，你却在想怎么说我爱你"></a>你喜欢的人在努力，你却在想怎么说我爱你</h1>]]></content>
+      <categories>
+        <category>杂谈</category>
       </categories>
   </entry>
   <entry>
@@ -276,11 +301,40 @@
       </categories>
   </entry>
   <entry>
-    <title>汇编语言</title>
-    <url>/2020/10/11/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h2 id="三大总线"><a href="#三大总线" class="headerlink" title="三大总线"></a>三大总线</h2><p>1、地址总线</p>
-<p>2、控制总线</p>
-<p>3、数据总线</p>
+    <title>海量数据处理问题</title>
+    <url>/2021/01/07/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h2 id="1-海量数据问题"><a href="#1-海量数据问题" class="headerlink" title="1 海量数据问题"></a>1 海量数据问题</h2><h3 id="1-1-海量日志数据，提取出某日访问百度次数最多的那个IP。"><a href="#1-1-海量日志数据，提取出某日访问百度次数最多的那个IP。" class="headerlink" title="1.1 海量日志数据，提取出某日访问百度次数最多的那个IP。"></a>1.1 海量日志数据，提取出某日访问百度次数最多的那个IP。</h3><p>首先是这一天，并且是访问百度的日志中的IP取出来，逐个写入到一个大文件中。注意到IP是32位的，最多有个2^32个IP。同样可以采用映射的方法，比如模1000，把整个大文件映射为1000个小文件，再找出每个小文中出现频率最大的IP（可以采用hash_map进行频率统计，然后再找出频率最大的几个）及相应的频率。然后再在这1000个最大的IP中，找出那个频率最大的IP，即为所求。</p>
+<p>算法思想：分而治之+哈希</p>
+<p>1、IP地址最多有2^32=4G种取值情况，所以不能一次性直接都完全加载到内存中。</p>
+<p>2、考虑分而治之的思想，将IP地址进行hash(IP)%1024，把海量的数据分别存储到1024个文件中，这样，每个文件最有就含有4MB个IP地址。</p>
+<p>3、对于每一个小文件，可以进行构造一个key value的hash map，将IP作为key值，出现的次数作为value值，同时记录下当前出现次数最多的那个IP地址。</p>
+<p>4、可以得到1024个文件📃中出现次数最多的IP，再根据常规的排序算法得到总体上的出现次数最多的IP。</p>
+<h3 id="1-2-搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"><a href="#1-2-搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节" class="headerlink" title="1.2 搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"></a>1.2 搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节</h3><p>假设目前有一千万个记录（这些查询串的重复度比较高，虽然总数是1千万，但如果除去重复后，不超过3百万个。一个查询串的重复度越高，说明查询它的用户越多，也就是越热门。），请你统计最热门的10个查询串，要求使用的内存不能超过1G。</p>
+<p>算法思想：经典的topK问题。</p>
+<p>1、先对这批海量数据进行预处理，在O(n)的时间之内用hash表完成统计。</p>
+<p>2、借助堆这个数据结构，找出topk，时间复杂度为nlogK。借助堆这个数据结构，我们可以在log量级的时间内查找和调整移动。我们可以维护一个大顶堆，然后遍历这300万左右的数据，分别和根元素进行比对，最后得出前十个热门的查询串。</p>
+<h3 id="1-3-有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"><a href="#1-3-有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词" class="headerlink" title="1.3 有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"></a>1.3 有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词</h3><p>算法思想：分而治之+hash</p>
+<p>1、顺序读取文件，对于读取的每一个值，可以使用hash(x)%5000，将读取的词存储到5000个文件中，每个文件大概200k，如果还是有文件大于1m，可以按照这个方法继续往下分，直到可以直接放入内存中为止。</p>
+<p>2、对于每一个小文件，统计每个文件节点中出现的词以及相应的一个频率（tries树🌲或者hashMap都可以）。取出出现频率最大的一百个词（可以采用含有100个节点的最小堆），这样又可以得到5000个文件。最后一步，可以将这5000个文件进行归并过程了（类似于归并排序）。</p>
+<h3 id="1-4-在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。"><a href="#1-4-在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。" class="headerlink" title="1.4 在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。"></a>1.4 在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。</h3><p>方案1：可以采用2-bitmap进行，共需要内存</p>
+<h3 id="1-5-海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"><a href="#1-5-海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。" class="headerlink" title="1.5 海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"></a>1.5 海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。</h3><h3 id="1-6-腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"><a href="#1-6-腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？" class="headerlink" title="1.6 腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"></a>1.6 腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？</h3><p>使用bitmap，或者布隆过滤器。</p>
+<h3 id="1-7-10亿个域名如何判断，新来一个域名，如何判断在还是不在"><a href="#1-7-10亿个域名如何判断，新来一个域名，如何判断在还是不在" class="headerlink" title="1.7 10亿个域名如何判断，新来一个域名，如何判断在还是不在"></a>1.7 10亿个域名如何判断，新来一个域名，如何判断在还是不在</h3><p>可以使用布隆过滤器，判断不在就一定不在，判断在的话可能不在。</p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>腾讯面试</title>
+    <url>/2020/11/16/%E8%85%BE%E8%AE%AF%E9%9D%A2%E8%AF%95/</url>
+    <content><![CDATA[<p>1、100万数据个是topK。</p>
+<p>2、32位无符号整形个数的QQ号记录QQ号的状态 上线和下线，计算使用多少内存。</p>
+<p>3、printf(“%d “, 1, 2, 3);  printf(“%s”)；</p>
+<p>4、HTTP 和 HTTPS的区别。1、对称加密和非对称加密。2、效率问题的瓶颈。</p>
+<p>5、阻塞问题</p>
+<p>1、对端接收处理不过来 。流量控制。</p>
+<p>2、网络阻塞。拥塞控制。</p>
+<p>3、项目问题</p>
 ]]></content>
   </entry>
   <entry>
@@ -309,14 +363,6 @@
       </categories>
   </entry>
   <entry>
-    <title>人为什么活着</title>
-    <url>/2020/10/13/%E7%94%9F%E6%B4%BB/</url>
-    <content><![CDATA[<h1 id="你喜欢的人在努力，你却在想怎么说我爱你"><a href="#你喜欢的人在努力，你却在想怎么说我爱你" class="headerlink" title="你喜欢的人在努力，你却在想怎么说我爱你"></a>你喜欢的人在努力，你却在想怎么说我爱你</h1>]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-  </entry>
-  <entry>
     <title>标签测试文章</title>
     <url>/2020/10/06/%E7%BC%96%E5%86%99Makefile/</url>
     <content><![CDATA[<h1 id="编写Makefile"><a href="#编写Makefile" class="headerlink" title="编写Makefile"></a>编写Makefile</h1><hr>
@@ -341,7 +387,7 @@
 <h2 id="二、Makefile通用模板"><a href="#二、Makefile通用模板" class="headerlink" title="二、Makefile通用模板"></a>二、Makefile通用模板</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TARGET&#x3D;server</span><br><span class="line">CC&#x3D;g++</span><br><span class="line">CFLAG&#x3D;-c -g -static</span><br><span class="line">#所有的.c文件</span><br><span class="line">SRCS:&#x3D;$(wildcard ..&#x2F;*.c)</span><br><span class="line">FILTERS&#x3D;..&#x2F;hello.c</span><br><span class="line">#从SRCS中除了hello.c文件 filter函数可以选择满足条件的</span><br><span class="line">SRCS:&#x3D;$(filter-out $(FILTERS), $(SRCS))</span><br><span class="line">OBJS:&#x3D;$(patsubst %.c, %.o, $(SRCS))</span><br><span class="line">CURRENT_PATH&#x3D;$(PWD)</span><br><span class="line">CPPFLAGS&#x3D; -I..&#x2F;include -I..&#x2F;util</span><br><span class="line">LIBS_PATH&#x3D;-L..&#x2F;lib64</span><br><span class="line">LIBS&#x3D;-lmylib</span><br><span class="line"></span><br><span class="line">#判断是哪个系统32bit编译还是在64bit编译。</span><br><span class="line">ARCH:&#x3D;$(shell uname -m)</span><br><span class="line">ifeq ($(ARCH), x86_64)</span><br><span class="line">VERSION:&#x3D;X86_64</span><br><span class="line">else</span><br><span class="line">VERSION:&#x3D;i686</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">$(TARGET):$(OBJS)</span><br><span class="line">        $(CC) $(DEBUG) $(SRCS) $(LIBS_PATH) $(LIBS) $(CPPFLAGS) -o $(TARGET)</span><br><span class="line"></span><br><span class="line">$(OBJS):%.o:%.c</span><br><span class="line">        $(CC) $(CFLAG) $&lt; -o $@</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">        rm -rf *~ *.bak $(TARGET)</span><br><span class="line"></span><br><span class="line">【顶层Makefile编写】</span><br><span class="line">all: all_client all_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">all_client:</span><br><span class="line">    $(MAKE) -C client</span><br><span class="line">all_server:</span><br><span class="line">    $(MAKE) -C server</span><br><span class="line"></span><br><span class="line">clean: clean_client clean_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">clean_client:</span><br><span class="line">    $(MAKE) -C client clean</span><br><span class="line">clean_server:</span><br><span class="line">    $(MAKE) -C server clean</span><br></pre></td></tr></table></figure>
 <hr>
 <p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#112;&#x79;&#x75;&#97;&#x6e;&#50;&#x31;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#46;&#99;&#111;&#x6d;">&#108;&#112;&#x79;&#x75;&#97;&#x6e;&#50;&#x31;&#64;&#111;&#117;&#x74;&#x6c;&#111;&#x6f;&#107;&#46;&#99;&#111;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#x70;&#x79;&#117;&#x61;&#110;&#50;&#49;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;">&#x6c;&#x70;&#x79;&#117;&#x61;&#110;&#50;&#49;&#x40;&#x6f;&#117;&#116;&#108;&#x6f;&#111;&#x6b;&#46;&#99;&#111;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
 ]]></content>
       <categories>
         <category>Testing</category>
@@ -350,14 +396,6 @@
         <tag>Testing</tag>
         <tag>Another Tag</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>shell脚本笔记</title>
-    <url>/2020/02/29/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="1、Shell脚本相关知识。"><a href="#1、Shell脚本相关知识。" class="headerlink" title="1、Shell脚本相关知识。"></a>1、<strong>Shell脚本相关知识。</strong></h1>]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
   </entry>
   <entry>
     <title>进程间通信</title>
@@ -388,6 +426,29 @@
 ]]></content>
       <categories>
         <category>Unix环境编程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>链表</title>
+    <url>/2020/03/04/%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[<blockquote>
+<ul>
+<li>整理知识，学习笔记</li>
+<li>发布日记，杂文，所见所想</li>
+<li>撰写发布技术文稿（代码支持）</li>
+<li>撰写发布学术论文（LaTeX 公式支持）</li>
+</ul>
+</blockquote>
+<h1 id="什么是链表"><a href="#什么是链表" class="headerlink" title="什么是链表"></a>什么是链表</h1><p>&ensp;&ensp;&ensp;&ensp;链表是一组数据项的集合，其中每一个数据项都是一个节点的一部分，每一个节点都包含有指向下一个节点的链接。</p>
+<h1 id="链表和数组的区别"><a href="#链表和数组的区别" class="headerlink" title="链表和数组的区别"></a>链表和数组的区别</h1><p>（1）<strong>逻辑结构</strong>。数组需要实现定义固定长度（元素个数），不能适应动态的增加或者删除数据元素。<br>（2）<strong>内存结构</strong>。（静态）数组从占空间分配内存，快捷方便，但是自由度小。链表从堆中进行分配，自由度大。<br>（3）<strong>存储结构</strong>。数组在内存中是顺序存储，而链表是随机存储。数组的访问效率很高，但是插入和删除效率低，链表相反。<br>（4）数组会存在越界的问题，但是链表不会。</p>
+<h1 id="链表的应用"><a href="#链表的应用" class="headerlink" title="链表的应用"></a>链表的应用</h1><h2 id="LRU缓存淘汰算法"><a href="#LRU缓存淘汰算法" class="headerlink" title="LRU缓存淘汰算法"></a>LRU缓存淘汰算法</h2><p>&ensp;&ensp;&ensp;&ensp;缓存是一种提高数据读取性能的技术，在硬件设计、软件开发中都有着非常广泛的应用，比如常见的 CPU缓存、数据库缓存、浏览器缓存等等。缓存的大小有限，当缓存被用满时，哪些数据应该被清理出去，哪些数据应该被保留？这就需要缓存淘汰策略来决定。常见的策略有三种：<strong>先进先出策略</strong> FIFO（First In，First Out）、<strong>最少使用策略</strong> LFU（Least Frequently Used）、<strong>最近最少使用策略</strong> LRU（Least Recently Used）。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define ture 1</span><br><span class="line">#define false 0</span><br><span class="line"></span><br><span class="line">typedef int Data_type;</span><br><span class="line">typedef struct _Node&#123;</span><br><span class="line">	Data_type data;</span><br><span class="line">	struct _Node *next;</span><br><span class="line">&#125;Node;</span><br><span class="line"></span><br><span class="line">&#x2F;* 将数据插入到头部 *&#x2F;</span><br><span class="line">void intsert_elem_to_begin(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 查找元素，存在则是返回1，不存在返回0 *&#x2F;</span><br><span class="line">int find_elem(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 删除链表尾部结点 *&#x2F;</span><br><span class="line">void dalete_tail_elem();</span><br><span class="line"></span><br><span class="line">&#x2F;* 删除指定元素结点 *&#x2F;</span><br><span class="line">int delete_elem(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 判断链表是否满 *&#x2F;</span><br><span class="line">int is_full();</span><br><span class="line"></span><br><span class="line">&#x2F;* 判断链表是否为空 *&#x2F;</span><br><span class="line">int is_empty();</span><br><span class="line"></span><br><span class="line">&#x2F;* 打印所有数据 *&#x2F;</span><br><span class="line">void show_all();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#x70;&#121;&#x75;&#x61;&#x6e;&#50;&#49;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#x6c;&#x70;&#121;&#x75;&#x61;&#x6e;&#50;&#49;&#x40;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a><br>2020年02月28日 02:52:00   </p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
       </categories>
   </entry>
   <entry>
@@ -429,66 +490,6 @@
 ]]></content>
       <categories>
         <category>面试宝典</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>腾讯面试</title>
-    <url>/2020/11/16/%E8%85%BE%E8%AE%AF%E9%9D%A2%E8%AF%95/</url>
-    <content><![CDATA[<p>1、100万数据个是topK。</p>
-<p>2、32位无符号整形个数的QQ号记录QQ号的状态 上线和下线，计算使用多少内存。</p>
-<p>3、printf(“%d “, 1, 2, 3);  printf(“%s”)；</p>
-<p>4、HTTP 和 HTTPS的区别。1、对称加密和非对称加密。2、效率问题的瓶颈。</p>
-<p>5、阻塞问题</p>
-<p>1、对端接收处理不过来 。流量控制。</p>
-<p>2、网络阻塞。拥塞控制。</p>
-<p>3、项目问题</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>链表</title>
-    <url>/2020/03/04/%E9%93%BE%E8%A1%A8/</url>
-    <content><![CDATA[<blockquote>
-<ul>
-<li>整理知识，学习笔记</li>
-<li>发布日记，杂文，所见所想</li>
-<li>撰写发布技术文稿（代码支持）</li>
-<li>撰写发布学术论文（LaTeX 公式支持）</li>
-</ul>
-</blockquote>
-<h1 id="什么是链表"><a href="#什么是链表" class="headerlink" title="什么是链表"></a>什么是链表</h1><p>&ensp;&ensp;&ensp;&ensp;链表是一组数据项的集合，其中每一个数据项都是一个节点的一部分，每一个节点都包含有指向下一个节点的链接。</p>
-<h1 id="链表和数组的区别"><a href="#链表和数组的区别" class="headerlink" title="链表和数组的区别"></a>链表和数组的区别</h1><p>（1）<strong>逻辑结构</strong>。数组需要实现定义固定长度（元素个数），不能适应动态的增加或者删除数据元素。<br>（2）<strong>内存结构</strong>。（静态）数组从占空间分配内存，快捷方便，但是自由度小。链表从堆中进行分配，自由度大。<br>（3）<strong>存储结构</strong>。数组在内存中是顺序存储，而链表是随机存储。数组的访问效率很高，但是插入和删除效率低，链表相反。<br>（4）数组会存在越界的问题，但是链表不会。</p>
-<h1 id="链表的应用"><a href="#链表的应用" class="headerlink" title="链表的应用"></a>链表的应用</h1><h2 id="LRU缓存淘汰算法"><a href="#LRU缓存淘汰算法" class="headerlink" title="LRU缓存淘汰算法"></a>LRU缓存淘汰算法</h2><p>&ensp;&ensp;&ensp;&ensp;缓存是一种提高数据读取性能的技术，在硬件设计、软件开发中都有着非常广泛的应用，比如常见的 CPU缓存、数据库缓存、浏览器缓存等等。缓存的大小有限，当缓存被用满时，哪些数据应该被清理出去，哪些数据应该被保留？这就需要缓存淘汰策略来决定。常见的策略有三种：<strong>先进先出策略</strong> FIFO（First In，First Out）、<strong>最少使用策略</strong> LFU（Least Frequently Used）、<strong>最近最少使用策略</strong> LRU（Least Recently Used）。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#define ture 1</span><br><span class="line">#define false 0</span><br><span class="line"></span><br><span class="line">typedef int Data_type;</span><br><span class="line">typedef struct _Node&#123;</span><br><span class="line">	Data_type data;</span><br><span class="line">	struct _Node *next;</span><br><span class="line">&#125;Node;</span><br><span class="line"></span><br><span class="line">&#x2F;* 将数据插入到头部 *&#x2F;</span><br><span class="line">void intsert_elem_to_begin(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 查找元素，存在则是返回1，不存在返回0 *&#x2F;</span><br><span class="line">int find_elem(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 删除链表尾部结点 *&#x2F;</span><br><span class="line">void dalete_tail_elem();</span><br><span class="line"></span><br><span class="line">&#x2F;* 删除指定元素结点 *&#x2F;</span><br><span class="line">int delete_elem(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 判断链表是否满 *&#x2F;</span><br><span class="line">int is_full();</span><br><span class="line"></span><br><span class="line">&#x2F;* 判断链表是否为空 *&#x2F;</span><br><span class="line">int is_empty();</span><br><span class="line"></span><br><span class="line">&#x2F;* 打印所有数据 *&#x2F;</span><br><span class="line">void show_all();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<hr>
-<p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#x70;&#x79;&#117;&#x61;&#x6e;&#x32;&#x31;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#99;&#111;&#109;">&#x6c;&#x70;&#x79;&#117;&#x61;&#x6e;&#x32;&#x31;&#x40;&#x6f;&#117;&#x74;&#x6c;&#111;&#111;&#107;&#46;&#99;&#111;&#109;</a><br>2020年02月28日 02:52:00   </p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>海量数据处理问题</title>
-    <url>/2021/01/07/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<h2 id="1-海量数据问题"><a href="#1-海量数据问题" class="headerlink" title="1 海量数据问题"></a>1 海量数据问题</h2><h3 id="1-1-海量日志数据，提取出某日访问百度次数最多的那个IP。"><a href="#1-1-海量日志数据，提取出某日访问百度次数最多的那个IP。" class="headerlink" title="1.1 海量日志数据，提取出某日访问百度次数最多的那个IP。"></a>1.1 海量日志数据，提取出某日访问百度次数最多的那个IP。</h3><p>首先是这一天，并且是访问百度的日志中的IP取出来，逐个写入到一个大文件中。注意到IP是32位的，最多有个2^32个IP。同样可以采用映射的方法，比如模1000，把整个大文件映射为1000个小文件，再找出每个小文中出现频率最大的IP（可以采用hash_map进行频率统计，然后再找出频率最大的几个）及相应的频率。然后再在这1000个最大的IP中，找出那个频率最大的IP，即为所求。</p>
-<p>算法思想：分而治之+哈希</p>
-<p>1、IP地址最多有2^32=4G种取值情况，所以不能一次性直接都完全加载到内存中。</p>
-<p>2、考虑分而治之的思想，将IP地址进行hash(IP)%1024，把海量的数据分别存储到1024个文件中，这样，每个文件最有就含有4MB个IP地址。</p>
-<p>3、对于每一个小文件，可以进行构造一个key value的hash map，将IP作为key值，出现的次数作为value值，同时记录下当前出现次数最多的那个IP地址。</p>
-<p>4、可以得到1024个文件📃中出现次数最多的IP，再根据常规的排序算法得到总体上的出现次数最多的IP。</p>
-<h3 id="1-2-搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"><a href="#1-2-搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节" class="headerlink" title="1.2 搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"></a>1.2 搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节</h3><p>假设目前有一千万个记录（这些查询串的重复度比较高，虽然总数是1千万，但如果除去重复后，不超过3百万个。一个查询串的重复度越高，说明查询它的用户越多，也就是越热门。），请你统计最热门的10个查询串，要求使用的内存不能超过1G。</p>
-<p>算法思想：经典的topK问题。</p>
-<p>1、先对这批海量数据进行预处理，在O(n)的时间之内用hash表完成统计。</p>
-<p>2、借助堆这个数据结构，找出topk，时间复杂度为nlogK。借助堆这个数据结构，我们可以在log量级的时间内查找和调整移动。我们可以维护一个大顶堆，然后遍历这300万左右的数据，分别和根元素进行比对，最后得出前十个热门的查询串。</p>
-<h3 id="1-3-有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"><a href="#1-3-有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词" class="headerlink" title="1.3 有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"></a>1.3 有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词</h3><p>算法思想：分而治之+hash</p>
-<p>1、顺序读取文件，对于读取的每一个值，可以使用hash(x)%5000，将读取的词存储到5000个文件中，每个文件大概200k，如果还是有文件大于1m，可以按照这个方法继续往下分，直到可以直接放入内存中为止。</p>
-<p>2、对于每一个小文件，统计每个文件节点中出现的词以及相应的一个频率（tries树🌲或者hashMap都可以）。取出出现频率最大的一百个词（可以采用含有100个节点的最小堆），这样又可以得到5000个文件。最后一步，可以将这5000个文件进行归并过程了（类似于归并排序）。</p>
-<h3 id="1-4-在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。"><a href="#1-4-在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。" class="headerlink" title="1.4 在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。"></a>1.4 在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。</h3><p>方案1：可以采用2-bitmap进行，共需要内存</p>
-<h3 id="1-5-海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"><a href="#1-5-海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。" class="headerlink" title="1.5 海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"></a>1.5 海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。</h3><h3 id="1-6-腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"><a href="#1-6-腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？" class="headerlink" title="1.6 腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"></a>1.6 腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？</h3><p>使用bitmap，或者布隆过滤器。</p>
-<h3 id="1-7-10亿个域名如何判断，新来一个域名，如何判断在还是不在"><a href="#1-7-10亿个域名如何判断，新来一个域名，如何判断在还是不在" class="headerlink" title="1.7 10亿个域名如何判断，新来一个域名，如何判断在还是不在"></a>1.7 10亿个域名如何判断，新来一个域名，如何判断在还是不在</h3><p>可以使用布隆过滤器，判断不在就一定不在，判断在的话可能不在。</p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
       </categories>
   </entry>
   <entry>
