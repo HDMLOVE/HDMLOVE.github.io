@@ -226,7 +226,7 @@
     <title>IO多路复用</title>
     <url>/2020/12/20/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/</url>
     <content><![CDATA[<blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;我们可以将标准输入、套接字等都看做IO的一路，多路复用的意思是在任何一路IO有事件的情况下，通知应用程序去处理相应的IO事件，这样程序就仿佛可以同一时刻处理多个IO事件了。</p>
+<p>我们可以将标准输入、套接字等都看做IO的一路，多路复用的意思是在任何一路IO有事件的情况下，通知应用程序去处理相应的IO事件，这样程序就仿佛可以同一时刻处理多个IO事件了。</p>
 </blockquote>
 <a id="more"></a>
 
@@ -267,7 +267,7 @@
 <li><p>突破了select(1024)最大文件描述符的限制，原因是它是基于链表来存储</p>
 </li>
 </ul>
-<p> <strong>同样存在缺点：</strong></p>
+<p> <strong>同样存在缺点</strong></p>
 <p> 1、依旧是大量的fd数组在用户空间和内核空间之间进行拷贝。</p>
 <p> 2、poll是水平触发，如果fd就绪被报告之后没有对其进行处理，下次poll韩式会再次报告该事件。</p>
 </blockquote>
@@ -285,21 +285,52 @@
 <p>EPOLL_CTL_DEL:从epfd中删除一个fd。<br>  参数3：fd,需要监听的文件描述符，一般指的是sockfd。<br>  参数4：event，告诉内核该fd资源感兴趣的事件。</p>
 </li>
 <li><p>epoll_wait函数，等待事件的发生，类似于select()函数调用。根据参数timeout，决定是否处于阻塞模式。<br>  参数1：epfd，指定一个感兴趣事件列表。<br>  参数2：*events，是一个指针，必须指向一个epoll_event结构数组，当函数返回的时候，内核会将就绪状态的的数据拷贝到该数组中。<br>  参数3：maxevents，标明参数2epoll_event结构数组最多能接收的数据量，即本次操作做多能获取多少就绪数据。<br>  参数4: timeout，单位为毫秒。</p>
-<pre><code> 0：表示立即返回。
- -1：阻塞调用，直到有用户感兴趣事件就绪为止。
-</code></pre>
+<p>  0：表示立即返回。</p>
+<p>   -1：阻塞调用，直到有用户感兴趣事件就绪为止。</p>
 </li>
 </ul>
-<p>(1) epoll_create 函数是一个系统调用函数，函数将会在内核空间开辟一块新的空间，可以理解为epoll结构空间，返回值为epoll的文件描述符编号，方便后续操作使用。</p>
-<p>(2) epoll_ctl是epoll事件的注册函数，epoll与select不同，select函数是调用时指定的需要监听的描述符和事件，epoll先将用户感兴趣的描述符事件注册到epoll空间内，此函数是非阻塞函数，作用仅仅是增删改epoll空间内的描述符信息。<br>  参数1：epfd，epoll结构的进程fd编号，函数将依靠该编号找到对应的epoll结构。<br>  参数2：op，表示当前的请求的类型，由三个定义：</p>
-<p>​                EPOLL_CTL_ADD:注册新的fd到epoll中。</p>
-<p>​                EPOLL_CTL_MOD:修改已经注册的fd的监听事件。</p>
-<p>​                EPOLL_CTL_DEL:从epfd中删除一个fd。<br>  参数3：fd,需要监听的文件描述符，一般指的是sockfd。<br>  参数4：event，告诉内核该fd资源感兴趣的事件。</p>
-<p>(3)epoll_wait函数，等待事件的发生，类似于select()函数调用。根据参数timeout，决定是否处于阻塞模式。<br>  参数1：epfd，指定一个感兴趣事件列表。<br>  参数2：*events，是一个指针，必须指向一个epoll_event结构数组，当函数返回的时候，内核会将就绪状态的的数据拷贝到该数组中。<br>  参数3：maxevents，标明参数2epoll_event结构数组最多能接收的数据量，即本次操作做多能获取多少就绪数据。<br>  参数4: timeout，单位为毫秒。<br>         0 表示立即返回。</p>
-<p>​        -1 阻塞调用，直到有用户感兴趣事件就绪为止。</p>
-<p>​        &gt;0 阻塞调用，阻塞指定的时间内如果有时间就绪则是提前返回，否则就等待指定的事件后返回。<br>  返回值（return value）：本次就绪的fd的个数。</p>
-<p>工作模式：<br>       epoll对文件描述符的操作有两种模式：LT(水平触发)和ET(边缘触发)。LT是默认模式，两者的区别如下：<br>       LT(level 水平触发)：事件就绪之后，用户可以选择处理或者不处理，如果用户本次未进行处理，那么下次调用epoll_wait时候仍然会将未出的事件打包给你。<br>       ET(edge 边缘触发)： 事件就绪之后，用户必须处理，因为内核不给给你兜底，内核把就绪的事件打包给用户态之后，就会把对应的就绪事件清理掉，不会再次通知用户。<br>       ET模式在很大的程度上减少了epoll事件被重复触发的次数，因此被认为效率比LT模式高，也是epoll重要的杀手锏。</p>
-<p><strong>epoll优点：</strong></p>
+<p><strong>epoll_create函数</strong></p>
+<ul>
+<li>epoll_create 函数是一个系统调用函数，函数将会在内核空间开辟一块新的空间，可以理解为epoll结构空间，返回值为epoll的文件描述符编号，方便后续操作使用。</li>
+</ul>
+<p><strong>epoll_ctl函数</strong></p>
+<p>epoll_ctl是epoll事件的注册函数，epoll与select不同，select函数是调用时指定的需要监听的描述符和事件，epoll先将用户感兴趣的描述符事件注册到epoll空间内，此函数是非阻塞函数，作用仅仅是增删改epoll空间内的描述符信息。</p>
+<ul>
+<li><p>参数1：epfd，epoll结构的进程fd编号，函数将依靠该编号找到对应的epoll结构。</p>
+</li>
+<li><p>参数2：op，表示当前的请求的类型，由三个定义：</p>
+</li>
+</ul>
+<p>EPOLL_CTL_ADD:注册新的fd到epoll中。</p>
+<p>EPOLL_CTL_MOD:修改已经注册的fd的监听事件。</p>
+<p>EPOLL_CTL_DEL:从epfd中删除一个fd。</p>
+<ul>
+<li><p>参数3：fd,需要监听的文件描述符，一般指的是sockfd。</p>
+</li>
+<li><p>参数4：event，告诉内核该fd资源感兴趣的事件。</p>
+</li>
+</ul>
+<p><strong>epoll_wait函数</strong></p>
+<p>epoll_wait函数，等待事件的发生，类似于select()函数调用。根据参数timeout，决定是否处于阻塞模式。</p>
+<ul>
+<li><p>参数1：epfd，指定一个感兴趣事件列表.。</p>
+</li>
+<li><p>参数2：*events，是一个指针，必须指向一个epoll_event结构数组，当函数返回的时候，内核会将就绪状态的的数据拷贝到该数组中。</p>
+</li>
+<li><p>参数3：maxevents，标明参数2epoll_event结构数组最多能接收的数据量，即本次操作做多能获取多少就绪数据。</p>
+</li>
+<li><p>参数4: timeout，单位为毫秒。</p>
+</li>
+</ul>
+<p>0 表示立即返回。</p>
+<p>-1 阻塞调用，直到有用户感兴趣事件就绪为止。</p>
+<p>&gt;0 阻塞调用，阻塞指定的时间内如果有时间就绪则是提前返回，否则就等待指定的事件后返回。<br>  返回值（return value）：本次就绪的fd的个数。</p>
+<p><strong>工作模式</strong></p>
+<p>epoll对文件描述符的操作有两种模式：LT(水平触发)和ET(边缘触发)。LT是默认模式，两者的区别如下：</p>
+<p>LT(level 水平触发)：事件就绪之后，用户可以选择处理或者不处理，如果用户本次未进行处理，那么下次调用epoll_wait时候仍然会将未出的事件打包给你。</p>
+<p>ET(edge 边缘触发)： 事件就绪之后，用户必须处理，因为内核不给给你兜底，内核把就绪的事件打包给用户态之后，就会把对应的就绪事件清理掉，不会再次通知用户。</p>
+<p>ET模式在很大的程度上减少了epoll事件被重复触发的次数，因此被认为效率比LT模式高，也是epoll重要的杀手锏。</p>
+<p><strong>epoll优点</strong></p>
 <p>1、没有最大文件描述符限制</p>
 <p>2、使用mmap文件映射内存加速与内核空间的消息传递，不再是大量的fd从用户空间拷贝到内核空间，大大减少了拷贝的开销。</p>
 <p>3、效率提升，不再使用轮询</p>
@@ -362,7 +393,7 @@
 <h2 id="二、Makefile通用模板"><a href="#二、Makefile通用模板" class="headerlink" title="二、Makefile通用模板"></a>二、Makefile通用模板</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TARGET&#x3D;server</span><br><span class="line">CC&#x3D;g++</span><br><span class="line">CFLAG&#x3D;-c -g -static</span><br><span class="line">#所有的.c文件</span><br><span class="line">SRCS:&#x3D;$(wildcard ..&#x2F;*.c)</span><br><span class="line">FILTERS&#x3D;..&#x2F;hello.c</span><br><span class="line">#从SRCS中除了hello.c文件 filter函数可以选择满足条件的</span><br><span class="line">SRCS:&#x3D;$(filter-out $(FILTERS), $(SRCS))</span><br><span class="line">OBJS:&#x3D;$(patsubst %.c, %.o, $(SRCS))</span><br><span class="line">CURRENT_PATH&#x3D;$(PWD)</span><br><span class="line">CPPFLAGS&#x3D; -I..&#x2F;include -I..&#x2F;util</span><br><span class="line">LIBS_PATH&#x3D;-L..&#x2F;lib64</span><br><span class="line">LIBS&#x3D;-lmylib</span><br><span class="line"></span><br><span class="line">#判断是哪个系统32bit编译还是在64bit编译。</span><br><span class="line">ARCH:&#x3D;$(shell uname -m)</span><br><span class="line">ifeq ($(ARCH), x86_64)</span><br><span class="line">VERSION:&#x3D;X86_64</span><br><span class="line">else</span><br><span class="line">VERSION:&#x3D;i686</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">$(TARGET):$(OBJS)</span><br><span class="line">        $(CC) $(DEBUG) $(SRCS) $(LIBS_PATH) $(LIBS) $(CPPFLAGS) -o $(TARGET)</span><br><span class="line"></span><br><span class="line">$(OBJS):%.o:%.c</span><br><span class="line">        $(CC) $(CFLAG) $&lt; -o $@</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">        rm -rf *~ *.bak $(TARGET)</span><br><span class="line"></span><br><span class="line">【顶层Makefile编写】</span><br><span class="line">all: all_client all_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">all_client:</span><br><span class="line">    $(MAKE) -C client</span><br><span class="line">all_server:</span><br><span class="line">    $(MAKE) -C server</span><br><span class="line"></span><br><span class="line">clean: clean_client clean_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">clean_client:</span><br><span class="line">    $(MAKE) -C client clean</span><br><span class="line">clean_server:</span><br><span class="line">    $(MAKE) -C server clean</span><br></pre></td></tr></table></figure>
 <hr>
 <p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#112;&#x79;&#117;&#97;&#x6e;&#50;&#x31;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;">&#108;&#112;&#x79;&#117;&#97;&#x6e;&#50;&#x31;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#x6f;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#x70;&#121;&#x75;&#97;&#110;&#50;&#49;&#64;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;">&#x6c;&#x70;&#121;&#x75;&#97;&#110;&#50;&#49;&#64;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;</a><br>2020年02月28日 02:52:00   </p>
 ]]></content>
       <categories>
         <category>Testing</category>
