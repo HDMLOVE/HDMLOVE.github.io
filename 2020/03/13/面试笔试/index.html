@@ -1,146 +1,141 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
 
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>
-    面试笔试 | Suzette219
-  </title>
-  <meta name="description" content="">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="面试笔试"/>
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="Suzette219">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://www.lpyuan.club/2020/03/13/面试笔试/"/>
+
+
+<meta name="description" content="网络基础大端小端网络字节序&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;”大端”，”小端”指的是表示多字节的值哪一端存储在该值的起始地址处；多字节小端存储起始地址处称为小端字节序，多字节的大端存储在起始地址处称为大端字节序。&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;通俗的说就是。 &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;常用的X86架构就是采用的小端存储，最高有效位在最高位地址。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试笔试">
+<meta property="og:url" content="http://www.lpyuan.club/2020/03/13/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/index.html">
+<meta property="og:site_name" content="Suzette219">
+<meta property="og:description" content="网络基础大端小端网络字节序&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;”大端”，”小端”指的是表示多字节的值哪一端存储在该值的起始地址处；多字节小端存储起始地址处称为小端字节序，多字节的大端存储在起始地址处称为大端字节序。&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;通俗的说就是。 &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;常用的X86架构就是采用的小端存储，最高有效位在最高位地址。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.lpyuan.club/2020/03/13/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/image1.jpg">
+<meta property="og:image" content="http://www.lpyuan.club/2020/03/13/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/image2.jpg">
+<meta property="og:image" content="http://www.lpyuan.club/2020/03/13/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/tcp_time_out.png">
+<meta property="og:image" content="http://www.lpyuan.club/2020/03/13/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/image3.jpg">
+<meta property="og:image" content="http://www.lpyuan.club/2020/03/13/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/image4.jpg">
+<meta property="og:image" content="http://www.lpyuan.club/2020/03/13/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/mmu.jpg">
+<meta property="og:image" content="http://www.lpyuan.club/2020/03/13/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/ye_biao.jpg">
+<meta property="article:published_time" content="2020-03-13T14:27:24.000Z">
+<meta property="article:modified_time" content="2021-01-06T19:41:05.562Z">
+<meta property="article:author" content="发量充足的程序员">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.lpyuan.club/2020/03/13/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/image1.jpg">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
   
-  <meta name="keywords" content="
-  
-  ">
-  
-  <meta name="author" content="发量充足的程序员">
 
-  <meta http-equiv="Cache-Control" content="no-transform"/>
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-  <meta name="theme-color" content="#1e2327">
-  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
 
-  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
 
-  
+    <title> 面试笔试 - Suzette219 </title>
+  <meta name="generator" content="Hexo 4.2.0"></head>
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Suzette219</a>
+    </h1>
 
-<body id="replica-app">
-
-<nav class="navbar-wrapper">
-  <div class="navbar">
-    <div class="container clearfix">
-      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
-
-      <div class="navbar-search float-left desktop-only">
-        <div class="navbar-search-form">
-          <label for="gsc-i-id1">This website</label>
-          <div id="google-search">
-            <gcse:search></gcse:search>
-          </div>
-        </div>
-      </div>
-
-      <ul class="navbar-nav float-left">
+    <nav id="nav-top">
         
-        <li><a href="/archives">Archives</a></li>
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
         
-        
-        <li><a href="/categories">Categories</a></li>
-        
-        
-        <li><a href="/tags">Tags</a></li>
-        
-        
-        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
-        
-      </ul>
+  </nav>
+</div>
 
-      <ul class="navbar-nav user-nav float-right desktop-only">
-        <li class="user-nav-notification">
-          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
-        </li>
-        <li>
-          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li class="user-nav-logo">
-          <a><img src="https://octodex.github.com/images/baracktocat.jpg"> <i class="fa fa-caret-down"></i></i></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          面试笔试
+        
+      </h1>
 
-<div class="main-container">
-  <header class="header-wrapper desktop-only">
-  <div class="container header-site-detail">
-    <ul class="header-toolbar">
-      <li class="clearfix">
-        <a href="/archives" class="header-toolbar-left"><i
-                  class="fa fa-file-text"></i> Posts </a>
-        <a href="/archives"
-           class="header-toolbar-right"> 25 </a>
-      </li>
-      <li>
-        <a href="/tags" class="header-toolbar-left"><i
-                  class="fa fa-tags"></i> Tags </a>
-        <a href="/tags"
-           class="header-toolbar-right"> 0 </a>
-      </li>
-      <li>
-        <a href="/categories" class="header-toolbar-left"><i
-                  class="fa fa-folder-open"></i> Categories </a>
-        <a href="/categories"
-           class="header-toolbar-right"> 9 </a>
-      </li>
-    </ul>
-    <h2 class="header-title">
-      <i class="fa fa-book text-muted"></i>
-      <a href="/">Suzette219</a>
-      
-      
-    </h2>
-  </div>
-
-  <div class="container">
-    <div class="header-tab-wrapper clearfix">
-      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
-      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
-      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
-      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
-      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
-    </div>
-  </div>
-</header>
+      <time class="post-time">
+          3月 13 2020
+      </time>
+    </header>
 
 
-<div class="post-container container">
-  <h3>
-    <i class="fa fa-user-o"></i>
-    发量充足的程序员
 
-    <span class="post-date float-right" title="{{moment(1584109644000).format('MMM DD, YYYY, h:mm:ss A')}}">
-      
-          <i class="fa fa-pencil-square-o"></i>
-      
-      {{moment(1584109644000).fromNow()}}
-    </span>
-  </h3>
-
-  <article class="post-content">
-    <h1>面试笔试</h1>
-    <h1 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h1><h2 id="大端小端网络字节序"><a href="#大端小端网络字节序" class="headerlink" title="大端小端网络字节序"></a>大端小端网络字节序</h2><p>&ensp;&ensp;&ensp;&ensp;”大端”，”小端”指的是表示多字节的值哪一端存储在该值的起始地址处；多字节小端存储起始地址处称为小端字节序，多字节的大端存储在起始地址处称为大端字节序。<br>&ensp;&ensp;&ensp;&ensp;通俗的说就是。</p>
+    
+            <div class="post-content">
+            <h1 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h1><h2 id="大端小端网络字节序"><a href="#大端小端网络字节序" class="headerlink" title="大端小端网络字节序"></a>大端小端网络字节序</h2><p>&ensp;&ensp;&ensp;&ensp;”大端”，”小端”指的是表示多字节的值哪一端存储在该值的起始地址处；多字节小端存储起始地址处称为小端字节序，多字节的大端存储在起始地址处称为大端字节序。<br>&ensp;&ensp;&ensp;&ensp;通俗的说就是。</p>
 <p>&ensp;&ensp;&ensp;&ensp;常用的X86架构就是采用的小端存储，最高有效位在最高位地址。</p>
 <p>&ensp;&ensp;&ensp;&ensp;大端字节序：最高有效位存于最低的内存地址，最低的有效位存于最高的内存地址。<br>&ensp;&ensp;&ensp;&ensp;小端字节序：最高有效位存于最高的内存地址，最低的有效位存于最低的内存地址。<br><img src="/2020/03/13/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/image1.jpg" alt="图来源于网络"><br>&ensp;&ensp;&ensp;&ensp;网络字节序，网络上传输的数据都是字节流。<strong>UDP/TCP/IP协议规定:</strong>把接收到的第一个字节当作高位字节看待,这就要求发送端发送的第一个字节是高位字节。而在发送端发送数据时,发送的第一个字节是该数值在内存中的起始地址处对应的那个字节,也就是说,该数值在内存中的起始地址处对应的那个字节就是要发送的第一个高位字节(即:高位字节存放在低地址处);由此可见,<strong>多字节数值在发送之前,在内存中因该是以大端法存放的</strong>。</p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">union 联合体成员存放的顺序都是从低地址开始存放，并且是所有的成员共享同一个内存空间，</span></span><br><span class="line"><span class="comment">可以利用这个特性进行一个大小端的判断。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 定义联合体结构 */</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">union</span> _testUnion&#123;</span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    <span class="keyword">char</span> b;</span><br><span class="line">&#125;testUnion;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 判断大小端 */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isBigEndStorage</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    testUnion a;</span><br><span class="line">    a.a = <span class="number">0x01</span>;</span><br><span class="line">    <span class="keyword">return</span> a.b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="number">1</span> == isBigEndStorage())</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"小端存储"</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"大端存储"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -284,8 +279,66 @@
 <p>2、<a href="https://blog.csdn.net/kozazyh/article/details/5495532" target="_blank" rel="noopener">https://blog.csdn.net/kozazyh/article/details/5495532</a></p>
 <p>3、<a href="https://blog.csdn.net/zhangye3017/article/details/80382496" target="_blank" rel="noopener">https://blog.csdn.net/zhangye3017/article/details/80382496</a></p>
 
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2020/10/06/hello-world/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">Hello World</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+      <a class="next" href="/2020/03/04/%E9%93%BE%E8%A1%A8/">
+        <span class="next-text nav-default">链表</span>
+        <span class="prev-text nav-mobile">Next</span>
+        <i class="iconfont icon-right"></i>
+      </a>
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
   </article>
-</div>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2021
+    <span class="footer-author">发量充足的程序员.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear" target="_blank" rel="noopener">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
 
 
     
@@ -293,32 +346,14 @@
 
 
 
-</div>
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
 
-<div class="footer-wrapper container">
-  <footer class="footer clearfix">
-    <div class="clearfix">
-    <a href="http://www.lpyuan.club" class="footer-logo">
-      <i class="fa fa-github"></i>
-    </a>
-    <ul class="footer-social-link">
-      <li>© 2019 发量充足的程序员</li>
-      <li><a href="http://www.lpyuan.club">Home</a></li>
-      
-    </ul>
-    <div class="footer-theme-info">
-      Theme <a href="//github.com/sabrinaluo/hexo-theme-replica" target="_blank" rel="noopener">Replica</a>
-      by <a href="//github.com/sabrinaluo" target="_blank" rel="noopener">Hiitea</a> ❤ Powered by Hexo
-    </div>
-    </div>
-    
-  </footer>
-</div>
+  
 
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
 
-
-
-<script src="/js/main.js"></script>
-
-</body>
+  </body>
 </html>

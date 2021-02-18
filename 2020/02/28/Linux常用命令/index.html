@@ -1,146 +1,133 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+  <head>
+    
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
 
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <title>
-    Linux常用命令 | Suzette219
-  </title>
-  <meta name="description" content="">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="description" content="Linux常用命令"/>
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/default" title="Suzette219">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=1.1" />
+
+
+
+<link rel="canonical" href="http://www.lpyuan.club/2020/02/28/Linux常用命令/"/>
+
+
+<meta name="description" content="linux下常用的一下命令防火墙相关的命令。1234567891011firewall-cmd --zone&#x3D;public --add-port&#x3D;4400-4600&#x2F;udp --permanen(指定端口范围为4400-4600通过防火墙) 其中：--zone #作用域 --add-port&#x3D;80&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux常用命令">
+<meta property="og:url" content="http://www.lpyuan.club/2020/02/28/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/index.html">
+<meta property="og:site_name" content="Suzette219">
+<meta property="og:description" content="linux下常用的一下命令防火墙相关的命令。1234567891011firewall-cmd --zone&#x3D;public --add-port&#x3D;4400-4600&#x2F;udp --permanen(指定端口范围为4400-4600通过防火墙) 其中：--zone #作用域 --add-port&#x3D;80&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-28T13:56:06.000Z">
+<meta property="article:modified_time" content="2020-10-05T22:10:54.955Z">
+<meta property="article:author" content="发量充足的程序员">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=1.1" />
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+
+
+
+
+
+<script type="text/javascript">
+  var themeConfig = {
+    fancybox: {
+      enable: false
+    },
+  };
+</script>
+
+
+
+
   
-  <meta name="keywords" content="
-  
-  ">
-  
-  <meta name="author" content="发量充足的程序员">
 
-  <meta http-equiv="Cache-Control" content="no-transform"/>
-  <meta http-equiv="Cache-Control" content="no-siteapp">
-  <meta name="theme-color" content="#1e2327">
-  <link rel="apple-touch-icon" href="https://github.githubassets.com/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="https://github.githubassets.com/apple-touch-icon-180x180.png">
 
-  <link rel="icon" type="image/x-icon" href="https://github.githubassets.com/favicon.ico">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="stylesheet"
-        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  
 
-  
+    <title> Linux常用命令 - Suzette219 </title>
+  <meta name="generator" content="Hexo 4.2.0"></head>
 
-  <script src="//cdnjs.cloudflare.com/ajax/libs/vue/1.0.25-csp/vue.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-<meta name="generator" content="Hexo 4.2.0"></head>
+  <body>
+    <div id="page">
+      <header id="masthead"><div class="site-header-inner">
+    <h1 class="site-title">
+        <a href="/." class="logo">Suzette219</a>
+    </h1>
 
-<body id="replica-app">
-
-<nav class="navbar-wrapper">
-  <div class="navbar">
-    <div class="container clearfix">
-      <a href="/" class="navbar-logo"><i class="fa fa-github"></i></a>
-
-      <div class="navbar-search float-left desktop-only">
-        <div class="navbar-search-form">
-          <label for="gsc-i-id1">This website</label>
-          <div id="google-search">
-            <gcse:search></gcse:search>
-          </div>
-        </div>
-      </div>
-
-      <ul class="navbar-nav float-left">
+    <nav id="nav-top">
         
-        <li><a href="/archives">Archives</a></li>
+            <ul id="menu-top" class="nav-top-items">
+                
+                    <li class="menu-item">
+                        <a href="/archives">
+                            
+                            
+                                Archives
+                            
+                        </a>
+                    </li>
+                
+                    <li class="menu-item">
+                        <a href="/about">
+                            
+                            
+                                About
+                            
+                        </a>
+                    </li>
+                
+            </ul>
         
-        
-        <li><a href="/categories">Categories</a></li>
-        
-        
-        <li><a href="/tags">Tags</a></li>
-        
-        
-        <li class="desktop-only"><a href="/atom.xml" target="_blank">RSS</a></li>
-        
-      </ul>
+  </nav>
+</div>
 
-      <ul class="navbar-nav user-nav float-right desktop-only">
-        <li class="user-nav-notification">
-          <a><span class="user-nav-unread"></span><i class="fa fa-bell"></i></a>
-        </li>
-        <li>
-          <a><i class="fa fa-plus"></i> <i class="fa fa-caret-down"></i></a>
-        </li>
-        <li class="user-nav-logo">
-          <a><img src="https://octodex.github.com/images/baracktocat.jpg"> <i class="fa fa-caret-down"></i></i></a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+      </header>
+      <div id="content">
+        
+    <div id="primary">
+        
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          Linux常用命令
+        
+      </h1>
 
-<div class="main-container">
-  <header class="header-wrapper desktop-only">
-  <div class="container header-site-detail">
-    <ul class="header-toolbar">
-      <li class="clearfix">
-        <a href="/archives" class="header-toolbar-left"><i
-                  class="fa fa-file-text"></i> Posts </a>
-        <a href="/archives"
-           class="header-toolbar-right"> 25 </a>
-      </li>
-      <li>
-        <a href="/tags" class="header-toolbar-left"><i
-                  class="fa fa-tags"></i> Tags </a>
-        <a href="/tags"
-           class="header-toolbar-right"> 0 </a>
-      </li>
-      <li>
-        <a href="/categories" class="header-toolbar-left"><i
-                  class="fa fa-folder-open"></i> Categories </a>
-        <a href="/categories"
-           class="header-toolbar-right"> 9 </a>
-      </li>
-    </ul>
-    <h2 class="header-title">
-      <i class="fa fa-book text-muted"></i>
-      <a href="/">Suzette219</a>
-      
-      
-    </h2>
-  </div>
-
-  <div class="container">
-    <div class="header-tab-wrapper clearfix">
-      <span class="header-tab header-tab-selected"><i class="fa fa-thumbs-o-up"></i> Like</span>
-      <span class="header-tab"><i class="fa fa-share-alt"></i> Share</span>
-      <span class="header-tab"><i class="fa fa-comments-o"></i> Discussion</span>
-      <span class="header-tab"><i class="fa fa-bookmark-o"></i> Bookmark </span>
-      <span class="header-tab"><i class="fa fa-smile-o"></i> Smile <i class="fa fa-caret-down"></i></span>
-    </div>
-  </div>
-</header>
+      <time class="post-time">
+          2月 28 2020
+      </time>
+    </header>
 
 
-<div class="post-container container">
-  <h3>
-    <i class="fa fa-user-o"></i>
-    发量充足的程序员
 
-    <span class="post-date float-right" title="{{moment(1582898166000).format('MMM DD, YYYY, h:mm:ss A')}}">
-      
-          <i class="fa fa-pencil-square-o"></i>
-      
-      {{moment(1582898166000).fromNow()}}
-    </span>
-  </h3>
-
-  <article class="post-content">
-    <h1>Linux常用命令</h1>
-    <h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a><strong>linux下常用的一下命令</strong></h1><h2 id="防火墙相关的命令。"><a href="#防火墙相关的命令。" class="headerlink" title="防火墙相关的命令。"></a><strong>防火墙相关的命令。</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;4400-4600&#x2F;udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone #作用域 </span><br><span class="line">--add-port&#x3D;80&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 </span><br><span class="line">--permanent #永久生效</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --remove-port&#x3D;80&#x2F;tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span><br></pre></td></tr></table></figure>
+    
+            <div class="post-content">
+            <h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a><strong>linux下常用的一下命令</strong></h1><h2 id="防火墙相关的命令。"><a href="#防火墙相关的命令。" class="headerlink" title="防火墙相关的命令。"></a><strong>防火墙相关的命令。</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;4400-4600&#x2F;udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone #作用域 </span><br><span class="line">--add-port&#x3D;80&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 </span><br><span class="line">--permanent #永久生效</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --remove-port&#x3D;80&#x2F;tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span><br></pre></td></tr></table></figure>
 <h2 id="yum安装软件包。"><a href="#yum安装软件包。" class="headerlink" title="yum安装软件包。"></a><strong>yum安装软件包。</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install epel-release #安装&quot;epel-release&quot;的软件包</span><br><span class="line">yum install tcpreplay</span><br></pre></td></tr></table></figure>
 <h2 id="ps命令。"><a href="#ps命令。" class="headerlink" title="ps命令。"></a><strong>ps命令。</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -eLf	 #查看进程线程情况</span><br></pre></td></tr></table></figure>
 <h2 id="压缩、解压命令。"><a href="#压缩、解压命令。" class="headerlink" title="压缩、解压命令。"></a><strong>压缩、解压命令。</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">压缩：</span><br><span class="line">tar -zcvf &#x2F;tmp&#x2F;etc.tar.gz  &#x2F;etc     #将&#x2F;etc下的所有文件及目录打包到&#x2F;etc，并使用gz压缩  </span><br><span class="line">tar -cvf &#x2F;home&#x2F;abc.tar &#x2F;home&#x2F;abc    #只打包，不压缩</span><br><span class="line">tar -zcvf &#x2F;home&#x2F;abc.tar.gz &#x2F;home&#x2F;abc#打包，并用gzip压缩</span><br><span class="line"></span><br><span class="line">解压：</span><br><span class="line">tar -zxvf &#x2F;tmp&#x2F;etc.tar.gz</span><br></pre></td></tr></table></figure>
@@ -151,8 +138,60 @@
 <h2 id="Shell递归删除指定字符串文件或者目录。"><a href="#Shell递归删除指定字符串文件或者目录。" class="headerlink" title="Shell递归删除指定字符串文件或者目录。"></a><strong>Shell递归删除指定字符串文件或者目录。</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">文件：find . -name &quot;*.rej&quot; | xargs rm -rf</span><br><span class="line">目录：find . -type d -name &quot;*.rej&quot; | xargs rm -rf</span><br></pre></td></tr></table></figure>
 <h2 id="文件夹建立软链接（用绝对地址）"><a href="#文件夹建立软链接（用绝对地址）" class="headerlink" title="文件夹建立软链接（用绝对地址）"></a><strong>文件夹建立软链接（用绝对地址）</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ln -s 源地址 目的地址   #比如我把linux文件系统rootfs_dir软链接到&#x2F;home&#x2F;jyg&#x2F;目录下</span><br><span class="line">ln -s &#x2F;opt&#x2F;linux&#x2F;rootfs_dir  &#x2F;home&#x2F;jyg&#x2F;rootfs_dir #就可以了</span><br></pre></td></tr></table></figure>
 <h2 id="大文件分割"><a href="#大文件分割" class="headerlink" title="大文件分割"></a><strong>大文件分割</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">windows下 d:&gt;wireshark&gt;editcap -C 1000000(文件大小) 待分割文件路径 新文件名称</span><br><span class="line">linux 可使用split命令</span><br></pre></td></tr></table></figure>
+            </div>
+          
+
+    
+      <footer class="post-footer">
+		
+
+        
+        
+  <nav class="post-nav">
+    
+      <a class="prev" href="/2020/02/29/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0/">
+        <i class="iconfont icon-left"></i>
+        <span class="prev-text nav-default">shell脚本笔记</span>
+        <span class="prev-text nav-mobile">Prev</span>
+      </a>
+    
+    
+  </nav>
+
+        
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+      </footer>
+    
   </article>
-</div>
+
+    </div>
+
+      </div>
+
+      <footer id="colophon"><span class="copyright-year">
+    
+        &copy;
+    
+        2014 -
+    
+    2021
+    <span class="footer-author">发量充足的程序员.</span>
+    <span class="power-by">
+        Powered by <a class="hexo-link" href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> and <a class="theme-link" href="https://github.com/frostfan/hexo-theme-polarbear" target="_blank" rel="noopener">Polar Bear</a>
+    </span>
+</span>
+
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+    
 
 
     
@@ -160,32 +199,14 @@
 
 
 
-</div>
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
 
-<div class="footer-wrapper container">
-  <footer class="footer clearfix">
-    <div class="clearfix">
-    <a href="http://www.lpyuan.club" class="footer-logo">
-      <i class="fa fa-github"></i>
-    </a>
-    <ul class="footer-social-link">
-      <li>© 2019 发量充足的程序员</li>
-      <li><a href="http://www.lpyuan.club">Home</a></li>
-      
-    </ul>
-    <div class="footer-theme-info">
-      Theme <a href="//github.com/sabrinaluo/hexo-theme-replica" target="_blank" rel="noopener">Replica</a>
-      by <a href="//github.com/sabrinaluo" target="_blank" rel="noopener">Hiitea</a> ❤ Powered by Hexo
-    </div>
-    </div>
-    
-  </footer>
-</div>
+  
 
+    <script type="text/javascript" src="/js/src/theme.js?v=1.1"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=1.1"></script>
 
-
-
-<script src="/js/main.js"></script>
-
-</body>
+  </body>
 </html>
