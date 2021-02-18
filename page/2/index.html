@@ -17,7 +17,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"www.lpyuan.club","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"www.lpyuan.club","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta property="og:type" content="website">
@@ -99,6 +99,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -128,11 +129,38 @@
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
     </header>
@@ -594,7 +622,7 @@
 <h2 id="二、Makefile通用模板"><a href="#二、Makefile通用模板" class="headerlink" title="二、Makefile通用模板"></a>二、Makefile通用模板</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">TARGET&#x3D;server</span><br><span class="line">CC&#x3D;g++</span><br><span class="line">CFLAG&#x3D;-c -g -static</span><br><span class="line">#所有的.c文件</span><br><span class="line">SRCS:&#x3D;$(wildcard ..&#x2F;*.c)</span><br><span class="line">FILTERS&#x3D;..&#x2F;hello.c</span><br><span class="line">#从SRCS中除了hello.c文件 filter函数可以选择满足条件的</span><br><span class="line">SRCS:&#x3D;$(filter-out $(FILTERS), $(SRCS))</span><br><span class="line">OBJS:&#x3D;$(patsubst %.c, %.o, $(SRCS))</span><br><span class="line">CURRENT_PATH&#x3D;$(PWD)</span><br><span class="line">CPPFLAGS&#x3D; -I..&#x2F;include -I..&#x2F;util</span><br><span class="line">LIBS_PATH&#x3D;-L..&#x2F;lib64</span><br><span class="line">LIBS&#x3D;-lmylib</span><br><span class="line"></span><br><span class="line">#判断是哪个系统32bit编译还是在64bit编译。</span><br><span class="line">ARCH:&#x3D;$(shell uname -m)</span><br><span class="line">ifeq ($(ARCH), x86_64)</span><br><span class="line">VERSION:&#x3D;X86_64</span><br><span class="line">else</span><br><span class="line">VERSION:&#x3D;i686</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">$(TARGET):$(OBJS)</span><br><span class="line">        $(CC) $(DEBUG) $(SRCS) $(LIBS_PATH) $(LIBS) $(CPPFLAGS) -o $(TARGET)</span><br><span class="line"></span><br><span class="line">$(OBJS):%.o:%.c</span><br><span class="line">        $(CC) $(CFLAG) $&lt; -o $@</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">        rm -rf *~ *.bak $(TARGET)</span><br><span class="line"></span><br><span class="line">【顶层Makefile编写】</span><br><span class="line">all: all_client all_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">all_client:</span><br><span class="line">    $(MAKE) -C client</span><br><span class="line">all_server:</span><br><span class="line">    $(MAKE) -C server</span><br><span class="line"></span><br><span class="line">clean: clean_client clean_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">clean_client:</span><br><span class="line">    $(MAKE) -C client clean</span><br><span class="line">clean_server:</span><br><span class="line">    $(MAKE) -C server clean</span><br></pre></td></tr></table></figure>
 <hr>
 <p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#x70;&#121;&#x75;&#97;&#x6e;&#x32;&#49;&#64;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;">&#x6c;&#x70;&#121;&#x75;&#97;&#x6e;&#x32;&#49;&#64;&#x6f;&#117;&#x74;&#x6c;&#x6f;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#109;</a><br>2020年02月28日 02:52:00   </p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#112;&#x79;&#117;&#97;&#x6e;&#50;&#49;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;">&#108;&#112;&#x79;&#117;&#97;&#x6e;&#50;&#49;&#x40;&#111;&#117;&#x74;&#108;&#x6f;&#x6f;&#x6b;&#x2e;&#99;&#x6f;&#109;</a><br>2020年02月28日 02:52:00   </p>
 
       
     </div>
@@ -960,7 +988,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#define ture 1</span><br><span class="line">#define false 0</span><br><span class="line"></span><br><span class="line">typedef int Data_type;</span><br><span class="line">typedef struct _Node&#123;</span><br><span class="line">	Data_type data;</span><br><span class="line">	struct _Node *next;</span><br><span class="line">&#125;Node;</span><br><span class="line"></span><br><span class="line">&#x2F;* 将数据插入到头部 *&#x2F;</span><br><span class="line">void intsert_elem_to_begin(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 查找元素，存在则是返回1，不存在返回0 *&#x2F;</span><br><span class="line">int find_elem(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 删除链表尾部结点 *&#x2F;</span><br><span class="line">void dalete_tail_elem();</span><br><span class="line"></span><br><span class="line">&#x2F;* 删除指定元素结点 *&#x2F;</span><br><span class="line">int delete_elem(Data_type data);</span><br><span class="line"></span><br><span class="line">&#x2F;* 判断链表是否满 *&#x2F;</span><br><span class="line">int is_full();</span><br><span class="line"></span><br><span class="line">&#x2F;* 判断链表是否为空 *&#x2F;</span><br><span class="line">int is_empty();</span><br><span class="line"></span><br><span class="line">&#x2F;* 打印所有数据 *&#x2F;</span><br><span class="line">void show_all();</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <hr>
 <p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#x70;&#121;&#117;&#x61;&#x6e;&#x32;&#x31;&#64;&#x6f;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;">&#x6c;&#x70;&#121;&#117;&#x61;&#x6e;&#x32;&#x31;&#64;&#x6f;&#x75;&#116;&#108;&#111;&#111;&#x6b;&#46;&#99;&#111;&#109;</a><br>2020年02月28日 02:52:00   </p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#112;&#x79;&#x75;&#x61;&#x6e;&#x32;&#49;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;">&#x6c;&#112;&#x79;&#x75;&#x61;&#x6e;&#x32;&#49;&#x40;&#x6f;&#117;&#116;&#x6c;&#x6f;&#x6f;&#x6b;&#46;&#99;&#111;&#109;</a><br>2020年02月28日 02:52:00   </p>
 
       
     </div>
@@ -1311,6 +1339,10 @@
   
 
 
+
+
+  
+<script src="/js/local-search.js"></script>
 
 
 

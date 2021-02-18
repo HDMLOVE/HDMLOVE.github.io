@@ -223,13 +223,6 @@
   </url>
   
   <url>
-    <loc>http://www.lpyuan.club/categories/Linux/</loc>
-    <lastmod>2021-02-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.lpyuan.club/categories/windows/</loc>
     <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
@@ -237,14 +230,7 @@
   </url>
   
   <url>
-    <loc>http://www.lpyuan.club/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
-    <lastmod>2021-02-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.lpyuan.club/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://www.lpyuan.club/categories/Linux/</loc>
     <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -258,7 +244,28 @@
   </url>
   
   <url>
+    <loc>http://www.lpyuan.club/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.lpyuan.club/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.lpyuan.club/categories/%E6%9D%82%E8%B0%88/</loc>
+    <lastmod>2021-02-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.lpyuan.club/categories/C%E8%AF%AD%E8%A8%80/</loc>
     <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -273,13 +280,6 @@
   
   <url>
     <loc>http://www.lpyuan.club/categories/%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/</loc>
-    <lastmod>2021-02-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.lpyuan.club/categories/C%E8%AF%AD%E8%A8%80/</loc>
     <lastmod>2021-02-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
