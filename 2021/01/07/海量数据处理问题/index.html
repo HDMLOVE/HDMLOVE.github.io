@@ -28,7 +28,7 @@
 <meta property="og:description" content="1 海量数据问题1.1 海量日志数据，提取出某日访问百度次数最多的那个IP。首先是这一天，并且是访问百度的日志中的IP取出来，逐个写入到一个大文件中。注意到IP是32位的，最多有个2^32个IP。同样可以采用映射的方法，比如模1000，把整个大文件映射为1000个小文件，再找出每个小文中出现频率最大的IP（可以采用hash_map进行频率统计，然后再找出频率最大的几个）及相应的频率。然后再在这10">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-06T19:37:46.000Z">
-<meta property="article:modified_time" content="2021-01-06T19:42:07.673Z">
+<meta property="article:modified_time" content="2021-02-18T16:00:15.236Z">
 <meta property="article:author" content="发量充足的程序员">
 <meta name="twitter:card" content="summary">
 
@@ -193,7 +193,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="发量充足的程序员">
-      <meta itemprop="description" content="">
+      <meta itemprop="description" content="超级无敌巨可爱的琪琪">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -210,10 +210,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-01-07 03:37:46 / 修改时间：03:42:07" itemprop="dateCreated datePublished" datetime="2021-01-07T03:37:46+08:00">2021-01-07</time>
+              <time title="创建时间：2021-01-07 03:37:46" itemprop="dateCreated datePublished" datetime="2021-01-07T03:37:46+08:00">2021-01-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-19 00:00:15" itemprop="dateModified" datetime="2021-02-19T00:00:15+08:00">2021-02-19</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -241,6 +247,8 @@
 <p>2、考虑分而治之的思想，将IP地址进行hash(IP)%1024，把海量的数据分别存储到1024个文件中，这样，每个文件最有就含有4MB个IP地址。</p>
 <p>3、对于每一个小文件，可以进行构造一个key value的hash map，将IP作为key值，出现的次数作为value值，同时记录下当前出现次数最多的那个IP地址。</p>
 <p>4、可以得到1024个文件📃中出现次数最多的IP，再根据常规的排序算法得到总体上的出现次数最多的IP。</p>
+<a id="more"></a>
+
 <h3 id="1-2-搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"><a href="#1-2-搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节" class="headerlink" title="1.2 搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"></a>1.2 搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节</h3><p>假设目前有一千万个记录（这些查询串的重复度比较高，虽然总数是1千万，但如果除去重复后，不超过3百万个。一个查询串的重复度越高，说明查询它的用户越多，也就是越热门。），请你统计最热门的10个查询串，要求使用的内存不能超过1G。</p>
 <p>算法思想：经典的topK问题。</p>
 <p>1、先对这批海量数据进行预处理，在O(n)的时间之内用hash表完成统计。</p>
@@ -340,21 +348,21 @@
     <img class="site-author-image" itemprop="image" alt="发量充足的程序员"
       src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">发量充足的程序员</p>
-  <div class="site-description" itemprop="description"></div>
+  <div class="site-description" itemprop="description">超级无敌巨可爱的琪琪</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
