@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
@@ -208,7 +208,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-02-18 16:39:14 / 修改时间：18:19:32" itemprop="dateCreated datePublished" datetime="2021-02-18T16:39:14+08:00">2021-02-18</time>
+              <time title="创建时间：2021-02-18 16:39:14 / 修改时间：23:11:29" itemprop="dateCreated datePublished" datetime="2021-02-18T16:39:14+08:00">2021-02-18</time>
             </span>
 
           
@@ -223,13 +223,16 @@
 
       
           <p>之前在写一个并发聊天室时候在多个客户端连续发送数据的时候遇到EAGIN错误，如图。</p>
-<p>![image-20210218161957083](/Users/xiaoluo/Library/Application Support/typora-user-images/image-20210218161957083.png)</p>
+<p><img src="/2021/02/18/Linux%E9%9D%9E%E9%98%BB%E5%A1%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84EAGIN%E5%BC%82%E5%B8%B8/image-20210218161957083.png" alt="image-20210218161957083"></p>
 <p>Linux下，管道、FIFO以及一些设备（通常是终端和网络）一般有以下几种性质。</p>
-<blockquote>
-<p>1、一次read操作返回的数据可能会少于所要求的数据，及时此时没有到达文件尾部也可能会出现这种情况。对于这种情况，我们不认为是错误，而是视为一种异常，应该继续对此设备进行读取。</p>
-<p>2、一次write或send操作的返回值也可能会少于指定的输出的字节数。通常这可能是由于某一种因素引起的，比如在处理网络数据的时，内核输出的缓冲区满，此时写不进数据。我们也通常不认为这是一种错误，应当继续将余下的数据进行写入。（通常遇到这种情况的场景是非阻塞描述符，或者捕捉到某一种信号的时候，才会发生中途返回。）</p>
-</blockquote>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/02/18/Linux%E9%9D%9E%E9%98%BB%E5%A1%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84EAGIN%E5%BC%82%E5%B8%B8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -668,7 +671,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-01-07 03:51:31" itemprop="dateModified" datetime="2021-01-07T03:51:31+08:00">2021-01-07</time>
+                <time title="修改时间：2021-02-18 23:11:51" itemprop="dateModified" datetime="2021-02-18T23:11:51+08:00">2021-02-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -1048,6 +1051,8 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="发量充足的程序员"
+      src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">发量充足的程序员</p>
   <div class="site-description" itemprop="description"></div>
 </div>
