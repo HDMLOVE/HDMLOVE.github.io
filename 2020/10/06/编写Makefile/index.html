@@ -20,16 +20,16 @@
     var CONFIG = {"hostname":"www.lpyuan.club","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="编写Makefile &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Makefile编写的好可以在工程项目编译链接的过程中省去很多麻烦，平时在练习的过程中也是能方便高效的学习。   整理知识，学习笔记 发布日记，杂文，所见所想 撰写发布技术文稿（代码支持） 撰写发布学术论文（LaTeX 公式支持）    一、Makefile相关知识点&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;需要掌握的一些">
+  <meta name="description" content="编写Makefile &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Makefile编写的好可以在工程项目编译链接的过程中省去很多麻烦，平时在练习的过程中也是能方便高效的学习。   整理知识，学习笔记 发布日记，杂文，所见所想 撰写发布技术文稿（代码支持） 撰写发布学术论文（LaTeX 公式支持）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="标签测试文章">
+<meta property="og:title" content="编写Makefile">
 <meta property="og:url" content="http://www.lpyuan.club/2020/10/06/%E7%BC%96%E5%86%99Makefile/index.html">
 <meta property="og:site_name" content="Suzette219">
-<meta property="og:description" content="编写Makefile &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Makefile编写的好可以在工程项目编译链接的过程中省去很多麻烦，平时在练习的过程中也是能方便高效的学习。   整理知识，学习笔记 发布日记，杂文，所见所想 撰写发布技术文稿（代码支持） 撰写发布学术论文（LaTeX 公式支持）    一、Makefile相关知识点&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;需要掌握的一些">
+<meta property="og:description" content="编写Makefile &amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;Makefile编写的好可以在工程项目编译链接的过程中省去很多麻烦，平时在练习的过程中也是能方便高效的学习。   整理知识，学习笔记 发布日记，杂文，所见所想 撰写发布技术文稿（代码支持） 撰写发布学术论文（LaTeX 公式支持）">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://www.zybuluo.com/static/img/logo.png">
 <meta property="article:published_time" content="2020-10-06T07:55:14.000Z">
-<meta property="article:modified_time" content="2021-02-18T11:34:59.810Z">
+<meta property="article:modified_time" content="2021-02-18T16:03:55.840Z">
 <meta property="article:author" content="发量充足的程序员">
 <meta property="article:tag" content="Testing">
 <meta property="article:tag" content="Another Tag">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>标签测试文章 | Suzette219</title>
+  <title>编写Makefile | Suzette219</title>
   
 
 
@@ -205,7 +205,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          标签测试文章
+          编写Makefile
         </h1>
 
         <div class="post-meta">
@@ -222,7 +222,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-18 19:34:59" itemprop="dateModified" datetime="2021-02-18T19:34:59+08:00">2021-02-18</time>
+                <time title="修改时间：2021-02-19 00:03:55" itemprop="dateModified" datetime="2021-02-19T00:03:55+08:00">2021-02-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -255,6 +255,8 @@
 <li>撰写发布学术论文（LaTeX 公式支持）</li>
 </ul>
 </blockquote>
+<a id="more"></a>
+
 <p><img src="https://www.zybuluo.com/static/img/logo.png" alt="cmd-markdown-logo"></p>
 <h2 id="一、Makefile相关知识点"><a href="#一、Makefile相关知识点" class="headerlink" title="一、Makefile相关知识点"></a>一、Makefile相关知识点</h2><p>&ensp;&ensp;&ensp;&ensp;需要掌握的一些Makefile相关的基础知识。</p>
 <h3 id="1-忽略出错的命令。"><a href="#1-忽略出错的命令。" class="headerlink" title="1. 忽略出错的命令。"></a>1. 忽略出错的命令。</h3><p>&ensp;&ensp;&ensp;&ensp;如果不希望某条命令因为出错了而导致整个make执行被终止，可以在命令前面加上“-”，表示不管该命令出不出错，后面的命令都将继续执行下去。如：<br>&ensp;&ensp;&ensp;&ensp;mkdir lpyuan<br>&ensp;&ensp;&ensp;&ensp;如果不加“-”并且dir已经存在，则这条命令就会出错，并将导致整个make执行被终止。要想不被终止，则需要在前加上’-‘符号。<br>&ensp;&ensp;&ensp;&ensp;-mkdir dir</p>
@@ -267,7 +269,7 @@
 <h2 id="二、Makefile通用模板"><a href="#二、Makefile通用模板" class="headerlink" title="二、Makefile通用模板"></a>二、Makefile通用模板</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">TARGET&#x3D;server</span><br><span class="line">CC&#x3D;g++</span><br><span class="line">CFLAG&#x3D;-c -g -static</span><br><span class="line">#所有的.c文件</span><br><span class="line">SRCS:&#x3D;$(wildcard ..&#x2F;*.c)</span><br><span class="line">FILTERS&#x3D;..&#x2F;hello.c</span><br><span class="line">#从SRCS中除了hello.c文件 filter函数可以选择满足条件的</span><br><span class="line">SRCS:&#x3D;$(filter-out $(FILTERS), $(SRCS))</span><br><span class="line">OBJS:&#x3D;$(patsubst %.c, %.o, $(SRCS))</span><br><span class="line">CURRENT_PATH&#x3D;$(PWD)</span><br><span class="line">CPPFLAGS&#x3D; -I..&#x2F;include -I..&#x2F;util</span><br><span class="line">LIBS_PATH&#x3D;-L..&#x2F;lib64</span><br><span class="line">LIBS&#x3D;-lmylib</span><br><span class="line"></span><br><span class="line">#判断是哪个系统32bit编译还是在64bit编译。</span><br><span class="line">ARCH:&#x3D;$(shell uname -m)</span><br><span class="line">ifeq ($(ARCH), x86_64)</span><br><span class="line">VERSION:&#x3D;X86_64</span><br><span class="line">else</span><br><span class="line">VERSION:&#x3D;i686</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">$(TARGET):$(OBJS)</span><br><span class="line">        $(CC) $(DEBUG) $(SRCS) $(LIBS_PATH) $(LIBS) $(CPPFLAGS) -o $(TARGET)</span><br><span class="line"></span><br><span class="line">$(OBJS):%.o:%.c</span><br><span class="line">        $(CC) $(CFLAG) $&lt; -o $@</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">        rm -rf *~ *.bak $(TARGET)</span><br><span class="line"></span><br><span class="line">【顶层Makefile编写】</span><br><span class="line">all: all_client all_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">all_client:</span><br><span class="line">    $(MAKE) -C client</span><br><span class="line">all_server:</span><br><span class="line">    $(MAKE) -C server</span><br><span class="line"></span><br><span class="line">clean: clean_client clean_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">clean_client:</span><br><span class="line">    $(MAKE) -C client clean</span><br><span class="line">clean_server:</span><br><span class="line">    $(MAKE) -C server clean</span><br></pre></td></tr></table></figure>
 <hr>
 <p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#x70;&#121;&#117;&#x61;&#110;&#x32;&#x31;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;">&#108;&#x70;&#121;&#117;&#x61;&#110;&#x32;&#x31;&#x40;&#111;&#x75;&#116;&#x6c;&#111;&#x6f;&#107;&#x2e;&#x63;&#x6f;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#x70;&#121;&#x75;&#x61;&#x6e;&#50;&#49;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;">&#108;&#x70;&#121;&#x75;&#x61;&#x6e;&#50;&#49;&#64;&#x6f;&#x75;&#x74;&#x6c;&#111;&#x6f;&#x6b;&#46;&#99;&#x6f;&#109;</a><br>2020年02月28日 02:52:00   </p>
 
     </div>
 
@@ -368,7 +370,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
