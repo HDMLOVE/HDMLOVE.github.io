@@ -1,23 +1,1144 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-{% block title %}{{ config.title }}{% if theme.index_with_subtitle and config.subtitle %} - {{config.subtitle }}{% endif %}{% endblock %}
+<link rel="stylesheet" href="/css/main.css">
 
-{% block page_class %}
-  {% if is_home() %} page-home {% endif %}
-{% endblock %}
 
-{% block content %}
-  <section id="posts" class="posts-expand">
-    {% for post in page.posts %}
-      {{ post_template.render(post, true) }}
-    {% endfor %}
-  </section>
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
-  {% include '_partials/pagination.swig' %}
-{% endblock %}
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.lpyuan.club","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
 
-{% block sidebar %}
-  {{ sidebar_template.render(false) }}
-{% endblock %}
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Suzette219">
+<meta property="og:url" content="http://www.lpyuan.club/index.html">
+<meta property="og:site_name" content="Suzette219">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="发量充足的程序员">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://www.lpyuan.club/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : true,
+    isPost : false,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Suzette219</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Suzette219</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-schedule">
+
+    <a href="/schedule/" rel="section"><i class="fa fa-calendar fa-fw"></i>日程表</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content index posts-expand">
+            
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.lpyuan.club/2021/02/18/Linux%E9%9D%9E%E9%98%BB%E5%A1%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84EAGIN%E5%BC%82%E5%B8%B8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="发量充足的程序员">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Suzette219">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/18/Linux%E9%9D%9E%E9%98%BB%E5%A1%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84EAGIN%E5%BC%82%E5%B8%B8/" class="post-title-link" itemprop="url">Linux非阻塞模式下的EAGIN异常</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-02-18 16:39:14 / 修改时间：18:19:32" itemprop="dateCreated datePublished" datetime="2021-02-18T16:39:14+08:00">2021-02-18</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>之前在写一个并发聊天室时候在多个客户端连续发送数据的时候遇到EAGIN错误，如图。</p>
+<p>![image-20210218161957083](/Users/xiaoluo/Library/Application Support/typora-user-images/image-20210218161957083.png)</p>
+<p>Linux下，管道、FIFO以及一些设备（通常是终端和网络）一般有以下几种性质。</p>
+<blockquote>
+<p>1、一次read操作返回的数据可能会少于所要求的数据，及时此时没有到达文件尾部也可能会出现这种情况。对于这种情况，我们不认为是错误，而是视为一种异常，应该继续对此设备进行读取。</p>
+<p>2、一次write或send操作的返回值也可能会少于指定的输出的字节数。通常这可能是由于某一种因素引起的，比如在处理网络数据的时，内核输出的缓冲区满，此时写不进数据。我们也通常不认为这是一种错误，应当继续将余下的数据进行写入。（通常遇到这种情况的场景是非阻塞描述符，或者捕捉到某一种信号的时候，才会发生中途返回。）</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.lpyuan.club/2021/02/01/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="发量充足的程序员">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Suzette219">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/02/01/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/" class="post-title-link" itemprop="url">Go语言error错误处理</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-02-01 16:39:14" itemprop="dateCreated datePublished" datetime="2021-02-01T16:39:14+08:00">2021-02-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-18 18:24:13" itemprop="dateModified" datetime="2021-02-18T18:24:13+08:00">2021-02-18</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="第3章-基本的数据类型"><a href="#第3章-基本的数据类型" class="headerlink" title="第3章 基本的数据类型"></a>第3章 基本的数据类型</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">四大类型：</span><br><span class="line">1、基础数据类型(basic type)</span><br><span class="line">2、聚合类型(aggregate type)</span><br><span class="line">3、引用类型(reference type)</span><br><span class="line">4、接口类型(interface type)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">基础的数据类型：</span><br><span class="line">1、数字、字符串、布尔型</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.lpyuan.club/2021/01/07/Raft%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="发量充足的程序员">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Suzette219">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/07/Raft%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">Raft算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-01-07 03:58:59 / 修改时间：23:46:21" itemprop="dateCreated datePublished" datetime="2021-01-07T03:58:59+08:00">2021-01-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Raft算法"><a href="#Raft算法" class="headerlink" title="Raft算法"></a>Raft算法</h1><h2 id="什么是Raft算法"><a href="#什么是Raft算法" class="headerlink" title="什么是Raft算法"></a>什么是Raft算法</h2><p>Raft算法是Multi-Paxos算法，</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.lpyuan.club/2021/01/07/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="发量充足的程序员">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Suzette219">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/07/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/" class="post-title-link" itemprop="url">排序算法</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-01-07 03:40:19 / 修改时间：03:42:16" itemprop="dateCreated datePublished" datetime="2021-01-07T03:40:19+08:00">2021-01-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><p>十大经典排序算法为：冒泡，选择，插入、希尔、归并、快速、堆、计数、桶、基数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">int main(int argc, char *argv[])</span><br><span class="line">&#123;</span><br><span class="line">    int i &#x3D; 0;</span><br><span class="line">    int a[] &#x3D; &#123;5,4,9,8,7,6,0,1,3,2&#125;;</span><br><span class="line">    prin_array(a, sizeof(a)&#x2F;sizeof(a[0])); </span><br><span class="line">    int len &#x3D; sizeof(a)&#x2F;sizeof(a[0]);</span><br><span class="line">    &#x2F;&#x2F; BubbleSort(a, sizeof(a)&#x2F;sizeof(a[0]));</span><br><span class="line">    SelectSort(a, sizeof(a)&#x2F;sizeof(a[0]));</span><br><span class="line">    prin_array(a, sizeof(a)&#x2F;sizeof(a[0]));</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>1、比较相邻的两个元素，如果第一个比第二个大，就交换他们。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">void BubbleSort(int array[], int len)&#123;</span><br><span class="line">    int i, j;</span><br><span class="line">    for (i &#x3D; 0; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (j &#x3D; 0; j &lt; len-1-i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            if (array[j] &gt; array[j+1])</span><br><span class="line">            &#123;</span><br><span class="line">                Swap(&amp;array[j], &amp;array[j+1]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    </span><br><span class="line">    return ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">void SelectSort(int array[], int len)&#123;</span><br><span class="line">    int i, j;</span><br><span class="line">    int min, index;</span><br><span class="line">    for ( i &#x3D; 0; i &lt; len-1; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        min &#x3D; array[i];</span><br><span class="line">        &#x2F;* code *&#x2F;</span><br><span class="line">        for ( j &#x3D; i+1; j &lt; len; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            if (min &gt; array[j])</span><br><span class="line">            &#123;</span><br><span class="line">                min &#x3D; array[j];</span><br><span class="line">                index &#x3D; j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Swap(&amp;array[i], &amp;array[index]);</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    return;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">void InsertSort(int array[], int len)&#123;</span><br><span class="line"></span><br><span class="line">    int i, j;</span><br><span class="line">    int temp;</span><br><span class="line">    for ( i &#x3D; 1; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        temp &#x3D; array[i];</span><br><span class="line">        for ( j &#x3D; i-1; j &gt;&#x3D;0; j--)</span><br><span class="line">        &#123;</span><br><span class="line">            &#x2F;* code *&#x2F;</span><br><span class="line">            if (temp &lt; array[j])&#123;</span><br><span class="line">                array[j+1] &#x3D; array[j];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        array[j+1] &#x3D; temp;</span><br><span class="line">    &#125;</span><br><span class="line">    return ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.lpyuan.club/2021/01/07/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="发量充足的程序员">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Suzette219">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/07/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/" class="post-title-link" itemprop="url">海量数据处理问题</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-01-07 03:37:46 / 修改时间：03:42:07" itemprop="dateCreated datePublished" datetime="2021-01-07T03:37:46+08:00">2021-01-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="1-海量数据问题"><a href="#1-海量数据问题" class="headerlink" title="1 海量数据问题"></a>1 海量数据问题</h2><h3 id="1-1-海量日志数据，提取出某日访问百度次数最多的那个IP。"><a href="#1-1-海量日志数据，提取出某日访问百度次数最多的那个IP。" class="headerlink" title="1.1 海量日志数据，提取出某日访问百度次数最多的那个IP。"></a>1.1 海量日志数据，提取出某日访问百度次数最多的那个IP。</h3><p>首先是这一天，并且是访问百度的日志中的IP取出来，逐个写入到一个大文件中。注意到IP是32位的，最多有个2^32个IP。同样可以采用映射的方法，比如模1000，把整个大文件映射为1000个小文件，再找出每个小文中出现频率最大的IP（可以采用hash_map进行频率统计，然后再找出频率最大的几个）及相应的频率。然后再在这1000个最大的IP中，找出那个频率最大的IP，即为所求。</p>
+<p>算法思想：分而治之+哈希</p>
+<p>1、IP地址最多有2^32=4G种取值情况，所以不能一次性直接都完全加载到内存中。</p>
+<p>2、考虑分而治之的思想，将IP地址进行hash(IP)%1024，把海量的数据分别存储到1024个文件中，这样，每个文件最有就含有4MB个IP地址。</p>
+<p>3、对于每一个小文件，可以进行构造一个key value的hash map，将IP作为key值，出现的次数作为value值，同时记录下当前出现次数最多的那个IP地址。</p>
+<p>4、可以得到1024个文件📃中出现次数最多的IP，再根据常规的排序算法得到总体上的出现次数最多的IP。</p>
+<h3 id="1-2-搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"><a href="#1-2-搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节" class="headerlink" title="1.2 搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"></a>1.2 搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节</h3><p>假设目前有一千万个记录（这些查询串的重复度比较高，虽然总数是1千万，但如果除去重复后，不超过3百万个。一个查询串的重复度越高，说明查询它的用户越多，也就是越热门。），请你统计最热门的10个查询串，要求使用的内存不能超过1G。</p>
+<p>算法思想：经典的topK问题。</p>
+<p>1、先对这批海量数据进行预处理，在O(n)的时间之内用hash表完成统计。</p>
+<p>2、借助堆这个数据结构，找出topk，时间复杂度为nlogK。借助堆这个数据结构，我们可以在log量级的时间内查找和调整移动。我们可以维护一个大顶堆，然后遍历这300万左右的数据，分别和根元素进行比对，最后得出前十个热门的查询串。</p>
+<h3 id="1-3-有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"><a href="#1-3-有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词" class="headerlink" title="1.3 有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"></a>1.3 有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词</h3><p>算法思想：分而治之+hash</p>
+<p>1、顺序读取文件，对于读取的每一个值，可以使用hash(x)%5000，将读取的词存储到5000个文件中，每个文件大概200k，如果还是有文件大于1m，可以按照这个方法继续往下分，直到可以直接放入内存中为止。</p>
+<p>2、对于每一个小文件，统计每个文件节点中出现的词以及相应的一个频率（tries树🌲或者hashMap都可以）。取出出现频率最大的一百个词（可以采用含有100个节点的最小堆），这样又可以得到5000个文件。最后一步，可以将这5000个文件进行归并过程了（类似于归并排序）。</p>
+<h3 id="1-4-在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。"><a href="#1-4-在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。" class="headerlink" title="1.4 在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。"></a>1.4 在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。</h3><p>方案1：可以采用2-bitmap进行，共需要内存</p>
+<h3 id="1-5-海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"><a href="#1-5-海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。" class="headerlink" title="1.5 海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"></a>1.5 海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。</h3><h3 id="1-6-腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"><a href="#1-6-腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？" class="headerlink" title="1.6 腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"></a>1.6 腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？</h3><p>使用bitmap，或者布隆过滤器。</p>
+<h3 id="1-7-10亿个域名如何判断，新来一个域名，如何判断在还是不在"><a href="#1-7-10亿个域名如何判断，新来一个域名，如何判断在还是不在" class="headerlink" title="1.7 10亿个域名如何判断，新来一个域名，如何判断在还是不在"></a>1.7 10亿个域名如何判断，新来一个域名，如何判断在还是不在</h3><p>可以使用布隆过滤器，判断不在就一定不在，判断在的话可能不在。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.lpyuan.club/2021/01/06/%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="发量充足的程序员">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Suzette219">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/06/%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90/" class="post-title-link" itemprop="url">结构体对齐</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-06 06:21:28" itemprop="dateCreated datePublished" datetime="2021-01-06T06:21:28+08:00">2021-01-06</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-07 03:47:48" itemprop="dateModified" datetime="2021-01-07T03:47:48+08:00">2021-01-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">C语言</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="结构体对齐"><a href="#结构体对齐" class="headerlink" title="结构体对齐"></a>结构体对齐</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><blockquote>
+<p>结构体对齐一直是一个老生常谈的问题，我面试过就被问过几次，但是每一次都复习准备好好的，但是一到面试时候，总能被面试官问倒（卑微~）其实主要的原因就是自己没有准确的深刻的理解结构体对齐这个知识点，没有对其进行一个总结。</p>
+</blockquote>
+<h2 id="为什么需要结构体对齐"><a href="#为什么需要结构体对齐" class="headerlink" title="为什么需要结构体对齐"></a>为什么需要结构体对齐</h2><p>结构体需要对其的原因主要就是对CPU对内存访问效率优化的一个问题。假设是intel 32的CPU， 每个总线周期都是要从偶地址读取32位的内存数据。</p>
+<p>假设我们的CPU和总线都是64位的，每次可以从内存中获取8个字节（Byte）64位（bit）的数据，这8个字节就是对齐的，假设就是0<del>7，8</del>15类似这样，你不能从中间3<del>10这样取值。如果需要取值3</del>10之间的数据，就需要取两次，分别是0<del>7，再取8</del>15。所以CPU的取值效率就下降了。</p>
+<h2 id="对齐的几个基本的原则"><a href="#对齐的几个基本的原则" class="headerlink" title="对齐的几个基本的原则"></a>对齐的几个基本的原则</h2><p>1、结构体变量的起始地址能够被其最宽的成员大小整除。</p>
+<p>2、结构体每个成员相对于起始地址的偏移能够被自身大小整除，如果不能则在前一个成员后面补充字节。</p>
+<p>3、结构体总的大小能够被最宽的成员大小整除，如果不能则是在后面进行一个补齐。</p>
+<p>结构体其实也是可以指定编译器对齐大小的，例如以下的代码</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack(1)</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> a;</span><br><span class="line">	<span class="keyword">int</span>  b;</span><br><span class="line">	<span class="keyword">char</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack()</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span> <span class="title">a</span>;</span></span><br></pre></td></tr></table></figure>
+<p>sizeof(a)的大小为5。</p>
+<h2 id="几种变形情况"><a href="#几种变形情况" class="headerlink" title="几种变形情况"></a>几种变形情况</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> a;</span><br><span class="line">	<span class="keyword">int</span>  b;</span><br><span class="line">	<span class="keyword">short</span> c;</span><br><span class="line">&#125;A1;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>变量a，自身按1字节对齐，</p>
+</blockquote>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/27862634">https://www.zhihu.com/question/27862634</a></p>
+<p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90">https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.lpyuan.club/2021/01/04/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="发量充足的程序员">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Suzette219">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/04/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/" class="post-title-link" itemprop="url">进程间通信</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-01-04 07:34:54" itemprop="dateCreated datePublished" datetime="2021-01-04T07:34:54+08:00">2021-01-04</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-01-07 03:51:31" itemprop="dateModified" datetime="2021-01-07T03:51:31+08:00">2021-01-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unix%E7%8E%AF%E5%A2%83%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">Unix环境编程</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <blockquote>
+<p><strong>原子操作</strong>，即不可分割开的操作；该操作一定是在同一个cpu时间片中完成，这样即使线程被切换，多个线程也不会看到同一块内存中不完整的数据。</p>
+<p>线程同步的主要方式–线程锁 线程同步最常用的方法是使用<strong>锁</strong>(Lock)。锁是一种非强制机制，每一个线程访问数据或资源之前，首先试图获取(Acquireuytreewq)锁,并在访问结束之后释放(release)。在锁已经被占用时获取锁，线程会等待，直到该锁被释放。</p>
+<p><strong>互斥锁</strong> 是在很多平台上都比较常用的一种锁。它属于sleep-waiting类型的锁。即当锁处于占用状态时，其他线程会挂起，当锁被释放时，所有等待的线程都将被唤醒，再次对锁进行竞争。在挂起与释放过程中，涉及用户态与内核态之间的context切换，而这种切换是比较消耗性能的。</p>
+<p><strong>自旋锁</strong> 与互斥锁有点类似，只是自旋锁被某线程占用时，其他线程不会进入睡眠(挂起)状态，而是一直运行（自旋/空转）直到锁被释放。由于不涉及用户态与内核态之间的切换，它的效率远远高于互斥锁。</p>
+<p>**信号量(Semaphore)**，有时被称为信号灯，是在多线程环境下使用的一种设施, 它负责协调各个线程, 以保证它们能够正确、合理的使用公共资源。</p>
+<p>信号量可以分为几类：</p>
+<ul>
+<li>二进制信号量(binary semaphore) / 二元信号量 ：只允许信号量取0或1值，，只有两种状态：占用与非占用，其同时只能被一个线程获取。</li>
+<li>整型信号量（integer semaphore)：信号量取值是整数，它可以被多个线程同时获得，直到信号量的值变为0。</li>
+<li>记录型信号量（record semaphore)：每个信号量s除一个整数值value（计数）外，还有一个等待队列List，其中是阻塞在该信号量的各个线程的标识。当信号量被释放一个，值被加一后，系统自动从等待队列中唤醒一个等待中的线程，让其获得信号量，同时信号量再减一。</li>
+</ul>
+<p>信号量通过一个计数器控制对共享资源的访问，信号量的值是一个非负整数，所有通过它的线程都会将该整数减一。如果计数器大于0，则访问被允许，计数器减1；如果为0，则访问被禁止，所有试图通过它的线程都将处于等待状态。</p>
+<p><strong>条件变量</strong> （Condition Variable） 作为一种同步手段类似于栅栏，允许线程以一种无竞争的方式等待某个条件的发生。当该条件没有发生时，线程会一直处于休眠状态。当被其它线程通知条件已经发生时，线程才会被唤醒从而继续向下执行。条件变量是比较底层的同步原语，直接使用的情况不多，往往用于实现高层之间的线程同步。使用条件变量的一个经典的例子就是线程池(Thread Pool)了。</p>
+</blockquote>
+<h1 id="共享内存"><a href="#共享内存" class="headerlink" title="共享内存"></a>共享内存</h1><blockquote>
+<p>共享内存允许两个或者多个进程共享一个给定的存储区，因为数据不需要再客户即和服务器之间复制，所以共享内存是最快的一种 I IPC。使用共享内存唯一的诀窍就是多个进程之间对一给定的存储区之间数据的同步存取问题。通常，信号量被用来实现对共享存储存取的同步。（记录锁也可以用于这种场合）。</p>
+<p>对于操作系统而言，在并行程序设计中难免会遇到数据同步和共享的问题，本文针对这个问题，以windows系统为例回顾一下资源同步的相关问题。</p>
+<p>要点如下：</p>
+<p>1.同步和数据共享数据征用</p>
+<p>2.同步原语 1.互斥和临界区 2.自旋锁 3.信号量 4.读写锁 5.屏障 6.原子操作与无锁代码</p>
+</blockquote>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p>1、<a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903543527178248">https://juejin.cn/post/6844903543527178248</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.lpyuan.club/2021/01/03/%E4%BF%A1%E5%8F%B7signal/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="发量充足的程序员">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Suzette219">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/01/03/%E4%BF%A1%E5%8F%B7signal/" class="post-title-link" itemprop="url">信号signal</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-01-03 04:39:12 / 修改时间：12:22:11" itemprop="dateCreated datePublished" datetime="2021-01-03T04:39:12+08:00">2021-01-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Unix%E7%8E%AF%E5%A2%83%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">Unix环境编程</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="信号机制"><a href="#信号机制" class="headerlink" title="信号机制"></a>信号机制</h1><blockquote>
+<p>信号：</p>
+<p>信号是一种软中断，信号提供了一种处理异步事件的方法。比如终端运行着一个程序，我们在设备输入一个ctrl+c中断停止的按键，那么我们实际上通过触发一个信号（）停止了一个程序。</p>
+<p>信号的处理：</p>
+<p>（1）可以直接将其忽略掉。大多数信号可以直接忽略掉但有两种信号却决不能被忽略，它们是SIGKILL和SIGSTOP信号。</p>
+<p>（2）捕捉信号，注册信号处理函数。</p>
+<p>（3）执行系统的默认动作。</p>
+<p>进程创建：</p>
+<p>当一个进程调用fork函数的时候，其子进程会直接继承父进程的信号处理方式，因为子进程在开始复制了父进程的春初对象，所以信号捕捉函数的地址在子进程中是有意义的。</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.lpyuan.club/2020/12/27/%E9%9D%A2%E8%AF%95%E6%89%8B%E6%92%95%E4%BB%A3%E7%A0%81/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="发量充足的程序员">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Suzette219">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/27/%E9%9D%A2%E8%AF%95%E6%89%8B%E6%92%95%E4%BB%A3%E7%A0%81/" class="post-title-link" itemprop="url">手撕代码</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-27 00:43:58" itemprop="dateCreated datePublished" datetime="2020-12-27T00:43:58+08:00">2020-12-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-16 12:52:03" itemprop="dateModified" datetime="2021-02-16T12:52:03+08:00">2021-02-16</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/" itemprop="url" rel="index"><span itemprop="name">面试宝典</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="面试常见的手撕代码题型"><a href="#面试常见的手撕代码题型" class="headerlink" title="面试常见的手撕代码题型"></a>面试常见的手撕代码题型</h1><p>所有代码都已经跑过</p>
+<h2 id="经典排序"><a href="#经典排序" class="headerlink" title="经典排序"></a>经典排序</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 交换两个数据 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> temp;</span><br><span class="line">  temp = *a;</span><br><span class="line">  *a = *b;</span><br><span class="line">  *b = temp;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 冒牌排序算法 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">size_t</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">NULL</span> == arr)</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">  <span class="keyword">int</span> i=<span class="number">0</span>, j=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;len; i++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">for</span>(j=<span class="number">1</span>; j&lt;len-i<span class="number">-1</span>; j++)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span>(arr[j]&lt;arr[j<span class="number">-1</span>])</span><br><span class="line">        swap(arr[j], arr[j<span class="number">-1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line">   </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> arr[<span class="number">10</span>]=&#123;<span class="number">7</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">8</span>&#125;;</span><br><span class="line">  BubbleSort(arr);</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt; <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>]);i++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<p>0 1 5 7 7 7 8 8 9</p>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> temp;</span><br><span class="line">  temp = *a;</span><br><span class="line">  *a = *b;</span><br><span class="line">  *b = temp;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i, j, temp;</span><br><span class="line">  <span class="keyword">if</span>(left &gt; right)</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">/* temp存放的是基数 */</span></span><br><span class="line">  temp = arr[left];</span><br><span class="line">  i = left;</span><br><span class="line">  j = right;</span><br><span class="line">  <span class="keyword">while</span>(i != j)&#123;</span><br><span class="line">    <span class="comment">/* 顺序很重要，要从右边开始找 */</span></span><br><span class="line">    <span class="keyword">while</span>(arr[j] &gt;= temp &amp;&amp; i &lt; j)</span><br><span class="line">      j--;</span><br><span class="line">    <span class="comment">/* 再从左开始找 */</span></span><br><span class="line">    <span class="keyword">while</span>(arr[i] &lt;= temp &amp;&amp; i &lt; j)</span><br><span class="line">      i++;</span><br><span class="line">    <span class="keyword">if</span>(i &lt; j)</span><br><span class="line">      swap(&amp;arr[i], &amp;arr[j]);</span><br><span class="line">  &#125;</span><br><span class="line">  arr[left] = arr[i];</span><br><span class="line">  arr[i] = temp;</span><br><span class="line">  </span><br><span class="line">  quickSort(left, i<span class="number">-1</span>);</span><br><span class="line">  quickSort(i+<span class="number">1</span>, right);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="查找算法"><a href="#查找算法" class="headerlink" title="查找算法"></a>查找算法</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>二分查找也叫做折半查找，其优点是查找速度快，缺点是要求所要査找的数据必须是有序序列。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> n, <span class="keyword">int</span> key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> hight = n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> mid, midVal;</span><br><span class="line">    <span class="keyword">while</span>(low &lt;= hight)&#123;</span><br><span class="line">        mid = (low+hight)/<span class="number">2</span>;</span><br><span class="line">        midVal = arr[mid];</span><br><span class="line">        <span class="keyword">if</span>(midVal &lt; key)</span><br><span class="line">            low = mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(midVal &gt; key)</span><br><span class="line">            hight = mid<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> key=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">8</span>]=&#123;<span class="number">-32</span>, <span class="number">12</span>, <span class="number">16</span>, <span class="number">24</span>, <span class="number">36</span>, <span class="number">45</span>, <span class="number">59</span>, <span class="number">98</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]); i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please input the data.\n&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;key);</span><br><span class="line">    <span class="keyword">int</span> ret = binarySearch(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]), key);</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">1</span> == ret)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;the key %d is exits.\n&quot;</span>, key);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;the key %d is not exits.\n&quot;</span>, key);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+<h2 id="链表操作"><a href="#链表操作" class="headerlink" title="链表操作"></a>链表操作</h2><h3 id="反转单链表"><a href="#反转单链表" class="headerlink" title="反转单链表"></a>反转单链表</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 定义链表结构 */</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">listNode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> value;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> _<span class="title">listNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;listNode;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 反转链表 */</span></span><br><span class="line"><span class="function">listNode *<span class="title">reverseList</span><span class="params">(listNode *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">NULL</span> == head || <span class="literal">NULL</span> == head-&gt;next)</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">  listNode *cur = head;</span><br><span class="line">  listNode *prev = <span class="literal">NULL</span>;</span><br><span class="line">  listNode *next = <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">while</span>(cur != <span class="literal">NULL</span>)&#123;</span><br><span class="line">    <span class="comment">/* 存放下一个节点 */</span></span><br><span class="line">    next = cur-&gt;next;</span><br><span class="line">    <span class="comment">/* 翻转头结点的下一个节点 */</span></span><br><span class="line">    cur-&gt;next = prev;</span><br><span class="line">    <span class="comment">/* 移动上一个节点 */</span></span><br><span class="line">    prev = cur;</span><br><span class="line">    <span class="comment">/* 更新当前节点 */</span></span><br><span class="line">    cur = next;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> prev；</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> arr[]=&#123;<span class="number">7</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    quickSort(arr, <span class="number">0</span>, <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>])); </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>]); ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/* code */</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="number">0</span>==i%<span class="number">16</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="判断链表是否有环"><a href="#判断链表是否有环" class="headerlink" title="判断链表是否有环"></a>判断链表是否有环</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 判断链表是否有环 */</span></span><br><span class="line"><span class="function">linkNode *<span class="title">isCircle</span><span class="params">(linkNode *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    assert(head != <span class="literal">NULL</span>);</span><br><span class="line">    linkNode *slow = head-&gt;next;               <span class="comment">/* 慢指针 */</span></span><br><span class="line">    linkNode *fast = head-&gt;next-&gt;next;         <span class="comment">/* 快指针 */</span></span><br><span class="line">    <span class="keyword">while</span>(fast != <span class="literal">NULL</span> &amp;&amp; fast-&gt;next != <span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(slow == fast)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        slow = slow-&gt;next;</span><br><span class="line">        fast = fast-&gt;next-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(fast == <span class="literal">NULL</span> || fast-&gt;next == <span class="literal">NULL</span>)</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">NULL</span>;   <span class="comment">/* 无环 */</span></span><br><span class="line">     <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> slow;    <span class="comment">/* 有环 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><h3 id="实现memcpy函数"><a href="#实现memcpy函数" class="headerlink" title="实现memcpy函数"></a>实现memcpy函数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 不考虑内存重叠的情况 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">myMemcpy</span><span class="params">(<span class="keyword">void</span> *dest, <span class="keyword">const</span> <span class="keyword">void</span> *src, <span class="keyword">size_t</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">NULL</span> == dest||<span class="literal">NULL</span> == src)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">char</span> *d = (<span class="keyword">char</span> *)dest;</span><br><span class="line">  <span class="keyword">char</span> *s = (<span class="keyword">char</span> *)src;</span><br><span class="line">  <span class="keyword">while</span>(n--)</span><br><span class="line">    *d++ = *s++;</span><br><span class="line">  <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 优化版本按照CPU位宽度进行拷贝优化 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span>  *<span class="title">myMemcpy</span><span class="params">(<span class="keyword">void</span> *dest, <span class="keyword">const</span> <span class="keyword">void</span> *src, <span class="keyword">size_t</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> nchucks = num/<span class="keyword">sizeof</span>(dest);  <span class="comment">/* 按照CPU的位宽进行拷贝 */</span></span><br><span class="line">  <span class="keyword">int</span> slice = num%/<span class="keyword">sizeof</span>(dest);   <span class="comment">/* 剩余的字节数按照一个一个字节进行拷贝 */</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">long</span> *s = (<span class="keyword">unsigned</span> <span class="keyword">long</span> *)src;</span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">long</span> *d = (<span class="keyword">unsigned</span> <span class="keyword">long</span> *)dest;</span><br><span class="line">   </span><br><span class="line">  <span class="keyword">while</span>(nchucks--)</span><br><span class="line">    *d++ = *s++;</span><br><span class="line">  <span class="keyword">while</span>(slice--)</span><br><span class="line">    *((<span class="keyword">char</span>*)d++) = *((<span class="keyword">char</span>*)s++);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 考虑内存重叠的情况 */</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="实现strstr函数"><a href="#实现strstr函数" class="headerlink" title="实现strstr函数"></a>实现strstr函数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">myStrstr</span><span class="params">()</span></span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="实现strlen函数"><a href="#实现strlen函数" class="headerlink" title="实现strlen函数"></a>实现strlen函数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myStrlen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *arr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  assert(arr);</span><br><span class="line">  <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(<span class="string">&#x27;\0&#x27;</span> != *arr++)</span><br><span class="line">    count++;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="实现strcpy函数"><a href="#实现strcpy函数" class="headerlink" title="实现strcpy函数"></a>实现strcpy函数</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">myStrcpy</span><span class="params">(<span class="keyword">char</span> *dest, <span class="keyword">const</span> <span class="keyword">char</span> *src)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  assert(dest);</span><br><span class="line">  assert(src);</span><br><span class="line">  <span class="keyword">char</span> *d = dest;</span><br><span class="line">  <span class="keyword">char</span> *s = src;</span><br><span class="line">  <span class="keyword">while</span>(<span class="string">&#x27;\0&#x27;</span> != *s)</span><br><span class="line">    *d++ = *s++;</span><br><span class="line">  <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>1、<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43496874/article/details/100868367?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control">https://blog.csdn.net/weixin_43496874/article/details/100868367?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control</a></p>
+<p>2、<a target="_blank" rel="noopener" href="http://c.biancheng.net/cpp/html/2744.html">http://c.biancheng.net/cpp/html/2744.html</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://www.lpyuan.club/2020/12/20/docker/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="发量充足的程序员">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Suzette219">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/12/20/docker/" class="post-title-link" itemprop="url">docker</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-12-20 08:49:58" itemprop="dateCreated datePublished" datetime="2020-12-20T08:49:58+08:00">2020-12-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-02-13 15:45:29" itemprop="dateModified" datetime="2021-02-13T15:45:29+08:00">2021-02-13</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Docker 本质上就是一个虚拟机。</p>
+<p><img src="/2020/12/20/docker/image.png" alt="image-20201220085110478"></p>
+<p>在docker中有几个基本的概念。</p>
+<p>1、镜像：类似于平时使用的iso或者image镜像文件。</p>
+<p>2、容器：容器其实就会类似于虚拟机</p>
+<p>3、tar文件：类似于vmdk文件，可以直接打个包在别的地方直接run运行。</p>
+<p>4、docker file。docker 的一些配置</p>
+<p>5、仓库：存放有很多已经打包好的镜像，MySQL镜像、ngnix镜像等。</p>
+<p>常用的操作命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">1、直接从远程仓库下载mysql镜像</span><br><span class="line">docker search mysql 查找mysql镜像</span><br><span class="line">docker pull mysql   下载mysql镜像</span><br><span class="line">等价于命令docker pull mysql:latest,不指定版本会直接默认下载最新的版本镜像。</span><br><span class="line"></span><br><span class="line">2、查看本地的镜像</span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line">3、运行容器</span><br><span class="line">docker run -d 3307:3306 mysql</span><br><span class="line">-d 指定后台运行不阻塞当前shell窗口</span><br><span class="line">-p 指定内外部端口映射 外部:内部</span><br><span class="line"></span><br><span class="line">4、查看正在运行的容器，查看活跃的容器。</span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line">5、进入容器</span><br><span class="line">docker exec -it id bash</span><br><span class="line"></span><br><span class="line">6、启动停止容器</span><br><span class="line">docker stop &lt;容器ID&gt;</span><br><span class="line">docker restart &lt;容器ID&gt;</span><br><span class="line"></span><br><span class="line">7、删除docker实例</span><br><span class="line">docker rm -f 实例ID</span><br><span class="line"></span><br><span class="line">8、查询mysql镜像</span><br><span class="line">docker search mysql</span><br><span class="line"></span><br><span class="line">9、保存容器镜像</span><br><span class="line">docker commit 实例ID 新的名字</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/12/20/docker/image1.png" alt="image-20201220090133527"></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">发量充足的程序员</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">发量充足的程序员</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
