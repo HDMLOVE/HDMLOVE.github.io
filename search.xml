@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>人为什么活着</title>
-    <url>/2020/10/14/%E7%94%9F%E6%B4%BB/</url>
-    <content><![CDATA[<p>你喜欢的人在努力，你却在想怎么说我爱你</p>
-<a id="more"></a>]]></content>
+    <title>写在前面</title>
+    <url>/2020/10/14/ca8bfdf3.html</url>
+    <content><![CDATA[<p>初衷</p>
+<p>你喜欢的人在努力，你却在想怎么说我爱你</p>
+<a id="more"></a>
+]]></content>
       <categories>
         <category>杂谈</category>
       </categories>
   </entry>
   <entry>
+    <title>釜山行</title>
+    <url>/2021/02/19/dfbf19f0.html</url>
+    <content><![CDATA[<p>一开始听到影片讲丧尸的时候，我对这一步电影是拒绝的，谁知道朋友圈的伙伴们便对我进行一番嘲讽，不服气的我便是选择勇敢地看完。</p>
+<a id="more"></a>
+
+<p>从来不喜欢看恐怖片的我一直单纯的以为这只是一部恐怖片，但是默默地看到了最后，给我留下的不是恐怖，但最多的却是感动，是沉思。这部是一部直透人性最深处，其中包含了亲情、爱情、友情、自私、冷漠……<br>政府，在我们的理解中是一个国家民众最基本的依靠，当一个政府里的高官被所谓的政治冲昏头脑的时候，政府就会变得自私自利。与此同时，政府也变回失去了他原本存在的意义。影片的一开始政府的举动让我很是不解，看到了最后，我才渐渐明白，剧中当灾难来临的时候，政府官员竟然掩盖真相，抛弃民众，不管民众的死活，并谎称这只是一场暴动，这一切的一切都值得我们思考。<br>爱情，有人说它是世界上最伟大的力量，而我想说，面对灾难来临时依旧坚不可摧的爱情才是最伟大的。剧中大叔与他的妻子圣京女士之间的爱情让许多人动容，面对另一节车厢中冷漠的人们的举动使他无法继续生存下去的时刻，毅然选择牺牲了自己保全了自己的爱人与那还未出生的女儿。还有就是年轻的棒球少女，自己生死的紧要关头却是从未舍弃自己喜欢的那个人，坚持要打开车门最后的最后虽然两人都被变成了尸人，但却是令我非常的感动。大叔和圣京女士代表了结婚的后依旧能够相守的一类人，而年轻棒球少女和年轻男子则是代表了正在青春萌动中了我们。</p>
+<p>亲情，感情线路最为复杂的就是男主也就是秀安的爸爸，做为一个忙于工作的父亲。从一开始是忙于工作不抽出时间来陪伴女儿的形象，到接下来的呈现的是无私的父爱，同时也是自私的民众。父亲从为了保护自己的女儿不顾别人的死活，到最后被女儿的纯真善良所感动，开始去帮去身边的人。</p>
+<p>自私，冷漠。在被尸人追赶逃跑的过程中不断有人把身边的人推向尸人以此来保全自己。但令我印象最为深刻的便是那最后一个车厢的人们，男主他们经历了重重尸人到达安全车厢的时候，那一整车厢的人竟然因害怕感染自己而拒绝开门从而导致大叔与奶奶被同化成了尸人，他们最后的目光我无法忘记，那是一种怎样的目光？是求生，或亦是对人性的绝望。<br>总的来说，这一步电影带给我的不是恐惧，最多的是来源于亲情，爱情以及纯真善良的感动，带给我的是自私冷漠的沉思，画面虽然夸张但是情感却是真实。</p>
+<p>借用老刘的话说，那就是躲过了三姐车厢的丧尸，却是没有躲过一节车厢的人心。也想补充一句，无论如何请相信这世界依然有爱。<br>                                                                                                                                                                                                                    2016.9.17</p>
+]]></content>
+      <categories>
+        <category>电影🎬</category>
+      </categories>
+      <tags>
+        <tag>movie</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux非阻塞模式下的EAGIN异常</title>
-    <url>/2021/02/19/Linux%E9%9D%9E%E9%98%BB%E5%A1%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84EAGIN%E5%BC%82%E5%B8%B8/</url>
+    <url>/2021/02/19/6f167ca3.html</url>
     <content><![CDATA[<p>之前在写一个并发聊天室时候在多个客户端连续发送数据的时候遇到EAGIN错误，如图。</p>
-<img src="/2021/02/19/Linux%E9%9D%9E%E9%98%BB%E5%A1%9E%E6%A8%A1%E5%BC%8F%E4%B8%8B%E7%9A%84EAGIN%E5%BC%82%E5%B8%B8/image-20210218231840685.png" alt="image-20210218231840685" style="zoom:20%;">
+<img src="/images/image-20210218231840685.png" alt="image-20210218231840685" style="zoom:20%;" />
 
 <p>Linux下，管道、FIFO以及一些设备（通常是终端和网络）一般有以下几种性质。</p>
 <a id="more"></a>
@@ -23,10 +43,27 @@
 <p>2、一次write或send操作的返回值也可能会少于指定的输出的字节数。通常这可能是由于某一种因素引起的，比如在处理网络数据的时，内核输出的缓冲区满，此时写不进数据。我们也通常不认为这是一种错误，应当继续将余下的数据进行写入。（通常遇到这种情况的场景是非阻塞描述符，或者捕捉到某一种信号的时候，才会发生中途返回。）</p>
 </blockquote>
 ]]></content>
+      <categories>
+        <category>Unix环境高级编程</category>
+      </categories>
+      <tags>
+        <tag>Unix</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Go语言error错误处理</title>
+    <url>/2021/02/02/b424edbd.html</url>
+    <content><![CDATA[<h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><p>Go语言的错误处理</p>
+<a id="more"></a>
+
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Go</category>
+      </categories>
   </entry>
   <entry>
     <title>Raft算法</title>
-    <url>/2021/01/07/Raft%E7%AE%97%E6%B3%95/</url>
+    <url>/2021/01/07/1df31392.html</url>
     <content><![CDATA[<h1 id="Raft算法"><a href="#Raft算法" class="headerlink" title="Raft算法"></a>Raft算法</h1><h2 id="什么是Raft算法"><a href="#什么是Raft算法" class="headerlink" title="什么是Raft算法"></a>什么是Raft算法</h2><p>Raft算法是Multi-Paxos算法，</p>
 ]]></content>
       <categories>
@@ -35,29 +72,32 @@
   </entry>
   <entry>
     <title>排序算法</title>
-    <url>/2021/01/07/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <url>/2021/01/07/Infinity.html</url>
     <content><![CDATA[<h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><p>十大经典排序算法为：冒泡，选择，插入、希尔、归并、快速、堆、计数、桶、基数</p>
 <a id="more"></a>
 
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">int main(int argc, char *argv[])</span><br><span class="line">&#123;</span><br><span class="line">    int i &#x3D; 0;</span><br><span class="line">    int a[] &#x3D; &#123;5,4,9,8,7,6,0,1,3,2&#125;;</span><br><span class="line">    prin_array(a, sizeof(a)&#x2F;sizeof(a[0])); </span><br><span class="line">    int len &#x3D; sizeof(a)&#x2F;sizeof(a[0]);</span><br><span class="line">    &#x2F;&#x2F; BubbleSort(a, sizeof(a)&#x2F;sizeof(a[0]));</span><br><span class="line">    SelectSort(a, sizeof(a)&#x2F;sizeof(a[0]));</span><br><span class="line">    prin_array(a, sizeof(a)&#x2F;sizeof(a[0]));</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123;<span class="number">5</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    prin_array(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>])); </span><br><span class="line">    <span class="keyword">int</span> len = <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]);</span><br><span class="line">    <span class="comment">// BubbleSort(a, sizeof(a)/sizeof(a[0]));</span></span><br><span class="line">    SelectSort(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]));</span><br><span class="line">  	prin_array(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]));</span><br><span class="line">  </span><br><span class="line">  	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 <h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>1、比较相邻的两个元素，如果第一个比第二个大，就交换他们。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void BubbleSort(int array[], int len)&#123;</span><br><span class="line">    int i, j;</span><br><span class="line">    for (i &#x3D; 0; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        for (j &#x3D; 0; j &lt; len-1-i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            if (array[j] &gt; array[j+1])</span><br><span class="line">            &#123;</span><br><span class="line">                Swap(&amp;array[j], &amp;array[j+1]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    </span><br><span class="line">    return ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; len<span class="number">-1</span>-i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">array</span>[j] &gt; <span class="built_in">array</span>[j+<span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                Swap(&amp;<span class="built_in">array</span>[j], &amp;<span class="built_in">array</span>[j+<span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void SelectSort(int array[], int len)&#123;</span><br><span class="line">    int i, j;</span><br><span class="line">    int min, index;</span><br><span class="line">    for ( i &#x3D; 0; i &lt; len-1; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        min &#x3D; array[i];</span><br><span class="line">        &#x2F;* code *&#x2F;</span><br><span class="line">        for ( j &#x3D; i+1; j &lt; len; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            if (min &gt; array[j])</span><br><span class="line">            &#123;</span><br><span class="line">                min &#x3D; array[j];</span><br><span class="line">                index &#x3D; j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Swap(&amp;array[i], &amp;array[index]);</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    return;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SelectSort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">int</span> min, index;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; len<span class="number">-1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        min = <span class="built_in">array</span>[i];</span><br><span class="line">        <span class="comment">/* code */</span></span><br><span class="line">        <span class="keyword">for</span> ( j = i+<span class="number">1</span>; j &lt; len; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (min &gt; <span class="built_in">array</span>[j])</span><br><span class="line">            &#123;</span><br><span class="line">                min = <span class="built_in">array</span>[j];</span><br><span class="line">                index = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Swap(&amp;<span class="built_in">array</span>[i], &amp;<span class="built_in">array</span>[index]);</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">void InsertSort(int array[], int len)&#123;</span><br><span class="line"></span><br><span class="line">    int i, j;</span><br><span class="line">    int temp;</span><br><span class="line">    for ( i &#x3D; 1; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        temp &#x3D; array[i];</span><br><span class="line">        for ( j &#x3D; i-1; j &gt;&#x3D;0; j--)</span><br><span class="line">        &#123;</span><br><span class="line">            &#x2F;* code *&#x2F;</span><br><span class="line">            if (temp &lt; array[j])&#123;</span><br><span class="line">                array[j+1] &#x3D; array[j];</span><br><span class="line">            &#125;</span><br><span class="line">            else</span><br><span class="line">            &#123;</span><br><span class="line">                break;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        array[j+1] &#x3D; temp;</span><br><span class="line">    &#125;</span><br><span class="line">    return ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertSort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">1</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        temp = <span class="built_in">array</span>[i];</span><br><span class="line">        <span class="keyword">for</span> ( j = i<span class="number">-1</span>; j &gt;=<span class="number">0</span>; j--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">/* code */</span></span><br><span class="line">            <span class="keyword">if</span> (temp &lt; <span class="built_in">array</span>[j])&#123;</span><br><span class="line">                <span class="built_in">array</span>[j+<span class="number">1</span>] = <span class="built_in">array</span>[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">array</span>[j+<span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>数据结构与算法</category>
       </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
   </entry>
   <entry>
     <title>海量数据处理问题</title>
-    <url>/2021/01/07/%E6%B5%B7%E9%87%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E9%97%AE%E9%A2%98/</url>
+    <url>/2021/01/07/39a6906f.html</url>
     <content><![CDATA[<h2 id="海量数据问题"><a href="#海量数据问题" class="headerlink" title="海量数据问题"></a>海量数据问题</h2><h3 id="海量日志数据，提取出某日访问百度次数最多的那个IP。"><a href="#海量日志数据，提取出某日访问百度次数最多的那个IP。" class="headerlink" title="海量日志数据，提取出某日访问百度次数最多的那个IP。"></a>海量日志数据，提取出某日访问百度次数最多的那个IP。</h3><p>首先是这一天，并且是访问百度的日志中的IP取出来，逐个写入到一个大文件中。注意到IP是32位的，最多有个2^32个IP。同样可以采用映射的方法，比如模1000，把整个大文件映射为1000个小文件，再找出每个小文中出现频率最大的IP（可以采用hash_map进行频率统计，然后再找出频率最大的几个）及相应的频率。然后再在这1000个最大的IP中，找出那个频率最大的IP，即为所求。</p>
 <a id="more"></a>
 
@@ -83,7 +123,7 @@
   </entry>
   <entry>
     <title>结构体对齐</title>
-    <url>/2021/01/06/%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90/</url>
+    <url>/2021/01/06/6aac47f4.html</url>
     <content><![CDATA[<h1 id="结构体对齐"><a href="#结构体对齐" class="headerlink" title="结构体对齐"></a>结构体对齐</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><blockquote>
 <p>&ensp;&ensp;&ensp;&ensp;结构体对齐一直是一个老生常谈的问题，我面试过就被问过几次，但是每一次都复习准备好好的，但是一到面试时候，总能被面试官问倒（卑微~）其实主要的原因就是自己没有准确的深刻的理解结构体对齐这个知识点，没有对其进行一个总结。</p>
 </blockquote>
@@ -105,12 +145,12 @@
 <p><a href="https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90">https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90</a></p>
 ]]></content>
       <categories>
-        <category>C语言</category>
+        <category>C/C++</category>
       </categories>
   </entry>
   <entry>
     <title>进程间通信</title>
-    <url>/2021/01/04/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1/</url>
+    <url>/2021/01/04/a9fd59ec.html</url>
     <content><![CDATA[<blockquote>
 <p><strong>原子操作</strong>，即不可分割开的操作；该操作一定是在同一个cpu时间片中完成，这样即使线程被切换，多个线程也不会看到同一块内存中不完整的数据。</p>
 <p>线程同步的主要方式–线程锁 线程同步最常用的方法是使用<strong>锁</strong>(Lock)。锁是一种非强制机制，每一个线程访问数据或资源之前，首先试图获取(Acquireuytreewq)锁,并在访问结束之后释放(release)。在锁已经被占用时获取锁，线程会等待，直到该锁被释放。</p>
@@ -138,15 +178,15 @@
 <h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p>1、<a href="https://juejin.cn/post/6844903543527178248">https://juejin.cn/post/6844903543527178248</a></p>
 ]]></content>
       <categories>
-        <category>Unix环境编程</category>
+        <category>Unix环境高级编程</category>
       </categories>
   </entry>
   <entry>
     <title>信号signal</title>
-    <url>/2021/01/03/%E4%BF%A1%E5%8F%B7signal/</url>
+    <url>/2021/01/03/600903f8.html</url>
     <content><![CDATA[<h1 id="信号机制"><a href="#信号机制" class="headerlink" title="信号机制"></a>信号机制</h1><blockquote>
 <p>信号：</p>
-<p>信号是一种软中断，信号提供了一种处理异步事件的方法。比如终端运行着一个程序，我们在设备输入一个ctrl+c中断停止的按键，那么我们实际上通过触发一个信号（）停止了一个程序。</p>
+<p>信号是一种软中断，信号提供了一种处理异步事件的方法。比如终端运行着一个程序，我们在设备输入一个ctrl+c中断停止的按键，那么我们实际上通过触发一个信号停止了一个程序。</p>
 <p>信号的处理：</p>
 <p>（1）可以直接将其忽略掉。大多数信号可以直接忽略掉但有两种信号却决不能被忽略，它们是SIGKILL和SIGSTOP信号。</p>
 <p>（2）捕捉信号，注册信号处理函数。</p>
@@ -158,12 +198,12 @@
 </blockquote>
 ]]></content>
       <categories>
-        <category>Unix环境编程</category>
+        <category>Unix环境高级编程</category>
       </categories>
   </entry>
   <entry>
     <title>手撕代码</title>
-    <url>/2020/12/27/%E9%9D%A2%E8%AF%95%E6%89%8B%E6%92%95%E4%BB%A3%E7%A0%81/</url>
+    <url>/2020/12/27/7a4494fd.html</url>
     <content><![CDATA[<h1 id="面试常见的手撕代码题型"><a href="#面试常见的手撕代码题型" class="headerlink" title="面试常见的手撕代码题型"></a>面试常见的手撕代码题型</h1><p>所有代码都已经跑过，可以正常编译运行。</p>
 <a id="more"></a>
 
@@ -175,12 +215,6 @@
 
 <h2 id="查找算法"><a href="#查找算法" class="headerlink" title="查找算法"></a>查找算法</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>二分查找也叫做折半查找，其优点是查找速度快，缺点是要求所要査找的数据必须是有序序列。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> n, <span class="keyword">int</span> key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> hight = n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> mid, midVal;</span><br><span class="line">    <span class="keyword">while</span>(low &lt;= hight)&#123;</span><br><span class="line">        mid = (low+hight)/<span class="number">2</span>;</span><br><span class="line">        midVal = arr[mid];</span><br><span class="line">        <span class="keyword">if</span>(midVal &lt; key)</span><br><span class="line">            low = mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(midVal &gt; key)</span><br><span class="line">            hight = mid<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> key=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">8</span>]=&#123;<span class="number">-32</span>, <span class="number">12</span>, <span class="number">16</span>, <span class="number">24</span>, <span class="number">36</span>, <span class="number">45</span>, <span class="number">59</span>, <span class="number">98</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]); i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please input the data.\n&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;key);</span><br><span class="line">    <span class="keyword">int</span> ret = binarySearch(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]), key);</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">1</span> == ret)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;the key %d is exits.\n&quot;</span>, key);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;the key %d is not exits.\n&quot;</span>, key);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
 <h2 id="链表操作"><a href="#链表操作" class="headerlink" title="链表操作"></a>链表操作</h2><h3 id="反转单链表"><a href="#反转单链表" class="headerlink" title="反转单链表"></a>反转单链表</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 定义链表结构 */</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">listNode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> value;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> _<span class="title">listNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;listNode;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 反转链表 */</span></span><br><span class="line"><span class="function">listNode *<span class="title">reverseList</span><span class="params">(listNode *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">NULL</span> == head || <span class="literal">NULL</span> == head-&gt;next)</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">  listNode *cur = head;</span><br><span class="line">  listNode *prev = <span class="literal">NULL</span>;</span><br><span class="line">  listNode *next = <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">while</span>(cur != <span class="literal">NULL</span>)&#123;</span><br><span class="line">    <span class="comment">/* 存放下一个节点 */</span></span><br><span class="line">    next = cur-&gt;next;</span><br><span class="line">    <span class="comment">/* 翻转头结点的下一个节点 */</span></span><br><span class="line">    cur-&gt;next = prev;</span><br><span class="line">    <span class="comment">/* 移动上一个节点 */</span></span><br><span class="line">    prev = cur;</span><br><span class="line">    <span class="comment">/* 更新当前节点 */</span></span><br><span class="line">    cur = next;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> prev；</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> arr[]=&#123;<span class="number">7</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    quickSort(arr, <span class="number">0</span>, <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>])); </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>]); ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/* code */</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="number">0</span>==i%<span class="number">16</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h3 id="判断链表是否有环"><a href="#判断链表是否有环" class="headerlink" title="判断链表是否有环"></a>判断链表是否有环</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 判断链表是否有环 */</span></span><br><span class="line"><span class="function">linkNode *<span class="title">isCircle</span><span class="params">(linkNode *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    assert(head != <span class="literal">NULL</span>);</span><br><span class="line">    linkNode *slow = head-&gt;next;               <span class="comment">/* 慢指针 */</span></span><br><span class="line">    linkNode *fast = head-&gt;next-&gt;next;         <span class="comment">/* 快指针 */</span></span><br><span class="line">    <span class="keyword">while</span>(fast != <span class="literal">NULL</span> &amp;&amp; fast-&gt;next != <span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(slow == fast)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        slow = slow-&gt;next;</span><br><span class="line">        fast = fast-&gt;next-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(fast == <span class="literal">NULL</span> || fast-&gt;next == <span class="literal">NULL</span>)</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">NULL</span>;   <span class="comment">/* 无环 */</span></span><br><span class="line">     <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> slow;    <span class="comment">/* 有环 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -206,9 +240,8 @@
   </entry>
   <entry>
     <title>docker</title>
-    <url>/2020/12/20/docker/</url>
-    <content><![CDATA[<p>Docker 本质上就是一个虚拟机。</p>
-<p><img src="/2020/12/20/docker/image.png" alt="image-20201220085110478"></p>
+    <url>/2020/12/20/f255ffad.html</url>
+    <content><![CDATA[<p>Docker 类似一个虚拟机。</p>
 <p>在docker中有几个基本的概念。</p>
 <p>1、镜像：类似于平时使用的iso或者image镜像文件。</p>
 <p>2、容器：容器其实就会类似于虚拟机</p>
@@ -217,14 +250,17 @@
 <p>5、仓库：存放有很多已经打包好的镜像，MySQL镜像、ngnix镜像等。</p>
 <a id="more"></a>
 
+<img src="/images/image-20201220085110478.png" alt="image-20201220085110478" style="zoom:33%;" />
+
 <p>常用的操作命令：</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1、直接从远程仓库下载mysql镜像</span><br><span class="line">docker search mysql 查找mysql镜像</span><br><span class="line">docker pull mysql   下载mysql镜像</span><br><span class="line">等价于命令docker pull mysql:latest,不指定版本会直接默认下载最新的版本镜像。</span><br><span class="line"></span><br><span class="line">2、查看本地的镜像</span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line">3、运行容器</span><br><span class="line">docker run -d 3307:3306 mysql</span><br><span class="line">-d 指定后台运行不阻塞当前shell窗口</span><br><span class="line">-p 指定内外部端口映射 外部:内部</span><br><span class="line"></span><br><span class="line">4、查看正在运行的容器，查看活跃的容器。</span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line">5、进入容器</span><br><span class="line">docker exec -it id bash</span><br><span class="line"></span><br><span class="line">6、启动停止容器</span><br><span class="line">docker stop &lt;容器ID&gt;</span><br><span class="line">docker restart &lt;容器ID&gt;</span><br><span class="line"></span><br><span class="line">7、删除docker实例</span><br><span class="line">docker rm -f 实例ID</span><br><span class="line"></span><br><span class="line">8、查询mysql镜像</span><br><span class="line">docker search mysql</span><br><span class="line"></span><br><span class="line">9、保存容器镜像</span><br><span class="line">docker commit 实例ID 新的名字</span><br></pre></td></tr></table></figure>
-<p><img src="/2020/12/20/docker/image1.png" alt="image-20201220090133527"></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1、直接从远程仓库下载mysql镜像</span></span><br><span class="line">docker search mysql <span class="comment"># 查找mysql镜像</span></span><br><span class="line">docker pull mysql   <span class="comment"># 下载mysql镜像</span></span><br><span class="line"><span class="comment"># 等价于命令docker pull mysql:latest,不指定版本会直接默认下载最新的版本镜像。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2、查看本地的镜像</span></span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3、运行容器</span></span><br><span class="line">docker run -d 3307:3306 mysql</span><br><span class="line"><span class="comment"># -d 指定后台运行不阻塞当前shell窗口</span></span><br><span class="line"><span class="comment"># -p 指定内外部端口映射 外部:内部</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4、查看正在运行的容器，查看活跃的容器。</span></span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5、进入容器</span></span><br><span class="line">docker <span class="built_in">exec</span> -it id bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6、启动停止容器</span></span><br><span class="line">docker stop &lt;容器ID&gt;</span><br><span class="line">docker restart &lt;容器ID&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 7、删除docker实例</span></span><br><span class="line">docker rm -f 实例ID</span><br><span class="line"></span><br><span class="line"><span class="comment"># 8、查询mysql镜像</span></span><br><span class="line">docker search mysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 9、保存容器镜像</span></span><br><span class="line">docker commit 实例ID 新的名字</span><br></pre></td></tr></table></figure>
+<img src="/images/image-20201220090133527.png" alt="image-20201220085110478" style="zoom:33%;" />
+
 ]]></content>
   </entry>
   <entry>
     <title>IO多路复用</title>
-    <url>/2020/12/20/IO%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8/</url>
+    <url>/2020/12/20/b21cb050.html</url>
     <content><![CDATA[<blockquote>
 <p>我们可以将标准输入、套接字等都看做IO的一路，多路复用的意思是在任何一路IO有事件的情况下，通知应用程序去处理相应的IO事件，这样程序就仿佛可以同一时刻处理多个IO事件了。</p>
 </blockquote>
@@ -339,36 +375,12 @@
 <p>2、<a href="https://time.geekbang.org/column/article/138948">https://time.geekbang.org/column/article/138948</a></p>
 ]]></content>
       <categories>
-        <category>Unix环境编程</category>
+        <category>Unix环境高级编程</category>
       </categories>
   </entry>
   <entry>
-    <title></title>
-    <url>/2020/11/29/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0/</url>
-    <content><![CDATA[<p>title: Go语言error错误处理<br>date: 2021-02-1 16:39:14<br>tags:<br>categories:</p>
-<h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><p>Go语言的错误处理</p>
-<a id="more"></a>
-
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
-    <title>腾讯面试</title>
-    <url>/2020/11/17/%E8%85%BE%E8%AE%AF%E9%9D%A2%E8%AF%95/</url>
-    <content><![CDATA[<p>1、100万数据个是topK。</p>
-<p>2、32位无符号整形个数的QQ号记录QQ号的状态 上线和下线，计算使用多少内存。</p>
-<p>3、printf(“%d “, 1, 2, 3);  printf(“%s”)；</p>
-<p>4、HTTP 和 HTTPS的区别。1、对称加密和非对称加密。2、效率问题的瓶颈。</p>
-<a id="more"></a>
-
-<p>5、阻塞问题</p>
-<p>1、对端接收处理不过来 。流量控制。</p>
-<p>2、网络阻塞。拥塞控制。</p>
-<p>3、项目问题</p>
-]]></content>
-  </entry>
-  <entry>
     <title>编写Makefile</title>
-    <url>/2020/10/06/%E7%BC%96%E5%86%99Makefile/</url>
+    <url>/2020/10/06/dfbf19f0.html</url>
     <content><![CDATA[<h1 id="编写Makefile"><a href="#编写Makefile" class="headerlink" title="编写Makefile"></a>编写Makefile</h1><hr>
 <p>&ensp;&ensp;&ensp;&ensp;Makefile编写的好可以在工程项目编译链接的过程中省去很多麻烦，平时在练习的过程中也是能方便高效的学习。</p>
 <blockquote>
@@ -389,51 +401,41 @@
 <p>如一个目录下有如下文件：<br>&ensp;&ensp;&ensp;&ensp;hello.c&ensp;&ensp;hi.c&ensp;&ensp;main.c&ensp;&ensp;Makefile<br>按照 Makefile 规则规规矩矩的写：</p>
 <figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line"><span class="section">main: main.o hello.o hi.o</span></span><br><span class="line">        gcc -o main main.o hello.o hi.o</span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">        cc -c main.c</span><br><span class="line"><span class="section">hello.o: hello.c</span></span><br><span class="line">        cc -c hello.c</span><br><span class="line"><span class="section">hi.o: hi.c</span></span><br><span class="line">        cc -c hi.c</span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">        rm *.o</span><br><span class="line">        rm main</span><br><span class="line">        </span><br><span class="line">改为用上述符号进行替代：</span><br><span class="line"></span><br><span class="line"><span class="section">main: main.o hello.o hi.o</span></span><br><span class="line">        gcc -o <span class="variable">$@</span> <span class="variable">$^</span></span><br><span class="line"><span class="section">main.o: main.c</span></span><br><span class="line">        cc -c <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">hello.o: hello.c</span></span><br><span class="line">        cc -c <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">hi.o: hi.c</span></span><br><span class="line">        cc -c <span class="variable">$&lt;</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">        rm *.o</span><br><span class="line">        rm main</span><br></pre></td></tr></table></figure>
 <h3 id="4-Makefile中的常用函数。"><a href="#4-Makefile中的常用函数。" class="headerlink" title="4. Makefile中的常用函数。"></a>4. Makefile中的常用函数。</h3><h4 id="4-1-函数名称-：反过滤函数—filter-out。"><a href="#4-1-函数名称-：反过滤函数—filter-out。" class="headerlink" title="4.1 函数名称 ：反过滤函数—filter-out。"></a>4.1 函数名称 ：反过滤函数—filter-out。</h4><p>格式：$(filter-out PATTERN…,TEXT)<br>函数功能 ：和“filter”函数实现的功能相反。过滤掉字串“TEXT”中所有符合“PATTERN”的单词，保留所有不符合的单词。可以多个模式。存在多模式时，模式表达式之间使用空格分割。<br>返回值 ：空格分割的“TEXT”字串中所有不符合模式“PATTERN”的字串。<br>函数说明： “filter-out”函数也可以用来去除一个变量中的某些字符串（实现和“filter”函数相反）。<br>下面有个例子：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">objects&#x3D;main1.o foo.o main2.o bar.o </span><br><span class="line">mains&#x3D;main1.o main2.o</span><br><span class="line">$(filter-out$(mains),$(objects))</span><br><span class="line">实现了去除变量&quot;objects&quot;中&quot;mains&quot;定义的字串（文件名）功能。它的返回值为&quot;foo.o bar.o&quot;。</span><br></pre></td></tr></table></figure>
-<h2 id="二、Makefile通用模板"><a href="#二、Makefile通用模板" class="headerlink" title="二、Makefile通用模板"></a>二、Makefile通用模板</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">TARGET&#x3D;server</span><br><span class="line">CC&#x3D;g++</span><br><span class="line">CFLAG&#x3D;-c -g -static</span><br><span class="line">#所有的.c文件</span><br><span class="line">SRCS:&#x3D;$(wildcard ..&#x2F;*.c)</span><br><span class="line">FILTERS&#x3D;..&#x2F;hello.c</span><br><span class="line">#从SRCS中除了hello.c文件 filter函数可以选择满足条件的</span><br><span class="line">SRCS:&#x3D;$(filter-out $(FILTERS), $(SRCS))</span><br><span class="line">OBJS:&#x3D;$(patsubst %.c, %.o, $(SRCS))</span><br><span class="line">CURRENT_PATH&#x3D;$(PWD)</span><br><span class="line">CPPFLAGS&#x3D; -I..&#x2F;include -I..&#x2F;util</span><br><span class="line">LIBS_PATH&#x3D;-L..&#x2F;lib64</span><br><span class="line">LIBS&#x3D;-lmylib</span><br><span class="line"></span><br><span class="line">#判断是哪个系统32bit编译还是在64bit编译。</span><br><span class="line">ARCH:&#x3D;$(shell uname -m)</span><br><span class="line">ifeq ($(ARCH), x86_64)</span><br><span class="line">VERSION:&#x3D;X86_64</span><br><span class="line">else</span><br><span class="line">VERSION:&#x3D;i686</span><br><span class="line">endif</span><br><span class="line"></span><br><span class="line">$(TARGET):$(OBJS)</span><br><span class="line">        $(CC) $(DEBUG) $(SRCS) $(LIBS_PATH) $(LIBS) $(CPPFLAGS) -o $(TARGET)</span><br><span class="line"></span><br><span class="line">$(OBJS):%.o:%.c</span><br><span class="line">        $(CC) $(CFLAG) $&lt; -o $@</span><br><span class="line"></span><br><span class="line">.PHONY:clean</span><br><span class="line">clean:</span><br><span class="line">        rm -rf *~ *.bak $(TARGET)</span><br><span class="line"></span><br><span class="line">【顶层Makefile编写】</span><br><span class="line">all: all_client all_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">all_client:</span><br><span class="line">    $(MAKE) -C client</span><br><span class="line">all_server:</span><br><span class="line">    $(MAKE) -C server</span><br><span class="line"></span><br><span class="line">clean: clean_client clean_server</span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line">clean_client:</span><br><span class="line">    $(MAKE) -C client clean</span><br><span class="line">clean_server:</span><br><span class="line">    $(MAKE) -C server clean</span><br></pre></td></tr></table></figure>
+<figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">objects=main1.o foo.o main2.o bar.o </span><br><span class="line">mains=main1.o main2.o</span><br><span class="line">$(filter-out<span class="variable">$(mains)</span>,<span class="variable">$(objects)</span>)</span><br><span class="line">实现了去除变量<span class="string">&quot;objects&quot;</span>中<span class="string">&quot;mains&quot;</span>定义的字串（文件名）功能。它的返回值为<span class="string">&quot;foo.o bar.o&quot;</span>。</span><br></pre></td></tr></table></figure>
+<h2 id="二、Makefile通用模板"><a href="#二、Makefile通用模板" class="headerlink" title="二、Makefile通用模板"></a>二、Makefile通用模板</h2><figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">TARGET=server</span><br><span class="line">CC=g++</span><br><span class="line">CFLAG=-c -g -static</span><br><span class="line"><span class="comment">#所有的.c文件</span></span><br><span class="line">SRCS:=<span class="variable">$(<span class="built_in">wildcard</span> ../*.c)</span></span><br><span class="line">FILTERS=../hello.c</span><br><span class="line"><span class="comment">#从SRCS中除了hello.c文件 filter函数可以选择满足条件的</span></span><br><span class="line">SRCS:=<span class="variable">$(<span class="built_in">filter</span>-out <span class="variable">$(FILTERS)</span>, <span class="variable">$(SRCS)</span>)</span></span><br><span class="line">OBJS:=<span class="variable">$(<span class="built_in">patsubst</span> %.c, %.o, <span class="variable">$(SRCS)</span>)</span></span><br><span class="line">CURRENT_PATH=<span class="variable">$(PWD)</span></span><br><span class="line">CPPFLAGS= -I../<span class="keyword">include</span> -I../util</span><br><span class="line">LIBS_PATH=-L../lib64</span><br><span class="line">LIBS=-lmylib</span><br><span class="line"></span><br><span class="line"><span class="comment">#判断是哪个系统32bit编译还是在64bit编译。</span></span><br><span class="line">ARCH:=<span class="variable">$(<span class="built_in">shell</span> uname -m)</span></span><br><span class="line"><span class="keyword">ifeq</span> (<span class="variable">$(ARCH)</span>, x86_64)</span><br><span class="line">VERSION:=X86_64</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">VERSION:=i686</span><br><span class="line"><span class="keyword">endif</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>:<span class="variable">$(OBJS)</span></span><br><span class="line">        <span class="variable">$(CC)</span> <span class="variable">$(DEBUG)</span> <span class="variable">$(SRCS)</span> <span class="variable">$(LIBS_PATH)</span> <span class="variable">$(LIBS)</span> <span class="variable">$(CPPFLAGS)</span> -o <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$(OBJS)</span>:%.o:%.c</span><br><span class="line">        <span class="variable">$(CC)</span> <span class="variable">$(CFLAG)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="meta-keyword">.PHONY</span>:clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">        rm -rf *~ *.bak <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line">【顶层Makefile编写】</span><br><span class="line"><span class="section">all: all_client all_server</span></span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line"><span class="section">all_client:</span></span><br><span class="line">    <span class="variable">$(MAKE)</span> -C client</span><br><span class="line"><span class="section">all_server:</span></span><br><span class="line">    <span class="variable">$(MAKE)</span> -C server</span><br><span class="line"></span><br><span class="line"><span class="section">clean: clean_client clean_server</span></span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line"><span class="section">clean_client:</span></span><br><span class="line">    <span class="variable">$(MAKE)</span> -C client clean</span><br><span class="line"><span class="section">clean_server:</span></span><br><span class="line">    <span class="variable">$(MAKE)</span> -C server clean</span><br></pre></td></tr></table></figure>
 <hr>
 <p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#x70;&#121;&#x75;&#97;&#110;&#50;&#49;&#64;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;">&#x6c;&#x70;&#121;&#x75;&#97;&#110;&#50;&#49;&#64;&#x6f;&#x75;&#116;&#108;&#111;&#x6f;&#x6b;&#46;&#x63;&#111;&#109;</a><br>2020年02月28日 02:52:00   </p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#x6c;&#x70;&#x79;&#x75;&#97;&#x6e;&#50;&#49;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#109;">&#x6c;&#x70;&#x79;&#x75;&#97;&#x6e;&#50;&#49;&#x40;&#111;&#x75;&#116;&#x6c;&#x6f;&#x6f;&#107;&#x2e;&#99;&#111;&#109;</a><br>2020年02月28日 02:52:00   </p>
 ]]></content>
       <categories>
-        <category>Testing</category>
+        <category>C/C++</category>
       </categories>
       <tags>
         <tag>Testing</tag>
-        <tag>Another Tag</tag>
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/10/06/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>面试笔试</title>
-    <url>/2020/03/14/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/</url>
+    <url>/2020/03/14/dc0b7f4a.html</url>
     <content><![CDATA[<h1 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h1><h2 id="大端小端网络字节序"><a href="#大端小端网络字节序" class="headerlink" title="大端小端网络字节序"></a>大端小端网络字节序</h2><p>&ensp;&ensp;&ensp;&ensp;”大端”，”小端”指的是表示多字节的值哪一端存储在该值的起始地址处；多字节小端存储起始地址处称为小端字节序，多字节的大端存储在起始地址处称为大端字节序。<br>&ensp;&ensp;&ensp;&ensp;通俗的说就是。</p>
 <p>&ensp;&ensp;&ensp;&ensp;常用的X86架构就是采用的小端存储，最高有效位在最高位地址。</p>
 <p>&ensp;&ensp;&ensp;&ensp;大端字节序：最高有效位存于最低的内存地址，最低的有效位存于最高的内存地址。<br>&ensp;&ensp;&ensp;&ensp;小端字节序：最高有效位存于最高的内存地址，最低的有效位存于最低的内存地址。</p>
 <a id="more"></a>
 
-<p><img src="/2020/03/14/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/image1.jpg" alt="图来源于网络"><br>&ensp;&ensp;&ensp;&ensp;网络字节序，网络上传输的数据都是字节流。**UDP/TCP/IP协议规定:**把接收到的第一个字节当作高位字节看待,这就要求发送端发送的第一个字节是高位字节。而在发送端发送数据时,发送的第一个字节是该数值在内存中的起始地址处对应的那个字节,也就是说,该数值在内存中的起始地址处对应的那个字节就是要发送的第一个高位字节(即:高位字节存放在低地址处);由此可见,<strong>多字节数值在发送之前,在内存中因该是以大端法存放的</strong>。</p>
+<img src="/images/image-20201220131133527.jpg" alt="image-20201220131133527" style="zoom:80%;" />
+
+<p>网络字节序，网络上传输的数据都是字节流。**UDP/TCP/IP协议规定:**把接收到的第一个字节当作高位字节看待,这就要求发送端发送的第一个字节是高位字节。而在发送端发送数据时,发送的第一个字节是该数值在内存中的起始地址处对应的那个字节,也就是说,该数值在内存中的起始地址处对应的那个字节就是要发送的第一个高位字节(即:高位字节存放在低地址处);由此可见,<strong>多字节数值在发送之前,在内存中因该是以大端法存放的</strong>。</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">union 联合体成员存放的顺序都是从低地址开始存放，并且是所有的成员共享同一个内存空间，</span></span><br><span class="line"><span class="comment">可以利用这个特性进行一个大小端的判断。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 定义联合体结构 */</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">union</span> _<span class="title">testUnion</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> a;</span><br><span class="line">    <span class="keyword">char</span> b;</span><br><span class="line">&#125;testUnion;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 判断大小端 */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">isBigEndStorage</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    testUnion a;</span><br><span class="line">    a.a = <span class="number">0x01</span>;</span><br><span class="line">    <span class="keyword">return</span> a.b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(<span class="number">1</span> == isBigEndStorage())</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;小端存储&quot;</span>);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;大端存储&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="tcp三次握手"><a href="#tcp三次握手" class="headerlink" title="tcp三次握手"></a>tcp三次握手</h2><p>&ensp;&ensp;&ensp;&ensp;为什么建立连接需要三次握手？TCP的两次握手是最基本的，第一次握手，客户端发了个连接请求消息到服务端，服务端收到信息后知道自己与客户端是可以连接成功的，但此时客户端并不知道服务端是否已经接收到了它的请求，所以服务端接收到消息后的应答，客户端得到服务端的反馈后，才确定自己与服务端是可以连接上的，这就是第二次握手。<br>&ensp;&ensp;&ensp;&ensp;客户端只有确定了自己能与服务端连接上才能开始发数据。所以两次握手肯定是最基本的。<br>&ensp;&ensp;&ensp;&ensp;到了这，有人肯定又有疑问，两次握手不就可以了吗，为什么需要第三次握手。其实，第三次握手主要的原因是防止已经失效的连接请求报文由于某种原因突然又回到服务端，从而就会产生错误。比如，一个请求的数据包，因为某些原因滞留在网络中很久，一直到了连接释放的时候才到达服务端，这时候，服务端以为是客户端的第一次连接回应了客户端从而建立了连接，实际上是不必要的连接客户端并没有任何数据要发送，当存在大量的这种情况下，会造成很大的资源浪费。所以需要第三次握手，只有客户端再次回应一下，就可以避免这种情况。<br><img src="/2020/03/14/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/image2.jpg" alt="图来源于网络"></p>
+<h2 id="tcp三次握手"><a href="#tcp三次握手" class="headerlink" title="tcp三次握手"></a>tcp三次握手</h2><p>&ensp;&ensp;&ensp;&ensp;为什么建立连接需要三次握手？TCP的两次握手是最基本的，第一次握手，客户端发了个连接请求消息到服务端，服务端收到信息后知道自己与客户端是可以连接成功的，但此时客户端并不知道服务端是否已经接收到了它的请求，所以服务端接收到消息后的应答，客户端得到服务端的反馈后，才确定自己与服务端是可以连接上的，这就是第二次握手。<br>&ensp;&ensp;&ensp;&ensp;客户端只有确定了自己能与服务端连接上才能开始发数据。所以两次握手肯定是最基本的。<br>&ensp;&ensp;&ensp;&ensp;到了这，有人肯定又有疑问，两次握手不就可以了吗，为什么需要第三次握手。其实，第三次握手主要的原因是防止已经失效的连接请求报文由于某种原因突然又回到服务端，从而就会产生错误。比如，一个请求的数据包，因为某些原因滞留在网络中很久，一直到了连接释放的时候才到达服务端，这时候，服务端以为是客户端的第一次连接回应了客户端从而建立了连接，实际上是不必要的连接客户端并没有任何数据要发送，当存在大量的这种情况下，会造成很大的资源浪费。所以需要第三次握手，只有客户端再次回应一下，就可以避免这种情况。</p>
+<img src="/images/image-20201220131233527.jpg" alt="image-20201220131233527" style="zoom:50%;" />
+
 <h2 id="TCP与UDP的概念"><a href="#TCP与UDP的概念" class="headerlink" title="TCP与UDP的概念"></a>TCP与UDP的概念</h2><p>&ensp;&ensp;&ensp;&ensp;TCP:一种面向连接的，可靠的，基于字节流的通信协议。<br>&ensp;&ensp;&ensp;&ensp;UDP:提供无连接的通信，不可靠的，基于数据报的通信协议。<br><strong>两者的主要区别是</strong>：<br>&ensp;&ensp;&ensp;&ensp;（1）TCP是面向连接的传输控制协议，而UDP是提供无连接的数据报服务。<br>&ensp;&ensp;&ensp;&ensp;（2）TCP具有高可靠性，能确保数据的完整性和正确性。<br>&ensp;&ensp;&ensp;&ensp;（3）TCP需要的系统资源比较多，而UDP需要的就相对少一些。<br>&ensp;&ensp;&ensp;&ensp;（4）UDP实时性比较高，低延迟，但是TCP的工作效率相对高一些。</p>
 <h2 id="UDP调用connect函数作用"><a href="#UDP调用connect函数作用" class="headerlink" title="UDP调用connect函数作用"></a>UDP调用connect函数作用</h2><p>&ensp;&ensp;&ensp;&ensp;UDP调用connect函数的作用，并不会引起和服务器目标端的网络交互，也就是说并不会触发所谓的”握手🤝“报文的过程。其主要的作用是让应用程序能够接收到”异步错误“的信息。假设在服务器不开启的情况下，客户端程序是不会报错的，程序会一直阻塞在recvfrom函数上，等待返回或者超时。如果将UDP套接字进行connect绑定，将UDP套接字建立“上下文”，那么这时候操作系统内核接收到的信息就可以和相应的套接字进行相关联。</p>
-<h2 id="TCP如何设定超时时间"><a href="#TCP如何设定超时时间" class="headerlink" title="TCP如何设定超时时间"></a>TCP如何设定超时时间</h2><p><img src="/2020/03/14/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/tcp_time_out.png" alt="图片来源于网络"></p>
-<p>&ensp;&ensp;&ensp;&ensp;如果TCP握手🤝的SYN超时按照上图来backoff。在Linux中，net.ipv4.tcp_syn_retries参数表示建立TCP连接时SYN报文重试的次数，最多会尝试7次。2的7次幂减去1刚好是127。我们将net.ipv4.tcp_syn_retries参数改成1，就可以将connect超时时间改成3秒。</p>
+<h2 id="TCP如何设定超时时间"><a href="#TCP如何设定超时时间" class="headerlink" title="TCP如何设定超时时间"></a>TCP如何设定超时时间</h2><img src="/images/image-20201220131433527.jpg" alt="image-20201220131433527" style="zoom:33%;" />
+
+<p>如果TCP握手🤝的SYN超时按照上图来backoff。在Linux中，net.ipv4.tcp_syn_retries参数表示建立TCP连接时SYN报文重试的次数，最多会尝试7次。2的7次幂减去1刚好是127。我们将net.ipv4.tcp_syn_retries参数改成1，就可以将connect超时时间改成3秒。</p>
 <p>&ensp;&ensp;&ensp;&ensp;tcp设置发送和接收超时，可以通过SO_SNDTIMEO和SO_RCVTIMEO的选项来设置超时。</p>
 <h2 id="SYN-flood洪水攻击"><a href="#SYN-flood洪水攻击" class="headerlink" title="SYN flood洪水攻击"></a>SYN flood洪水攻击</h2><p>&ensp;&ensp;&ensp;&ensp;正常的情况下，TCP需要经过三次握手才能建立连接。于是就出现了对握手🤝，过程进行的攻击。通过发送大量的SYN数据包，服务器响应（SYN+ACK）包。但是这个时候，攻击者不会回应ACK数据包，这个时候服务器不知道发送的（SYN+ACK）包是否发送成功，默认情况下会重试5次（tcp_syn_retries）。这样的话，对于服务器的内存、带宽都会有消耗。如果处于公网地址，攻击者伪造大量的报文进行攻击，那么如果服务器没有任何防护设施的话，可能会直接导致服务器连接资源耗尽，导致拒绝对外服务。</p>
 <p>&ensp;&ensp;&ensp;&ensp;从服务器防御的角度来看，可以采取以下措施。</p>
@@ -465,10 +467,14 @@
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line">    cnt = (<span class="keyword">int</span>)recv(m_socket, pBuf,RECVSIZE, <span class="number">0</span>);</span><br><span class="line">    <span class="keyword">if</span>( cnt &gt;<span class="number">0</span> )</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//正常处理数据</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">   &#123;</span><br><span class="line">         <span class="keyword">if</span>((cnt&lt;<span class="number">0</span>) &amp;&amp;(errno == EAGAIN||errno == EWOULDBLOCK||errno == EINTR)) </span><br><span class="line">         <span class="comment">//这几种错误码，认为连接是正常的，继续接收</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">continue</span>;<span class="comment">//继续接收数据</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">break</span>;<span class="comment">//跳出接收循环</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="TCP慢启动、拥塞控制、快重传、快恢复"><a href="#TCP慢启动、拥塞控制、快重传、快恢复" class="headerlink" title="TCP慢启动、拥塞控制、快重传、快恢复"></a>TCP慢启动、拥塞控制、快重传、快恢复</h2><h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h2 id="进程和线程"><a href="#进程和线程" class="headerlink" title="进程和线程"></a>进程和线程</h2><p>&ensp;&ensp;&ensp;&ensp;进程：进程是具有一定独立功能的程序关于某一个数据集合的一心运行活动，他是系统进程资源分配和调度的一个基本单位。<br>&ensp;&ensp;&ensp;&ensp;线程：线程是进程的一个实体，他是CPU分配和调度的基本单位。<br><strong>线程的优点</strong>：<br>&ensp;&ensp;&ensp;&ensp;（1）易于调度。<br>&ensp;&ensp;&ensp;&ensp;（2）线程可以提供并发性，利用线程可以有效的实现并发。<br>&ensp;&ensp;&ensp;&ensp;（3）线程开销小。<br>&ensp;&ensp;&ensp;&ensp;（4）有利于发挥对处理器的优点。通过创建多线程，每个线程可以不同的处理器上运行，从而实现应用程序的并行，使得每个处理器都能得到充分发挥。<br><strong>进程与线程的区别</strong>：<br>&ensp;&ensp;&ensp;&ensp;&ensp;(1) 一个线程属于一个进程，而一个进程可以有多个线程。<br>&ensp;&ensp;&ensp;&ensp;（2）一个进程的所有线程共享一个进程的所有资源，这些资源包括有打开的文件，创建的socket，不同的进程是相互独立的<br>&ensp;&ensp;&ensp;&ensp;（3）线程是轻量级进程，进程有进程控制块，线程也有线程控制块。但是线程控制块比进程控制块小的很多，线程切换代价小，进程空间切换代价大，线程空间切换代价小。</p>
 <h2 id="僵尸进程"><a href="#僵尸进程" class="headerlink" title="僵尸进程"></a>僵尸进程</h2><p><strong>定义</strong>：<br>&ensp;&ensp;&ensp;&ensp;ps 命令观察进程的执行状态的时候，看到状态栏为defunct状态的进程，这些就是所谓的僵尸进程。<br><strong>僵尸进程的危害</strong><br>&ensp;&ensp;&ensp;&ensp;进程表中占用一个位置（slot）,由于进程表的容量是有限的，所以defunct进程不仅会占用系统资源，影响系统的性能，如果数目太多的话会导致系统的崩溃。<br><strong>僵尸进程产生的原因</strong><br>&ensp;&ensp;&ensp;&ensp;(1)操作系统对所有的进程维护一张进程表，每一个进程在进程表中都有一个entry（进入点），核心程序在执行该进程时候所使用的一切信息都是存储在entry（进入点）中，ps命令查看的就是这个进程表中的相关数据。<br>&ensp;&ensp;&ensp;&ensp;(2)当一个父进程fork()系统调用建立一个新的进程之后，核心进程就会在进程表中给子进程分配一个entry（进入点），然后将这些信息存放在对应的进程表内，这些信息中有一项就是其父进程的识别码。<br>&ensp;&ensp;&ensp;&ensp;(3)当子进程结束之后，其实该没有被真正的销毁，而此时进程表中的数据会被该进程的退出码（exit code），执行所需要的的CPU时间等等数据结构所取代，这些数据会一直保存到父进程读取为止。<br>&ensp;&ensp;&ensp;&ensp;（4）此时，该进程几乎已经放弃所有的把内存空间，没有任何可执行代码，同时也不能被调度，仅仅只是在进程表中保留一个位置，除此之外该进程不占用任何存储空间。该父进程一直没有注册SIGCHILD信号处理函数调用wait或者waitpid等待子进程结束，或者也没有注册忽略该信号，那么这些进程将会变成僵尸进程（zombie），如果父进程一直处于循环状态，系统中就会有很多的僵尸进程。<br><strong>解决的方法</strong><br>&ensp;&ensp;&ensp;&ensp;（1）重启服务器电脑，这个是最简单，最易用的方法，但是如果你服务器电脑上运行有其他的程序，那么这个方法，代价很大。<br>&ensp;&ensp;&ensp;&ensp;（2）找到僵尸进程的父进程，将父进程杀掉。ps -ef |grep defunct_process_id。<br><strong>如何防止僵尸进程</strong><br>&ensp;&ensp;&ensp;&ensp;（1）父进程fork之前注册之前忽略SIG_CLILD信号，忽略子进程退出相关的信息。调用函数：signal（SIGCHILD, SIG_IGN）。<br>&ensp;&ensp;&ensp;&ensp;（2）父进程调用wait,waitpid函数收集子进程退出的状态码。<br>&ensp;&ensp;&ensp;&ensp;（3）在父进程创建子进程的时候，连续调用两次fork()，而且使紧跟的子进程直接退出，使其孙子进程成为孤儿进程，从而init进程将代替父进程来接手，负责清除这个孤儿进程，系统自动回收。<br>##死锁是怎么样产生的##<br><strong>死锁的定义</strong><br>&ensp;&ensp;&ensp;&ensp;系统中有若干个进程在并发运行，他们不断的申请和释放资源，在这一个过程中，由于争夺资源而处于无限期的等待资源的状态，此时导致程序无法继续进行，若无外力的作用，他都将无法推进下去，这是系统处于死锁状态，或者系统产生了死锁。<br><strong>产生死锁的原因</strong><br>&ensp;&ensp;&ensp;&ensp;（1）系统的资源不足，例如多个打印机，但是由于纸张不够，进程推进不下去，产生了死锁。<br>&ensp;&ensp;&ensp;&ensp;（2）进程推进顺序不对。<br>&ensp;&ensp;&ensp;&ensp;（3）资源的分配不当。<br><strong>产生死锁的条件</strong><br>&ensp;&ensp;&ensp;&ensp;（1）互斥性，每个资源每次只能被一个进程使用。<br>&ensp;&ensp;&ensp;&ensp;（2）请求与保持等待，当一个进程因为请求资源而被阻塞等待时，对已经获得的资源保持不释放。<br>&ensp;&ensp;&ensp;&ensp;（3）不可剥夺，进程已经获得资源，未使用完之前，不可被其他剥夺。<br>&ensp;&ensp;&ensp;&ensp;（4）环路等待，若干进程之间 形成首尾相接的的等待资源的关系。</p>
-<h2 id="CPU的执行方式"><a href="#CPU的执行方式" class="headerlink" title="CPU的执行方式"></a>CPU的执行方式</h2><p><img src="/2020/03/14/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/image3.jpg" alt="图来源于网络"><br>CPU的工作主要分为五个阶段：<br>1、取指令（IF，instruction fetch）。将一条程序执行指令从主存中取出来放到指令寄存器的一个过程。<br>2、指令译码阶段（ID，instruction decode）。取出指令之后，指令译码器按照预定的指令格式对取回的指令进行拆分和解释，识别区分不同的指令类别以及获取各种操作数的方法。<br>3、执行指令的阶段（EX，execute）。具体实现指令的功能，CPU的不同部分被连接起来，以执行所需的操作。<br>4、访问存取数的阶段（MEM，memory）。根据指令的需要访问主存，读取操作数，CPU得到操作数在主存的地址，并从主存中读取该操作数用于运算。<br>5、结果回写阶段（WB，write back）。作为最后一个阶段，结果写回阶段把指令的运行结果数据“写回”到某种存储形式。</p>
+<h2 id="CPU的执行方式"><a href="#CPU的执行方式" class="headerlink" title="CPU的执行方式"></a>CPU的执行方式</h2><img src="/images/image-20201220131633527.jpg" alt="image-20201220131633527" style="zoom:60%;" />
+
+<p>CPU的工作主要分为五个阶段：<br>1、取指令（IF，instruction fetch）。将一条程序执行指令从主存中取出来放到指令寄存器的一个过程。<br>2、指令译码阶段（ID，instruction decode）。取出指令之后，指令译码器按照预定的指令格式对取回的指令进行拆分和解释，识别区分不同的指令类别以及获取各种操作数的方法。<br>3、执行指令的阶段（EX，execute）。具体实现指令的功能，CPU的不同部分被连接起来，以执行所需的操作。<br>4、访问存取数的阶段（MEM，memory）。根据指令的需要访问主存，读取操作数，CPU得到操作数在主存的地址，并从主存中读取该操作数用于运算。<br>5、结果回写阶段（WB，write back）。作为最后一个阶段，结果写回阶段把指令的运行结果数据“写回”到某种存储形式。</p>
 <p>资料参考<br><a href="https://www.jianshu.com/p/05c6c1d73144">https://www.jianshu.com/p/05c6c1d73144</a><br><a href="https://www.jianshu.com/p/bfff5d0e718e">https://www.jianshu.com/p/bfff5d0e718e</a></p>
 <h2 id="共享内存"><a href="#共享内存" class="headerlink" title="共享内存"></a>共享内存</h2><p>资料参考<br><a href="https://blog.csdn.net/Al_xin/article/details/38602093">https://blog.csdn.net/Al_xin/article/details/38602093</a></p>
-<h2 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h2><p><img src="/2020/03/14/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/image4.jpg" alt="图来源于网络"><br>32位系统0-4G地址空间，用户空间内存，从低到高分别是五种不同的内存段。<br>1、只读段，主要包括有代码和一些常量。<br>2、数据段，主要包括全局变量。<br>3、堆，主要包括分配的内存，从低地址开始向上增长。<br>4、文件映射段，主要包括动态库、共享内存等，从高地址向下增长。<br>5、栈，包括局部变量，函数的调用的上下文等，栈的大小一般是固定的，一般是8M。<br>在这五个内存段中，堆和文件映射段是动态内存分配的，malloc或者mmap等。<br><strong>堆是线程私有还是共有？栈呢？</strong><br>1、在多线程环境下，每个线程拥有一个栈和一个程序计数器。<br>2、栈和程序计数器用来保存线程的执行历史和线程的执行状态，是线程私有的资源。<br>3、其他的资源（比如堆、地址空间、全局变量）是由同一个进程内的多个线程共享。</p>
+<h2 id="堆栈"><a href="#堆栈" class="headerlink" title="堆栈"></a>堆栈</h2><img src="/images/image-20201220131733527.jpg" alt="image-20201220131733527" style="zoom:60%;" />
+
+<p>32位系统0-4G地址空间，用户空间内存，从低到高分别是五种不同的内存段。<br>1、只读段，主要包括有代码和一些常量。<br>2、数据段，主要包括全局变量。<br>3、堆，主要包括分配的内存，从低地址开始向上增长。<br>4、文件映射段，主要包括动态库、共享内存等，从高地址向下增长。<br>5、栈，包括局部变量，函数的调用的上下文等，栈的大小一般是固定的，一般是8M。<br>在这五个内存段中，堆和文件映射段是动态内存分配的，malloc或者mmap等。<br><strong>堆是线程私有还是共有？栈呢？</strong><br>1、在多线程环境下，每个线程拥有一个栈和一个程序计数器。<br>2、栈和程序计数器用来保存线程的执行历史和线程的执行状态，是线程私有的资源。<br>3、其他的资源（比如堆、地址空间、全局变量）是由同一个进程内的多个线程共享。</p>
 <p>资料参考<br><a href="https://time.geekbang.org/column/article/74272">https://time.geekbang.org/column/article/74272</a></p>
 <h2 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h2><p>协程，指的就是微线程。是应用层的一种概念。</p>
 <p>&ensp;&ensp;&ensp;&ensp;协程最大的优势就是具有极高的执行效率。可以把协程看做是一种子程序，因为子程序的切换不是进程也不是线程的切换，因此没有进程或者线程的切换的开销。</p>
@@ -501,12 +507,14 @@
 <h2 id="linux内存管理机制"><a href="#linux内存管理机制" class="headerlink" title="linux内存管理机制"></a>linux内存管理机制</h2><p>&ensp;&ensp;&ensp;&ensp;linux操作系统采用虚拟内存管理技术，将不同进程的虚拟地址空间和不同的内存物理地址映射起来，使得每个进程都有各自互不干扰的进程地址空间。</p>
 <p>&ensp;&ensp;&ensp;&ensp;在32位的系统上该空间的大小为4G的现行虚拟空间，用户所看到的或者接触的都是虚拟地址空间，并不会看到实际的物理地址。操作系统引入了虚拟内存，那么进程持有的虚拟地址就会通过CPU的内存管理单元（MMU）的映射关系，转化成物理地址，然后再通过物理地址进程访问。只有那些实际使用的UNINEICUN才分配物理内存，并且分配之后的物理内存是通过内存映射来管理的。</p>
 <p>&ensp;&ensp;&ensp;&ensp;内存映射，其实就是讲虚拟内存地址映射到物理内存地址，为了完成内存映射，内核为每一个进程都维护了一张页表，记录虚拟地址与物理地址之间的映射关系。页表实际上存储在CPU的内存管理单元MMU中，这样情况下，处理器可以直接通过硬件找出需要访问的内存。当进程访问虚拟地址在页表中查询不到的时候，系统就会产生一个缺页异常，进入到内核空间进行分配物理内存，更新进程页表，最后返回到用户空间，回复进程的运行。</p>
-<p><img src="/2020/03/14/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/mmu.jpg" alt="图来源于网络"></p>
-<p>&ensp;&ensp;&ensp;&ensp;MMU并不是以字节为单位来管理内存的，而是规定了一乐内存映射的最小单位，页。通常是4KB大小，这样每一个内存映射，都需要关联4KB或者4KB的整数倍的内存空间。</p>
+<img src="/images/image-20201220131833527.jpg" alt="image-20201220131833527" style="zoom:40%;" />
+
+<p>MMU并不是以字节为单位来管理内存的，而是规定了一乐内存映射的最小单位，页。通常是4KB大小，这样每一个内存映射，都需要关联4KB或者4KB的整数倍的内存空间。</p>
 <p><strong>多级页表</strong></p>
 <p>&ensp;&ensp;&ensp;&ensp;多级页表就是把内存分成区块来进行管理，将原来的映射关系改成区块索引和区块偏移。由于虚拟地址空间通常只用很少的一部分，那么多级页表就只保存这些使用的区块，这样就可以大大的减少页表的项数。</p>
 <p>Linux是用过四级页表来管理内存的，如下图。虚拟地址被分为5个部分，前四个表项用于选择页，而最后一个表项这是索引表示页内偏移。</p>
-<p><img src="/2020/03/14/%E9%9D%A2%E8%AF%95%E7%AC%94%E8%AF%95/ye_biao.jpg" alt="图片来源于网络"></p>
+<img src="/images/image-20201220131933527.jpg" alt="image-20201220131933527" style="zoom:40%;" />
+
 <p>再看大页，大页指的是比普通页更大的内存块，常见的大小有2MB和1GB。大页通常用在使用大量内存的进程上，比如Oracle、DPDK等。</p>
 <p><strong>内存的分配与回收♻️</strong></p>
 <p>&ensp;&ensp;&ensp;&ensp;在C标准库中，malloc是其提供的内存分配函数，对应的系统调用上主要有两种实现的方式，即brk()和mmap()。</p>
@@ -514,7 +522,7 @@
 <p>&ensp;&ensp;&ensp;&ensp;（2）对于大块的内存（大于128K），则是使用内内存映射mmap()来进行分配，也就是在文件映射段找到一块空闲的内内存分配出去。</p>
 <p>这两种方式的优缺点：</p>
 <p>&ensp;&ensp;&ensp;&ensp;brk()方式的缓存，可以减少却也一行的发生，可以提高内存的访问效率，不过，由于这些内存没有归还给系统，在内存繁忙的时候，频繁的内存分配和释放会造成内存碎片。</p>
-<p>&ensp;&ensp;&ensp;&ensp;mmap（）方式的分配内存，会在释放时候直接归还给系统，所以每次mmap都会发生缺页异常。在内存工作繁忙的时候，频繁的内存分配会导致大量的缺页异常的发生，使得内存的管理负担增大，这也是malloc只对大块内存使用mmap的原因。</p>
+<p>&ensp;&ensp;&ensp;&ensp;mmap()方式的分配内存，会在释放时候直接归还给系统，所以每次mmap都会发生缺页异常。在内存工作繁忙的时候，频繁的内存分配会导致大量的缺页异常的发生，使得内存的管理负担增大，这也是malloc只对大块内存使用mmap的原因。</p>
 <p>&ensp;&ensp;&ensp;&ensp;了解了这两种，调用方式之后，我们还需要清楚的了解一点，就是当发生这两种调用方式之后，其实没有镇长的分配内存，这些实际使用的内存，只有在首次访问的时候才进行分配，也就是通过缺页异常进入到内核中，再由内核进行分配内存。</p>
 <h2 id="Linux的任务调度机制"><a href="#Linux的任务调度机制" class="headerlink" title="Linux的任务调度机制"></a>Linux的任务调度机制</h2><p>&ensp;&ensp;&ensp;&ensp;&ensp;Linux作为一个多任务的操作系统，必须支持程序的并发执行。</p>
 <p>&ensp;&ensp;&ensp;&ensp;&ensp;多任务一般分为两类，非抢占式多任务与抢占式多任务。</p>
@@ -528,8 +536,8 @@
 <h2 id="标准库函数和系统调用的区别"><a href="#标准库函数和系统调用的区别" class="headerlink" title="标准库函数和系统调用的区别"></a>标准库函数和系统调用的区别</h2><p>&ensp;&ensp;&ensp;&ensp;标准库函数，是语言本身的一部分，系统函数则是内核提供给应用层程序的一个接口，属于系统的一部分。函数库调用是语言或者应用程序的一部分，而系统调用则是操作系统的一部分。</p>
 <p>&ensp;&ensp;&ensp;&ensp;系统调用通常用于<strong>底层文件访问（low-level file access）</strong>，例如在驱动程序中对设备文件的直接访问。</p>
 <p>&ensp;&ensp;&ensp;&ensp;系统调用是操作系统相关的，因此一般没有跨操作系统的可移植性。</p>
-<h2 id="如何查看进程打开的文件"><a href="#如何查看进程打开的文件" class="headerlink" title="如何查看进程打开的文件"></a>如何查看进程打开的文件</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1、查看谁正在使用某个文件</span><br><span class="line">lsof /filepath/file</span><br><span class="line"></span><br><span class="line">2、通过某个进程号显示该进行打开的文件</span><br><span class="line">lsof -p 1</span><br></pre></td></tr></table></figure>
-<h2 id="gdb调试"><a href="#gdb调试" class="headerlink" title="gdb调试"></a>gdb调试</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zhangye3017/article/details/80382496</span></span><br></pre></td></tr></table></figure>
+<h2 id="如何查看进程打开的文件"><a href="#如何查看进程打开的文件" class="headerlink" title="如何查看进程打开的文件"></a>如何查看进程打开的文件</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1、查看谁正在使用某个文件</span></span><br><span class="line">lsof /filepath/file</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2、通过某个进程号显示该进行打开的文件</span></span><br><span class="line">lsof -p 1</span><br></pre></td></tr></table></figure>
+<h2 id="gdb调试"><a href="#gdb调试" class="headerlink" title="gdb调试"></a>gdb调试</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">https://blog.csdn.net/zhangye3017/article/details/80382496</span><br></pre></td></tr></table></figure>
 
 
 <h1 id="C语言基础"><a href="#C语言基础" class="headerlink" title="C语言基础"></a>C语言基础</h1><h2 id="memcpy比较两个结构体"><a href="#memcpy比较两个结构体" class="headerlink" title="memcpy比较两个结构体"></a>memcpy比较两个结构体</h2><p>不能。结构体struct 对象由于内存对齐会有内存间隙，就算其中的成员变量相等，内存直接比较还是不能相等。</p>
@@ -558,6 +566,14 @@
 <p>&ensp;&ensp;&ensp;&ensp;缓存击穿和和缓存雪崩有点类似，但是两者有点区别。雪崩是因为大面积缓存失效，打崩数据库。缓存击穿则是指的是一个key非常热点，在不停的扛着大并发，大并发集中对一个点进行访问，当这个key在失效的瞬间，持续的大并发就会击穿缓存，直接请求数据库，就像在一个完好无损的桶上开了一个洞。</p>
 <p>应对思路：设置热点数据永不过期，或者加上互斥锁🔐就可以解决这个问题。</p>
 <h2 id="Redis的hash是什么实现的"><a href="#Redis的hash是什么实现的" class="headerlink" title="Redis的hash是什么实现的"></a>Redis的hash是什么实现的</h2><p>&ensp;&ensp;&ensp;&ensp;Redis中的字典采用哈希表作为底层实现，一个哈希表多个节点，每个节点保存一个键值对。Redis数据库就是使用字典作为底层实现的，通过key和value的键值对形式，代表了数据库中的全部数据。而且对数据库的增删改查都是建立在对字典的操作上。</p>
+<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><p>1、100万数据个是topK。</p>
+<p>2、32位无符号整形个数的QQ号记录QQ号的状态 上线和下线，计算使用多少内存。</p>
+<p>3、printf(“%d “, 1, 2, 3);  printf(“%s”)；</p>
+<p>4、HTTP 和 HTTPS的区别。1、对称加密和非对称加密。2、效率问题的瓶颈。</p>
+<p>5、阻塞问题</p>
+<p>1、对端接收处理不过来 。流量控制。</p>
+<p>2、网络阻塞。拥塞控制。</p>
+<p>3、项目问题</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>1、<a href="https://blog.csdn.net/xp731574722/article/details/82868560">https://blog.csdn.net/xp731574722/article/details/82868560</a></p>
 <p>2、<a href="https://blog.csdn.net/kozazyh/article/details/5495532">https://blog.csdn.net/kozazyh/article/details/5495532</a></p>
 <p>3、<a href="https://blog.csdn.net/zhangye3017/article/details/80382496">https://blog.csdn.net/zhangye3017/article/details/80382496</a></p>
@@ -567,52 +583,84 @@
       </categories>
   </entry>
   <entry>
-    <title>Hexo搭建个人站点</title>
-    <url>/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/</url>
-    <content><![CDATA[<p>花了好几天，熬了几个夜晚，终于把自己的个人博客搭建起来了网站，顺便来一篇教程，分享给大家，同时也方便以后再次部署。我之前是在github上搭建了一版，github+hexo,奈何实在太卡了，想起自己在阿里云有台服务器，然后直接部署到云上了,下面方法步骤亲测成功。</p>
+    <title>Hexo搭建个人站点，我太难了</title>
+    <url>/2020/03/02/4d51d04c.html</url>
+    <content><![CDATA[<p>花了好几天，熬了几个夜晚，摸索了好久终于把自己的个人博客网站搭建起来了，顺便来一篇教程，分享给大家，同时也方便以后再次部署。我之前是在Github上搭建了一版，Github+hexo，国内加载图片等等资源奈何实在太卡了，想起自己在阿里云有台服务器，然后直接部署到云上了,下面是我具体的部署的一些步骤。</p>
 <a id="more"></a>
 
-<h1 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h1><blockquote>
-<ul>
-<li>一台个人PC</li>
-<li>money!(开玩笑的 ^-^)</li>
-<li>一台linux服务器，可以买台云服务器，没有又想体验的话就VM虚拟机，本地看看过把瘾吧。^ ^</li>
+<h1 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h1><ul>
+<li><p>一台个人PC</p>
+</li>
+<li><p>money!(开玩笑的 ^-^)</p>
+</li>
+<li><p>一台linux服务器，可以买台云服务器，没有又想体验的话就VM虚拟机，本地看看过把瘾吧^ ^。</p>
+</li>
 </ul>
-</blockquote>
-<h1 id="需要的软件环境"><a href="#需要的软件环境" class="headerlink" title="需要的软件环境"></a>需要的软件环境</h1><blockquote>
-<ul>
-<li>Git</li>
-<li>Node.js</li>
-<li>hexo-cli</li>
-<li>Nginx</li>
+<h1 id="需要的软件环境"><a href="#需要的软件环境" class="headerlink" title="需要的软件环境"></a>需要的软件环境</h1><ul>
+<li><p>Git</p>
+</li>
+<li><p>Node.js</p>
+</li>
+<li><p>hexo-cli</p>
+</li>
+<li><p>Nginx</p>
+</li>
 </ul>
-</blockquote>
 <h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p><a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a><br>下一步下一步傻瓜式安装</p>
 <h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下一步下一步傻瓜式安装</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p><img src="/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image1.jpg" alt="点击图片时候下方显示描述"></p>
-<p>&ensp;&ensp;&ensp;&ensp;选择一个文件夹作为你的博客文件夹，比如我自己建立在E:盘在命令行窗口下：</p>
-<p><img src="/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image2.jpg" alt="点击图片时候下方显示描述"></p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo -v     # 查看hexo安装成功没</span><br><span class="line">cd e:       # 打开e盘;</span><br><span class="line">mkdir blog; # 创建blog文件夹作为我的博客目录</span><br><span class="line">cd blog     # 进入blog目录</span><br><span class="line">hexo init   # 初始化blog</span><br><span class="line">hexo g      # 生成静态页面</span><br><span class="line">hexo s      # 启动服务监听</span><br><span class="line">打开页面    localhost:4000</span><br><span class="line">可以看到hello world 的页面，初步完成。</span><br><span class="line"></span><br><span class="line">常用命令</span><br><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br><span class="line"></span><br><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d # 一件生成静态页面同时上传</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>Hexo有很多很不错的主题，使用过butterfly、replica、landscape等等，目前陷入<strong>Next</strong>主题的坑(简直太好用了！！)。</p>
-<p><strong>主题地址</strong></p>
-<p><a href="https://github.com/theme-next/hexo-theme-next">Next主题社区维护版本入口地址</a></p>
-<p><strong>文章评论系统</strong></p>
-<p>目前本站使用的是Valine评论系统，感觉还不错，下面介绍怎么配置使用这个系统。</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><img src="/images/image-20210219105759182.jpg" alt="image-20210219105759182" style="zoom:50%;" />
+
+<p>选择一个文件夹作为你的博客文件夹，比如我自己建立在E:盘在命令行窗口下：</p>
+<img src="/images/image-20210219105959182.jpg" alt="image-20210219105959182" style="zoom:80%;" />
+
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="string">hexo</span> <span class="string">-v</span> <span class="comment"># 查看hexo安装成功没</span></span><br><span class="line"><span class="string">mkdir</span> <span class="string">blog;</span> <span class="comment"># 创建blog文件夹作为我的博客目录</span></span><br><span class="line"><span class="string">cd</span> <span class="string">blog</span> <span class="comment"># 进入blog目录</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">init</span> <span class="comment"># 初始化blog</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">g</span> <span class="comment"># 生成静态页面</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">s</span> <span class="comment"># 启动服务监听</span></span><br><span class="line"><span class="string">localhost:4000</span> <span class="comment">#打开页面 </span></span><br><span class="line"><span class="comment"># 可以看到hello world 的页面，初步完成。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 常用命令</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">new</span> <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">new</span> <span class="string">page</span> <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">generate</span> <span class="comment">#生成静态页面至public目录</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">server</span> <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">deploy</span> <span class="comment">#部署到GitHub</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">version</span> <span class="comment">#查看Hexo的版本</span></span><br><span class="line"></span><br><span class="line"><span class="string">hexo</span> <span class="string">s</span> <span class="string">-g</span> <span class="comment">#生成并本地预览</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">d</span> <span class="string">-g</span> <span class="comment">#生成并上传</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">clean</span> <span class="string">&amp;&amp;</span> <span class="string">hexo</span> <span class="string">g</span> <span class="string">&amp;&amp;</span> <span class="string">hexo</span> <span class="string">d</span> <span class="comment"># 一件生成静态页面同时上传</span></span><br></pre></td></tr></table></figure>
+<h2 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h2><p>Hexo主要有两份配置文件，一份是站点配置文件<code>_config.yml</code>，一份是主题配置文件（对应的主题目录下的<code>_config.yml</code>文件）。</p>
+<h4 id="站点基本信息的配置"><a href="#站点基本信息的配置" class="headerlink" title="站点基本信息的配置"></a>站点基本信息的配置</h4><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Suzette219</span> <span class="comment"># 站点标题</span></span><br><span class="line"><span class="attr">subtitle :</span> <span class="string">share</span> <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">lpyuan</span> <span class="string">blog</span> <span class="comment"># 站点描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="comment"># 站点关键字</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">发量充足的程序员</span> <span class="comment"># 站点作者昵称</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 语言</span></span><br><span class="line"><span class="attr">timezone :</span> <span class="string">&#x27;UTC&#x27;</span> <span class="comment"># 时区</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>更多的操作可以访问<a href="https://hexo.io/zh-cn/docs/configuration.html">Hexo官方详细配置说明</a></p>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>Hexo有很多很不错的主题，使用过butterfly、replica、landscape等等，本站点目前使用<strong>Next</strong>主题(Next简直太好用了！！)。</p>
+<h4 id="主题地址"><a href="#主题地址" class="headerlink" title="主题地址"></a>主题地址</h4><p><a href="https://github.com/theme-next/hexo-theme-next">Next主题社区维护版本入口地址</a></p>
+<h4 id="文章评论系统"><a href="#文章评论系统" class="headerlink" title="文章评论系统"></a>文章评论系统</h4><p>目前本站使用的是Valine评论系统，感觉还不错，下面介绍怎么配置使用这个系统。</p>
 <p>首先这个Valine评论系统是可以很好的支持Next主题的，它支持Markdown语法，没有后端是基于LeanCloud的所以我们需要注册一个LeanCloud账户，</p>
 <p><a href="https://console.leancloud.cn/">LeanCloud官网入口地址</a></p>
 <p>注册完成后，选择创建应用，然后选择开发版本，填写描述信息，然后生成，同时将<strong>App ID</strong> 和 <strong>App Key</strong>记下来。</p>
 <ul>
-<li>设置Next主题，在主题配置文件中找到valine进行配置，将生成的<strong>App ID</strong> 和 <strong>App Key</strong>填入对应的字段，如下图。</li>
+<li><p>设置Next主题，在主题配置文件中找到valine进行配置，将生成的<strong>App ID</strong> 和 <strong>App Key</strong>填入对应的字段，如下图。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># true表示开启，false表示关闭</span></span><br><span class="line">  <span class="attr">appid:</span>  <span class="string">B4XbT4kXwfh9RTyBuoKPvO</span> <span class="comment"># Appid</span></span><br><span class="line">  <span class="attr">appkey:</span> <span class="string">S3dLSovwi3LXNsun5D</span> <span class="comment"># Appkey</span></span><br><span class="line">  <span class="attr">notify:</span> <span class="literal">false</span> <span class="comment"># 邮件通知</span></span><br><span class="line">  <span class="attr">verify:</span> <span class="literal">false</span> <span class="comment"># 验证码</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">如果对文章或本站点有任何疑问或者建议，请留言~</span> <span class="comment"># 评论框占位符</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">mm</span> <span class="comment"># 功能风格</span></span><br><span class="line">  <span class="attr">guest_info:</span> <span class="string">nick,mail</span> <span class="comment"># link # 自定义注释头</span></span><br><span class="line">  <span class="attr">pageSize:</span> <span class="number">5</span> <span class="comment"># 分页大小</span></span><br><span class="line">  <span class="attr">language:</span> <span class="comment"># 可选语言, available values: en, zh-cn</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span> <span class="comment"># 文章阅读统计</span></span><br><span class="line">  <span class="attr">comment_count:</span> <span class="literal">true</span> <span class="comment"># 如果为false，评论计数将只显示在文章页面，而不是首页</span></span><br><span class="line">  <span class="attr">recordIP:</span> <span class="literal">false</span> <span class="comment"># 是否记录评论IP</span></span><br><span class="line">  <span class="attr">serverURLs:</span> <span class="comment"># 当自定义域名启用时，在此处填写(默认自动检测，不需要填写)</span></span><br><span class="line">  <span class="comment">#post_meta_order: 0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>如果想要管理评论，进入 leancloud 官网，找到 <code>控制台</code>-&gt;<code>存储</code>-&gt;<code>commet</code> 中进行管理。</p>
+</li>
+<li><p>如需取消某个 页面/文章 的评论，在 md 文件头部标签增加 <code>comments: false</code></p>
+</li>
 </ul>
-<img src="/2020/03/02/Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%99/image-20210219032911009.png" alt="image-20210219032911009" style="zoom:25%;">
-
-<ul>
-<li>如果想要管理评论，进入 leancloud 官网，找到 <code>控制台</code>-&gt;<code>存储</code>-&gt;<code>commet</code> 中进行管理。</li>
-</ul>
+<h4 id="菜单栏配置"><a href="#菜单栏配置" class="headerlink" title="菜单栏配置"></a>菜单栏配置</h4><p>在主题配置中找到<code>menu</code>字段，选择自己喜欢的菜单按钮。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span> <span class="comment"># 主页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span> <span class="comment">#关于</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span> <span class="comment"># 标签</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span> <span class="comment"># 分类</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span> <span class="comment"># 归档</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="string">/schedule/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-calendar</span> <span class="comment"># 日程</span></span><br><span class="line">  <span class="attr">sitemap:</span> <span class="string">/sitemap.xml</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-sitemap</span> <span class="comment"># 站点地图</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">/404/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-heartbeat</span> <span class="comment"># 404跳转</span></span><br></pre></td></tr></table></figure>
 <h4 id="设置代码高亮"><a href="#设置代码高亮" class="headerlink" title="设置代码高亮"></a>设置代码高亮</h4><p>NexT 代码高亮，共有5款主题供你选择。 NexT 默认使用的是 白色的 <code>normal</code> 主题，可选的值有 <code>normal</code>，<code>night</code>， <code>night blue</code>， <code>night bright</code>， <code>night eighties</code>：</p>
 <p>更改 <code>highlight_theme</code> 字段，将其值设定成你所喜爱的高亮主题，例如：</p>
 <p>高亮主题设置示例</p>
 <figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Code Highlight theme</span></span><br><span class="line"><span class="comment"># Available value: normal | night | night eighties | night blue | night bright</span></span><br><span class="line"><span class="comment"># https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line"><span class="attr">highlight_theme:</span> <span class="string">normal</span></span><br></pre></td></tr></table></figure>
+<h4 id="修改字体大小"><a href="#修改字体大小" class="headerlink" title="修改字体大小"></a>修改字体大小</h4><p>在<code>themes/next/source/css/_variables</code>目录下base.stye文件中，直接搜索<code>font-size-base</code>字段进行修改，同时主题配置文件中搜索<code>font</code>字段将其对应的功能打开。</p>
+<img src="/images/image-20210219101529354.png" alt="image-20210219101529354" style="zoom:30%;" />
+
+<h4 id="配置文章置顶功能"><a href="#配置文章置顶功能" class="headerlink" title="配置文章置顶功能"></a>配置文章置顶功能</h4><p>安装下面两个插件，在文章的头部便签加上<code>top: true</code>即可。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装下面两个插件</span></span><br><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+<h4 id="生成永久链接"><a href="#生成永久链接" class="headerlink" title="生成永久链接"></a>生成永久链接</h4><p>下载插件</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装hexo-abbrlink插件</span></span><br><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<p>修改站点配置<code>permalink</code>字段</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># permalink: :year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:abbrlink.html</span>  <span class="comment"># p 是自定义的前缀</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">    <span class="attr">alg:</span> <span class="string">crc32</span>   <span class="comment">#算法： crc16(default) and crc32</span></span><br><span class="line">    <span class="attr">rep:</span> <span class="string">hex</span>     <span class="comment">#进制： dec(default) and hex</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+<p>不同算法生成的连接格式如下：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br></pre></td></tr></table></figure>
+<h4 id="文章头部标签"><a href="#文章头部标签" class="headerlink" title="文章头部标签"></a>文章头部标签</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hexo搭建个人站点</span> <span class="comment"># 显示文章标题名称</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020-03-01 17:29:07</span> <span class="comment"># 文章创建时间</span></span><br><span class="line"><span class="attr">tags:</span> <span class="comment"># 标签</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">其他</span> <span class="comment"># 分类</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span> <span class="comment"># 当前文章是否开启评论系统</span></span><br><span class="line"><span class="attr">top:</span> <span class="literal">true</span> <span class="comment"># 开启文章置顶</span></span><br><span class="line"><span class="attr">typora-root-url:</span> <span class="string">../images_temp</span> <span class="comment"># 使用typora工具编写markdown插入图片时候方便typora图片根目录</span></span><br><span class="line"><span class="attr">typora-copy-images-to:</span> <span class="string">../_posts/Hexo搭建个人网站</span> <span class="comment"># 网站读取对应的目录，主要是我每一篇文章有对应的目录</span></span><br></pre></td></tr></table></figure>
+<h4 id="为博客加上宠物"><a href="#为博客加上宠物" class="headerlink" title="为博客加上宠物"></a>为博客加上宠物</h4><p>在hexo根目录下安装插件</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+<p>安装需要的宠物插件:<a href="https://link.zhihu.com/?target=https://huaji8.top/post/live2d-plugin-2.0/">宠物样式</a> <a href="https://link.zhihu.com/?target=https://github.com/xiazeyu/live2d-widget-models">源码地址</a></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install &#123;packagename&#125;</span><br></pre></td></tr></table></figure>
+<p>其中{packagename} 替换为你要安装的宠物名,如<code>live2d-widget-model-koharu</code></p>
+<p>具体指令: <code>live2d-widget-model-koharu</code></p>
+<p>在<strong>站点配置文件</strong><code>_config.yml</code>中添加上如下代码:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span>   <span class="comment">#开启宠物</span></span><br><span class="line">    <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">    <span class="attr">model:</span></span><br><span class="line">      <span class="attr">use:</span> <span class="string">live2d-widget-model-koharu</span></span><br><span class="line">    <span class="attr">display:</span></span><br><span class="line">      <span class="attr">position:</span> <span class="string">left</span>   <span class="comment">#指定宠物显示的位置</span></span><br><span class="line">      <span class="attr">width:</span> <span class="number">210</span>    <span class="comment">#指定宠物显示的宽度</span></span><br><span class="line">      <span class="attr">height:</span> <span class="number">360</span>   <span class="comment">#指定宠物显示的高度</span></span><br><span class="line">    <span class="attr">mobile:</span></span><br></pre></td></tr></table></figure>
+<h4 id="开启代码块复制"><a href="#开启代码块复制" class="headerlink" title="开启代码块复制"></a>开启代码块复制</h4><p>文章中插入的一些代码，有时需要一键复制，可以增加代码块的复制功能。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 代码控制块</span></span><br><span class="line"><span class="attr">codeblock:</span></span><br><span class="line">  <span class="comment"># Code Highlight theme</span></span><br><span class="line">  <span class="comment"># Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic</span></span><br><span class="line">  <span class="comment"># See: https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line">  <span class="attr">highlight_theme:</span> <span class="string">galactic</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Add copy button on codeblock</span></span><br><span class="line">  <span class="comment"># 代码块复制按钮是否开启</span></span><br><span class="line">  <span class="attr">copy_button:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Show text copy result.</span></span><br><span class="line">    <span class="attr">show_result:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: default | flat | mac</span></span><br><span class="line">		<span class="attr">style:</span> <span class="string">mac</span> <span class="comment"># 使用mac风格</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>其他</category>
@@ -620,39 +668,59 @@
   </entry>
   <entry>
     <title>Google浏览器无法安装问题</title>
-    <url>/2020/03/02/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p><img src="/2020/03/02/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image1.jpg" alt="点击图片时候下方显示描述"></p>
+    <url>/2020/03/02/e3aa8e8f.html</url>
+    <content><![CDATA[<img src="/images/20210219125929354.jpg" alt="20210219125929354" style="zoom:50%;" />
+
 <p>&ensp;&ensp;&ensp;&ensp;今天遇到一个有趣的问题，Google浏览器莫名其面的一直安装不上，自己捣鼓了好久最后才解决。网上有很多方法说是因为注册表有残留，准确的说是GoogleUpdate这个东西在作怪，解决的方法只需要将注册表里Google相关的东西删除。</p>
 <a id="more"></a>
 
-<h1 id="打开注册表直接Win-R输入regedit"><a href="#打开注册表直接Win-R输入regedit" class="headerlink" title="打开注册表直接Win+R输入regedit"></a>打开注册表直接Win+R输入regedit</h1><p><img src="/2020/03/02/Google%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E9%97%AE%E9%A2%98/image2.jpg"></p>
+<h1 id="打开注册表直接Win-R输入regedit"><a href="#打开注册表直接Win-R输入regedit" class="headerlink" title="打开注册表直接Win+R输入regedit"></a>打开注册表直接Win+R输入regedit</h1><img src="/images/20210219130029354.jpg" alt="20210219130029354" style="zoom:80%;" />
+
 <h1 id="删除注册表残留数据。"><a href="#删除注册表残留数据。" class="headerlink" title="删除注册表残留数据。"></a>删除注册表残留数据。</h1><p>&ensp;&ensp;&ensp;&ensp;删除\HKEY_CURRENT_USER\Software\和HKEY_LOCAL_MACHINE\SOFTWARE目录下的Google及对应的子目录就可以了。但是我操作的时候出现了问题，删除Google目录时候报错，后面发现是权限问题。解决方法：右键该目录修改管理员权限可以删除。</p>
 <h1 id="确认电脑系统版本。"><a href="#确认电脑系统版本。" class="headerlink" title="确认电脑系统版本。"></a>确认电脑系统版本。</h1><p>&ensp;&ensp;&ensp;&ensp;可以删除之后还是发现无法安装，最后发现照着网上的帖子没有用，因为帖子估计都比较老，我的是win10系统，所以导致删除的路径不对，导致依旧无法正常安装，需要删除对应的路径。</p>
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">32位：HKEY_LOCAL_MACHINE\SOFTWARE\Google</span><br><span class="line">64位：HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Google</span><br></pre></td></tr></table></figure>
 <h1 id="重启安装应用。"><a href="#重启安装应用。" class="headerlink" title="重启安装应用。"></a>重启安装应用。</h1><p>&ensp;&ensp;&ensp;&ensp;重新双击运行安装应用程序，完美解决！</p>
 ]]></content>
       <categories>
-        <category>windows</category>
+        <category>Windows</category>
       </categories>
   </entry>
   <entry>
     <title>Linux常用命令</title>
-    <url>/2020/02/29/Linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a><strong>linux下常用的一下命令</strong></h1><a id="more"></a>
+    <url>/2020/02/29/d0edc1ed.html</url>
+    <content><![CDATA[<h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a>linux下常用的一下命令</h1><p>工作中我们会经常遇到各种各样的问题，遇到我们解决不了的我们会查找相关的资料，下面就是我平时工作中遇到的一些场景，记录的一些关于linux下操作的相关命令，希望对大家有用，会不定时更新~</p>
+<a id="more"></a>
 
-<h2 id="防火墙相关的命令。"><a href="#防火墙相关的命令。" class="headerlink" title="防火墙相关的命令。"></a><strong>防火墙相关的命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone&#x3D;public --add-port&#x3D;4400-4600&#x2F;udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone #作用域 </span><br><span class="line">--add-port&#x3D;80&#x2F;tcp #添加端口，格式为：端口&#x2F;通讯协议 </span><br><span class="line">--permanent #永久生效</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --remove-port&#x3D;80&#x2F;tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone&#x3D;public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state #查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span><br></pre></td></tr></table></figure>
-<h2 id="yum安装软件包。"><a href="#yum安装软件包。" class="headerlink" title="yum安装软件包。"></a><strong>yum安装软件包。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum install epel-release #安装&quot;epel-release&quot;的软件包</span><br><span class="line">yum install tcpreplay</span><br></pre></td></tr></table></figure>
-<h2 id="ps命令。"><a href="#ps命令。" class="headerlink" title="ps命令。"></a><strong>ps命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ps -eLf	 #查看进程线程情况</span><br></pre></td></tr></table></figure>
-<h2 id="压缩、解压命令。"><a href="#压缩、解压命令。" class="headerlink" title="压缩、解压命令。"></a><strong>压缩、解压命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">压缩：</span><br><span class="line">tar -zcvf &#x2F;tmp&#x2F;etc.tar.gz  &#x2F;etc     #将&#x2F;etc下的所有文件及目录打包到&#x2F;etc，并使用gz压缩  </span><br><span class="line">tar -cvf &#x2F;home&#x2F;abc.tar &#x2F;home&#x2F;abc    #只打包，不压缩</span><br><span class="line">tar -zcvf &#x2F;home&#x2F;abc.tar.gz &#x2F;home&#x2F;abc#打包，并用gzip压缩</span><br><span class="line"></span><br><span class="line">解压：</span><br><span class="line">tar -zxvf &#x2F;tmp&#x2F;etc.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="服务的锁定与取消。"><a href="#服务的锁定与取消。" class="headerlink" title="服务的锁定与取消。"></a><strong>服务的锁定与取消。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">systemctl mask firewalld   #需要锁定该服务时执行</span><br><span class="line">systemctl unmask firewalld #实现取消服务的锁定</span><br></pre></td></tr></table></figure>
-<h2 id="路由配置相关。"><a href="#路由配置相关。" class="headerlink" title="路由配置相关。"></a><strong>路由配置相关。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">#添加IPV6地址</span><br><span class="line">ip -6 addr add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt; dev &lt;interface&gt;</span><br><span class="line">ip -6 addr add 2001:0db8:0:f101::1&#x2F;64 dev eth0</span><br><span class="line"></span><br><span class="line">ifconfig &lt;interface&gt; inet6 add &lt;ipv6address&gt;&#x2F;&lt;prefixlength&gt;</span><br><span class="line">ifconfig eth0 inet6 add 2001:0db8:0:f101::1&#x2F;64</span><br><span class="line"></span><br><span class="line">#添加默认路由</span><br><span class="line">ip -6 route add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; via &lt;ipv6address&gt;</span><br><span class="line">ip -6 route add default via 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">route -A inet6 add &lt;ipv6network&gt;&#x2F;&lt;prefixlength&gt; gw</span><br><span class="line">route -A inet6 add default gw 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">#查看路由</span><br><span class="line">ip -6 route show</span><br><span class="line">route -A &#39;inet6&#39;</span><br><span class="line">route -6</span><br><span class="line"></span><br><span class="line">#windows查看路由表</span><br><span class="line">route print</span><br><span class="line"></span><br><span class="line">#查看邻居缓存</span><br><span class="line">ip -6 neighbor show</span><br><span class="line"></span><br><span class="line">#windows查看邻居缓存</span><br><span class="line">netsh interface ipv6 show neighbors</span><br><span class="line"></span><br><span class="line">#查看smtp服务器</span><br><span class="line">ping smtp.sohu.com </span><br><span class="line">ping smtp.qq.com</span><br></pre></td></tr></table></figure>
-<h2 id="更新内核命令。"><a href="#更新内核命令。" class="headerlink" title="更新内核命令。"></a><strong>更新内核命令。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">yum update kernel -y</span><br></pre></td></tr></table></figure>
-<h2 id="大文件重定向有效信息。"><a href="#大文件重定向有效信息。" class="headerlink" title="大文件重定向有效信息。"></a><strong>大文件重定向有效信息。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">重定向dmesg.txt关键字Call Trace的前后2000行到nn.txt：</span><br><span class="line">grep -C 2000 ‘Call Trace’ dmesg.txt &gt;nn.txt</span><br></pre></td></tr></table></figure>
-<h2 id="Shell递归删除指定字符串文件或者目录。"><a href="#Shell递归删除指定字符串文件或者目录。" class="headerlink" title="Shell递归删除指定字符串文件或者目录。"></a><strong>Shell递归删除指定字符串文件或者目录。</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">文件：find . -name &quot;*.rej&quot; | xargs rm -rf</span><br><span class="line">目录：find . -type d -name &quot;*.rej&quot; | xargs rm -rf</span><br></pre></td></tr></table></figure>
-<h2 id="文件夹建立软链接（用绝对地址）"><a href="#文件夹建立软链接（用绝对地址）" class="headerlink" title="文件夹建立软链接（用绝对地址）"></a><strong>文件夹建立软链接（用绝对地址）</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ln -s 源地址 目的地址   #比如我把linux文件系统rootfs_dir软链接到&#x2F;home&#x2F;jyg&#x2F;目录下</span><br><span class="line">ln -s &#x2F;opt&#x2F;linux&#x2F;rootfs_dir  &#x2F;home&#x2F;jyg&#x2F;rootfs_dir #就可以了</span><br></pre></td></tr></table></figure>
-<h2 id="大文件分割"><a href="#大文件分割" class="headerlink" title="大文件分割"></a><strong>大文件分割</strong></h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">windows下 d:&gt;wireshark&gt;editcap -C 1000000(文件大小) 待分割文件路径 新文件名称</span><br><span class="line">linux 可使用split命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+<h2 id="防火墙相关的命令"><a href="#防火墙相关的命令" class="headerlink" title="防火墙相关的命令"></a>防火墙相关的命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=4400-4600/udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone <span class="comment"># 作用域 </span></span><br><span class="line">--add-port=80/tcp <span class="comment"># 添加端口，格式为：端口/通讯协议 </span></span><br><span class="line">--permanent <span class="comment"># 永久生效</span></span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --remove-port=80/tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state <span class="comment"># 查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span></span><br></pre></td></tr></table></figure>
+<h2 id="yum安装软件包"><a href="#yum安装软件包" class="headerlink" title="yum安装软件包"></a>yum安装软件包</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum install epel-release <span class="comment"># 安装&quot;epel-release&quot;的软件包</span></span><br><span class="line">yum install tcpreplay</span><br></pre></td></tr></table></figure>
+<h2 id="ps命令"><a href="#ps命令" class="headerlink" title="ps命令"></a>ps命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ps -eLf	 <span class="comment">#查看进程线程情况</span></span><br></pre></td></tr></table></figure>
+<h2 id="压缩、解压命令"><a href="#压缩、解压命令" class="headerlink" title="压缩、解压命令"></a>压缩、解压命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">压缩：</span><br><span class="line">tar -zcvf /tmp/etc.tar.gz  /etc      <span class="comment">#将/etc下的所有文件及目录打包到/etc，并使用gz压缩  </span></span><br><span class="line">tar -cvf /home/abc.tar /home/abc     <span class="comment">#只打包，不压缩</span></span><br><span class="line">tar -zcvf /home/abc.tar.gz /home/abc <span class="comment">#打包，并用gzip压缩</span></span><br><span class="line"></span><br><span class="line">解压：</span><br><span class="line">tar -zxvf /tmp/etc.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="服务的锁定与取消"><a href="#服务的锁定与取消" class="headerlink" title="服务的锁定与取消"></a>服务的锁定与取消</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">systemctl mask firewalld   <span class="comment">#需要锁定该服务时执行</span></span><br><span class="line">systemctl unmask firewalld <span class="comment">#实现取消服务的锁定</span></span><br></pre></td></tr></table></figure>
+<h2 id="路由配置相关"><a href="#路由配置相关" class="headerlink" title="路由配置相关"></a>路由配置相关</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#添加IPV6地址</span></span><br><span class="line">ip -6 addr add &lt;ipv6address&gt;/&lt;prefixlength&gt; dev &lt;interface&gt;</span><br><span class="line">ip -6 addr add 2001:0db8:0:f101::1/64 dev eth0</span><br><span class="line"></span><br><span class="line">ifconfig &lt;interface&gt; inet6 add &lt;ipv6address&gt;/&lt;prefixlength&gt;</span><br><span class="line">ifconfig eth0 inet6 add 2001:0db8:0:f101::1/64</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加默认路由</span></span><br><span class="line">ip -6 route add &lt;ipv6network&gt;/&lt;prefixlength&gt; via &lt;ipv6address&gt;</span><br><span class="line">ip -6 route add default via 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">route -A inet6 add &lt;ipv6network&gt;/&lt;prefixlength&gt; gw</span><br><span class="line">route -A inet6 add default gw 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看路由</span></span><br><span class="line">ip -6 route show</span><br><span class="line">route -A <span class="string">&#x27;inet6&#x27;</span></span><br><span class="line">route -6</span><br><span class="line"></span><br><span class="line"><span class="comment">#windows查看路由表</span></span><br><span class="line">route <span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查看邻居缓存</span></span><br><span class="line">ip -6 neighbor show</span><br><span class="line"></span><br><span class="line"><span class="comment">#windows查看邻居缓存</span></span><br><span class="line">netsh interface ipv6 show neighbors</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看smtp服务器</span></span><br><span class="line">ping smtp.sohu.com </span><br><span class="line">ping smtp.qq.com</span><br></pre></td></tr></table></figure>
+<h2 id="更新内核命令"><a href="#更新内核命令" class="headerlink" title="更新内核命令"></a>更新内核命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum update kernel -y</span><br></pre></td></tr></table></figure>
+<h2 id="大文件重定向有效信息"><a href="#大文件重定向有效信息" class="headerlink" title="大文件重定向有效信息"></a>大文件重定向有效信息</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 重定向dmesg.txt关键字Call Trace的前后2000行到nn.txt：</span></span><br><span class="line">grep -C 2000 ‘Call Trace’ dmesg.txt &gt;nn.txt</span><br></pre></td></tr></table></figure>
+<h2 id="Shell递归删除指定字符串文件或者目录"><a href="#Shell递归删除指定字符串文件或者目录" class="headerlink" title="Shell递归删除指定字符串文件或者目录"></a>Shell递归删除指定字符串文件或者目录</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">文件：find . -name <span class="string">&quot;*.rej&quot;</span> | xargs rm -rf</span><br><span class="line">目录：find . -<span class="built_in">type</span> d -name <span class="string">&quot;*.rej&quot;</span> | xargs rm -rf</span><br></pre></td></tr></table></figure>
+<h2 id="文件夹建立软链接（用绝对地址"><a href="#文件夹建立软链接（用绝对地址" class="headerlink" title="文件夹建立软链接（用绝对地址)"></a>文件夹建立软链接（用绝对地址)</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ln -s 源地址 目的地址   <span class="comment">#比如我把linux文件系统rootfs_dir软链接到/home/jyg/目录下</span></span><br><span class="line">ln -s /opt/linux/rootfs_dir  /home/jyg/rootfs_dir <span class="comment">#就可以了</span></span><br></pre></td></tr></table></figure>
+<h2 id="大数据报文件分割"><a href="#大数据报文件分割" class="headerlink" title="大数据报文件分割"></a>大数据报文件分割</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">windows下 d:&gt;wireshark&gt;editcap -C 1000000(文件大小) 待分割文件路径 新文件名称</span><br><span class="line">linux 可使用split命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
         <category>Linux</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/02/17/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<a id="more"></a>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
