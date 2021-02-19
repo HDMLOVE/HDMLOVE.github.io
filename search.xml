@@ -1,23 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Google浏览器无法安装问题</title>
-    <url>/2020/03/02/e3aa8e8f.html</url>
-    <content><![CDATA[<img src="/images/20210219125929354.jpg" alt="20210219125929354" style="zoom:50%;">
-
-<p>&ensp;&ensp;&ensp;&ensp;今天遇到一个有趣的问题，Google浏览器莫名其面的一直安装不上，自己捣鼓了好久最后才解决。网上有很多方法说是因为注册表有残留，准确的说是GoogleUpdate这个东西在作怪，解决的方法只需要将注册表里Google相关的东西删除。</p>
+    <title>写在前面</title>
+    <url>/2020/10/14/ca8bfdf3.html</url>
+    <content><![CDATA[<p>初衷</p>
+<p>你喜欢的人在努力，你却在想怎么说我爱你</p>
 <a id="more"></a>
-
-<h1 id="打开注册表直接Win-R输入regedit"><a href="#打开注册表直接Win-R输入regedit" class="headerlink" title="打开注册表直接Win+R输入regedit"></a>打开注册表直接Win+R输入regedit</h1><img src="/images/20210219130029354.jpg" alt="20210219130029354" style="zoom:80%;">
-
-<h1 id="删除注册表残留数据。"><a href="#删除注册表残留数据。" class="headerlink" title="删除注册表残留数据。"></a>删除注册表残留数据。</h1><p>&ensp;&ensp;&ensp;&ensp;删除\HKEY_CURRENT_USER\Software\和HKEY_LOCAL_MACHINE\SOFTWARE目录下的Google及对应的子目录就可以了。但是我操作的时候出现了问题，删除Google目录时候报错，后面发现是权限问题。解决方法：右键该目录修改管理员权限可以删除。</p>
-<h1 id="确认电脑系统版本。"><a href="#确认电脑系统版本。" class="headerlink" title="确认电脑系统版本。"></a>确认电脑系统版本。</h1><p>&ensp;&ensp;&ensp;&ensp;可以删除之后还是发现无法安装，最后发现照着网上的帖子没有用，因为帖子估计都比较老，我的是win10系统，所以导致删除的路径不对，导致依旧无法正常安装，需要删除对应的路径。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">32位：HKEY_LOCAL_MACHINE\SOFTWARE\Google</span><br><span class="line">64位：HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Google</span><br></pre></td></tr></table></figure>
-<h1 id="重启安装应用。"><a href="#重启安装应用。" class="headerlink" title="重启安装应用。"></a>重启安装应用。</h1><p>&ensp;&ensp;&ensp;&ensp;重新双击运行安装应用程序，完美解决！</p>
 ]]></content>
       <categories>
-        <category>Windows</category>
+        <category>杂谈</category>
       </categories>
+  </entry>
+  <entry>
+    <title>釜山行</title>
+    <url>/2021/02/19/dfbf19f0.html</url>
+    <content><![CDATA[<p>一开始听到影片讲丧尸的时候，我对这一步电影是拒绝的，谁知道朋友圈的伙伴们便对我进行一番嘲讽，不服气的我便是选择勇敢地看完。</p>
+<a id="more"></a>
+
+<p>从来不喜欢看恐怖片的我一直单纯的以为这只是一部恐怖片，但是默默地看到了最后，给我留下的不是恐怖，但最多的却是感动，是沉思。这部是一部直透人性最深处，其中包含了亲情、爱情、友情、自私、冷漠…… </p>
+<p>政府，在我们的理解中是一个国家民众最基本的依靠，当一个政府里的高官被所谓的政治冲昏头脑的时候，政府就会变得自私自利。与此同时，政府也变回失去了他原本存在的意义。影片的一开始政府的举动让我很是不解，看到了最后，我才渐渐明白，剧中当灾难来临的时候，政府官员竟然掩盖真相，抛弃民众，不管民众的死活，并谎称这只是一场暴动，这一切的一切都值得我们思考。</p>
+<p>爱情，有人说它是世界上最伟大的力量，而我想说，面对灾难来临时依旧坚不可摧的爱情才是最伟大的。剧中大叔与他的妻子圣京女士之间的爱情让许多人动容，面对另一节车厢中冷漠的人们的举动使他无法继续生存下去的时刻，毅然选择牺牲了自己保全了自己的爱人与那还未出生的女儿。还有就是年轻的棒球少女，自己生死的紧要关头却是从未舍弃自己喜欢的那个人，坚持要打开车门最后的最后虽然两人都被变成了尸人，但却是令我非常的感动。大叔和圣京女士代表了结婚的后依旧能够相守的一类人，而年轻棒球少女和年轻男子则是代表了正在青春萌动中了我们。</p>
+<p>亲情，感情线路最为复杂的就是男主也就是秀安的爸爸，做为一个忙于工作的父亲。从一开始是忙于工作不抽出时间来陪伴女儿的形象，到接下来的呈现的是无私的父爱，同时也是自私的民众。父亲从为了保护自己的女儿不顾别人的死活，到最后被女儿的纯真善良所感动，开始去帮去身边的人。</p>
+<p>自私，冷漠。在被尸人追赶逃跑的过程中不断有人把身边的人推向尸人以此来保全自己。但令我印象最为深刻的便是那最后一个车厢的人们，男主他们经历了重重尸人到达安全车厢的时候，那一整车厢的人竟然因害怕感染自己而拒绝开门从而导致大叔与奶奶被同化成了尸人，他们最后的目光我无法忘记，那是一种怎样的目光？是求生，或亦是对人性的绝望。<br>总的来说，这一步电影带给我的不是恐惧，最多的是来源于亲情，爱情以及纯真善良的感动，带给我的是自私冷漠的沉思，画面虽然夸张但是情感却是真实。</p>
+<p>借用老刘的话说，那就是躲过了三姐车厢的丧尸，却是没有躲过一节车厢的人心。也想补充一句，无论如何请相信这世界依然有爱。<br>                                                                                                                                                                                                                    2016.9.17</p>
+]]></content>
+      <categories>
+        <category>杂谈</category>
+      </categories>
+      <tags>
+        <tag>电影🎬</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux非阻塞模式下的EAGIN异常</title>
+    <url>/2021/02/19/6f167ca3.html</url>
+    <content><![CDATA[<p>之前在写一个并发聊天室时候在多个客户端连续发送数据的时候遇到EAGIN错误，如图。</p>
+<img src="/images/image-20210218231840685.png" alt="image-20210218231840685" style="zoom:20%;">
+
+<p>Linux下，管道、FIFO以及一些设备（通常是终端和网络）一般有以下几种性质。</p>
+<a id="more"></a>
+
+<blockquote>
+<p>1、一次read操作返回的数据可能会少于所要求的数据，及时此时没有到达文件尾部也可能会出现这种情况。对于这种情况，我们不认为是错误，而是视为一种异常，应该继续对此设备进行读取。</p>
+<p>2、一次write或send操作的返回值也可能会少于指定的输出的字节数。通常这可能是由于某一种因素引起的，比如在处理网络数据的时，内核输出的缓冲区满，此时写不进数据。我们也通常不认为这是一种错误，应当继续将余下的数据进行写入。（通常遇到这种情况的场景是非阻塞描述符，或者捕捉到某一种信号的时候，才会发生中途返回。）</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Unix环境高级编程</category>
+      </categories>
+      <tags>
+        <tag>Unix</tag>
+      </tags>
   </entry>
   <entry>
     <title>Go语言error错误处理</title>
@@ -31,88 +64,201 @@
       </categories>
   </entry>
   <entry>
-    <title>Hexo搭建个人站点，我太难了</title>
-    <url>/2020/03/02/4d51d04c.html</url>
-    <content><![CDATA[<p>花了好几天，熬了几个夜晚，摸索了好久终于把自己的个人博客网站搭建起来了，顺便来一篇教程，分享给大家，同时也方便以后再次部署。我之前是在Github上搭建了一版，Github+hexo，国内加载图片等等资源奈何实在太卡了，想起自己在阿里云有台服务器，然后直接部署到云上了,下面是我具体的部署的一些步骤。</p>
-<a id="more"></a>
-
-<h1 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h1><ul>
-<li><p>一台个人PC</p>
-</li>
-<li><p>money!(开玩笑的 ^-^)</p>
-</li>
-<li><p>一台linux服务器，可以买台云服务器，没有又想体验的话就VM虚拟机，本地看看过把瘾吧^ ^。</p>
-</li>
-</ul>
-<h1 id="需要的软件环境"><a href="#需要的软件环境" class="headerlink" title="需要的软件环境"></a>需要的软件环境</h1><ul>
-<li><p>Git</p>
-</li>
-<li><p>Node.js</p>
-</li>
-<li><p>hexo-cli</p>
-</li>
-<li><p>Nginx</p>
-</li>
-</ul>
-<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p><a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a><br>下一步下一步傻瓜式安装</p>
-<h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下一步下一步傻瓜式安装</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><img src="/images/image-20210219105759182.jpg" alt="image-20210219105759182" style="zoom:50%;">
-
-<p>选择一个文件夹作为你的博客文件夹，比如我自己建立在E:盘在命令行窗口下：</p>
-<img src="/images/image-20210219105959182.jpg" alt="image-20210219105959182" style="zoom:80%;">
-
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="string">hexo</span> <span class="string">-v</span> <span class="comment"># 查看hexo安装成功没</span></span><br><span class="line"><span class="string">mkdir</span> <span class="string">blog;</span> <span class="comment"># 创建blog文件夹作为我的博客目录</span></span><br><span class="line"><span class="string">cd</span> <span class="string">blog</span> <span class="comment"># 进入blog目录</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">init</span> <span class="comment"># 初始化blog</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">g</span> <span class="comment"># 生成静态页面</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">s</span> <span class="comment"># 启动服务监听</span></span><br><span class="line"><span class="string">localhost:4000</span> <span class="comment">#打开页面 </span></span><br><span class="line"><span class="comment"># 可以看到hello world 的页面，初步完成。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 常用命令</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">new</span> <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">new</span> <span class="string">page</span> <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">generate</span> <span class="comment">#生成静态页面至public目录</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">server</span> <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">deploy</span> <span class="comment">#部署到GitHub</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">version</span> <span class="comment">#查看Hexo的版本</span></span><br><span class="line"></span><br><span class="line"><span class="string">hexo</span> <span class="string">s</span> <span class="string">-g</span> <span class="comment">#生成并本地预览</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">d</span> <span class="string">-g</span> <span class="comment">#生成并上传</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">clean</span> <span class="string">&amp;&amp;</span> <span class="string">hexo</span> <span class="string">g</span> <span class="string">&amp;&amp;</span> <span class="string">hexo</span> <span class="string">d</span> <span class="comment"># 一件生成静态页面同时上传</span></span><br></pre></td></tr></table></figure>
-<h2 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h2><p>Hexo主要有两份配置文件，一份是站点配置文件<code>_config.yml</code>，一份是主题配置文件（对应的主题目录下的<code>_config.yml</code>文件）。</p>
-<h4 id="站点基本信息的配置"><a href="#站点基本信息的配置" class="headerlink" title="站点基本信息的配置"></a>站点基本信息的配置</h4><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Suzette219</span> <span class="comment"># 站点标题</span></span><br><span class="line"><span class="attr">subtitle :</span> <span class="string">share</span> <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">lpyuan</span> <span class="string">blog</span> <span class="comment"># 站点描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="comment"># 站点关键字</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">发量充足的程序员</span> <span class="comment"># 站点作者昵称</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 语言</span></span><br><span class="line"><span class="attr">timezone :</span> <span class="string">&#x27;UTC&#x27;</span> <span class="comment"># 时区</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<p>更多的操作可以访问<a href="https://hexo.io/zh-cn/docs/configuration.html">Hexo官方详细配置说明</a></p>
-<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>Hexo有很多很不错的主题，使用过butterfly、replica、landscape等等，本站点目前使用<strong>Next</strong>主题(Next简直太好用了！！)。</p>
-<h4 id="主题地址"><a href="#主题地址" class="headerlink" title="主题地址"></a>主题地址</h4><p><a href="https://github.com/theme-next/hexo-theme-next">Next主题社区维护版本入口地址</a></p>
-<h4 id="文章评论系统"><a href="#文章评论系统" class="headerlink" title="文章评论系统"></a>文章评论系统</h4><p>目前本站使用的是Valine评论系统，感觉还不错，下面介绍怎么配置使用这个系统。</p>
-<p>首先这个Valine评论系统是可以很好的支持Next主题的，它支持Markdown语法，没有后端是基于LeanCloud的所以我们需要注册一个LeanCloud账户，</p>
-<p><a href="https://console.leancloud.cn/">LeanCloud官网入口地址</a></p>
-<p>注册完成后，选择创建应用，然后选择开发版本，填写描述信息，然后生成，同时将<strong>App ID</strong> 和 <strong>App Key</strong>记下来。</p>
-<ul>
-<li><p>设置Next主题，在主题配置文件中找到valine进行配置，将生成的<strong>App ID</strong> 和 <strong>App Key</strong>填入对应的字段，如下图。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># true表示开启，false表示关闭</span></span><br><span class="line">  <span class="attr">appid:</span>  <span class="string">B4XbT4kXwfh9RTyBuoKPvO</span> <span class="comment"># Appid</span></span><br><span class="line">  <span class="attr">appkey:</span> <span class="string">S3dLSovwi3LXNsun5D</span> <span class="comment"># Appkey</span></span><br><span class="line">  <span class="attr">notify:</span> <span class="literal">false</span> <span class="comment"># 邮件通知</span></span><br><span class="line">  <span class="attr">verify:</span> <span class="literal">false</span> <span class="comment"># 验证码</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">如果对文章或本站点有任何疑问或者建议，请留言~</span> <span class="comment"># 评论框占位符</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">mm</span> <span class="comment"># 功能风格</span></span><br><span class="line">  <span class="attr">guest_info:</span> <span class="string">nick,mail</span> <span class="comment"># link # 自定义注释头</span></span><br><span class="line">  <span class="attr">pageSize:</span> <span class="number">5</span> <span class="comment"># 分页大小</span></span><br><span class="line">  <span class="attr">language:</span> <span class="comment"># 可选语言, available values: en, zh-cn</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span> <span class="comment"># 文章阅读统计</span></span><br><span class="line">  <span class="attr">comment_count:</span> <span class="literal">true</span> <span class="comment"># 如果为false，评论计数将只显示在文章页面，而不是首页</span></span><br><span class="line">  <span class="attr">recordIP:</span> <span class="literal">false</span> <span class="comment"># 是否记录评论IP</span></span><br><span class="line">  <span class="attr">serverURLs:</span> <span class="comment"># 当自定义域名启用时，在此处填写(默认自动检测，不需要填写)</span></span><br><span class="line">  <span class="comment">#post_meta_order: 0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li><p>如果想要管理评论，进入 leancloud 官网，找到 <code>控制台</code>-&gt;<code>存储</code>-&gt;<code>commet</code> 中进行管理。</p>
-</li>
-<li><p>如需取消某个 页面/文章 的评论，在 md 文件头部标签增加 <code>comments: false</code></p>
-</li>
-</ul>
-<h4 id="菜单栏配置"><a href="#菜单栏配置" class="headerlink" title="菜单栏配置"></a>菜单栏配置</h4><p>在主题配置中找到<code>menu</code>字段，选择自己喜欢的菜单按钮。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span> <span class="comment"># 主页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span> <span class="comment">#关于</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span> <span class="comment"># 标签</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span> <span class="comment"># 分类</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span> <span class="comment"># 归档</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="string">/schedule/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-calendar</span> <span class="comment"># 日程</span></span><br><span class="line">  <span class="attr">sitemap:</span> <span class="string">/sitemap.xml</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-sitemap</span> <span class="comment"># 站点地图</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">/404/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-heartbeat</span> <span class="comment"># 404跳转</span></span><br></pre></td></tr></table></figure>
-<h4 id="设置代码高亮"><a href="#设置代码高亮" class="headerlink" title="设置代码高亮"></a>设置代码高亮</h4><p>NexT 代码高亮，共有5款主题供你选择。 NexT 默认使用的是 白色的 <code>normal</code> 主题，可选的值有 <code>normal</code>，<code>night</code>， <code>night blue</code>， <code>night bright</code>， <code>night eighties</code>：</p>
-<p>更改 <code>highlight_theme</code> 字段，将其值设定成你所喜爱的高亮主题，例如：</p>
-<p>高亮主题设置示例</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Code Highlight theme</span></span><br><span class="line"><span class="comment"># Available value: normal | night | night eighties | night blue | night bright</span></span><br><span class="line"><span class="comment"># https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line"><span class="attr">highlight_theme:</span> <span class="string">normal</span></span><br></pre></td></tr></table></figure>
-<h4 id="修改字体大小"><a href="#修改字体大小" class="headerlink" title="修改字体大小"></a>修改字体大小</h4><p>在<code>themes/next/source/css/_variables</code>目录下base.stye文件中，直接搜索<code>font-size-base</code>字段进行修改，同时主题配置文件中搜索<code>font</code>字段将其对应的功能打开。</p>
-<img src="/images/image-20210219101529354.png" alt="image-20210219101529354" style="zoom:30%;">
-
-<h4 id="配置文章置顶功能"><a href="#配置文章置顶功能" class="headerlink" title="配置文章置顶功能"></a>配置文章置顶功能</h4><p>安装下面两个插件，在文章的头部便签加上<code>top: true</code>即可。</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装下面两个插件</span></span><br><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
-<h4 id="生成永久链接"><a href="#生成永久链接" class="headerlink" title="生成永久链接"></a>生成永久链接</h4><p>下载插件</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装hexo-abbrlink插件</span></span><br><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
-<p>修改站点配置<code>permalink</code>字段</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># permalink: :year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:abbrlink.html</span>  <span class="comment"># p 是自定义的前缀</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">    <span class="attr">alg:</span> <span class="string">crc32</span>   <span class="comment">#算法： crc16(default) and crc32</span></span><br><span class="line">    <span class="attr">rep:</span> <span class="string">hex</span>     <span class="comment">#进制： dec(default) and hex</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-<p>不同算法生成的连接格式如下：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br></pre></td></tr></table></figure>
-<h4 id="文章头部标签"><a href="#文章头部标签" class="headerlink" title="文章头部标签"></a>文章头部标签</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hexo搭建个人站点</span> <span class="comment"># 显示文章标题名称</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020-03-01 17:29:07</span> <span class="comment"># 文章创建时间</span></span><br><span class="line"><span class="attr">tags:</span> <span class="comment"># 标签</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">其他</span> <span class="comment"># 分类</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span> <span class="comment"># 当前文章是否开启评论系统</span></span><br><span class="line"><span class="attr">top:</span> <span class="literal">true</span> <span class="comment"># 开启文章置顶</span></span><br><span class="line"><span class="attr">typora-root-url:</span> <span class="string">../images_temp</span> <span class="comment"># 使用typora工具编写markdown插入图片时候方便typora图片根目录</span></span><br><span class="line"><span class="attr">typora-copy-images-to:</span> <span class="string">../_posts/Hexo搭建个人网站</span> <span class="comment"># 网站读取对应的目录，主要是我每一篇文章有对应的目录</span></span><br></pre></td></tr></table></figure>
-<h4 id="为博客加上宠物"><a href="#为博客加上宠物" class="headerlink" title="为博客加上宠物"></a>为博客加上宠物</h4><p>在hexo根目录下安装插件</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-<p>安装需要的宠物插件:<a href="https://link.zhihu.com/?target=https://huaji8.top/post/live2d-plugin-2.0/">宠物样式</a> <a href="https://link.zhihu.com/?target=https://github.com/xiazeyu/live2d-widget-models">源码地址</a></p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install &#123;packagename&#125;</span><br></pre></td></tr></table></figure>
-<p>其中{packagename} 替换为你要安装的宠物名,如<code>live2d-widget-model-koharu</code></p>
-<p>具体指令: <code>live2d-widget-model-koharu</code></p>
-<p>在<strong>站点配置文件</strong><code>_config.yml</code>中添加上如下代码:</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span>   <span class="comment">#开启宠物</span></span><br><span class="line">    <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">    <span class="attr">model:</span></span><br><span class="line">      <span class="attr">use:</span> <span class="string">live2d-widget-model-koharu</span></span><br><span class="line">    <span class="attr">display:</span></span><br><span class="line">      <span class="attr">position:</span> <span class="string">left</span>   <span class="comment">#指定宠物显示的位置</span></span><br><span class="line">      <span class="attr">width:</span> <span class="number">210</span>    <span class="comment">#指定宠物显示的宽度</span></span><br><span class="line">      <span class="attr">height:</span> <span class="number">360</span>   <span class="comment">#指定宠物显示的高度</span></span><br><span class="line">    <span class="attr">mobile:</span></span><br></pre></td></tr></table></figure>
-<h4 id="开启代码块复制"><a href="#开启代码块复制" class="headerlink" title="开启代码块复制"></a>开启代码块复制</h4><p>文章中插入的一些代码，有时需要一键复制，可以增加代码块的复制功能。</p>
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 代码控制块</span></span><br><span class="line"><span class="attr">codeblock:</span></span><br><span class="line">  <span class="comment"># Code Highlight theme</span></span><br><span class="line">  <span class="comment"># Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic</span></span><br><span class="line">  <span class="comment"># See: https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line">  <span class="attr">highlight_theme:</span> <span class="string">galactic</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Add copy button on codeblock</span></span><br><span class="line">  <span class="comment"># 代码块复制按钮是否开启</span></span><br><span class="line">  <span class="attr">copy_button:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Show text copy result.</span></span><br><span class="line">    <span class="attr">show_result:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: default | flat | mac</span></span><br><span class="line">		<span class="attr">style:</span> <span class="string">mac</span> <span class="comment"># 使用mac风格</span></span><br></pre></td></tr></table></figure>
+    <title>Raft算法</title>
+    <url>/2021/01/07/1df31392.html</url>
+    <content><![CDATA[<h1 id="Raft算法"><a href="#Raft算法" class="headerlink" title="Raft算法"></a>Raft算法</h1><h2 id="什么是Raft算法"><a href="#什么是Raft算法" class="headerlink" title="什么是Raft算法"></a>什么是Raft算法</h2><p>Raft算法是Multi-Paxos算法，</p>
 ]]></content>
       <categories>
-        <category>其他</category>
+        <category>数据结构与算法</category>
       </categories>
+  </entry>
+  <entry>
+    <title>排序算法</title>
+    <url>/2021/01/07/Infinity.html</url>
+    <content><![CDATA[<h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><p>十大经典排序算法为：冒泡，选择，插入、希尔、归并、快速、堆、计数、桶、基数</p>
+<a id="more"></a>
+
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123;<span class="number">5</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    prin_array(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>])); </span><br><span class="line">    <span class="keyword">int</span> len = <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]);</span><br><span class="line">    <span class="comment">// BubbleSort(a, sizeof(a)/sizeof(a[0]));</span></span><br><span class="line">    SelectSort(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]));</span><br><span class="line">  	prin_array(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]));</span><br><span class="line">  </span><br><span class="line">  	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>1、比较相邻的两个元素，如果第一个比第二个大，就交换他们。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; len<span class="number">-1</span>-i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">array</span>[j] &gt; <span class="built_in">array</span>[j+<span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                Swap(&amp;<span class="built_in">array</span>[j], &amp;<span class="built_in">array</span>[j+<span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SelectSort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">int</span> min, index;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; len<span class="number">-1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        min = <span class="built_in">array</span>[i];</span><br><span class="line">        <span class="comment">/* code */</span></span><br><span class="line">        <span class="keyword">for</span> ( j = i+<span class="number">1</span>; j &lt; len; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (min &gt; <span class="built_in">array</span>[j])</span><br><span class="line">            &#123;</span><br><span class="line">                min = <span class="built_in">array</span>[j];</span><br><span class="line">                index = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Swap(&amp;<span class="built_in">array</span>[i], &amp;<span class="built_in">array</span>[index]);</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertSort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">1</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        temp = <span class="built_in">array</span>[i];</span><br><span class="line">        <span class="keyword">for</span> ( j = i<span class="number">-1</span>; j &gt;=<span class="number">0</span>; j--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">/* code */</span></span><br><span class="line">            <span class="keyword">if</span> (temp &lt; <span class="built_in">array</span>[j])&#123;</span><br><span class="line">                <span class="built_in">array</span>[j+<span class="number">1</span>] = <span class="built_in">array</span>[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">array</span>[j+<span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>海量数据处理问题</title>
+    <url>/2021/01/07/39a6906f.html</url>
+    <content><![CDATA[<h2 id="海量数据问题"><a href="#海量数据问题" class="headerlink" title="海量数据问题"></a>海量数据问题</h2><h3 id="海量日志数据，提取出某日访问百度次数最多的那个IP。"><a href="#海量日志数据，提取出某日访问百度次数最多的那个IP。" class="headerlink" title="海量日志数据，提取出某日访问百度次数最多的那个IP。"></a>海量日志数据，提取出某日访问百度次数最多的那个IP。</h3><p>首先是这一天，并且是访问百度的日志中的IP取出来，逐个写入到一个大文件中。注意到IP是32位的，最多有个2^32个IP。同样可以采用映射的方法，比如模1000，把整个大文件映射为1000个小文件，再找出每个小文中出现频率最大的IP（可以采用hash_map进行频率统计，然后再找出频率最大的几个）及相应的频率。然后再在这1000个最大的IP中，找出那个频率最大的IP，即为所求。</p>
+<a id="more"></a>
+
+<p>算法思想：分而治之+哈希</p>
+<p>1、IP地址最多有2^32=4G种取值情况，所以不能一次性直接都完全加载到内存中。</p>
+<p>2、考虑分而治之的思想，将IP地址进行hash(IP)%1024，把海量的数据分别存储到1024个文件中，这样，每个文件最有就含有4MB个IP地址。</p>
+<p>3、对于每一个小文件，可以进行构造一个key value的hash map，将IP作为key值，出现的次数作为value值，同时记录下当前出现次数最多的那个IP地址。</p>
+<p>4、可以得到1024个文件📃中出现次数最多的IP，再根据常规的排序算法得到总体上的出现次数最多的IP。</p>
+<h3 id="搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"><a href="#搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节" class="headerlink" title="搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"></a>搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节</h3><p>假设目前有一千万个记录（这些查询串的重复度比较高，虽然总数是1千万，但如果除去重复后，不超过3百万个。一个查询串的重复度越高，说明查询它的用户越多，也就是越热门。），请你统计最热门的10个查询串，要求使用的内存不能超过1G。</p>
+<p>算法思想：经典的topK问题。</p>
+<p>1、先对这批海量数据进行预处理，在O(n)的时间之内用hash表完成统计。</p>
+<p>2、借助堆这个数据结构，找出topk，时间复杂度为nlogK。借助堆这个数据结构，我们可以在log量级的时间内查找和调整移动。我们可以维护一个大顶堆，然后遍历这300万左右的数据，分别和根元素进行比对，最后得出前十个热门的查询串。</p>
+<h3 id="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"><a href="#有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词" class="headerlink" title="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"></a>有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词</h3><p>算法思想：分而治之+hash</p>
+<p>1、顺序读取文件，对于读取的每一个值，可以使用hash(x)%5000，将读取的词存储到5000个文件中，每个文件大概200k，如果还是有文件大于1m，可以按照这个方法继续往下分，直到可以直接放入内存中为止。</p>
+<p>2、对于每一个小文件，统计每个文件节点中出现的词以及相应的一个频率（tries树🌲或者hashMap都可以）。取出出现频率最大的一百个词（可以采用含有100个节点的最小堆），这样又可以得到5000个文件。最后一步，可以将这5000个文件进行归并过程了（类似于归并排序）。</p>
+<h3 id="在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。"><a href="#在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。" class="headerlink" title="在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。"></a>在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。</h3><p>方案1：可以采用2-bitmap进行，共需要内存</p>
+<h3 id="海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"><a href="#海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。" class="headerlink" title="海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"></a>海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。</h3><h3 id="腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"><a href="#腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？" class="headerlink" title="腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"></a>腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？</h3><p>使用bitmap，或者布隆过滤器。</p>
+<h3 id="10亿个域名如何判断，新来一个域名，如何判断在还是不在"><a href="#10亿个域名如何判断，新来一个域名，如何判断在还是不在" class="headerlink" title="10亿个域名如何判断，新来一个域名，如何判断在还是不在"></a>10亿个域名如何判断，新来一个域名，如何判断在还是不在</h3><p>可以使用布隆过滤器，判断不在就一定不在，判断在的话可能不在。</p>
+]]></content>
+      <categories>
+        <category>数据结构与算法</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>结构体对齐</title>
+    <url>/2021/01/06/6aac47f4.html</url>
+    <content><![CDATA[<h1 id="结构体对齐"><a href="#结构体对齐" class="headerlink" title="结构体对齐"></a>结构体对齐</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;结构体对齐一直是一个老生常谈的问题，我面试过就被问过几次，但是每一次都复习准备好好的，但是一到面试时候，总能被面试官问倒（卑微~）其实主要的原因就是自己没有准确的深刻的理解结构体对齐这个知识点，没有对其进行一个总结。</p>
+</blockquote>
+<h2 id="为什么需要结构体对齐"><a href="#为什么需要结构体对齐" class="headerlink" title="为什么需要结构体对齐"></a>为什么需要结构体对齐</h2><p>&ensp;&ensp;&ensp;&ensp;结构体需要对其的原因主要就是对CPU对内存访问效率优化的一个问题。假设是intel 32的CPU， 每个总线周期都是要从偶地址读取32位的内存数据。</p>
+<p>假设我们的CPU和总线都是64位的，每次可以从内存中获取8个字节（Byte）64位（bit）的数据，这8个字节就是对齐的，假设就是0<del>7，8</del>15类似这样，你不能从中间3<del>10这样取值。如果需要取值3</del>10之间的数据，就需要取两次，分别是0<del>7，再取8</del>15。所以CPU的取值效率就下降了。</p>
+<a id="more"></a>
+
+<h2 id="对齐的几个基本的原则"><a href="#对齐的几个基本的原则" class="headerlink" title="对齐的几个基本的原则"></a>对齐的几个基本的原则</h2><p>1、结构体变量的起始地址能够被其最宽的成员大小整除。</p>
+<p>2、结构体每个成员相对于起始地址的偏移能够被自身大小整除，如果不能则在前一个成员后面补充字节。</p>
+<p>3、结构体总的大小能够被最宽的成员大小整除，如果不能则是在后面进行一个补齐。</p>
+<p>结构体其实也是可以指定编译器对齐大小的，例如以下的代码</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack(1)</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> a;</span><br><span class="line">	<span class="keyword">int</span>  b;</span><br><span class="line">	<span class="keyword">char</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack()</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span> <span class="title">a</span>;</span></span><br></pre></td></tr></table></figure>
+<p>sizeof(a)的大小为5。</p>
+<h2 id="几种变形情况"><a href="#几种变形情况" class="headerlink" title="几种变形情况"></a>几种变形情况</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> a;</span><br><span class="line">	<span class="keyword">int</span>  b;</span><br><span class="line">	<span class="keyword">short</span> c;</span><br><span class="line">&#125;A1;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>变量a，自身按1字节对齐，</p>
+</blockquote>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.zhihu.com/question/27862634">https://www.zhihu.com/question/27862634</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90">https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90</a></p>
+]]></content>
+      <categories>
+        <category>C/C++</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>进程间通信</title>
+    <url>/2021/01/04/a9fd59ec.html</url>
+    <content><![CDATA[<blockquote>
+<p><strong>原子操作</strong>，即不可分割开的操作；该操作一定是在同一个cpu时间片中完成，这样即使线程被切换，多个线程也不会看到同一块内存中不完整的数据。</p>
+<p>线程同步的主要方式–线程锁 线程同步最常用的方法是使用<strong>锁</strong>(Lock)。锁是一种非强制机制，每一个线程访问数据或资源之前，首先试图获取(Acquireuytreewq)锁,并在访问结束之后释放(release)。在锁已经被占用时获取锁，线程会等待，直到该锁被释放。</p>
+<a id="more"></a>
+
+<p><strong>互斥锁</strong> 是在很多平台上都比较常用的一种锁。它属于sleep-waiting类型的锁。即当锁处于占用状态时，其他线程会挂起，当锁被释放时，所有等待的线程都将被唤醒，再次对锁进行竞争。在挂起与释放过程中，涉及用户态与内核态之间的context切换，而这种切换是比较消耗性能的。</p>
+<p><strong>自旋锁</strong> 与互斥锁有点类似，只是自旋锁被某线程占用时，其他线程不会进入睡眠(挂起)状态，而是一直运行（自旋/空转）直到锁被释放。由于不涉及用户态与内核态之间的切换，它的效率远远高于互斥锁。</p>
+<p>**信号量(Semaphore)**，有时被称为信号灯，是在多线程环境下使用的一种设施, 它负责协调各个线程, 以保证它们能够正确、合理的使用公共资源。</p>
+<p>信号量可以分为几类：</p>
+<ul>
+<li>二进制信号量(binary semaphore) / 二元信号量 ：只允许信号量取0或1值，，只有两种状态：占用与非占用，其同时只能被一个线程获取。</li>
+<li>整型信号量（integer semaphore)：信号量取值是整数，它可以被多个线程同时获得，直到信号量的值变为0。</li>
+<li>记录型信号量（record semaphore)：每个信号量s除一个整数值value（计数）外，还有一个等待队列List，其中是阻塞在该信号量的各个线程的标识。当信号量被释放一个，值被加一后，系统自动从等待队列中唤醒一个等待中的线程，让其获得信号量，同时信号量再减一。</li>
+</ul>
+<p>信号量通过一个计数器控制对共享资源的访问，信号量的值是一个非负整数，所有通过它的线程都会将该整数减一。如果计数器大于0，则访问被允许，计数器减1；如果为0，则访问被禁止，所有试图通过它的线程都将处于等待状态。</p>
+<p><strong>条件变量</strong> （Condition Variable） 作为一种同步手段类似于栅栏，允许线程以一种无竞争的方式等待某个条件的发生。当该条件没有发生时，线程会一直处于休眠状态。当被其它线程通知条件已经发生时，线程才会被唤醒从而继续向下执行。条件变量是比较底层的同步原语，直接使用的情况不多，往往用于实现高层之间的线程同步。使用条件变量的一个经典的例子就是线程池(Thread Pool)了。</p>
+</blockquote>
+<h1 id="共享内存"><a href="#共享内存" class="headerlink" title="共享内存"></a>共享内存</h1><blockquote>
+<p>共享内存允许两个或者多个进程共享一个给定的存储区，因为数据不需要再客户即和服务器之间复制，所以共享内存是最快的一种 I IPC。使用共享内存唯一的诀窍就是多个进程之间对一给定的存储区之间数据的同步存取问题。通常，信号量被用来实现对共享存储存取的同步。（记录锁也可以用于这种场合）。</p>
+<p>对于操作系统而言，在并行程序设计中难免会遇到数据同步和共享的问题，本文针对这个问题，以windows系统为例回顾一下资源同步的相关问题。</p>
+<p>要点如下：</p>
+<p>1.同步和数据共享数据征用</p>
+<p>2.同步原语 1.互斥和临界区 2.自旋锁 3.信号量 4.读写锁 5.屏障 6.原子操作与无锁代码</p>
+</blockquote>
+<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p>1、<a href="https://juejin.cn/post/6844903543527178248">https://juejin.cn/post/6844903543527178248</a></p>
+]]></content>
+      <categories>
+        <category>Unix环境高级编程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>信号signal</title>
+    <url>/2021/01/03/600903f8.html</url>
+    <content><![CDATA[<h1 id="信号机制"><a href="#信号机制" class="headerlink" title="信号机制"></a>信号机制</h1><blockquote>
+<p>信号：</p>
+<p>信号是一种软中断，信号提供了一种处理异步事件的方法。比如终端运行着一个程序，我们在设备输入一个ctrl+c中断停止的按键，那么我们实际上通过触发一个信号停止了一个程序。</p>
+<p>信号的处理：</p>
+<p>（1）可以直接将其忽略掉。大多数信号可以直接忽略掉但有两种信号却决不能被忽略，它们是SIGKILL和SIGSTOP信号。</p>
+<p>（2）捕捉信号，注册信号处理函数。</p>
+<p>（3）执行系统的默认动作。</p>
+<a id="more"></a>
+
+<p>进程创建：</p>
+<p>当一个进程调用fork函数的时候，其子进程会直接继承父进程的信号处理方式，因为子进程在开始复制了父进程的春初对象，所以信号捕捉函数的地址在子进程中是有意义的。</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>Unix环境高级编程</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>手撕代码</title>
+    <url>/2020/12/27/7a4494fd.html</url>
+    <content><![CDATA[<h1 id="面试常见的手撕代码题型"><a href="#面试常见的手撕代码题型" class="headerlink" title="面试常见的手撕代码题型"></a>面试常见的手撕代码题型</h1><p>所有代码都已经跑过，可以正常编译运行。</p>
+<a id="more"></a>
+
+<h2 id="经典排序"><a href="#经典排序" class="headerlink" title="经典排序"></a>经典排序</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 交换两个数据 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> temp;</span><br><span class="line">  temp = *a;</span><br><span class="line">  *a = *b;</span><br><span class="line">  *b = temp;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 冒牌排序算法 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">size_t</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">NULL</span> == arr)</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">  <span class="keyword">int</span> i=<span class="number">0</span>, j=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;len; i++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">for</span>(j=<span class="number">1</span>; j&lt;len-i<span class="number">-1</span>; j++)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span>(arr[j]&lt;arr[j<span class="number">-1</span>])</span><br><span class="line">        swap(arr[j], arr[j<span class="number">-1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line">   </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> arr[<span class="number">10</span>]=&#123;<span class="number">7</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">8</span>&#125;;</span><br><span class="line">  BubbleSort(arr);</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt; <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>]);i++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果：</p>
+<p>0 1 5 7 7 7 8 8 9</p>
+<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> temp;</span><br><span class="line">  temp = *a;</span><br><span class="line">  *a = *b;</span><br><span class="line">  *b = temp;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i, j, temp;</span><br><span class="line">  <span class="keyword">if</span>(left &gt; right)</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">/* temp存放的是基数 */</span></span><br><span class="line">  temp = arr[left];</span><br><span class="line">  i = left;</span><br><span class="line">  j = right;</span><br><span class="line">  <span class="keyword">while</span>(i != j)&#123;</span><br><span class="line">    <span class="comment">/* 顺序很重要，要从右边开始找 */</span></span><br><span class="line">    <span class="keyword">while</span>(arr[j] &gt;= temp &amp;&amp; i &lt; j)</span><br><span class="line">      j--;</span><br><span class="line">    <span class="comment">/* 再从左开始找 */</span></span><br><span class="line">    <span class="keyword">while</span>(arr[i] &lt;= temp &amp;&amp; i &lt; j)</span><br><span class="line">      i++;</span><br><span class="line">    <span class="keyword">if</span>(i &lt; j)</span><br><span class="line">      swap(&amp;arr[i], &amp;arr[j]);</span><br><span class="line">  &#125;</span><br><span class="line">  arr[left] = arr[i];</span><br><span class="line">  arr[i] = temp;</span><br><span class="line">  </span><br><span class="line">  quickSort(left, i<span class="number">-1</span>);</span><br><span class="line">  quickSort(i+<span class="number">1</span>, right);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="查找算法"><a href="#查找算法" class="headerlink" title="查找算法"></a>查找算法</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>二分查找也叫做折半查找，其优点是查找速度快，缺点是要求所要査找的数据必须是有序序列。</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> n, <span class="keyword">int</span> key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> hight = n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> mid, midVal;</span><br><span class="line">    <span class="keyword">while</span>(low &lt;= hight)&#123;</span><br><span class="line">        mid = (low+hight)/<span class="number">2</span>;</span><br><span class="line">        midVal = arr[mid];</span><br><span class="line">        <span class="keyword">if</span>(midVal &lt; key)</span><br><span class="line">            low = mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(midVal &gt; key)</span><br><span class="line">            hight = mid<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> key=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">8</span>]=&#123;<span class="number">-32</span>, <span class="number">12</span>, <span class="number">16</span>, <span class="number">24</span>, <span class="number">36</span>, <span class="number">45</span>, <span class="number">59</span>, <span class="number">98</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]); i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please input the data.\n&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;key);</span><br><span class="line">    <span class="keyword">int</span> ret = binarySearch(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]), key);</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">1</span> == ret)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;the key %d is exits.\n&quot;</span>, key);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;the key %d is not exits.\n&quot;</span>, key);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="链表操作"><a href="#链表操作" class="headerlink" title="链表操作"></a>链表操作</h2><h3 id="反转单链表"><a href="#反转单链表" class="headerlink" title="反转单链表"></a>反转单链表</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 定义链表结构 */</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">listNode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> value;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> _<span class="title">listNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;listNode;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 反转链表 */</span></span><br><span class="line"><span class="function">listNode *<span class="title">reverseList</span><span class="params">(listNode *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">NULL</span> == head || <span class="literal">NULL</span> == head-&gt;next)</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">  listNode *cur = head;</span><br><span class="line">  listNode *prev = <span class="literal">NULL</span>;</span><br><span class="line">  listNode *next = <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">while</span>(cur != <span class="literal">NULL</span>)&#123;</span><br><span class="line">    <span class="comment">/* 存放下一个节点 */</span></span><br><span class="line">    next = cur-&gt;next;</span><br><span class="line">    <span class="comment">/* 翻转头结点的下一个节点 */</span></span><br><span class="line">    cur-&gt;next = prev;</span><br><span class="line">    <span class="comment">/* 移动上一个节点 */</span></span><br><span class="line">    prev = cur;</span><br><span class="line">    <span class="comment">/* 更新当前节点 */</span></span><br><span class="line">    cur = next;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> prev；</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> arr[]=&#123;<span class="number">7</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    quickSort(arr, <span class="number">0</span>, <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>])); </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>]); ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/* code */</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="number">0</span>==i%<span class="number">16</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h3 id="判断链表是否有环"><a href="#判断链表是否有环" class="headerlink" title="判断链表是否有环"></a>判断链表是否有环</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 判断链表是否有环 */</span></span><br><span class="line"><span class="function">linkNode *<span class="title">isCircle</span><span class="params">(linkNode *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    assert(head != <span class="literal">NULL</span>);</span><br><span class="line">    linkNode *slow = head-&gt;next;               <span class="comment">/* 慢指针 */</span></span><br><span class="line">    linkNode *fast = head-&gt;next-&gt;next;         <span class="comment">/* 快指针 */</span></span><br><span class="line">    <span class="keyword">while</span>(fast != <span class="literal">NULL</span> &amp;&amp; fast-&gt;next != <span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(slow == fast)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        slow = slow-&gt;next;</span><br><span class="line">        fast = fast-&gt;next-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(fast == <span class="literal">NULL</span> || fast-&gt;next == <span class="literal">NULL</span>)</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">NULL</span>;   <span class="comment">/* 无环 */</span></span><br><span class="line">     <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> slow;    <span class="comment">/* 有环 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><h3 id="实现memcpy函数"><a href="#实现memcpy函数" class="headerlink" title="实现memcpy函数"></a>实现memcpy函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 不考虑内存重叠的情况 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">myMemcpy</span><span class="params">(<span class="keyword">void</span> *dest, <span class="keyword">const</span> <span class="keyword">void</span> *src, <span class="keyword">size_t</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">NULL</span> == dest||<span class="literal">NULL</span> == src)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">char</span> *d = (<span class="keyword">char</span> *)dest;</span><br><span class="line">  <span class="keyword">char</span> *s = (<span class="keyword">char</span> *)src;</span><br><span class="line">  <span class="keyword">while</span>(n--)</span><br><span class="line">    *d++ = *s++;</span><br><span class="line">  <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 优化版本按照CPU位宽度进行拷贝优化 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span>  *<span class="title">myMemcpy</span><span class="params">(<span class="keyword">void</span> *dest, <span class="keyword">const</span> <span class="keyword">void</span> *src, <span class="keyword">size_t</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> nchucks = num/<span class="keyword">sizeof</span>(dest);  <span class="comment">/* 按照CPU的位宽进行拷贝 */</span></span><br><span class="line">  <span class="keyword">int</span> slice = num%/<span class="keyword">sizeof</span>(dest);   <span class="comment">/* 剩余的字节数按照一个一个字节进行拷贝 */</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">long</span> *s = (<span class="keyword">unsigned</span> <span class="keyword">long</span> *)src;</span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">long</span> *d = (<span class="keyword">unsigned</span> <span class="keyword">long</span> *)dest;</span><br><span class="line">   </span><br><span class="line">  <span class="keyword">while</span>(nchucks--)</span><br><span class="line">    *d++ = *s++;</span><br><span class="line">  <span class="keyword">while</span>(slice--)</span><br><span class="line">    *((<span class="keyword">char</span>*)d++) = *((<span class="keyword">char</span>*)s++);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 考虑内存重叠的情况 */</span></span><br></pre></td></tr></table></figure>
+
+
+<h3 id="实现strstr函数"><a href="#实现strstr函数" class="headerlink" title="实现strstr函数"></a>实现strstr函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">myStrstr</span><span class="params">()</span></span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="实现strlen函数"><a href="#实现strlen函数" class="headerlink" title="实现strlen函数"></a>实现strlen函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myStrlen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *arr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  assert(arr);</span><br><span class="line">  <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(<span class="string">&#x27;\0&#x27;</span> != *arr++)</span><br><span class="line">    count++;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="实现strcpy函数"><a href="#实现strcpy函数" class="headerlink" title="实现strcpy函数"></a>实现strcpy函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">myStrcpy</span><span class="params">(<span class="keyword">char</span> *dest, <span class="keyword">const</span> <span class="keyword">char</span> *src)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  assert(dest);</span><br><span class="line">  assert(src);</span><br><span class="line">  <span class="keyword">char</span> *d = dest;</span><br><span class="line">  <span class="keyword">char</span> *s = src;</span><br><span class="line">  <span class="keyword">while</span>(<span class="string">&#x27;\0&#x27;</span> != *s)</span><br><span class="line">    *d++ = *s++;</span><br><span class="line">  <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>1、<a href="https://blog.csdn.net/weixin_43496874/article/details/100868367?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control">https://blog.csdn.net/weixin_43496874/article/details/100868367?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control</a></p>
+<p>2、<a href="http://c.biancheng.net/cpp/html/2744.html">http://c.biancheng.net/cpp/html/2744.html</a></p>
+]]></content>
+      <categories>
+        <category>面试宝典</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>docker</title>
+    <url>/2020/12/20/f255ffad.html</url>
+    <content><![CDATA[<p>Docker 类似一个虚拟机。</p>
+<p>在docker中有几个基本的概念。</p>
+<p>1、镜像：类似于平时使用的iso或者image镜像文件。</p>
+<p>2、容器：容器其实就会类似于虚拟机</p>
+<p>3、tar文件：类似于vmdk文件，可以直接打个包在别的地方直接run运行。</p>
+<p>4、docker file。docker 的一些配置</p>
+<p>5、仓库：存放有很多已经打包好的镜像，MySQL镜像、ngnix镜像等。</p>
+<a id="more"></a>
+
+<img src="/images/image-20201220085110478.png" alt="image-20201220085110478" style="zoom:33%;">
+
+<p>常用的操作命令：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1、直接从远程仓库下载mysql镜像</span></span><br><span class="line">docker search mysql <span class="comment"># 查找mysql镜像</span></span><br><span class="line">docker pull mysql   <span class="comment"># 下载mysql镜像</span></span><br><span class="line"><span class="comment"># 等价于命令docker pull mysql:latest,不指定版本会直接默认下载最新的版本镜像。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2、查看本地的镜像</span></span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3、运行容器</span></span><br><span class="line">docker run -d 3307:3306 mysql</span><br><span class="line"><span class="comment"># -d 指定后台运行不阻塞当前shell窗口</span></span><br><span class="line"><span class="comment"># -p 指定内外部端口映射 外部:内部</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4、查看正在运行的容器，查看活跃的容器。</span></span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5、进入容器</span></span><br><span class="line">docker <span class="built_in">exec</span> -it id bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6、启动停止容器</span></span><br><span class="line">docker stop &lt;容器ID&gt;</span><br><span class="line">docker restart &lt;容器ID&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 7、删除docker实例</span></span><br><span class="line">docker rm -f 实例ID</span><br><span class="line"></span><br><span class="line"><span class="comment"># 8、查询mysql镜像</span></span><br><span class="line">docker search mysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 9、保存容器镜像</span></span><br><span class="line">docker commit 实例ID 新的名字</span><br></pre></td></tr></table></figure>
+<img src="/images/image-20201220090133527.png" alt="image-20201220085110478" style="zoom:33%;">
+
+]]></content>
   </entry>
   <entry>
     <title>IO多路复用</title>
@@ -235,203 +381,6 @@
       </categories>
   </entry>
   <entry>
-    <title>Linux非阻塞模式下的EAGIN异常</title>
-    <url>/2021/02/19/6f167ca3.html</url>
-    <content><![CDATA[<p>之前在写一个并发聊天室时候在多个客户端连续发送数据的时候遇到EAGIN错误，如图。</p>
-<img src="/images/image-20210218231840685.png" alt="image-20210218231840685" style="zoom:20%;">
-
-<p>Linux下，管道、FIFO以及一些设备（通常是终端和网络）一般有以下几种性质。</p>
-<a id="more"></a>
-
-<blockquote>
-<p>1、一次read操作返回的数据可能会少于所要求的数据，及时此时没有到达文件尾部也可能会出现这种情况。对于这种情况，我们不认为是错误，而是视为一种异常，应该继续对此设备进行读取。</p>
-<p>2、一次write或send操作的返回值也可能会少于指定的输出的字节数。通常这可能是由于某一种因素引起的，比如在处理网络数据的时，内核输出的缓冲区满，此时写不进数据。我们也通常不认为这是一种错误，应当继续将余下的数据进行写入。（通常遇到这种情况的场景是非阻塞描述符，或者捕捉到某一种信号的时候，才会发生中途返回。）</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Unix环境高级编程</category>
-      </categories>
-      <tags>
-        <tag>Unix</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux常用命令</title>
-    <url>/2020/02/29/d0edc1ed.html</url>
-    <content><![CDATA[<h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a>linux下常用的一下命令</h1><p>工作中我们会经常遇到各种各样的问题，遇到我们解决不了的我们会查找相关的资料，下面就是我平时工作中遇到的一些场景，记录的一些关于linux下操作的相关命令，希望对大家有用，会不定时更新~</p>
-<a id="more"></a>
-
-<h2 id="防火墙相关的命令"><a href="#防火墙相关的命令" class="headerlink" title="防火墙相关的命令"></a>防火墙相关的命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=4400-4600/udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone <span class="comment"># 作用域 </span></span><br><span class="line">--add-port=80/tcp <span class="comment"># 添加端口，格式为：端口/通讯协议 </span></span><br><span class="line">--permanent <span class="comment"># 永久生效</span></span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --remove-port=80/tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state <span class="comment"># 查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span></span><br></pre></td></tr></table></figure>
-<h2 id="yum安装软件包"><a href="#yum安装软件包" class="headerlink" title="yum安装软件包"></a>yum安装软件包</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum install epel-release <span class="comment"># 安装&quot;epel-release&quot;的软件包</span></span><br><span class="line">yum install tcpreplay</span><br></pre></td></tr></table></figure>
-<h2 id="ps命令"><a href="#ps命令" class="headerlink" title="ps命令"></a>ps命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ps -eLf	 <span class="comment">#查看进程线程情况</span></span><br></pre></td></tr></table></figure>
-<h2 id="压缩、解压命令"><a href="#压缩、解压命令" class="headerlink" title="压缩、解压命令"></a>压缩、解压命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">压缩：</span><br><span class="line">tar -zcvf /tmp/etc.tar.gz  /etc      <span class="comment">#将/etc下的所有文件及目录打包到/etc，并使用gz压缩  </span></span><br><span class="line">tar -cvf /home/abc.tar /home/abc     <span class="comment">#只打包，不压缩</span></span><br><span class="line">tar -zcvf /home/abc.tar.gz /home/abc <span class="comment">#打包，并用gzip压缩</span></span><br><span class="line"></span><br><span class="line">解压：</span><br><span class="line">tar -zxvf /tmp/etc.tar.gz</span><br></pre></td></tr></table></figure>
-<h2 id="服务的锁定与取消"><a href="#服务的锁定与取消" class="headerlink" title="服务的锁定与取消"></a>服务的锁定与取消</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">systemctl mask firewalld   <span class="comment">#需要锁定该服务时执行</span></span><br><span class="line">systemctl unmask firewalld <span class="comment">#实现取消服务的锁定</span></span><br></pre></td></tr></table></figure>
-<h2 id="路由配置相关"><a href="#路由配置相关" class="headerlink" title="路由配置相关"></a>路由配置相关</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#添加IPV6地址</span></span><br><span class="line">ip -6 addr add &lt;ipv6address&gt;/&lt;prefixlength&gt; dev &lt;interface&gt;</span><br><span class="line">ip -6 addr add 2001:0db8:0:f101::1/64 dev eth0</span><br><span class="line"></span><br><span class="line">ifconfig &lt;interface&gt; inet6 add &lt;ipv6address&gt;/&lt;prefixlength&gt;</span><br><span class="line">ifconfig eth0 inet6 add 2001:0db8:0:f101::1/64</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加默认路由</span></span><br><span class="line">ip -6 route add &lt;ipv6network&gt;/&lt;prefixlength&gt; via &lt;ipv6address&gt;</span><br><span class="line">ip -6 route add default via 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">route -A inet6 add &lt;ipv6network&gt;/&lt;prefixlength&gt; gw</span><br><span class="line">route -A inet6 add default gw 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看路由</span></span><br><span class="line">ip -6 route show</span><br><span class="line">route -A <span class="string">&#x27;inet6&#x27;</span></span><br><span class="line">route -6</span><br><span class="line"></span><br><span class="line"><span class="comment">#windows查看路由表</span></span><br><span class="line">route <span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查看邻居缓存</span></span><br><span class="line">ip -6 neighbor show</span><br><span class="line"></span><br><span class="line"><span class="comment">#windows查看邻居缓存</span></span><br><span class="line">netsh interface ipv6 show neighbors</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看smtp服务器</span></span><br><span class="line">ping smtp.sohu.com </span><br><span class="line">ping smtp.qq.com</span><br></pre></td></tr></table></figure>
-<h2 id="更新内核命令"><a href="#更新内核命令" class="headerlink" title="更新内核命令"></a>更新内核命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum update kernel -y</span><br></pre></td></tr></table></figure>
-<h2 id="大文件重定向有效信息"><a href="#大文件重定向有效信息" class="headerlink" title="大文件重定向有效信息"></a>大文件重定向有效信息</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 重定向dmesg.txt关键字Call Trace的前后2000行到nn.txt：</span></span><br><span class="line">grep -C 2000 ‘Call Trace’ dmesg.txt &gt;nn.txt</span><br></pre></td></tr></table></figure>
-<h2 id="Shell递归删除指定字符串文件或者目录"><a href="#Shell递归删除指定字符串文件或者目录" class="headerlink" title="Shell递归删除指定字符串文件或者目录"></a>Shell递归删除指定字符串文件或者目录</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">文件：find . -name <span class="string">&quot;*.rej&quot;</span> | xargs rm -rf</span><br><span class="line">目录：find . -<span class="built_in">type</span> d -name <span class="string">&quot;*.rej&quot;</span> | xargs rm -rf</span><br></pre></td></tr></table></figure>
-<h2 id="文件夹建立软链接（用绝对地址"><a href="#文件夹建立软链接（用绝对地址" class="headerlink" title="文件夹建立软链接（用绝对地址)"></a>文件夹建立软链接（用绝对地址)</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ln -s 源地址 目的地址   <span class="comment">#比如我把linux文件系统rootfs_dir软链接到/home/jyg/目录下</span></span><br><span class="line">ln -s /opt/linux/rootfs_dir  /home/jyg/rootfs_dir <span class="comment">#就可以了</span></span><br></pre></td></tr></table></figure>
-<h2 id="大数据报文件分割"><a href="#大数据报文件分割" class="headerlink" title="大数据报文件分割"></a>大数据报文件分割</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">windows下 d:&gt;wireshark&gt;editcap -C 1000000(文件大小) 待分割文件路径 新文件名称</span><br><span class="line">linux 可使用split命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>Raft算法</title>
-    <url>/2021/01/07/1df31392.html</url>
-    <content><![CDATA[<h1 id="Raft算法"><a href="#Raft算法" class="headerlink" title="Raft算法"></a>Raft算法</h1><h2 id="什么是Raft算法"><a href="#什么是Raft算法" class="headerlink" title="什么是Raft算法"></a>什么是Raft算法</h2><p>Raft算法是Multi-Paxos算法，</p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>docker</title>
-    <url>/2020/12/20/f255ffad.html</url>
-    <content><![CDATA[<p>Docker 类似一个虚拟机。</p>
-<p>在docker中有几个基本的概念。</p>
-<p>1、镜像：类似于平时使用的iso或者image镜像文件。</p>
-<p>2、容器：容器其实就会类似于虚拟机</p>
-<p>3、tar文件：类似于vmdk文件，可以直接打个包在别的地方直接run运行。</p>
-<p>4、docker file。docker 的一些配置</p>
-<p>5、仓库：存放有很多已经打包好的镜像，MySQL镜像、ngnix镜像等。</p>
-<a id="more"></a>
-
-<img src="/images/image-20201220085110478.png" alt="image-20201220085110478" style="zoom:33%;">
-
-<p>常用的操作命令：</p>
-<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1、直接从远程仓库下载mysql镜像</span></span><br><span class="line">docker search mysql <span class="comment"># 查找mysql镜像</span></span><br><span class="line">docker pull mysql   <span class="comment"># 下载mysql镜像</span></span><br><span class="line"><span class="comment"># 等价于命令docker pull mysql:latest,不指定版本会直接默认下载最新的版本镜像。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 2、查看本地的镜像</span></span><br><span class="line">docker images</span><br><span class="line"></span><br><span class="line"><span class="comment"># 3、运行容器</span></span><br><span class="line">docker run -d 3307:3306 mysql</span><br><span class="line"><span class="comment"># -d 指定后台运行不阻塞当前shell窗口</span></span><br><span class="line"><span class="comment"># -p 指定内外部端口映射 外部:内部</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 4、查看正在运行的容器，查看活跃的容器。</span></span><br><span class="line">docker ps</span><br><span class="line"></span><br><span class="line"><span class="comment"># 5、进入容器</span></span><br><span class="line">docker <span class="built_in">exec</span> -it id bash</span><br><span class="line"></span><br><span class="line"><span class="comment"># 6、启动停止容器</span></span><br><span class="line">docker stop &lt;容器ID&gt;</span><br><span class="line">docker restart &lt;容器ID&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 7、删除docker实例</span></span><br><span class="line">docker rm -f 实例ID</span><br><span class="line"></span><br><span class="line"><span class="comment"># 8、查询mysql镜像</span></span><br><span class="line">docker search mysql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 9、保存容器镜像</span></span><br><span class="line">docker commit 实例ID 新的名字</span><br></pre></td></tr></table></figure>
-<img src="/images/image-20201220090133527.png" alt="image-20201220085110478" style="zoom:33%;">
-
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2020/02/17/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<a id="more"></a>
-
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>信号signal</title>
-    <url>/2021/01/03/600903f8.html</url>
-    <content><![CDATA[<h1 id="信号机制"><a href="#信号机制" class="headerlink" title="信号机制"></a>信号机制</h1><blockquote>
-<p>信号：</p>
-<p>信号是一种软中断，信号提供了一种处理异步事件的方法。比如终端运行着一个程序，我们在设备输入一个ctrl+c中断停止的按键，那么我们实际上通过触发一个信号停止了一个程序。</p>
-<p>信号的处理：</p>
-<p>（1）可以直接将其忽略掉。大多数信号可以直接忽略掉但有两种信号却决不能被忽略，它们是SIGKILL和SIGSTOP信号。</p>
-<p>（2）捕捉信号，注册信号处理函数。</p>
-<p>（3）执行系统的默认动作。</p>
-<a id="more"></a>
-
-<p>进程创建：</p>
-<p>当一个进程调用fork函数的时候，其子进程会直接继承父进程的信号处理方式，因为子进程在开始复制了父进程的春初对象，所以信号捕捉函数的地址在子进程中是有意义的。</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>Unix环境高级编程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>写在前面</title>
-    <url>/2020/10/14/ca8bfdf3.html</url>
-    <content><![CDATA[<p>初衷</p>
-<p>你喜欢的人在努力，你却在想怎么说我爱你</p>
-<a id="more"></a>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>排序算法</title>
-    <url>/2021/01/07/Infinity.html</url>
-    <content><![CDATA[<h2 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h2><p>十大经典排序算法为：冒泡，选择，插入、希尔、归并、快速、堆、计数、桶、基数</p>
-<a id="more"></a>
-
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> a[] = &#123;<span class="number">5</span>,<span class="number">4</span>,<span class="number">9</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">6</span>,<span class="number">0</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>&#125;;</span><br><span class="line">    prin_array(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>])); </span><br><span class="line">    <span class="keyword">int</span> len = <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]);</span><br><span class="line">    <span class="comment">// BubbleSort(a, sizeof(a)/sizeof(a[0]));</span></span><br><span class="line">    SelectSort(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]));</span><br><span class="line">  	prin_array(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]));</span><br><span class="line">  </span><br><span class="line">  	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>1、比较相邻的两个元素，如果第一个比第二个大，就交换他们。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span> (j = <span class="number">0</span>; j &lt; len<span class="number">-1</span>-i; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="built_in">array</span>[j] &gt; <span class="built_in">array</span>[j+<span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                Swap(&amp;<span class="built_in">array</span>[j], &amp;<span class="built_in">array</span>[j+<span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">SelectSort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">int</span> min, index;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">0</span>; i &lt; len<span class="number">-1</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        min = <span class="built_in">array</span>[i];</span><br><span class="line">        <span class="comment">/* code */</span></span><br><span class="line">        <span class="keyword">for</span> ( j = i+<span class="number">1</span>; j &lt; len; j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span> (min &gt; <span class="built_in">array</span>[j])</span><br><span class="line">            &#123;</span><br><span class="line">                min = <span class="built_in">array</span>[j];</span><br><span class="line">                index = j;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        Swap(&amp;<span class="built_in">array</span>[i], &amp;<span class="built_in">array</span>[index]);</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertSort</span><span class="params">(<span class="keyword">int</span> <span class="built_in">array</span>[], <span class="keyword">int</span> len)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> i, j;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">for</span> ( i = <span class="number">1</span>; i &lt; len; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        temp = <span class="built_in">array</span>[i];</span><br><span class="line">        <span class="keyword">for</span> ( j = i<span class="number">-1</span>; j &gt;=<span class="number">0</span>; j--)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">/* code */</span></span><br><span class="line">            <span class="keyword">if</span> (temp &lt; <span class="built_in">array</span>[j])&#123;</span><br><span class="line">                <span class="built_in">array</span>[j+<span class="number">1</span>] = <span class="built_in">array</span>[j];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">array</span>[j+<span class="number">1</span>] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>结构体对齐</title>
-    <url>/2021/01/06/6aac47f4.html</url>
-    <content><![CDATA[<h1 id="结构体对齐"><a href="#结构体对齐" class="headerlink" title="结构体对齐"></a>结构体对齐</h1><h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;结构体对齐一直是一个老生常谈的问题，我面试过就被问过几次，但是每一次都复习准备好好的，但是一到面试时候，总能被面试官问倒（卑微~）其实主要的原因就是自己没有准确的深刻的理解结构体对齐这个知识点，没有对其进行一个总结。</p>
-</blockquote>
-<h2 id="为什么需要结构体对齐"><a href="#为什么需要结构体对齐" class="headerlink" title="为什么需要结构体对齐"></a>为什么需要结构体对齐</h2><p>&ensp;&ensp;&ensp;&ensp;结构体需要对其的原因主要就是对CPU对内存访问效率优化的一个问题。假设是intel 32的CPU， 每个总线周期都是要从偶地址读取32位的内存数据。</p>
-<p>假设我们的CPU和总线都是64位的，每次可以从内存中获取8个字节（Byte）64位（bit）的数据，这8个字节就是对齐的，假设就是0<del>7，8</del>15类似这样，你不能从中间3<del>10这样取值。如果需要取值3</del>10之间的数据，就需要取两次，分别是0<del>7，再取8</del>15。所以CPU的取值效率就下降了。</p>
-<a id="more"></a>
-
-<h2 id="对齐的几个基本的原则"><a href="#对齐的几个基本的原则" class="headerlink" title="对齐的几个基本的原则"></a>对齐的几个基本的原则</h2><p>1、结构体变量的起始地址能够被其最宽的成员大小整除。</p>
-<p>2、结构体每个成员相对于起始地址的偏移能够被自身大小整除，如果不能则在前一个成员后面补充字节。</p>
-<p>3、结构体总的大小能够被最宽的成员大小整除，如果不能则是在后面进行一个补齐。</p>
-<p>结构体其实也是可以指定编译器对齐大小的，例如以下的代码</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack(1)</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> a;</span><br><span class="line">	<span class="keyword">int</span>  b;</span><br><span class="line">	<span class="keyword">char</span> c;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack()</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span> <span class="title">a</span>;</span></span><br></pre></td></tr></table></figure>
-<p>sizeof(a)的大小为5。</p>
-<h2 id="几种变形情况"><a href="#几种变形情况" class="headerlink" title="几种变形情况"></a>几种变形情况</h2><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span>&#123;</span></span><br><span class="line">	<span class="keyword">char</span> a;</span><br><span class="line">	<span class="keyword">int</span>  b;</span><br><span class="line">	<span class="keyword">short</span> c;</span><br><span class="line">&#125;A1;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>变量a，自身按1字节对齐，</p>
-</blockquote>
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.zhihu.com/question/27862634">https://www.zhihu.com/question/27862634</a></p>
-<p><a href="https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90">https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90</a></p>
-]]></content>
-      <categories>
-        <category>C/C++</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>海量数据处理问题</title>
-    <url>/2021/01/07/39a6906f.html</url>
-    <content><![CDATA[<h2 id="海量数据问题"><a href="#海量数据问题" class="headerlink" title="海量数据问题"></a>海量数据问题</h2><h3 id="海量日志数据，提取出某日访问百度次数最多的那个IP。"><a href="#海量日志数据，提取出某日访问百度次数最多的那个IP。" class="headerlink" title="海量日志数据，提取出某日访问百度次数最多的那个IP。"></a>海量日志数据，提取出某日访问百度次数最多的那个IP。</h3><p>首先是这一天，并且是访问百度的日志中的IP取出来，逐个写入到一个大文件中。注意到IP是32位的，最多有个2^32个IP。同样可以采用映射的方法，比如模1000，把整个大文件映射为1000个小文件，再找出每个小文中出现频率最大的IP（可以采用hash_map进行频率统计，然后再找出频率最大的几个）及相应的频率。然后再在这1000个最大的IP中，找出那个频率最大的IP，即为所求。</p>
-<a id="more"></a>
-
-<p>算法思想：分而治之+哈希</p>
-<p>1、IP地址最多有2^32=4G种取值情况，所以不能一次性直接都完全加载到内存中。</p>
-<p>2、考虑分而治之的思想，将IP地址进行hash(IP)%1024，把海量的数据分别存储到1024个文件中，这样，每个文件最有就含有4MB个IP地址。</p>
-<p>3、对于每一个小文件，可以进行构造一个key value的hash map，将IP作为key值，出现的次数作为value值，同时记录下当前出现次数最多的那个IP地址。</p>
-<p>4、可以得到1024个文件📃中出现次数最多的IP，再根据常规的排序算法得到总体上的出现次数最多的IP。</p>
-<h3 id="搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"><a href="#搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节" class="headerlink" title="搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节"></a>搜索引擎会通过日志文件把用户每次检索使用的所有检索串都记录下来，每个查询串的长度为1-255字节</h3><p>假设目前有一千万个记录（这些查询串的重复度比较高，虽然总数是1千万，但如果除去重复后，不超过3百万个。一个查询串的重复度越高，说明查询它的用户越多，也就是越热门。），请你统计最热门的10个查询串，要求使用的内存不能超过1G。</p>
-<p>算法思想：经典的topK问题。</p>
-<p>1、先对这批海量数据进行预处理，在O(n)的时间之内用hash表完成统计。</p>
-<p>2、借助堆这个数据结构，找出topk，时间复杂度为nlogK。借助堆这个数据结构，我们可以在log量级的时间内查找和调整移动。我们可以维护一个大顶堆，然后遍历这300万左右的数据，分别和根元素进行比对，最后得出前十个热门的查询串。</p>
-<h3 id="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"><a href="#有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词" class="headerlink" title="有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词"></a>有一个1G大小的一个文件，里面每一行是一个词，词的大小不超过16字节，内存限制大小是1M。返回频数最高的100个词</h3><p>算法思想：分而治之+hash</p>
-<p>1、顺序读取文件，对于读取的每一个值，可以使用hash(x)%5000，将读取的词存储到5000个文件中，每个文件大概200k，如果还是有文件大于1m，可以按照这个方法继续往下分，直到可以直接放入内存中为止。</p>
-<p>2、对于每一个小文件，统计每个文件节点中出现的词以及相应的一个频率（tries树🌲或者hashMap都可以）。取出出现频率最大的一百个词（可以采用含有100个节点的最小堆），这样又可以得到5000个文件。最后一步，可以将这5000个文件进行归并过程了（类似于归并排序）。</p>
-<h3 id="在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。"><a href="#在2-5亿个整数中找出不重复的整数，内存不足以容纳这2-5亿个整数。" class="headerlink" title="在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。"></a>在2.5亿个整数中找出不重复的整数，内存不足以容纳这2.5亿个整数。</h3><p>方案1：可以采用2-bitmap进行，共需要内存</p>
-<h3 id="海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"><a href="#海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。" class="headerlink" title="海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。"></a>海量数据分布在100台电脑中，想个办法高效统计出这批数据的TOP10。</h3><h3 id="腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"><a href="#腾讯面试题：给40亿个不重复的unsigned-int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？" class="headerlink" title="腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？"></a>腾讯面试题：给40亿个不重复的unsigned int的整数，没排过序的，然后再给一个数，如何快速判断这个数是否在那40亿个数当中？</h3><p>使用bitmap，或者布隆过滤器。</p>
-<h3 id="10亿个域名如何判断，新来一个域名，如何判断在还是不在"><a href="#10亿个域名如何判断，新来一个域名，如何判断在还是不在" class="headerlink" title="10亿个域名如何判断，新来一个域名，如何判断在还是不在"></a>10亿个域名如何判断，新来一个域名，如何判断在还是不在</h3><p>可以使用布隆过滤器，判断不在就一定不在，判断在的话可能不在。</p>
-]]></content>
-      <categories>
-        <category>数据结构与算法</category>
-      </categories>
-  </entry>
-  <entry>
     <title>编写Makefile</title>
     <url>/2020/10/06/dfbf19f0.html</url>
     <content><![CDATA[<h1 id="编写Makefile"><a href="#编写Makefile" class="headerlink" title="编写Makefile"></a>编写Makefile</h1><hr>
@@ -458,7 +407,7 @@
 <h2 id="二、Makefile通用模板"><a href="#二、Makefile通用模板" class="headerlink" title="二、Makefile通用模板"></a>二、Makefile通用模板</h2><figure class="highlight makefile"><table><tr><td class="code"><pre><span class="line">TARGET=server</span><br><span class="line">CC=g++</span><br><span class="line">CFLAG=-c -g -static</span><br><span class="line"><span class="comment">#所有的.c文件</span></span><br><span class="line">SRCS:=<span class="variable">$(<span class="built_in">wildcard</span> ../*.c)</span></span><br><span class="line">FILTERS=../hello.c</span><br><span class="line"><span class="comment">#从SRCS中除了hello.c文件 filter函数可以选择满足条件的</span></span><br><span class="line">SRCS:=<span class="variable">$(<span class="built_in">filter</span>-out <span class="variable">$(FILTERS)</span>, <span class="variable">$(SRCS)</span>)</span></span><br><span class="line">OBJS:=<span class="variable">$(<span class="built_in">patsubst</span> %.c, %.o, <span class="variable">$(SRCS)</span>)</span></span><br><span class="line">CURRENT_PATH=<span class="variable">$(PWD)</span></span><br><span class="line">CPPFLAGS= -I../<span class="keyword">include</span> -I../util</span><br><span class="line">LIBS_PATH=-L../lib64</span><br><span class="line">LIBS=-lmylib</span><br><span class="line"></span><br><span class="line"><span class="comment">#判断是哪个系统32bit编译还是在64bit编译。</span></span><br><span class="line">ARCH:=<span class="variable">$(<span class="built_in">shell</span> uname -m)</span></span><br><span class="line"><span class="keyword">ifeq</span> (<span class="variable">$(ARCH)</span>, x86_64)</span><br><span class="line">VERSION:=X86_64</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">VERSION:=i686</span><br><span class="line"><span class="keyword">endif</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$(TARGET)</span>:<span class="variable">$(OBJS)</span></span><br><span class="line">        <span class="variable">$(CC)</span> <span class="variable">$(DEBUG)</span> <span class="variable">$(SRCS)</span> <span class="variable">$(LIBS_PATH)</span> <span class="variable">$(LIBS)</span> <span class="variable">$(CPPFLAGS)</span> -o <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$(OBJS)</span>:%.o:%.c</span><br><span class="line">        <span class="variable">$(CC)</span> <span class="variable">$(CFLAG)</span> <span class="variable">$&lt;</span> -o <span class="variable">$@</span></span><br><span class="line"></span><br><span class="line"><span class="meta"><span class="meta-keyword">.PHONY</span>:clean</span></span><br><span class="line"><span class="section">clean:</span></span><br><span class="line">        rm -rf *~ *.bak <span class="variable">$(TARGET)</span></span><br><span class="line"></span><br><span class="line">【顶层Makefile编写】</span><br><span class="line"><span class="section">all: all_client all_server</span></span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line"><span class="section">all_client:</span></span><br><span class="line">    <span class="variable">$(MAKE)</span> -C client</span><br><span class="line"><span class="section">all_server:</span></span><br><span class="line">    <span class="variable">$(MAKE)</span> -C server</span><br><span class="line"></span><br><span class="line"><span class="section">clean: clean_client clean_server</span></span><br><span class="line">    rm -rf *~ *.bak</span><br><span class="line"><span class="section">clean_client:</span></span><br><span class="line">    <span class="variable">$(MAKE)</span> -C client clean</span><br><span class="line"><span class="section">clean_server:</span></span><br><span class="line">    <span class="variable">$(MAKE)</span> -C server clean</span><br></pre></td></tr></table></figure>
 <hr>
 <p>感谢您花费时间阅读这篇文章，书中有错误的地方或者有什么建议都可以留言，或者通过邮件祝您在这里记录、阅读、分享愉快！</p>
-<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#112;&#x79;&#117;&#97;&#x6e;&#50;&#49;&#x40;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;">&#108;&#112;&#x79;&#117;&#97;&#x6e;&#50;&#49;&#x40;&#x6f;&#117;&#x74;&#108;&#x6f;&#111;&#107;&#46;&#99;&#111;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
+<p>作&ensp;者:&ensp;lpyuan<br>Email:&ensp;<a href="mailto:&#108;&#112;&#x79;&#x75;&#x61;&#110;&#x32;&#x31;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;">&#108;&#112;&#x79;&#x75;&#x61;&#110;&#x32;&#x31;&#x40;&#x6f;&#x75;&#116;&#x6c;&#111;&#x6f;&#x6b;&#x2e;&#x63;&#111;&#x6d;</a><br>2020年02月28日 02:52:00   </p>
 ]]></content>
       <categories>
         <category>C/C++</category>
@@ -466,96 +415,6 @@
       <tags>
         <tag>Testing</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>进程间通信</title>
-    <url>/2021/01/04/a9fd59ec.html</url>
-    <content><![CDATA[<blockquote>
-<p><strong>原子操作</strong>，即不可分割开的操作；该操作一定是在同一个cpu时间片中完成，这样即使线程被切换，多个线程也不会看到同一块内存中不完整的数据。</p>
-<p>线程同步的主要方式–线程锁 线程同步最常用的方法是使用<strong>锁</strong>(Lock)。锁是一种非强制机制，每一个线程访问数据或资源之前，首先试图获取(Acquireuytreewq)锁,并在访问结束之后释放(release)。在锁已经被占用时获取锁，线程会等待，直到该锁被释放。</p>
-<a id="more"></a>
-
-<p><strong>互斥锁</strong> 是在很多平台上都比较常用的一种锁。它属于sleep-waiting类型的锁。即当锁处于占用状态时，其他线程会挂起，当锁被释放时，所有等待的线程都将被唤醒，再次对锁进行竞争。在挂起与释放过程中，涉及用户态与内核态之间的context切换，而这种切换是比较消耗性能的。</p>
-<p><strong>自旋锁</strong> 与互斥锁有点类似，只是自旋锁被某线程占用时，其他线程不会进入睡眠(挂起)状态，而是一直运行（自旋/空转）直到锁被释放。由于不涉及用户态与内核态之间的切换，它的效率远远高于互斥锁。</p>
-<p>**信号量(Semaphore)**，有时被称为信号灯，是在多线程环境下使用的一种设施, 它负责协调各个线程, 以保证它们能够正确、合理的使用公共资源。</p>
-<p>信号量可以分为几类：</p>
-<ul>
-<li>二进制信号量(binary semaphore) / 二元信号量 ：只允许信号量取0或1值，，只有两种状态：占用与非占用，其同时只能被一个线程获取。</li>
-<li>整型信号量（integer semaphore)：信号量取值是整数，它可以被多个线程同时获得，直到信号量的值变为0。</li>
-<li>记录型信号量（record semaphore)：每个信号量s除一个整数值value（计数）外，还有一个等待队列List，其中是阻塞在该信号量的各个线程的标识。当信号量被释放一个，值被加一后，系统自动从等待队列中唤醒一个等待中的线程，让其获得信号量，同时信号量再减一。</li>
-</ul>
-<p>信号量通过一个计数器控制对共享资源的访问，信号量的值是一个非负整数，所有通过它的线程都会将该整数减一。如果计数器大于0，则访问被允许，计数器减1；如果为0，则访问被禁止，所有试图通过它的线程都将处于等待状态。</p>
-<p><strong>条件变量</strong> （Condition Variable） 作为一种同步手段类似于栅栏，允许线程以一种无竞争的方式等待某个条件的发生。当该条件没有发生时，线程会一直处于休眠状态。当被其它线程通知条件已经发生时，线程才会被唤醒从而继续向下执行。条件变量是比较底层的同步原语，直接使用的情况不多，往往用于实现高层之间的线程同步。使用条件变量的一个经典的例子就是线程池(Thread Pool)了。</p>
-</blockquote>
-<h1 id="共享内存"><a href="#共享内存" class="headerlink" title="共享内存"></a>共享内存</h1><blockquote>
-<p>共享内存允许两个或者多个进程共享一个给定的存储区，因为数据不需要再客户即和服务器之间复制，所以共享内存是最快的一种 I IPC。使用共享内存唯一的诀窍就是多个进程之间对一给定的存储区之间数据的同步存取问题。通常，信号量被用来实现对共享存储存取的同步。（记录锁也可以用于这种场合）。</p>
-<p>对于操作系统而言，在并行程序设计中难免会遇到数据同步和共享的问题，本文针对这个问题，以windows系统为例回顾一下资源同步的相关问题。</p>
-<p>要点如下：</p>
-<p>1.同步和数据共享数据征用</p>
-<p>2.同步原语 1.互斥和临界区 2.自旋锁 3.信号量 4.读写锁 5.屏障 6.原子操作与无锁代码</p>
-</blockquote>
-<h1 id="reference"><a href="#reference" class="headerlink" title="reference"></a>reference</h1><p>1、<a href="https://juejin.cn/post/6844903543527178248">https://juejin.cn/post/6844903543527178248</a></p>
-]]></content>
-      <categories>
-        <category>Unix环境高级编程</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>釜山行</title>
-    <url>/2021/02/19/dfbf19f0.html</url>
-    <content><![CDATA[<p>一开始听到影片讲丧尸的时候，我对这一步电影是拒绝的，谁知道朋友圈的伙伴们便对我进行一番嘲讽，不服气的我便是选择勇敢地看完。</p>
-<a id="more"></a>
-
-<p>从来不喜欢看恐怖片的我一直单纯的以为这只是一部恐怖片，但是默默地看到了最后，给我留下的不是恐怖，但最多的却是感动，是沉思。这部是一部直透人性最深处，其中包含了亲情、爱情、友情、自私、冷漠…… </p>
-<p>政府，在我们的理解中是一个国家民众最基本的依靠，当一个政府里的高官被所谓的政治冲昏头脑的时候，政府就会变得自私自利。与此同时，政府也变回失去了他原本存在的意义。影片的一开始政府的举动让我很是不解，看到了最后，我才渐渐明白，剧中当灾难来临的时候，政府官员竟然掩盖真相，抛弃民众，不管民众的死活，并谎称这只是一场暴动，这一切的一切都值得我们思考。</p>
-<p>爱情，有人说它是世界上最伟大的力量，而我想说，面对灾难来临时依旧坚不可摧的爱情才是最伟大的。剧中大叔与他的妻子圣京女士之间的爱情让许多人动容，面对另一节车厢中冷漠的人们的举动使他无法继续生存下去的时刻，毅然选择牺牲了自己保全了自己的爱人与那还未出生的女儿。还有就是年轻的棒球少女，自己生死的紧要关头却是从未舍弃自己喜欢的那个人，坚持要打开车门最后的最后虽然两人都被变成了尸人，但却是令我非常的感动。大叔和圣京女士代表了结婚的后依旧能够相守的一类人，而年轻棒球少女和年轻男子则是代表了正在青春萌动中了我们。</p>
-<p>亲情，感情线路最为复杂的就是男主也就是秀安的爸爸，做为一个忙于工作的父亲。从一开始是忙于工作不抽出时间来陪伴女儿的形象，到接下来的呈现的是无私的父爱，同时也是自私的民众。父亲从为了保护自己的女儿不顾别人的死活，到最后被女儿的纯真善良所感动，开始去帮去身边的人。</p>
-<p>自私，冷漠。在被尸人追赶逃跑的过程中不断有人把身边的人推向尸人以此来保全自己。但令我印象最为深刻的便是那最后一个车厢的人们，男主他们经历了重重尸人到达安全车厢的时候，那一整车厢的人竟然因害怕感染自己而拒绝开门从而导致大叔与奶奶被同化成了尸人，他们最后的目光我无法忘记，那是一种怎样的目光？是求生，或亦是对人性的绝望。<br>总的来说，这一步电影带给我的不是恐惧，最多的是来源于亲情，爱情以及纯真善良的感动，带给我的是自私冷漠的沉思，画面虽然夸张但是情感却是真实。</p>
-<p>借用老刘的话说，那就是躲过了三姐车厢的丧尸，却是没有躲过一节车厢的人心。也想补充一句，无论如何请相信这世界依然有爱。<br>                                                                                                                                                                                                                    2016.9.17</p>
-]]></content>
-      <categories>
-        <category>杂谈</category>
-      </categories>
-      <tags>
-        <tag>电影🎬</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>手撕代码</title>
-    <url>/2020/12/27/7a4494fd.html</url>
-    <content><![CDATA[<h1 id="面试常见的手撕代码题型"><a href="#面试常见的手撕代码题型" class="headerlink" title="面试常见的手撕代码题型"></a>面试常见的手撕代码题型</h1><p>所有代码都已经跑过，可以正常编译运行。</p>
-<a id="more"></a>
-
-<h2 id="经典排序"><a href="#经典排序" class="headerlink" title="经典排序"></a>经典排序</h2><h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 交换两个数据 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> temp;</span><br><span class="line">  temp = *a;</span><br><span class="line">  *a = *b;</span><br><span class="line">  *b = temp;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 冒牌排序算法 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">size_t</span> len)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">NULL</span> == arr)</span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">  <span class="keyword">int</span> i=<span class="number">0</span>, j=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;len; i++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">for</span>(j=<span class="number">1</span>; j&lt;len-i<span class="number">-1</span>; j++)</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span>(arr[j]&lt;arr[j<span class="number">-1</span>])</span><br><span class="line">        swap(arr[j], arr[j<span class="number">-1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br><span class="line">   </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">int</span> arr[<span class="number">10</span>]=&#123;<span class="number">7</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">8</span>&#125;;</span><br><span class="line">  BubbleSort(arr);</span><br><span class="line">  <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt; <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>]);i++)</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>输出结果：</p>
-<p>0 1 5 7 7 7 8 8 9</p>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">swap</span><span class="params">(<span class="keyword">int</span> *a, <span class="keyword">int</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> temp;</span><br><span class="line">  temp = *a;</span><br><span class="line">  *a = *b;</span><br><span class="line">  *b = temp;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">quickSort</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> i, j, temp;</span><br><span class="line">  <span class="keyword">if</span>(left &gt; right)</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">  <span class="comment">/* temp存放的是基数 */</span></span><br><span class="line">  temp = arr[left];</span><br><span class="line">  i = left;</span><br><span class="line">  j = right;</span><br><span class="line">  <span class="keyword">while</span>(i != j)&#123;</span><br><span class="line">    <span class="comment">/* 顺序很重要，要从右边开始找 */</span></span><br><span class="line">    <span class="keyword">while</span>(arr[j] &gt;= temp &amp;&amp; i &lt; j)</span><br><span class="line">      j--;</span><br><span class="line">    <span class="comment">/* 再从左开始找 */</span></span><br><span class="line">    <span class="keyword">while</span>(arr[i] &lt;= temp &amp;&amp; i &lt; j)</span><br><span class="line">      i++;</span><br><span class="line">    <span class="keyword">if</span>(i &lt; j)</span><br><span class="line">      swap(&amp;arr[i], &amp;arr[j]);</span><br><span class="line">  &#125;</span><br><span class="line">  arr[left] = arr[i];</span><br><span class="line">  arr[i] = temp;</span><br><span class="line">  </span><br><span class="line">  quickSort(left, i<span class="number">-1</span>);</span><br><span class="line">  quickSort(i+<span class="number">1</span>, right);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="查找算法"><a href="#查找算法" class="headerlink" title="查找算法"></a>查找算法</h2><h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><p>二分查找也叫做折半查找，其优点是查找速度快，缺点是要求所要査找的数据必须是有序序列。</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">binarySearch</span><span class="params">(<span class="keyword">int</span> arr[], <span class="keyword">int</span> n, <span class="keyword">int</span> key)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> low = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> hight = n<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> mid, midVal;</span><br><span class="line">    <span class="keyword">while</span>(low &lt;= hight)&#123;</span><br><span class="line">        mid = (low+hight)/<span class="number">2</span>;</span><br><span class="line">        midVal = arr[mid];</span><br><span class="line">        <span class="keyword">if</span>(midVal &lt; key)</span><br><span class="line">            low = mid+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(midVal &gt; key)</span><br><span class="line">            hight = mid<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> key=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">8</span>]=&#123;<span class="number">-32</span>, <span class="number">12</span>, <span class="number">16</span>, <span class="number">24</span>, <span class="number">36</span>, <span class="number">45</span>, <span class="number">59</span>, <span class="number">98</span>&#125;;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt;<span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]); i++)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, a[i]);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Please input the data.\n&quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;key);</span><br><span class="line">    <span class="keyword">int</span> ret = binarySearch(a, <span class="keyword">sizeof</span>(a)/<span class="keyword">sizeof</span>(a[<span class="number">0</span>]), key);</span><br><span class="line">    <span class="keyword">if</span> (<span class="number">1</span> == ret)</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;the key %d is exits.\n&quot;</span>, key);</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;the key %d is not exits.\n&quot;</span>, key);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="链表操作"><a href="#链表操作" class="headerlink" title="链表操作"></a>链表操作</h2><h3 id="反转单链表"><a href="#反转单链表" class="headerlink" title="反转单链表"></a>反转单链表</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 定义链表结构 */</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> _<span class="title">listNode</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> value;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> _<span class="title">listNode</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;listNode;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 反转链表 */</span></span><br><span class="line"><span class="function">listNode *<span class="title">reverseList</span><span class="params">(listNode *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">NULL</span> == head || <span class="literal">NULL</span> == head-&gt;next)</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">  listNode *cur = head;</span><br><span class="line">  listNode *prev = <span class="literal">NULL</span>;</span><br><span class="line">  listNode *next = <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">while</span>(cur != <span class="literal">NULL</span>)&#123;</span><br><span class="line">    <span class="comment">/* 存放下一个节点 */</span></span><br><span class="line">    next = cur-&gt;next;</span><br><span class="line">    <span class="comment">/* 翻转头结点的下一个节点 */</span></span><br><span class="line">    cur-&gt;next = prev;</span><br><span class="line">    <span class="comment">/* 移动上一个节点 */</span></span><br><span class="line">    prev = cur;</span><br><span class="line">    <span class="comment">/* 更新当前节点 */</span></span><br><span class="line">    cur = next;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> prev；</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">int</span> arr[]=&#123;<span class="number">7</span>,<span class="number">5</span>,<span class="number">7</span>,<span class="number">9</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">8</span>,<span class="number">7</span>,<span class="number">8</span>&#125;;</span><br><span class="line">    quickSort(arr, <span class="number">0</span>, <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>])); </span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">sizeof</span>(arr)/<span class="keyword">sizeof</span>(arr[<span class="number">0</span>]); ++i)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">/* code */</span></span><br><span class="line">        <span class="keyword">if</span>(<span class="number">0</span>==i%<span class="number">16</span>)</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, arr[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="判断链表是否有环"><a href="#判断链表是否有环" class="headerlink" title="判断链表是否有环"></a>判断链表是否有环</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 判断链表是否有环 */</span></span><br><span class="line"><span class="function">linkNode *<span class="title">isCircle</span><span class="params">(linkNode *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    assert(head != <span class="literal">NULL</span>);</span><br><span class="line">    linkNode *slow = head-&gt;next;               <span class="comment">/* 慢指针 */</span></span><br><span class="line">    linkNode *fast = head-&gt;next-&gt;next;         <span class="comment">/* 快指针 */</span></span><br><span class="line">    <span class="keyword">while</span>(fast != <span class="literal">NULL</span> &amp;&amp; fast-&gt;next != <span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(slow == fast)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        slow = slow-&gt;next;</span><br><span class="line">        fast = fast-&gt;next-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span>(fast == <span class="literal">NULL</span> || fast-&gt;next == <span class="literal">NULL</span>)</span><br><span class="line">         <span class="keyword">return</span> <span class="literal">NULL</span>;   <span class="comment">/* 无环 */</span></span><br><span class="line">     <span class="keyword">else</span></span><br><span class="line">        <span class="keyword">return</span> slow;    <span class="comment">/* 有环 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><h3 id="实现memcpy函数"><a href="#实现memcpy函数" class="headerlink" title="实现memcpy函数"></a>实现memcpy函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 不考虑内存重叠的情况 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">myMemcpy</span><span class="params">(<span class="keyword">void</span> *dest, <span class="keyword">const</span> <span class="keyword">void</span> *src, <span class="keyword">size_t</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">if</span>(<span class="literal">NULL</span> == dest||<span class="literal">NULL</span> == src)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">  <span class="keyword">char</span> *d = (<span class="keyword">char</span> *)dest;</span><br><span class="line">  <span class="keyword">char</span> *s = (<span class="keyword">char</span> *)src;</span><br><span class="line">  <span class="keyword">while</span>(n--)</span><br><span class="line">    *d++ = *s++;</span><br><span class="line">  <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 优化版本按照CPU位宽度进行拷贝优化 */</span></span><br><span class="line"><span class="function"><span class="keyword">void</span>  *<span class="title">myMemcpy</span><span class="params">(<span class="keyword">void</span> *dest, <span class="keyword">const</span> <span class="keyword">void</span> *src, <span class="keyword">size_t</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> nchucks = num/<span class="keyword">sizeof</span>(dest);  <span class="comment">/* 按照CPU的位宽进行拷贝 */</span></span><br><span class="line">  <span class="keyword">int</span> slice = num%/<span class="keyword">sizeof</span>(dest);   <span class="comment">/* 剩余的字节数按照一个一个字节进行拷贝 */</span></span><br><span class="line">  </span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">long</span> *s = (<span class="keyword">unsigned</span> <span class="keyword">long</span> *)src;</span><br><span class="line">  <span class="keyword">unsigned</span> <span class="keyword">long</span> *d = (<span class="keyword">unsigned</span> <span class="keyword">long</span> *)dest;</span><br><span class="line">   </span><br><span class="line">  <span class="keyword">while</span>(nchucks--)</span><br><span class="line">    *d++ = *s++;</span><br><span class="line">  <span class="keyword">while</span>(slice--)</span><br><span class="line">    *((<span class="keyword">char</span>*)d++) = *((<span class="keyword">char</span>*)s++);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 考虑内存重叠的情况 */</span></span><br></pre></td></tr></table></figure>
-
-
-<h3 id="实现strstr函数"><a href="#实现strstr函数" class="headerlink" title="实现strstr函数"></a>实现strstr函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> *<span class="title">myStrstr</span><span class="params">()</span></span>&#123;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> ;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="实现strlen函数"><a href="#实现strlen函数" class="headerlink" title="实现strlen函数"></a>实现strlen函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">myStrlen</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *arr)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  assert(arr);</span><br><span class="line">  <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(<span class="string">&#x27;\0&#x27;</span> != *arr++)</span><br><span class="line">    count++;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> count;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="实现strcpy函数"><a href="#实现strcpy函数" class="headerlink" title="实现strcpy函数"></a>实现strcpy函数</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span> *<span class="title">myStrcpy</span><span class="params">(<span class="keyword">char</span> *dest, <span class="keyword">const</span> <span class="keyword">char</span> *src)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  assert(dest);</span><br><span class="line">  assert(src);</span><br><span class="line">  <span class="keyword">char</span> *d = dest;</span><br><span class="line">  <span class="keyword">char</span> *s = src;</span><br><span class="line">  <span class="keyword">while</span>(<span class="string">&#x27;\0&#x27;</span> != *s)</span><br><span class="line">    *d++ = *s++;</span><br><span class="line">  <span class="keyword">return</span> dest;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>1、<a href="https://blog.csdn.net/weixin_43496874/article/details/100868367?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control">https://blog.csdn.net/weixin_43496874/article/details/100868367?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-4.control</a></p>
-<p>2、<a href="http://c.biancheng.net/cpp/html/2744.html">http://c.biancheng.net/cpp/html/2744.html</a></p>
-]]></content>
-      <categories>
-        <category>面试宝典</category>
-      </categories>
   </entry>
   <entry>
     <title>面试笔试</title>
@@ -724,5 +583,146 @@
       <categories>
         <category>面试宝典</category>
       </categories>
+  </entry>
+  <entry>
+    <title>Hexo搭建个人站点，我太难了</title>
+    <url>/2020/03/02/4d51d04c.html</url>
+    <content><![CDATA[<p>花了好几天，熬了几个夜晚，摸索了好久终于把自己的个人博客网站搭建起来了，顺便来一篇教程，分享给大家，同时也方便以后再次部署。我之前是在Github上搭建了一版，Github+hexo，国内加载图片等等资源奈何实在太卡了，想起自己在阿里云有台服务器，然后直接部署到云上了,下面是我具体的部署的一些步骤。</p>
+<a id="more"></a>
+
+<h1 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h1><ul>
+<li><p>一台个人PC</p>
+</li>
+<li><p>money!(开玩笑的 ^-^)</p>
+</li>
+<li><p>一台linux服务器，可以买台云服务器，没有又想体验的话就VM虚拟机，本地看看过把瘾吧^ ^。</p>
+</li>
+</ul>
+<h1 id="需要的软件环境"><a href="#需要的软件环境" class="headerlink" title="需要的软件环境"></a>需要的软件环境</h1><ul>
+<li><p>Git</p>
+</li>
+<li><p>Node.js</p>
+</li>
+<li><p>hexo-cli</p>
+</li>
+<li><p>Nginx</p>
+</li>
+</ul>
+<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p><a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a><br>下一步下一步傻瓜式安装</p>
+<h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下一步下一步傻瓜式安装</p>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><img src="/images/image-20210219105759182.jpg" alt="image-20210219105759182" style="zoom:50%;">
+
+<p>选择一个文件夹作为你的博客文件夹，比如我自己建立在E:盘在命令行窗口下：</p>
+<img src="/images/image-20210219105959182.jpg" alt="image-20210219105959182" style="zoom:80%;">
+
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="string">hexo</span> <span class="string">-v</span> <span class="comment"># 查看hexo安装成功没</span></span><br><span class="line"><span class="string">mkdir</span> <span class="string">blog;</span> <span class="comment"># 创建blog文件夹作为我的博客目录</span></span><br><span class="line"><span class="string">cd</span> <span class="string">blog</span> <span class="comment"># 进入blog目录</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">init</span> <span class="comment"># 初始化blog</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">g</span> <span class="comment"># 生成静态页面</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">s</span> <span class="comment"># 启动服务监听</span></span><br><span class="line"><span class="string">localhost:4000</span> <span class="comment">#打开页面 </span></span><br><span class="line"><span class="comment"># 可以看到hello world 的页面，初步完成。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 常用命令</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">new</span> <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">new</span> <span class="string">page</span> <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">generate</span> <span class="comment">#生成静态页面至public目录</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">server</span> <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">deploy</span> <span class="comment">#部署到GitHub</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">version</span> <span class="comment">#查看Hexo的版本</span></span><br><span class="line"></span><br><span class="line"><span class="string">hexo</span> <span class="string">s</span> <span class="string">-g</span> <span class="comment">#生成并本地预览</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">d</span> <span class="string">-g</span> <span class="comment">#生成并上传</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">clean</span> <span class="string">&amp;&amp;</span> <span class="string">hexo</span> <span class="string">g</span> <span class="string">&amp;&amp;</span> <span class="string">hexo</span> <span class="string">d</span> <span class="comment"># 一件生成静态页面同时上传</span></span><br></pre></td></tr></table></figure>
+<h2 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h2><p>Hexo主要有两份配置文件，一份是站点配置文件<code>_config.yml</code>，一份是主题配置文件（对应的主题目录下的<code>_config.yml</code>文件）。</p>
+<h4 id="站点基本信息的配置"><a href="#站点基本信息的配置" class="headerlink" title="站点基本信息的配置"></a>站点基本信息的配置</h4><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Suzette219</span> <span class="comment"># 站点标题</span></span><br><span class="line"><span class="attr">subtitle :</span> <span class="string">share</span> <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">lpyuan</span> <span class="string">blog</span> <span class="comment"># 站点描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="comment"># 站点关键字</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">发量充足的程序员</span> <span class="comment"># 站点作者昵称</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 语言</span></span><br><span class="line"><span class="attr">timezone :</span> <span class="string">&#x27;UTC&#x27;</span> <span class="comment"># 时区</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<p>更多的操作可以访问<a href="https://hexo.io/zh-cn/docs/configuration.html">Hexo官方详细配置说明</a></p>
+<h2 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h2><p>Hexo有很多很不错的主题，使用过butterfly、replica、landscape等等，本站点目前使用<strong>Next</strong>主题(Next简直太好用了！！)。</p>
+<h4 id="主题地址"><a href="#主题地址" class="headerlink" title="主题地址"></a>主题地址</h4><p><a href="https://github.com/theme-next/hexo-theme-next">Next主题社区维护版本入口地址</a></p>
+<h4 id="文章评论系统"><a href="#文章评论系统" class="headerlink" title="文章评论系统"></a>文章评论系统</h4><p>目前本站使用的是Valine评论系统，感觉还不错，下面介绍怎么配置使用这个系统。</p>
+<p>首先这个Valine评论系统是可以很好的支持Next主题的，它支持Markdown语法，没有后端是基于LeanCloud的所以我们需要注册一个LeanCloud账户，</p>
+<p><a href="https://console.leancloud.cn/">LeanCloud官网入口地址</a></p>
+<p>注册完成后，选择创建应用，然后选择开发版本，填写描述信息，然后生成，同时将<strong>App ID</strong> 和 <strong>App Key</strong>记下来。</p>
+<ul>
+<li><p>设置Next主题，在主题配置文件中找到valine进行配置，将生成的<strong>App ID</strong> 和 <strong>App Key</strong>填入对应的字段，如下图。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">valine:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> <span class="comment"># true表示开启，false表示关闭</span></span><br><span class="line">  <span class="attr">appid:</span>  <span class="string">B4XbT4kXwfh9RTyBuoKPvO</span> <span class="comment"># Appid</span></span><br><span class="line">  <span class="attr">appkey:</span> <span class="string">S3dLSovwi3LXNsun5D</span> <span class="comment"># Appkey</span></span><br><span class="line">  <span class="attr">notify:</span> <span class="literal">false</span> <span class="comment"># 邮件通知</span></span><br><span class="line">  <span class="attr">verify:</span> <span class="literal">false</span> <span class="comment"># 验证码</span></span><br><span class="line">  <span class="attr">placeholder:</span> <span class="string">如果对文章或本站点有任何疑问或者建议，请留言~</span> <span class="comment"># 评论框占位符</span></span><br><span class="line">  <span class="attr">avatar:</span> <span class="string">mm</span> <span class="comment"># 功能风格</span></span><br><span class="line">  <span class="attr">guest_info:</span> <span class="string">nick,mail</span> <span class="comment"># link # 自定义注释头</span></span><br><span class="line">  <span class="attr">pageSize:</span> <span class="number">5</span> <span class="comment"># 分页大小</span></span><br><span class="line">  <span class="attr">language:</span> <span class="comment"># 可选语言, available values: en, zh-cn</span></span><br><span class="line">  <span class="attr">visitor:</span> <span class="literal">true</span> <span class="comment"># 文章阅读统计</span></span><br><span class="line">  <span class="attr">comment_count:</span> <span class="literal">true</span> <span class="comment"># 如果为false，评论计数将只显示在文章页面，而不是首页</span></span><br><span class="line">  <span class="attr">recordIP:</span> <span class="literal">false</span> <span class="comment"># 是否记录评论IP</span></span><br><span class="line">  <span class="attr">serverURLs:</span> <span class="comment"># 当自定义域名启用时，在此处填写(默认自动检测，不需要填写)</span></span><br><span class="line">  <span class="comment">#post_meta_order: 0</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li><p>如果想要管理评论，进入 leancloud 官网，找到 <code>控制台</code>-&gt;<code>存储</code>-&gt;<code>commet</code> 中进行管理。</p>
+</li>
+<li><p>如需取消某个 页面/文章 的评论，在 md 文件头部标签增加 <code>comments: false</code></p>
+</li>
+</ul>
+<h4 id="菜单栏配置"><a href="#菜单栏配置" class="headerlink" title="菜单栏配置"></a>菜单栏配置</h4><p>在主题配置中找到<code>menu</code>字段，选择自己喜欢的菜单按钮。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">home:</span> <span class="string">/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-home</span> <span class="comment"># 主页</span></span><br><span class="line">  <span class="attr">about:</span> <span class="string">/about/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-user</span> <span class="comment">#关于</span></span><br><span class="line">  <span class="attr">tags:</span> <span class="string">/tags/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-tags</span> <span class="comment"># 标签</span></span><br><span class="line">  <span class="attr">categories:</span> <span class="string">/categories/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-th</span> <span class="comment"># 分类</span></span><br><span class="line">  <span class="attr">archives:</span> <span class="string">/archives/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-archive</span> <span class="comment"># 归档</span></span><br><span class="line">  <span class="attr">schedule:</span> <span class="string">/schedule/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-calendar</span> <span class="comment"># 日程</span></span><br><span class="line">  <span class="attr">sitemap:</span> <span class="string">/sitemap.xml</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-sitemap</span> <span class="comment"># 站点地图</span></span><br><span class="line">  <span class="attr">commonweal:</span> <span class="string">/404/</span> <span class="string">||</span> <span class="string">fa</span> <span class="string">fa-heartbeat</span> <span class="comment"># 404跳转</span></span><br></pre></td></tr></table></figure>
+<h4 id="设置代码高亮"><a href="#设置代码高亮" class="headerlink" title="设置代码高亮"></a>设置代码高亮</h4><p>NexT 代码高亮，共有5款主题供你选择。 NexT 默认使用的是 白色的 <code>normal</code> 主题，可选的值有 <code>normal</code>，<code>night</code>， <code>night blue</code>， <code>night bright</code>， <code>night eighties</code>：</p>
+<p>更改 <code>highlight_theme</code> 字段，将其值设定成你所喜爱的高亮主题，例如：</p>
+<p>高亮主题设置示例</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Code Highlight theme</span></span><br><span class="line"><span class="comment"># Available value: normal | night | night eighties | night blue | night bright</span></span><br><span class="line"><span class="comment"># https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line"><span class="attr">highlight_theme:</span> <span class="string">normal</span></span><br></pre></td></tr></table></figure>
+<h4 id="修改字体大小"><a href="#修改字体大小" class="headerlink" title="修改字体大小"></a>修改字体大小</h4><p>在<code>themes/next/source/css/_variables</code>目录下base.stye文件中，直接搜索<code>font-size-base</code>字段进行修改，同时主题配置文件中搜索<code>font</code>字段将其对应的功能打开。</p>
+<img src="/images/image-20210219101529354.png" alt="image-20210219101529354" style="zoom:30%;">
+
+<h4 id="配置文章置顶功能"><a href="#配置文章置顶功能" class="headerlink" title="配置文章置顶功能"></a>配置文章置顶功能</h4><p>安装下面两个插件，在文章的头部便签加上<code>top: true</code>即可。</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装下面两个插件</span></span><br><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+<h4 id="生成永久链接"><a href="#生成永久链接" class="headerlink" title="生成永久链接"></a>生成永久链接</h4><p>下载插件</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装hexo-abbrlink插件</span></span><br><span class="line">npm install hexo-abbrlink --save</span><br></pre></td></tr></table></figure>
+<p>修改站点配置<code>permalink</code>字段</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># permalink: :year/:month/:day/:title/</span></span><br><span class="line"><span class="attr">permalink:</span> <span class="string">:year/:month/:day/:abbrlink.html</span>  <span class="comment"># p 是自定义的前缀</span></span><br><span class="line"><span class="attr">abbrlink:</span></span><br><span class="line">    <span class="attr">alg:</span> <span class="string">crc32</span>   <span class="comment">#算法： crc16(default) and crc32</span></span><br><span class="line">    <span class="attr">rep:</span> <span class="string">hex</span>     <span class="comment">#进制： dec(default) and hex</span></span><br><span class="line">    </span><br></pre></td></tr></table></figure>
+<p>不同算法生成的连接格式如下：</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br></pre></td></tr></table></figure>
+<h4 id="文章头部标签"><a href="#文章头部标签" class="headerlink" title="文章头部标签"></a>文章头部标签</h4><figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Hexo搭建个人站点</span> <span class="comment"># 显示文章标题名称</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2020-03-01 17:29:07</span> <span class="comment"># 文章创建时间</span></span><br><span class="line"><span class="attr">tags:</span> <span class="comment"># 标签</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">其他</span> <span class="comment"># 分类</span></span><br><span class="line"><span class="attr">comments:</span> <span class="literal">true</span> <span class="comment"># 当前文章是否开启评论系统</span></span><br><span class="line"><span class="attr">top:</span> <span class="literal">true</span> <span class="comment"># 开启文章置顶</span></span><br><span class="line"><span class="attr">typora-root-url:</span> <span class="string">../images_temp</span> <span class="comment"># 使用typora工具编写markdown插入图片时候方便typora图片根目录</span></span><br><span class="line"><span class="attr">typora-copy-images-to:</span> <span class="string">../_posts/Hexo搭建个人网站</span> <span class="comment"># 网站读取对应的目录，主要是我每一篇文章有对应的目录</span></span><br></pre></td></tr></table></figure>
+<h4 id="为博客加上宠物"><a href="#为博客加上宠物" class="headerlink" title="为博客加上宠物"></a>为博客加上宠物</h4><p>在hexo根目录下安装插件</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install -save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+<p>安装需要的宠物插件:<a href="https://link.zhihu.com/?target=https://huaji8.top/post/live2d-plugin-2.0/">宠物样式</a> <a href="https://link.zhihu.com/?target=https://github.com/xiazeyu/live2d-widget-models">源码地址</a></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">npm install &#123;packagename&#125;</span><br></pre></td></tr></table></figure>
+<p>其中{packagename} 替换为你要安装的宠物名,如<code>live2d-widget-model-koharu</code></p>
+<p>具体指令: <code>live2d-widget-model-koharu</code></p>
+<p>在<strong>站点配置文件</strong><code>_config.yml</code>中添加上如下代码:</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">live2d:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span>   <span class="comment">#开启宠物</span></span><br><span class="line">    <span class="attr">scriptFrom:</span> <span class="string">local</span></span><br><span class="line">    <span class="attr">model:</span></span><br><span class="line">      <span class="attr">use:</span> <span class="string">live2d-widget-model-koharu</span></span><br><span class="line">    <span class="attr">display:</span></span><br><span class="line">      <span class="attr">position:</span> <span class="string">left</span>   <span class="comment">#指定宠物显示的位置</span></span><br><span class="line">      <span class="attr">width:</span> <span class="number">210</span>    <span class="comment">#指定宠物显示的宽度</span></span><br><span class="line">      <span class="attr">height:</span> <span class="number">360</span>   <span class="comment">#指定宠物显示的高度</span></span><br><span class="line">    <span class="attr">mobile:</span></span><br></pre></td></tr></table></figure>
+<h4 id="开启代码块复制"><a href="#开启代码块复制" class="headerlink" title="开启代码块复制"></a>开启代码块复制</h4><p>文章中插入的一些代码，有时需要一键复制，可以增加代码块的复制功能。</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 代码控制块</span></span><br><span class="line"><span class="attr">codeblock:</span></span><br><span class="line">  <span class="comment"># Code Highlight theme</span></span><br><span class="line">  <span class="comment"># Available values: normal | night | night eighties | night blue | night bright | solarized | solarized dark | galactic</span></span><br><span class="line">  <span class="comment"># See: https://github.com/chriskempson/tomorrow-theme</span></span><br><span class="line">  <span class="attr">highlight_theme:</span> <span class="string">galactic</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Add copy button on codeblock</span></span><br><span class="line">  <span class="comment"># 代码块复制按钮是否开启</span></span><br><span class="line">  <span class="attr">copy_button:</span></span><br><span class="line">    <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Show text copy result.</span></span><br><span class="line">    <span class="attr">show_result:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Available values: default | flat | mac</span></span><br><span class="line">		<span class="attr">style:</span> <span class="string">mac</span> <span class="comment"># 使用mac风格</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>其他</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Google浏览器无法安装问题</title>
+    <url>/2020/03/02/e3aa8e8f.html</url>
+    <content><![CDATA[<img src="/images/20210219125929354.jpg" alt="20210219125929354" style="zoom:50%;">
+
+<p>&ensp;&ensp;&ensp;&ensp;今天遇到一个有趣的问题，Google浏览器莫名其面的一直安装不上，自己捣鼓了好久最后才解决。网上有很多方法说是因为注册表有残留，准确的说是GoogleUpdate这个东西在作怪，解决的方法只需要将注册表里Google相关的东西删除。</p>
+<a id="more"></a>
+
+<h1 id="打开注册表直接Win-R输入regedit"><a href="#打开注册表直接Win-R输入regedit" class="headerlink" title="打开注册表直接Win+R输入regedit"></a>打开注册表直接Win+R输入regedit</h1><img src="/images/20210219130029354.jpg" alt="20210219130029354" style="zoom:80%;">
+
+<h1 id="删除注册表残留数据。"><a href="#删除注册表残留数据。" class="headerlink" title="删除注册表残留数据。"></a>删除注册表残留数据。</h1><p>&ensp;&ensp;&ensp;&ensp;删除\HKEY_CURRENT_USER\Software\和HKEY_LOCAL_MACHINE\SOFTWARE目录下的Google及对应的子目录就可以了。但是我操作的时候出现了问题，删除Google目录时候报错，后面发现是权限问题。解决方法：右键该目录修改管理员权限可以删除。</p>
+<h1 id="确认电脑系统版本。"><a href="#确认电脑系统版本。" class="headerlink" title="确认电脑系统版本。"></a>确认电脑系统版本。</h1><p>&ensp;&ensp;&ensp;&ensp;可以删除之后还是发现无法安装，最后发现照着网上的帖子没有用，因为帖子估计都比较老，我的是win10系统，所以导致删除的路径不对，导致依旧无法正常安装，需要删除对应的路径。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">32位：HKEY_LOCAL_MACHINE\SOFTWARE\Google</span><br><span class="line">64位：HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Google</span><br></pre></td></tr></table></figure>
+<h1 id="重启安装应用。"><a href="#重启安装应用。" class="headerlink" title="重启安装应用。"></a>重启安装应用。</h1><p>&ensp;&ensp;&ensp;&ensp;重新双击运行安装应用程序，完美解决！</p>
+]]></content>
+      <categories>
+        <category>Windows</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Linux常用命令</title>
+    <url>/2020/02/29/d0edc1ed.html</url>
+    <content><![CDATA[<h1 id="linux下常用的一下命令"><a href="#linux下常用的一下命令" class="headerlink" title="linux下常用的一下命令"></a>linux下常用的一下命令</h1><p>工作中我们会经常遇到各种各样的问题，遇到我们解决不了的我们会查找相关的资料，下面就是我平时工作中遇到的一些场景，记录的一些关于linux下操作的相关命令，希望对大家有用，会不定时更新~</p>
+<a id="more"></a>
+
+<h2 id="防火墙相关的命令"><a href="#防火墙相关的命令" class="headerlink" title="防火墙相关的命令"></a>防火墙相关的命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=4400-4600/udp --permanen(指定端口范围为4400-4600通过防火墙)</span><br><span class="line"> 其中：</span><br><span class="line">--zone <span class="comment"># 作用域 </span></span><br><span class="line">--add-port=80/tcp <span class="comment"># 添加端口，格式为：端口/通讯协议 </span></span><br><span class="line">--permanent <span class="comment"># 永久生效</span></span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --remove-port=80/tcp --permanent（关闭指定端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --zone=public --list-ports（查看通过的端口）</span><br><span class="line"></span><br><span class="line">firewall-cmd --state <span class="comment"># 查看默认防火墙状态（关闭后显示notrunning，开启后显示running）</span></span><br></pre></td></tr></table></figure>
+<h2 id="yum安装软件包"><a href="#yum安装软件包" class="headerlink" title="yum安装软件包"></a>yum安装软件包</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum install epel-release <span class="comment"># 安装&quot;epel-release&quot;的软件包</span></span><br><span class="line">yum install tcpreplay</span><br></pre></td></tr></table></figure>
+<h2 id="ps命令"><a href="#ps命令" class="headerlink" title="ps命令"></a>ps命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ps -eLf	 <span class="comment">#查看进程线程情况</span></span><br></pre></td></tr></table></figure>
+<h2 id="压缩、解压命令"><a href="#压缩、解压命令" class="headerlink" title="压缩、解压命令"></a>压缩、解压命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">压缩：</span><br><span class="line">tar -zcvf /tmp/etc.tar.gz  /etc      <span class="comment">#将/etc下的所有文件及目录打包到/etc，并使用gz压缩  </span></span><br><span class="line">tar -cvf /home/abc.tar /home/abc     <span class="comment">#只打包，不压缩</span></span><br><span class="line">tar -zcvf /home/abc.tar.gz /home/abc <span class="comment">#打包，并用gzip压缩</span></span><br><span class="line"></span><br><span class="line">解压：</span><br><span class="line">tar -zxvf /tmp/etc.tar.gz</span><br></pre></td></tr></table></figure>
+<h2 id="服务的锁定与取消"><a href="#服务的锁定与取消" class="headerlink" title="服务的锁定与取消"></a>服务的锁定与取消</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">systemctl mask firewalld   <span class="comment">#需要锁定该服务时执行</span></span><br><span class="line">systemctl unmask firewalld <span class="comment">#实现取消服务的锁定</span></span><br></pre></td></tr></table></figure>
+<h2 id="路由配置相关"><a href="#路由配置相关" class="headerlink" title="路由配置相关"></a>路由配置相关</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment">#添加IPV6地址</span></span><br><span class="line">ip -6 addr add &lt;ipv6address&gt;/&lt;prefixlength&gt; dev &lt;interface&gt;</span><br><span class="line">ip -6 addr add 2001:0db8:0:f101::1/64 dev eth0</span><br><span class="line"></span><br><span class="line">ifconfig &lt;interface&gt; inet6 add &lt;ipv6address&gt;/&lt;prefixlength&gt;</span><br><span class="line">ifconfig eth0 inet6 add 2001:0db8:0:f101::1/64</span><br><span class="line"></span><br><span class="line"><span class="comment">#添加默认路由</span></span><br><span class="line">ip -6 route add &lt;ipv6network&gt;/&lt;prefixlength&gt; via &lt;ipv6address&gt;</span><br><span class="line">ip -6 route add default via 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line">route -A inet6 add &lt;ipv6network&gt;/&lt;prefixlength&gt; gw</span><br><span class="line">route -A inet6 add default gw 2001:0db8:0:f101::1</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看路由</span></span><br><span class="line">ip -6 route show</span><br><span class="line">route -A <span class="string">&#x27;inet6&#x27;</span></span><br><span class="line">route -6</span><br><span class="line"></span><br><span class="line"><span class="comment">#windows查看路由表</span></span><br><span class="line">route <span class="built_in">print</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#查看邻居缓存</span></span><br><span class="line">ip -6 neighbor show</span><br><span class="line"></span><br><span class="line"><span class="comment">#windows查看邻居缓存</span></span><br><span class="line">netsh interface ipv6 show neighbors</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看smtp服务器</span></span><br><span class="line">ping smtp.sohu.com </span><br><span class="line">ping smtp.qq.com</span><br></pre></td></tr></table></figure>
+<h2 id="更新内核命令"><a href="#更新内核命令" class="headerlink" title="更新内核命令"></a>更新内核命令</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">yum update kernel -y</span><br></pre></td></tr></table></figure>
+<h2 id="大文件重定向有效信息"><a href="#大文件重定向有效信息" class="headerlink" title="大文件重定向有效信息"></a>大文件重定向有效信息</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 重定向dmesg.txt关键字Call Trace的前后2000行到nn.txt：</span></span><br><span class="line">grep -C 2000 ‘Call Trace’ dmesg.txt &gt;nn.txt</span><br></pre></td></tr></table></figure>
+<h2 id="Shell递归删除指定字符串文件或者目录"><a href="#Shell递归删除指定字符串文件或者目录" class="headerlink" title="Shell递归删除指定字符串文件或者目录"></a>Shell递归删除指定字符串文件或者目录</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">文件：find . -name <span class="string">&quot;*.rej&quot;</span> | xargs rm -rf</span><br><span class="line">目录：find . -<span class="built_in">type</span> d -name <span class="string">&quot;*.rej&quot;</span> | xargs rm -rf</span><br></pre></td></tr></table></figure>
+<h2 id="文件夹建立软链接（用绝对地址"><a href="#文件夹建立软链接（用绝对地址" class="headerlink" title="文件夹建立软链接（用绝对地址)"></a>文件夹建立软链接（用绝对地址)</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">ln -s 源地址 目的地址   <span class="comment">#比如我把linux文件系统rootfs_dir软链接到/home/jyg/目录下</span></span><br><span class="line">ln -s /opt/linux/rootfs_dir  /home/jyg/rootfs_dir <span class="comment">#就可以了</span></span><br></pre></td></tr></table></figure>
+<h2 id="大数据报文件分割"><a href="#大数据报文件分割" class="headerlink" title="大数据报文件分割"></a>大数据报文件分割</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">windows下 d:&gt;wireshark&gt;editcap -C 1000000(文件大小) 待分割文件路径 新文件名称</span><br><span class="line">linux 可使用split命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/02/17/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<a id="more"></a>
+
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
