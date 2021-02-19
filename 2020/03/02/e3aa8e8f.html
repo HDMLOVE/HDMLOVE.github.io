@@ -266,12 +266,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <img src="/images/20210219125929354.jpg" alt="20210219125929354" style="zoom:50%;" />
+        <img src="/images/20210219125929354.jpg" alt="20210219125929354" style="zoom:50%;">
 
 <p>&ensp;&ensp;&ensp;&ensp;今天遇到一个有趣的问题，Google浏览器莫名其面的一直安装不上，自己捣鼓了好久最后才解决。网上有很多方法说是因为注册表有残留，准确的说是GoogleUpdate这个东西在作怪，解决的方法只需要将注册表里Google相关的东西删除。</p>
 <a id="more"></a>
 
-<h1 id="打开注册表直接Win-R输入regedit"><a href="#打开注册表直接Win-R输入regedit" class="headerlink" title="打开注册表直接Win+R输入regedit"></a>打开注册表直接Win+R输入regedit</h1><img src="/images/20210219130029354.jpg" alt="20210219130029354" style="zoom:80%;" />
+<h1 id="打开注册表直接Win-R输入regedit"><a href="#打开注册表直接Win-R输入regedit" class="headerlink" title="打开注册表直接Win+R输入regedit"></a>打开注册表直接Win+R输入regedit</h1><img src="/images/20210219130029354.jpg" alt="20210219130029354" style="zoom:80%;">
 
 <h1 id="删除注册表残留数据。"><a href="#删除注册表残留数据。" class="headerlink" title="删除注册表残留数据。"></a>删除注册表残留数据。</h1><p>&ensp;&ensp;&ensp;&ensp;删除\HKEY_CURRENT_USER\Software\和HKEY_LOCAL_MACHINE\SOFTWARE目录下的Google及对应的子目录就可以了。但是我操作的时候出现了问题，删除Google目录时候报错，后面发现是权限问题。解决方法：右键该目录修改管理员权限可以删除。</p>
 <h1 id="确认电脑系统版本。"><a href="#确认电脑系统版本。" class="headerlink" title="确认电脑系统版本。"></a>确认电脑系统版本。</h1><p>&ensp;&ensp;&ensp;&ensp;可以删除之后还是发现无法安装，最后发现照着网上的帖子没有用，因为帖子估计都比较老，我的是win10系统，所以导致删除的路径不对，导致依旧无法正常安装，需要删除对应的路径。</p>
