@@ -20,6 +20,7 @@
 
 <p>1、一次read操作返回的数据可能会少于所要求的数据，及时此时没有到达文件尾部也可能会出现这种情况。对于这种情况，我们不认为是错误，而是视为一种异常，应该继续对此设备进行读取。</p>
 <p>2、一次write或send操作的返回值也可能会少于指定的输出的字节数。通常这可能是由于某一种因素引起的，比如在处理网络数据的时，内核输出的缓冲区满，此时写不进数据。我们也通常不认为这是一种错误，应当继续将余下的数据进行写入。（通常遇到这种情况的场景是非阻塞描述符，或者捕捉到某一种信号的时候，才会发生中途返回。）</p>
+<p>未完待续~</p>
 ]]></content>
       <categories>
         <category>Unix环境高级编程</category>
@@ -35,7 +36,9 @@
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><p>Go语言的错误处理</p>
 <a id="more"></a>
 
-<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 封装Go 防止野生的goruntime panic导致程序挂掉 */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Go</span><span class="params">(x <span class="keyword">func</span>()</span>)</span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="keyword">defer</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">			<span class="keyword">if</span> err := <span class="built_in">recover</span>(); err != <span class="literal">nil</span> &#123;</span><br><span class="line">				fmt.Println(err)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;()</span><br><span class="line">		x()</span><br><span class="line">	&#125;()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">go</span> <span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		fmt.Println(<span class="string">&quot;he&quot;</span>)</span><br><span class="line">	&#125;()</span><br><span class="line">	time.Sleep(<span class="number">2</span> * time.Second)</span><br><span class="line">	Go(<span class="function"><span class="keyword">func</span><span class="params">()</span></span> &#123;</span><br><span class="line">		<span class="built_in">panic</span>(<span class="string">&quot;lpyuan2&quot;</span>)</span><br><span class="line">		fmt.Println(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">	&#125;)</span><br><span class="line">	time.Sleep(<span class="number">1</span> * time.Second)</span><br><span class="line">	<span class="built_in">panic</span>(<span class="string">&quot;lpyuan1&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>未完待续~</p>
+]]></content>
       <categories>
         <category>Go</category>
       </categories>
@@ -44,6 +47,7 @@
     <title>Raft算法</title>
     <url>/2021/01/07/1df31392.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="Raft算法"><a href="#Raft算法" class="headerlink" title="Raft算法"></a>Raft算法</h1><h2 id="什么是Raft算法"><a href="#什么是Raft算法" class="headerlink" title="什么是Raft算法"></a>什么是Raft算法</h2><p>Raft算法是Multi-Paxos算法，</p>
+<p>未完待续~</p>
 ]]></content>
       <categories>
         <category>数据结构与算法</category>
@@ -223,6 +227,7 @@
 <blockquote>
 <p>变量a，自身按1字节对齐，</p>
 </blockquote>
+<p>未完待续~</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://www.zhihu.com/question/27862634">https://www.zhihu.com/question/27862634</a></p>
 <p><a href="https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90">https://cloud.tencent.com/developer/article/1055149?from=information.detail.linux%E7%BB%93%E6%9E%84%E4%BD%93%E5%AF%B9%E9%BD%90</a></p>
 ]]></content>
@@ -249,6 +254,7 @@
 </ul>
 <p>信号量通过一个计数器控制对共享资源的访问，信号量的值是一个非负整数，所有通过它的线程都会将该整数减一。如果计数器大于0，则访问被允许，计数器减1；如果为0，则访问被禁止，所有试图通过它的线程都将处于等待状态。</p>
 <p><strong>条件变量</strong> （Condition Variable） 作为一种同步手段类似于栅栏，允许线程以一种无竞争的方式等待某个条件的发生。当该条件没有发生时，线程会一直处于休眠状态。当被其它线程通知条件已经发生时，线程才会被唤醒从而继续向下执行。条件变量是比较底层的同步原语，直接使用的情况不多，往往用于实现高层之间的线程同步。使用条件变量的一个经典的例子就是线程池(Thread Pool)了。</p>
+<p>未完待续~</p>
 </blockquote>
 <h1 id="共享内存"><a href="#共享内存" class="headerlink" title="共享内存"></a>共享内存</h1><blockquote>
 <p>共享内存允许两个或者多个进程共享一个给定的存储区，因为数据不需要再客户即和服务器之间复制，所以共享内存是最快的一种 I IPC。使用共享内存唯一的诀窍就是多个进程之间对一给定的存储区之间数据的同步存取问题。通常，信号量被用来实现对共享存储存取的同步。（记录锁也可以用于这种场合）。</p>
@@ -275,6 +281,7 @@
 <p>（2）捕捉信号，注册信号处理函数。</p>
 <p>（3）执行系统的默认动作。</p>
 <p>信号</p>
+<p>未完待续~</p>
 <h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p><a href="https://blog.csdn.net/wangquan1992/article/details/108511628">https://blog.csdn.net/wangquan1992/article/details/108511628</a></p>
 ]]></content>
       <categories>

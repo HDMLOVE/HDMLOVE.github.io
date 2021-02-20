@@ -29,7 +29,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://www.lpyuan.club/images/image-20210218231840685.png">
 <meta property="article:published_time" content="2021-02-18T16:39:14.000Z">
-<meta property="article:modified_time" content="2021-02-20T05:42:39.532Z">
+<meta property="article:modified_time" content="2021-02-20T15:18:26.306Z">
 <meta property="article:author" content="开开心心的小骆">
 <meta property="article:tag" content="Unix">
 <meta property="article:tag" content="网络编程">
@@ -285,6 +285,7 @@
 
 <p>1、一次read操作返回的数据可能会少于所要求的数据，及时此时没有到达文件尾部也可能会出现这种情况。对于这种情况，我们不认为是错误，而是视为一种异常，应该继续对此设备进行读取。</p>
 <p>2、一次write或send操作的返回值也可能会少于指定的输出的字节数。通常这可能是由于某一种因素引起的，比如在处理网络数据的时，内核输出的缓冲区满，此时写不进数据。我们也通常不认为这是一种错误，应当继续将余下的数据进行写入。（通常遇到这种情况的场景是非阻塞描述符，或者捕捉到某一种信号的时候，才会发生中途返回。）</p>
+<p>未完待续~</p>
 
     </div>
 
