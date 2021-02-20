@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.lpyuan.club/2020/03/02/e3aa8e8f.html</loc>
+    
+    <lastmod>2021-02-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.lpyuan.club/2021/01/07/81dd58c3.html</loc>
     
     <lastmod>2021-02-20</lastmod>
@@ -87,13 +94,6 @@
   
   <url>
     <loc>http://www.lpyuan.club/books/index.html</loc>
-    
-    <lastmod>2021-02-19</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.lpyuan.club/2020/03/02/e3aa8e8f.html</loc>
     
     <lastmod>2021-02-19</lastmod>
     
@@ -221,6 +221,13 @@
   </url>
   
   <url>
+    <loc>http://www.lpyuan.club/tags/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2021-02-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://www.lpyuan.club/tags/Go/</loc>
     <lastmod>2021-02-20</lastmod>
     <changefreq>daily</changefreq>
@@ -235,7 +242,7 @@
   </url>
   
   <url>
-    <loc>http://www.lpyuan.club/tags/%E7%AE%97%E6%B3%95/</loc>
+    <loc>http://www.lpyuan.club/tags/Testing/</loc>
     <lastmod>2021-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -250,13 +257,6 @@
   
   <url>
     <loc>http://www.lpyuan.club/tags/%E9%93%BE%E8%A1%A8/</loc>
-    <lastmod>2021-02-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.lpyuan.club/tags/Testing/</loc>
     <lastmod>2021-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -286,14 +286,14 @@
   </url>
   
   <url>
-    <loc>http://www.lpyuan.club/categories/Linux/</loc>
+    <loc>http://www.lpyuan.club/categories/Unix%E7%8E%AF%E5%A2%83%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/</loc>
     <lastmod>2021-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://www.lpyuan.club/categories/Unix%E7%8E%AF%E5%A2%83%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B/</loc>
+    <loc>http://www.lpyuan.club/categories/Linux/</loc>
     <lastmod>2021-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
