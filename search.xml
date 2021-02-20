@@ -83,44 +83,57 @@
     <url>/2021/01/07/e655a013.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>链表在Linux内核中可以说是一种最简单的、也是最普通的一种线性的数据结构。链表是一种存放和操作可变数量元素（通常我们称之为节点）的数据结构。</p>
 <p>可以用最简单的数据结构来表示这样一个链表：</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 一个链表中的一个一个元素 */</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">list_element</span>&#123;</span></span><br><span class="line">  <span class="keyword">void</span> *data;	<span class="comment">/* 有效数据 */</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">list_element</span> *<span class="title">next</span>;</span>	<span class="comment">/* 指向下一个节点指针 */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 一个链表中的一个一个元素 */</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">list_element</span>&#123;</span></span><br><span class="line">  <span class="keyword">void</span> *data;				<span class="comment">/* 有效数据 */</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">list_element</span> *<span class="title">next</span>;</span>	<span class="comment">/* 指向下一个节点指针 */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <p>下图描述一个链表结构体：</p>
 <img src="/images/image-20210220120514901.png" alt="image-20210220120514901" style="zoom:50%;" />
 
 <a id="more"></a>
 
-<h2 id="1实现一种算法，找出单向链表的倒数第k个节点"><a href="#1实现一种算法，找出单向链表的倒数第k个节点" class="headerlink" title="1实现一种算法，找出单向链表的倒数第k个节点"></a>1实现一种算法，找出单向链表的倒数第k个节点</h2><p>示例：</p>
+<h2 id="实现一种算法，找出单向链表的倒数第k个节点"><a href="#实现一种算法，找出单向链表的倒数第k个节点" class="headerlink" title="实现一种算法，找出单向链表的倒数第k个节点"></a>实现一种算法，找出单向链表的倒数第k个节点</h2><p>示例：</p>
 <figure class="highlight text"><table><tr><td class="code"><pre><span class="line">输入：</span><br><span class="line">1-&gt;2-&gt;3-&gt;4-&gt;5 和 k=2</span><br><span class="line">输出：4 </span><br></pre></td></tr></table></figure>
 <p>说明：</p>
 <p>给定的k值是有效的。</p>
 <p><strong>解题思路</strong></p>
-<p>1、先让t向前走k步</p>
-<p>2、head和t同时向前走一直到链表尾部，此时head就是倒数第k个节点。</p>
+<ul>
+<li><p>先让t向前走k步</p>
+</li>
+<li><p>head和t同时向前走一直到链表尾部，此时head就是倒数第k个节点。</p>
+</li>
+</ul>
 <p><strong>示例代码</strong></p>
 <p>C/C++示例：</p>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"> <span class="comment">/* </span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * type ListNode struct &#123;</span></span><br><span class="line"><span class="comment"> *     Val int</span></span><br><span class="line"><span class="comment"> *     Next *ListNode</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kthToLast</span><span class="params">(struct listNode *head, <span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">listNode</span> *<span class="title">p</span> =</span> head;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">listNode</span> *<span class="title">q</span> =</span> head;</span><br><span class="line">  <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(k--)&#123;</span><br><span class="line">    p = p-&gt;next;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span>(p)&#123;</span><br><span class="line">    p = p-&gt;next;</span><br><span class="line">    q = q-&gt;next;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> q-&gt;val;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kthToLast</span><span class="params">(struct ListNode* head, <span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">p</span> =</span> head;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">q</span> =</span> head;</span><br><span class="line">    <span class="keyword">while</span>(p)&#123;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        k--;</span><br><span class="line">        <span class="keyword">if</span>(k&lt;<span class="number">0</span>)</span><br><span class="line">            q = q-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> q-&gt;val;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 <p>Go语言示例：</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * type ListNode struct &#123;</span></span><br><span class="line"><span class="comment"> *     Val int</span></span><br><span class="line"><span class="comment"> *     Next *ListNode</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">kthToLast</span><span class="params">(head *ListNode, k <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    fast := head</span><br><span class="line">    slow := head</span><br><span class="line">    <span class="keyword">for</span> k&gt;<span class="number">0</span>&#123;</span><br><span class="line">        fast = fast.Next</span><br><span class="line">        k--</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> fast != <span class="literal">nil</span>&#123;</span><br><span class="line">        fast = fast.Next</span><br><span class="line">        slow = slow.Next</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> slow.Val</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。"><a href="#2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。" class="headerlink" title="2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。"></a>2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。</h2><img src="/images/image-20210220042214993.png" alt="image-20210220042214993" style="zoom:40%;" />
+<h2 id="给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。"><a href="#给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。" class="headerlink" title="给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。"></a>给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。</h2><img src="/images/image-20210220042214993.png" alt="image-20210220042214993" style="zoom:40%;" />
 
 <p><strong>解题思路</strong></p>
-<p>遍历整个链表，找到链表的尾部同时获取链表的长度，将链表的尾部与链表头相连形成一个环。然后通过取余计算计算k的余数。最后通过直接断开这个环，返回头指针即可。</p>
+<ul>
+<li>遍历整个链表，找到链表的尾部同时获取链表的长度，将链表的尾部与链表头相连形成一个环。</li>
+<li>然后通过取余计算计算k的余数。最后通过直接断开这个环，返回头指针即可。</li>
+</ul>
+<p>Go语言 示例：</p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * type ListNode struct &#123;</span></span><br><span class="line"><span class="comment"> *     Val int</span></span><br><span class="line"><span class="comment"> *     Next *ListNode</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">rotateRight</span><span class="params">(head *ListNode, k <span class="keyword">int</span>)</span> *<span class="title">ListNode</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> head == <span class="literal">nil</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">    &#125;</span><br><span class="line">    n, p := <span class="number">1</span>, head</span><br><span class="line">    <span class="keyword">for</span> p.Next != <span class="literal">nil</span>&#123;</span><br><span class="line">        p = p.Next</span><br><span class="line">        n++</span><br><span class="line">    &#125;</span><br><span class="line">    p.Next = head</span><br><span class="line">    k %= n</span><br><span class="line">    <span class="keyword">for</span> i :=<span class="number">1</span> ; i&lt;= n-k; i++&#123;</span><br><span class="line">        p = p.Next</span><br><span class="line">    &#125;</span><br><span class="line">    head, p.Next = p.Next, <span class="literal">nil</span></span><br><span class="line">    <span class="keyword">return</span> head</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="3-实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。"><a href="#3-实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。" class="headerlink" title="3 实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。"></a>3 实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。</h2><img src="/images/image-20210220042243290.png" alt="image-20210220042243290" style="zoom:33%;" />
+<h2 id="实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。"><a href="#实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。" class="headerlink" title="实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。"></a>实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。</h2><img src="/images/image-20210220042243290.png" alt="image-20210220042243290" style="zoom:33%;" />
 
 <p><strong>解题思路</strong></p>
-<p>由于只能访问该节点，无法获取他的前驱节    点，我们不能简单的对节点进行删除操作。</p>
-<p>我们换一种思路，将cur-&gt;next的值拷贝到当前节点将其值覆盖，然后将cur的next节点删除掉，</p>
-<p>以达到删除当前节点的效果。(狸猫换太子)</p>
+<ul>
+<li><p>由于只能访问该节点，无法获取他的前驱节    点，我们不能简单的对节点进行删除操作。</p>
+</li>
+<li><p>我们换一种思路，将cur-&gt;next的值拷贝到当前节点将其值覆盖，然后将cur的next节点删除掉，以达到删除当前节点的效果。(狸猫换太子)</p>
+</li>
+</ul>
 <figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">deleteNode</span><span class="params">(struct listNode *node)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  node-&gt;val = node-&gt;next-&gt;val;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">listNode</span> *<span class="title">temp</span> =</span> node-&gt;next;</span><br><span class="line">  node-&gt;next = node-&gt;next-&gt;next;</span><br><span class="line">  <span class="built_in">free</span>(temp);</span><br><span class="line">  <span class="keyword">return</span>;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">deleteNode</span><span class="params">(node *listNode)</span></span>&#123;</span><br><span class="line">  node.Val, node.Next = node.Next.Val, node.Next.Next</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="4-两数相加"><a href="#4-两数相加" class="headerlink" title="4 两数相加"></a>4 两数相加</h2><p>给你两个非空链表来代表两个非负整数。数字最高位位于链表的开始位置，他们的每个节点只是存储一个数字。将这两数相加会返回一个新的链表节点，你可以假设除了数字之外，这连个数字都不会以零开头。</p>
+<h2 id="两数相加"><a href="#两数相加" class="headerlink" title="两数相加"></a>两数相加</h2><p>给你两个非空链表来代表两个非负整数。数字最高位位于链表的开始位置，他们的每个节点只是存储一个数字。将这两数相加会返回一个新的链表节点，你可以假设除了数字之外，这连个数字都不会以零开头。</p>
 <p>进阶：</p>
 <p>如果输入链表不能修改该如何处理，换句话说，你不能对列表中的节点进行翻转。</p>
 <img src="/images/image-20210220042322096.png" alt="image-20210220042322096" style="zoom:33%;" />
 
 <p><strong>解题思路</strong></p>
-<p>对两个参数链表进行翻转，翻转之后，对对应的位进行一个相加进位处理。</p>
+<ul>
+<li>对两个参数链表进行翻转，翻转之后，对对应的位进行一个相加进位处理。</li>
+</ul>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
@@ -730,12 +743,9 @@
 <a id="more"></a>
 
 <h1 id="需要准备的东西"><a href="#需要准备的东西" class="headerlink" title="需要准备的东西"></a>需要准备的东西</h1><ul>
-<li><p>一台个人PC</p>
-</li>
-<li><p>money!(开玩笑的 ^-^)</p>
-</li>
-<li><p>一台linux服务器，可以买台云服务器，没有又想体验的话就VM虚拟机，本地看看过把瘾吧^ ^。</p>
-</li>
+<li>一台个人PC</li>
+<li>money!(开玩笑的 ^-^)</li>
+<li>一台linux服务器，可以买台云服务器，没有又想体验的话就本地跑吧~（或者托管github自己查查怎么弄）</li>
 </ul>
 <h1 id="需要的软件环境"><a href="#需要的软件环境" class="headerlink" title="需要的软件环境"></a>需要的软件环境</h1><ul>
 <li><p>Git</p>
@@ -747,14 +757,43 @@
 <li><p>Nginx</p>
 </li>
 </ul>
-<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p><a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a><br>下一步下一步傻瓜式安装</p>
-<h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><p><a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a><br>下一步下一步傻瓜式安装</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><img src="/images/image-20210219105759182.jpg" alt="image-20210219105759182" style="zoom:50%;" />
+<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h1><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p><a href="https://nodejs.org/zh-cn/download/">官网中文下载入口</a></p>
+<p>下载完成后，点击下一步下一步傻瓜式安装。</p>
+<h2 id="安装-git"><a href="#安装-git" class="headerlink" title="安装 git"></a>安装 git</h2><p><a href="https://git-scm.com/downloads">Git下载入口</a><br>下载完成后，点击下一步下一步傻瓜式安装，安装完成之后，右键桌面看看有没有Git终端，有说明安装成功了。</p>
+<h2 id="Windows版本"><a href="#Windows版本" class="headerlink" title="Windows版本"></a>Windows版本</h2><p>安装hexo</p>
+<ul>
+<li>右键开始按钮，打开Windows PowerShell管理员窗口。</li>
+</ul>
+<img src="/images/image-20210219105759182.jpg" alt="image-20210219105759182" style="zoom:50%;" />
 
-<p>选择一个文件夹作为你的博客文件夹，比如我自己建立在E:盘在命令行窗口下：</p>
+<ul>
+<li>执行命令<code>npm install -g hexo</code>进行安装，如下图所示：</li>
+</ul>
 <img src="/images/image-20210219105959182.jpg" alt="image-20210219105959182" style="zoom:80%;" />
 
-<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="string">hexo</span> <span class="string">-v</span> <span class="comment"># 查看hexo安装成功没</span></span><br><span class="line"><span class="string">mkdir</span> <span class="string">blog;</span> <span class="comment"># 创建blog文件夹作为我的博客目录</span></span><br><span class="line"><span class="string">cd</span> <span class="string">blog</span> <span class="comment"># 进入blog目录</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">init</span> <span class="comment"># 初始化blog</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">g</span> <span class="comment"># 生成静态页面</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">s</span> <span class="comment"># 启动服务监听</span></span><br><span class="line"><span class="string">localhost:4000</span> <span class="comment">#打开页面 </span></span><br><span class="line"><span class="comment"># 可以看到hello world 的页面，初步完成。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 常用命令</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">new</span> <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">new</span> <span class="string">page</span> <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">generate</span> <span class="comment">#生成静态页面至public目录</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">server</span> <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">deploy</span> <span class="comment">#部署到GitHub</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">version</span> <span class="comment">#查看Hexo的版本</span></span><br><span class="line"></span><br><span class="line"><span class="string">hexo</span> <span class="string">s</span> <span class="string">-g</span> <span class="comment">#生成并本地预览</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">d</span> <span class="string">-g</span> <span class="comment">#生成并上传</span></span><br><span class="line"><span class="string">hexo</span> <span class="string">clean</span> <span class="string">&amp;&amp;</span> <span class="string">hexo</span> <span class="string">g</span> <span class="string">&amp;&amp;</span> <span class="string">hexo</span> <span class="string">d</span> <span class="comment"># 一件生成静态页面同时上传</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>安装完成之后，执行命令<code>hexo -v</code>查看是否安装成功。</p>
+</li>
+<li><p>安装成功之后，右键桌面进入Git终端，选择博客项目需要存放的位置，可以使用<code>mkdir Blog</code>命令来新建一个项目目录。</p>
+</li>
+<li><p>创建目录成功之后（或者选择你自己的目录），进入对应的Blog目录，执行命令<code>hexo init</code>对项目进行初始化。</p>
+</li>
+<li><p>在Blog目录下，执行命令<code>hexo g</code>生成demo，执行命令<code>hexo s</code>启动博客项目开启端口监听，启动成功后，可以再浏览器输入<code>localhost:4000</code>进行查看，若有Hello World界面说明成功了。</p>
+</li>
+<li><p>在Blog目录下，执行命令<code>hexo new &quot;testBlog&quot;</code>生成一个文件叫testBlog.md的Markdown文件，该文件在<code>source/_posts</code>目录下。</p>
+</li>
+<li><p>打开testBlog.md文件，将以下内容整个复制过去。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line"># 这是一级标题</span><br><span class="line">## 这是二级标题</span><br><span class="line">这是我的第一篇博客</span><br></pre></td></tr></table></figure></li>
+<li><p>执行命令<code>hexo clean &amp;&amp; hexo g &amp;&amp;hexo s</code>一次性完成清理、重新生成、启动监听。</p>
+</li>
+<li><p>在浏览器输入<code>localhost:4000</code>查看文章。</p>
+</li>
+<li><p>以后需要新增文章，只需要按照这个步骤来进行就可以了，至于文章的编写，具体需去学习如何编写markdown文件。</p>
+</li>
+</ul>
+<h2 id="Mac版本"><a href="#Mac版本" class="headerlink" title="Mac版本"></a>Mac版本</h2><p>和Windows步骤一直，安装软件时候按照mac方式安装即可。</p>
+<p><strong>以下是Hexo常用的一些命令:</strong></p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">hexo -v <span class="comment"># 查看hexo安装成功没</span></span><br><span class="line">mkdir blog; <span class="comment"># 创建blog文件夹作为我的博客目录</span></span><br><span class="line"><span class="built_in">cd</span> blog <span class="comment"># 进入blog目录</span></span><br><span class="line">hexo init <span class="comment"># 初始化blog</span></span><br><span class="line">hexo g <span class="comment"># 生成静态页面</span></span><br><span class="line">hexo s <span class="comment"># 启动服务监听</span></span><br><span class="line">localhost:4000 <span class="comment">#打开页面 </span></span><br><span class="line"><span class="comment"># 可以看到hello world 的页面，初步完成。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 常用命令</span></span><br><span class="line">hexo new <span class="string">&quot;postName&quot;</span> <span class="comment">#新建文章</span></span><br><span class="line">hexo new page <span class="string">&quot;pageName&quot;</span> <span class="comment">#新建页面</span></span><br><span class="line">hexo generate <span class="comment">#生成静态页面至public目录</span></span><br><span class="line">hexo server <span class="comment">#开启预览访问端口（默认端口4000，&#x27;ctrl + c&#x27;关闭server）</span></span><br><span class="line">hexo deploy <span class="comment">#部署到GitHub</span></span><br><span class="line">hexo <span class="built_in">help</span>  <span class="comment"># 查看帮助</span></span><br><span class="line">hexo version <span class="comment">#查看Hexo的版本</span></span><br><span class="line"></span><br><span class="line">hexo s -g <span class="comment">#生成并本地预览</span></span><br><span class="line">hexo d -g <span class="comment">#生成并上传</span></span><br><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d <span class="comment"># 一件生成静态页面同时上传</span></span><br></pre></td></tr></table></figure>
 <h2 id="站点配置"><a href="#站点配置" class="headerlink" title="站点配置"></a>站点配置</h2><p>Hexo主要有两份配置文件，一份是站点配置文件<code>_config.yml</code>，一份是主题配置文件（对应的主题目录下的<code>_config.yml</code>文件）。</p>
 <h4 id="站点基本信息的配置"><a href="#站点基本信息的配置" class="headerlink" title="站点基本信息的配置"></a>站点基本信息的配置</h4><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Suzette219</span> <span class="comment"># 站点标题</span></span><br><span class="line"><span class="attr">subtitle :</span> <span class="string">share</span> <span class="comment"># 副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">lpyuan</span> <span class="string">blog</span> <span class="comment"># 站点描述</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="comment"># 站点关键字</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">发量充足的程序员</span> <span class="comment"># 站点作者昵称</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span> <span class="comment"># 语言</span></span><br><span class="line"><span class="attr">timezone :</span> <span class="string">&#x27;UTC&#x27;</span> <span class="comment"># 时区</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
