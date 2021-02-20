@@ -242,13 +242,6 @@
   </url>
   
   <url>
-    <loc>http://www.lpyuan.club/tags/Testing/</loc>
-    <lastmod>2021-02-20</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://www.lpyuan.club/tags/%E7%94%B5%E5%BD%B1%F0%9F%8E%AC/</loc>
     <lastmod>2021-02-20</lastmod>
     <changefreq>daily</changefreq>
@@ -262,14 +255,14 @@
     <priority>0.6</priority>
   </url>
   
-
-  
   <url>
-    <loc>http://www.lpyuan.club/categories/Linux/</loc>
+    <loc>http://www.lpyuan.club/tags/Testing/</loc>
     <lastmod>2021-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
+  
+
   
   <url>
     <loc>http://www.lpyuan.club/categories/Windows/</loc>
@@ -287,6 +280,13 @@
   
   <url>
     <loc>http://www.lpyuan.club/categories/%E5%85%B6%E4%BB%96/</loc>
+    <lastmod>2021-02-20</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.lpyuan.club/categories/Linux/</loc>
     <lastmod>2021-02-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
