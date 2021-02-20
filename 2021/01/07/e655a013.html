@@ -20,24 +20,24 @@
     var CONFIG = {"hostname":"www.lpyuan.club","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="链表是一种线性的数据结构，每一个节点存放着下一个节点的指针。   1实现一种算法，找出单向链表的倒数第k个节点示例： 123输入：1-&gt;2-&gt;3-&gt;4-&gt;5 和 k&#x3D;2输出：4  说明： 给定的k值是有效的。 解题思路 1、先让t向前走k步 2、head和t同时向前走一直到链表尾部，此时head就是倒数第k个节点。 示例代码 C&#x2F;C++示例： 123456789101112">
+  <meta name="description" content="链表在Linux内核中可以说是一种最简单的、也是最普通的一种线性的数据结构。链表是一种存放和操作可变数量元素（通常我们称之为节点）的数据结构。 可以用最简单的数据结构来表示这样一个链表： 12345&#x2F;* 一个链表中的一个一个元素 *&#x2F;struct list_element&amp;#123;  void *data;									&#x2F;* 有效数据 *&#x2F;  struct list_element *nex">
 <meta property="og:type" content="article">
 <meta property="og:title" content="链表相关问题">
 <meta property="og:url" content="http://www.lpyuan.club/2021/01/07/e655a013.html">
 <meta property="og:site_name" content="Suzette219">
-<meta property="og:description" content="链表是一种线性的数据结构，每一个节点存放着下一个节点的指针。   1实现一种算法，找出单向链表的倒数第k个节点示例： 123输入：1-&gt;2-&gt;3-&gt;4-&gt;5 和 k&#x3D;2输出：4  说明： 给定的k值是有效的。 解题思路 1、先让t向前走k步 2、head和t同时向前走一直到链表尾部，此时head就是倒数第k个节点。 示例代码 C&#x2F;C++示例： 123456789101112">
+<meta property="og:description" content="链表在Linux内核中可以说是一种最简单的、也是最普通的一种线性的数据结构。链表是一种存放和操作可变数量元素（通常我们称之为节点）的数据结构。 可以用最简单的数据结构来表示这样一个链表： 12345&#x2F;* 一个链表中的一个一个元素 *&#x2F;struct list_element&amp;#123;  void *data;									&#x2F;* 有效数据 *&#x2F;  struct list_element *nex">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://www.lpyuan.club/images/image-20210220042103014.png">
+<meta property="og:image" content="http://www.lpyuan.club/images/image-20210220120514901.png">
 <meta property="og:image" content="http://www.lpyuan.club/images/image-20210220042214993.png">
 <meta property="og:image" content="http://www.lpyuan.club/images/image-20210220042243290.png">
 <meta property="og:image" content="http://www.lpyuan.club/images/image-20210220042322096.png">
 <meta property="article:published_time" content="2021-01-07T03:58:59.000Z">
-<meta property="article:modified_time" content="2021-02-19T20:30:15.653Z">
+<meta property="article:modified_time" content="2021-02-20T05:31:22.305Z">
 <meta property="article:author" content="开开心心的小骆">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="链表">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://www.lpyuan.club/images/image-20210220042103014.png">
+<meta name="twitter:image" content="http://www.lpyuan.club/images/image-20210220120514901.png">
 
 <link rel="canonical" href="http://www.lpyuan.club/2021/01/07/e655a013.html">
 
@@ -280,8 +280,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>链表是一种线性的数据结构，每一个节点存放着下一个节点的指针。</p>
-<img src="/images/image-20210220042103014.png" alt="image-20210220042103014" style="zoom:33%;">
+        <p>链表在Linux内核中可以说是一种最简单的、也是最普通的一种线性的数据结构。链表是一种存放和操作可变数量元素（通常我们称之为节点）的数据结构。</p>
+<p>可以用最简单的数据结构来表示这样一个链表：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 一个链表中的一个一个元素 */</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">list_element</span>&#123;</span></span><br><span class="line">  <span class="keyword">void</span> *data;									<span class="comment">/* 有效数据 */</span></span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">list_element</span> *<span class="title">next</span>;</span>	<span class="comment">/* 指向下一个节点指针 */</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>下图描述一个链表结构体：</p>
+<img src="/images/image-20210220120514901.png" alt="image-20210220120514901" style="zoom:50%;" />
+
+<a id="more"></a>
 
 <h2 id="1实现一种算法，找出单向链表的倒数第k个节点"><a href="#1实现一种算法，找出单向链表的倒数第k个节点" class="headerlink" title="1实现一种算法，找出单向链表的倒数第k个节点"></a>1实现一种算法，找出单向链表的倒数第k个节点</h2><p>示例：</p>
 <figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：</span><br><span class="line">1-&gt;2-&gt;3-&gt;4-&gt;5 和 k=2</span><br><span class="line">输出：4 </span><br></pre></td></tr></table></figure>
@@ -295,12 +300,12 @@
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">/* </span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * type ListNode struct &#123;</span></span><br><span class="line"><span class="comment"> *     Val int</span></span><br><span class="line"><span class="comment"> *     Next *ListNode</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kthToLast</span><span class="params">(struct listNode *head, <span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">listNode</span> *<span class="title">p</span> =</span> head;</span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">listNode</span> *<span class="title">q</span> =</span> head;</span><br><span class="line">  <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">while</span>(k--)&#123;</span><br><span class="line">    p = p-&gt;next;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span>(p)&#123;</span><br><span class="line">    p = p-&gt;next;</span><br><span class="line">    q = q-&gt;next;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> q-&gt;val;</span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">kthToLast</span><span class="params">(struct ListNode* head, <span class="keyword">int</span> k)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">p</span> =</span> head;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">q</span> =</span> head;</span><br><span class="line">    <span class="keyword">while</span>(p)&#123;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        k--;</span><br><span class="line">        <span class="keyword">if</span>(k&lt;<span class="number">0</span>)</span><br><span class="line">            q = q-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> q-&gt;val;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
 <p>Go语言示例：</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * type ListNode struct &#123;</span></span><br><span class="line"><span class="comment"> *     Val int</span></span><br><span class="line"><span class="comment"> *     Next *ListNode</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">kthToLast</span><span class="params">(head *ListNode, k <span class="keyword">int</span>)</span> <span class="title">int</span></span> &#123;</span><br><span class="line">    fast := head</span><br><span class="line">    slow := head</span><br><span class="line">    <span class="keyword">for</span> k&gt;<span class="number">0</span>&#123;</span><br><span class="line">        fast = fast.Next</span><br><span class="line">        k--</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> fast != <span class="literal">nil</span>&#123;</span><br><span class="line">        fast = fast.Next</span><br><span class="line">        slow = slow.Next</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> slow.Val</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。"><a href="#2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。" class="headerlink" title="2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。"></a>2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。</h2><img src="/images/image-20210220042214993.png" alt="image-20210220042214993" style="zoom:40%;">
+<h2 id="2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。"><a href="#2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。" class="headerlink" title="2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。"></a>2给定一个链表，旋转该链表，将链表的每一个节点向右移动k个位置，其中k是非负数。</h2><img src="/images/image-20210220042214993.png" alt="image-20210220042214993" style="zoom:40%;" />
 
 <p><strong>解题思路</strong></p>
 <p>遍历整个链表，找到链表的尾部同时获取链表的长度，将链表的尾部与链表头相连形成一个环。然后通过取余计算计算k的余数。最后通过直接断开这个环，返回头指针即可。</p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * type ListNode struct &#123;</span></span><br><span class="line"><span class="comment"> *     Val int</span></span><br><span class="line"><span class="comment"> *     Next *ListNode</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">rotateRight</span><span class="params">(head *ListNode, k <span class="keyword">int</span>)</span> *<span class="title">ListNode</span></span> &#123;</span><br><span class="line">    <span class="keyword">if</span> head == <span class="literal">nil</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">    &#125;</span><br><span class="line">    n, p := <span class="number">1</span>, head</span><br><span class="line">    <span class="keyword">for</span> p.Next != <span class="literal">nil</span>&#123;</span><br><span class="line">        p = p.Next</span><br><span class="line">        n++</span><br><span class="line">    &#125;</span><br><span class="line">    p.Next = head</span><br><span class="line">    k %= n</span><br><span class="line">    <span class="keyword">for</span> i :=<span class="number">1</span> ; i&lt;= n-k; i++&#123;</span><br><span class="line">        p = p.Next</span><br><span class="line">    &#125;</span><br><span class="line">    head, p.Next = p.Next, <span class="literal">nil</span></span><br><span class="line">    <span class="keyword">return</span> head</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="3-实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。"><a href="#3-实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。" class="headerlink" title="3 实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。"></a>3 实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。</h2><img src="/images/image-20210220042243290.png" alt="image-20210220042243290" style="zoom:33%;">
+<h2 id="3-实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。"><a href="#3-实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。" class="headerlink" title="3 实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。"></a>3 实现一种算法，删除单向链表中间的某个节点（即不是第一个或者最后一个节点），界定你只能访问该节点。</h2><img src="/images/image-20210220042243290.png" alt="image-20210220042243290" style="zoom:33%;" />
 
 <p><strong>解题思路</strong></p>
 <p>由于只能访问该节点，无法获取他的前驱节    点，我们不能简单的对节点进行删除操作。</p>
@@ -311,7 +316,7 @@
 <h2 id="4-两数相加"><a href="#4-两数相加" class="headerlink" title="4 两数相加"></a>4 两数相加</h2><p>给你两个非空链表来代表两个非负整数。数字最高位位于链表的开始位置，他们的每个节点只是存储一个数字。将这两数相加会返回一个新的链表节点，你可以假设除了数字之外，这连个数字都不会以零开头。</p>
 <p>进阶：</p>
 <p>如果输入链表不能修改该如何处理，换句话说，你不能对列表中的节点进行翻转。</p>
-<img src="/images/image-20210220042322096.png" alt="image-20210220042322096" style="zoom:33%;">
+<img src="/images/image-20210220042322096.png" alt="image-20210220042322096" style="zoom:33%;" />
 
 <p><strong>解题思路</strong></p>
 <p>对两个参数链表进行翻转，翻转之后，对对应的位进行一个相加进位处理。</p>
@@ -356,7 +361,7 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/01/07/Infinity.html" rel="prev" title="排序算法">
+    <a href="/2021/01/07/735e5788.html" rel="prev" title="排序算法">
       <i class="fa fa-chevron-left"></i> 排序算法
     </a></div>
       <div class="post-nav-item">
@@ -444,13 +449,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">10</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -471,10 +476,10 @@
         <a href="mailto:lpyuan21@outlook.com" title="E-Mail → mailto:lpyuan21@outlook.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://twitter.com/yourname" title="Twitter → https://twitter.com/yourname" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
+        <a href="https://mobile.twitter.com/HDML0VE" title="Twitter → https://mobile.twitter.com/HDML0VE" rel="noopener" target="_blank"><i class="fab fa-twitter fa-fw"></i>Twitter</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://stackoverflow.com/yourname" title="StackOverflow → https://stackoverflow.com/yourname" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+        <a href="https://stackoverflow.com" title="StackOverflow → https://stackoverflow.com" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
       </span>
   </div>
 
