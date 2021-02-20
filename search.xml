@@ -530,7 +530,7 @@
       </categories>
   </entry>
   <entry>
-    <title>面试笔试</title>
+    <title>面试知识点</title>
     <url>/2020/03/14/dc0b7f4a.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="网络基础"><a href="#网络基础" class="headerlink" title="网络基础"></a>网络基础</h1><h2 id="大端小端网络字节序"><a href="#大端小端网络字节序" class="headerlink" title="大端小端网络字节序"></a>大端小端网络字节序</h2><p>&ensp;&ensp;&ensp;&ensp;”大端”，”小端”指的是表示多字节的值哪一端存储在该值的起始地址处；多字节小端存储起始地址处称为小端字节序，多字节的大端存储在起始地址处称为大端字节序。<br>&ensp;&ensp;&ensp;&ensp;通俗的说就是。</p>
 <p>&ensp;&ensp;&ensp;&ensp;常用的X86架构就是采用的小端存储，最高有效位在最高位地址。</p>
