@@ -464,7 +464,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Go语言错误处理"><a href="#Go语言错误处理" class="headerlink" title="Go语言错误处理"></a>Go语言错误处理</h2><p>Go语言的错误处理</p>
+          <p>Go 的处理异常逻辑是不引入 exception，支持多参数返回，所以你很容易的在函数签名中带上实现了 error Interface 的对象，交由调用者来判定。如果一个函数返回了 value, error，你不能对这个 value 做任何假设，必须先判定 error。唯一可以忽略 error 的是，如果你连 value 也不关心。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/02/02/b424edbd.html#more" rel="contents">
